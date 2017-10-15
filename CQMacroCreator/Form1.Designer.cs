@@ -187,6 +187,8 @@
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -1861,11 +1863,33 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label56.Location = new System.Drawing.Point(731, 468);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(47, 13);
+            this.label56.TabIndex = 158;
+            this.label56.Text = "by Latas";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label57.Location = new System.Drawing.Point(670, 486);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(108, 13);
+            this.label57.TabIndex = 159;
+            this.label57.Text = "for Dice\'s Calc v2.7.1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 508);
+            this.Controls.Add(this.label57);
+            this.Controls.Add(this.label56);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label55);
             this.Controls.Add(this.label54);
@@ -2241,6 +2265,8 @@
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
     }
 }
 
