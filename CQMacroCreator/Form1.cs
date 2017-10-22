@@ -28,10 +28,11 @@ namespace CQMacroCreator
                                                AquortisCount, AerisCount, GeumCount,
                                                RudeanCount, AuralCount, GerorCount,
                                                OureaCount, ErebusCount, PontusCount,
+                                               OymosCount, XarthCount, AtzarCount,
                                                LadyCount, TinyCount, NebraCount,
                                                VeildurCount, BrynCount, GrothCount,
-                                               SpykeCount, AoyukiCount, GaiaCount,
-                                               OymosCount, XarthCount, AtzarCount,
+                                               ZethCount, KothCount, GurthCount,
+                                               SpykeCount, AoyukiCount, GaiaCount,                                               
                                                ValorCount, RokkaCount, PyroCount, BewatCount,
                                                NicteCount, DruidCount, IgnitorCount, UndineCount,
                                                ChromaCount, PetryCount, ZaytusCount
@@ -47,17 +48,17 @@ namespace CQMacroCreator
                                                AquortisBox, AerisBox, GeumBox,
                                                RudeanBox, AuralBox, GerorBox,
                                                OureaBox, ErebusBox, PontusBox,
+                                               OymosBox, XarthBox, AtzarBox,
                                                LadyBox, TinyBox, NebraBox,
                                                VeildurBox, BrynBox, GrothBox,
-                                               SpykeBox, AoyukiBox, GaiaBox,
-                                               OymosBox, XarthBox, AtzarBox,
+                                               ZethBox, KothBox, GurthBox,
+                                               SpykeBox, AoyukiBox, GaiaBox,                                              
                                                ValorBox, RokkaBox, PyroBox, BewatBox,
                                                NicteBox, DruidBox, IgnitorBox, UndineBox,
                                                ChromaBox, PetryBox, ZaytusBox
 
 
-            };
-            //count.Add(HunterCount);
+            };            
         }
 
         private void button1_Click(object sender, EventArgs e)
