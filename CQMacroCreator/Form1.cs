@@ -17,6 +17,11 @@ namespace CQMacroCreator
         List<NumericUpDown> heroCounts;
         List<CheckBox> heroBoxes;
         ToolTip tp = new ToolTip();
+
+        string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x", 
+                                "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
+                              "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
+                              "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan"};
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +41,8 @@ namespace CQMacroCreator
                                                SpykeCount, AoyukiCount, GaiaCount,                                               
                                                ValorCount, RokkaCount, PyroCount, BewatCount,
                                                NicteCount, DruidCount, IgnitorCount, UndineCount,
-                                               ChromaCount, PetryCount, ZaytusCount
+                                               ChromaCount, PetryCount, ZaytusCount,
+                                               WerewolfCount, JackCount, DullahanCount
 
             };
 
@@ -56,50 +62,37 @@ namespace CQMacroCreator
                                                SpykeBox, AoyukiBox, GaiaBox,                                              
                                                ValorBox, RokkaBox, PyroBox, BewatBox,
                                                NicteBox, DruidBox, IgnitorBox, UndineBox,
-                                               ChromaBox, PetryBox, ZaytusBox
+                                               ChromaBox, PetryBox, ZaytusBox,
+                                               WerewolfBox, JackBox, DullahanBox
             };
-            int[] rarity = {6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               1,2,6,
-                               6,6,6,
-                               6,6,6,
-                               6,6,6,
-                               1,1,1,1,
-                               2,2,2,2,
-                               2,2,2
-                           };
+
             
+
+
             tp.SetToolTip(lowerCount, "Lower follower limit. It disables low tier monsters making calculations a little faster. Default is 0(no limit)");
             tp.SetToolTip(upperCount, "Upper follower limit. Disables high tier monsters(those you can't afford) making calculations a little faster. Default is -1(no limit)");
             tp.SetToolTip(lineupBox, "Write enemy lineup here. Uses same format as Dice's calc - units are separated by comma, heroes are Name:Level\nQuests are written like questX-Y where X is quest number and Y is 1 for 6 monsters solutions, 2 for 5 monsters, 3 for 4 monsters");
         }
 
         List<Hero> heroList = new List<Hero>(new Hero[] {
-            new Hero(50,12,6),
-            new Hero(22,14,1), new Hero(40,20,2), new Hero(82,22,6),
-            new Hero(28,12,1), new Hero(38,22,2), new Hero(70,26,6),
-            new Hero(24,16,1), new Hero(36,24,2), new Hero(46,40,6),
-            new Hero(19,22,1), new Hero(50,18,2), new Hero(60,32,6),
-            new Hero(28,16,1), new Hero(46,20,2), new Hero(100,20,6),
-            new Hero(58,8,1), new Hero(30,32,2), new Hero(75,2,6),
-            new Hero(38,12,1), new Hero(18,50,2), new Hero(46,46,6),
-            new Hero(30,16,1), new Hero(48,20,2), new Hero(62,36,6),
-            new Hero(36,14,1), new Hero(32,32,2), new Hero(76,32,6),
-            new Hero(45,20,1), new Hero(70,30,2), new Hero(90,40,6),
-            new Hero(66,44,6), new Hero(72,48,6), new Hero(78,52,6),
-            new Hero(70,42,6), new Hero(76,46,6), new Hero(82,50,6),
-            new Hero(75,45,6), new Hero(70,55,6), new Hero(50,100,6),
-            new Hero(20,10,1), new Hero(30,8,1), new Hero(24,12,1), new Hero(50,6,1),
-            new Hero(22,32,2), new Hero(46,16,2), new Hero(32,24,2), new Hero(58,14,2),
-            new Hero(52,20,2), new Hero(26,44,2), new Hero(58,22,2)
+            new Hero(50,12,6,1,1.2),
+            new Hero(22,14,1,0,0), new Hero(40,20,2,0,0), new Hero(82,22,6,0,10000),            //hunter, shaman, alpha
+            new Hero(28,12,1,0,0), new Hero(38,22,2,0,0), new Hero(70,26,6,0,2000),             //carl, nimue, athos
+            new Hero(24,16,1,0,0), new Hero(36,24,2,0,0), new Hero(46,40,6,0,2500),             //jet, geron, rei
+            new Hero(19,22,1,0,0), new Hero(50,18,2,0,0), new Hero(60,32,6,0,1500),             //ailen, faefyr, auri
+            new Hero(28,16,1,0,0), new Hero(46,20,2,0,1000), new Hero(100,20,6,0,50000),        //kairy, taurus, tronix
+            new Hero(58,8,1,0,0), new Hero(30,32,2,0,0), new Hero(75,2,6,0,0),                  //aquortis, aeris, geum
+            new Hero(38,12,1,0,0), new Hero(18,50,2,0,0), new Hero(46,46,6,1,1.3),              //rudean, aural, geror
+            new Hero(30,16,1,0,0), new Hero(48,20,2,0,0), new Hero(62,36,6,1,1.15),             //ourea, erebus, pontus
+            new Hero(36,14,1,0,0), new Hero(32,32,2,0,0), new Hero(76,32,6,1,1.15),             //oymos, xarth, atzar
+            new Hero(45,20,1,0,0), new Hero(70,30,2,0,0), new Hero(90,40,6,0,10000),            //lady, tiny, nebra
+            new Hero(66,44,6,0,20000), new Hero(72,48,6,0,30000), new Hero(78,52,6,0,40000),    //veildur, bryn, groth
+            new Hero(70,42,6,1,1.05), new Hero(76,46,6,1,1.08), new Hero(82,50,6,1,1.10),       //zeth, koth, gurth
+            new Hero(75,45,6,0,20000), new Hero(70,55,6,0,15000), new Hero(50,100,6,0,0),       //spyke, aoyuki, gaia
+            new Hero(20,10,1,0,0), new Hero(30,8,1,0,0), new Hero(24,12,1,0,0), new Hero(50,6,1,0,0),
+            new Hero(22,32,2,0,0), new Hero(46,16,2,0,0), new Hero(32,24,2,0,0), new Hero(58,14,2,0,0),
+            new Hero(52,20,2,0,0), new Hero(26,44,2,0,0), new Hero(58,22,2,0,0),
+            new Hero(35,25,1,0,0), new Hero(55,35,2,0,0), new Hero(75,45,6,0,0)
 
         });
 
@@ -182,22 +175,28 @@ namespace CQMacroCreator
             Console.Write("\n" + Directory.GetCurrentDirectory());
             System.IO.StreamWriter sw = new System.IO.StreamWriter("gen.cqinput");
             sw.WriteLine("n");
-            List<int> l = new List<int>();
+            List<string> l = new List<string>();
             for (int i = 0; i < heroCounts.Count; i++)
             {
-                if (heroBoxes[i].Checked)
+                //if (heroBoxes[i].Checked)
+                //{
+                //    l.Add((int)heroCounts[i].Value);
+                //}
+                //else
+                //{
+                //    l.Add(0);
+                //}
+                if (heroBoxes[i].Checked && heroCounts[i].Value > 0)
                 {
-                    l.Add((int)heroCounts[i].Value);
+                    l.Add(names[i] + ":" + heroCounts[i].Value);
                 }
-                else
-                {
-                    l.Add(0);
-                }
+
             }
             for (int i = 0; i < l.Count; i++)
             {
                 sw.WriteLine(l[i]);
             }
+            sw.WriteLine("done");
             sw.WriteLine(lowerCount.Value);
             sw.WriteLine(upperCount.Value);
             sw.WriteLine(lineupBox.Text);
@@ -236,7 +235,7 @@ namespace CQMacroCreator
             int index;
             int[] sorted = strength.OrderByDescending(i => i).ToArray();
             int j=0;
-            while((j<8 || (j<12 && sorted[j+1] > sorted[j]*0.75)) && Math.Pow(sorted[j],1.5) > (double)lowerCount.Value)
+            while((j<8 || (j<12 && sorted[j+1] > sorted[j]*0.7)) && sorted[j] > (double)lowerCount.Value)
             {                
                 index = Array.IndexOf(strength, sorted[j]);
                 heroBoxes[index].Checked = true;

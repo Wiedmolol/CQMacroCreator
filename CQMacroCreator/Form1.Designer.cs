@@ -201,6 +201,16 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label61 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.label62 = new System.Windows.Forms.Label();
+            this.WerewolfBox = new System.Windows.Forms.CheckBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.WerewolfCount = new System.Windows.Forms.NumericUpDown();
+            this.JackBox = new System.Windows.Forms.CheckBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.JackCount = new System.Windows.Forms.NumericUpDown();
+            this.DullahanBox = new System.Windows.Forms.CheckBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.DullahanCount = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -254,11 +264,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.GurthCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KothCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZethCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WerewolfCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JackCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DullahanCount)).BeginInit();
             this.SuspendLayout();
             // 
             // JamesCount
             // 
-            this.JamesCount.Location = new System.Drawing.Point(62, 46);
+            this.JamesCount.Location = new System.Drawing.Point(62, 522);
             this.JamesCount.Maximum = new decimal(new int[] {
             99,
             0,
@@ -271,7 +284,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 48);
+            this.label1.Location = new System.Drawing.Point(12, 524);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 1;
@@ -280,7 +293,7 @@
             // JamesBox
             // 
             this.JamesBox.AutoSize = true;
-            this.JamesBox.Location = new System.Drawing.Point(118, 47);
+            this.JamesBox.Location = new System.Drawing.Point(118, 523);
             this.JamesBox.Name = "JamesBox";
             this.JamesBox.Size = new System.Drawing.Size(33, 17);
             this.JamesBox.TabIndex = 2;
@@ -1882,7 +1895,7 @@
             // 
             this.label56.AutoSize = true;
             this.label56.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label56.Location = new System.Drawing.Point(731, 485);
+            this.label56.Location = new System.Drawing.Point(731, 546);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(47, 13);
             this.label56.TabIndex = 158;
@@ -1892,11 +1905,11 @@
             // 
             this.label57.AutoSize = true;
             this.label57.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label57.Location = new System.Drawing.Point(670, 503);
+            this.label57.Location = new System.Drawing.Point(670, 564);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(108, 13);
             this.label57.TabIndex = 159;
-            this.label57.Text = "for Dice\'s Calc v2.7.2";
+            this.label57.Text = "for Dice\'s Calc v2.7.3";
             // 
             // GurthBox
             // 
@@ -2019,11 +2032,122 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label62
+            // 
+            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label62.Location = new System.Drawing.Point(8, 517);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(470, 2);
+            this.label62.TabIndex = 172;
+            // 
+            // WerewolfBox
+            // 
+            this.WerewolfBox.AutoSize = true;
+            this.WerewolfBox.Location = new System.Drawing.Point(118, 549);
+            this.WerewolfBox.Name = "WerewolfBox";
+            this.WerewolfBox.Size = new System.Drawing.Size(33, 17);
+            this.WerewolfBox.TabIndex = 175;
+            this.WerewolfBox.Text = "E";
+            this.WerewolfBox.UseVisualStyleBackColor = true;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(4, 550);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(52, 13);
+            this.label63.TabIndex = 174;
+            this.label63.Text = "Werewolf";
+            // 
+            // WerewolfCount
+            // 
+            this.WerewolfCount.Location = new System.Drawing.Point(62, 548);
+            this.WerewolfCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.WerewolfCount.Name = "WerewolfCount";
+            this.WerewolfCount.Size = new System.Drawing.Size(50, 20);
+            this.WerewolfCount.TabIndex = 173;
+            // 
+            // JackBox
+            // 
+            this.JackBox.AutoSize = true;
+            this.JackBox.Location = new System.Drawing.Point(278, 547);
+            this.JackBox.Name = "JackBox";
+            this.JackBox.Size = new System.Drawing.Size(33, 17);
+            this.JackBox.TabIndex = 178;
+            this.JackBox.Text = "E";
+            this.JackBox.UseVisualStyleBackColor = true;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(146, 550);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(71, 13);
+            this.label64.TabIndex = 177;
+            this.label64.Text = "Jack\'o Knight";
+            // 
+            // JackCount
+            // 
+            this.JackCount.Location = new System.Drawing.Point(222, 546);
+            this.JackCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.JackCount.Name = "JackCount";
+            this.JackCount.Size = new System.Drawing.Size(50, 20);
+            this.JackCount.TabIndex = 176;
+            // 
+            // DullahanBox
+            // 
+            this.DullahanBox.AutoSize = true;
+            this.DullahanBox.Location = new System.Drawing.Point(445, 547);
+            this.DullahanBox.Name = "DullahanBox";
+            this.DullahanBox.Size = new System.Drawing.Size(33, 17);
+            this.DullahanBox.TabIndex = 181;
+            this.DullahanBox.Text = "E";
+            this.DullahanBox.UseVisualStyleBackColor = true;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(339, 548);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(49, 13);
+            this.label65.TabIndex = 180;
+            this.label65.Text = "Dullahan";
+            // 
+            // DullahanCount
+            // 
+            this.DullahanCount.Location = new System.Drawing.Point(389, 546);
+            this.DullahanCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.DullahanCount.Name = "DullahanCount";
+            this.DullahanCount.Size = new System.Drawing.Size(50, 20);
+            this.DullahanCount.TabIndex = 179;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 520);
+            this.ClientSize = new System.Drawing.Size(790, 586);
+            this.Controls.Add(this.DullahanBox);
+            this.Controls.Add(this.label65);
+            this.Controls.Add(this.DullahanCount);
+            this.Controls.Add(this.JackBox);
+            this.Controls.Add(this.label64);
+            this.Controls.Add(this.JackCount);
+            this.Controls.Add(this.WerewolfBox);
+            this.Controls.Add(this.label63);
+            this.Controls.Add(this.WerewolfCount);
+            this.Controls.Add(this.label62);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label61);
             this.Controls.Add(this.button4);
@@ -2251,6 +2375,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.GurthCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KothCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZethCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WerewolfCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JackCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DullahanCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2430,6 +2557,16 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.CheckBox WerewolfBox;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.NumericUpDown WerewolfCount;
+        private System.Windows.Forms.CheckBox JackBox;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.NumericUpDown JackCount;
+        private System.Windows.Forms.CheckBox DullahanBox;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.NumericUpDown DullahanCount;
     }
 }
 
