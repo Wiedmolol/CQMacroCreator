@@ -211,6 +211,24 @@
             this.DullahanBox = new System.Windows.Forms.CheckBox();
             this.label65 = new System.Windows.Forms.Label();
             this.DullahanCount = new System.Windows.Forms.NumericUpDown();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.OdelithBox = new System.Windows.Forms.CheckBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.OdelithCount = new System.Windows.Forms.NumericUpDown();
+            this.KirkBox = new System.Windows.Forms.CheckBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.KirkCount = new System.Windows.Forms.NumericUpDown();
+            this.ThertBox = new System.Windows.Forms.CheckBox();
+            this.Thert = new System.Windows.Forms.Label();
+            this.ThertCount = new System.Windows.Forms.NumericUpDown();
+            this.ShyguBox = new System.Windows.Forms.CheckBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.ShyguCount = new System.Windows.Forms.NumericUpDown();
+            this.NeptuniusBox = new System.Windows.Forms.CheckBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.NeptuniusCount = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -267,11 +285,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.WerewolfCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JackCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DullahanCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OdelithCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KirkCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThertCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShyguCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NeptuniusCount)).BeginInit();
             this.SuspendLayout();
             // 
             // JamesCount
             // 
-            this.JamesCount.Location = new System.Drawing.Point(62, 522);
+            this.JamesCount.Location = new System.Drawing.Point(62, 582);
             this.JamesCount.Maximum = new decimal(new int[] {
             99,
             0,
@@ -284,7 +307,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 524);
+            this.label1.Location = new System.Drawing.Point(12, 584);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 1;
@@ -293,7 +316,7 @@
             // JamesBox
             // 
             this.JamesBox.AutoSize = true;
-            this.JamesBox.Location = new System.Drawing.Point(118, 523);
+            this.JamesBox.Location = new System.Drawing.Point(118, 583);
             this.JamesBox.Name = "JamesBox";
             this.JamesBox.Size = new System.Drawing.Size(33, 17);
             this.JamesBox.TabIndex = 2;
@@ -1861,7 +1884,7 @@
             // 
             this.lineupBox.Location = new System.Drawing.Point(594, 125);
             this.lineupBox.Name = "lineupBox";
-            this.lineupBox.Size = new System.Drawing.Size(184, 20);
+            this.lineupBox.Size = new System.Drawing.Size(145, 20);
             this.lineupBox.TabIndex = 154;
             // 
             // label54
@@ -1878,7 +1901,7 @@
             this.label55.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label55.Location = new System.Drawing.Point(497, 70);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(2, 400);
+            this.label55.Size = new System.Drawing.Size(2, 500);
             this.label55.TabIndex = 156;
             // 
             // button3
@@ -1895,7 +1918,7 @@
             // 
             this.label56.AutoSize = true;
             this.label56.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label56.Location = new System.Drawing.Point(731, 546);
+            this.label56.Location = new System.Drawing.Point(731, 597);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(47, 13);
             this.label56.TabIndex = 158;
@@ -1905,11 +1928,11 @@
             // 
             this.label57.AutoSize = true;
             this.label57.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label57.Location = new System.Drawing.Point(670, 564);
+            this.label57.Location = new System.Drawing.Point(670, 615);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(108, 13);
             this.label57.TabIndex = 159;
-            this.label57.Text = "for Dice\'s Calc v2.7.3";
+            this.label57.Text = "for Dice\'s Calc v2.7.6";
             // 
             // GurthBox
             // 
@@ -2016,7 +2039,7 @@
             // 
             // label61
             // 
-            this.label61.Location = new System.Drawing.Point(512, 258);
+            this.label61.Location = new System.Drawing.Point(512, 256);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(218, 200);
             this.label61.TabIndex = 170;
@@ -2035,7 +2058,7 @@
             // label62
             // 
             this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label62.Location = new System.Drawing.Point(8, 517);
+            this.label62.Location = new System.Drawing.Point(8, 577);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(470, 2);
             this.label62.TabIndex = 172;
@@ -2043,7 +2066,7 @@
             // WerewolfBox
             // 
             this.WerewolfBox.AutoSize = true;
-            this.WerewolfBox.Location = new System.Drawing.Point(118, 549);
+            this.WerewolfBox.Location = new System.Drawing.Point(118, 609);
             this.WerewolfBox.Name = "WerewolfBox";
             this.WerewolfBox.Size = new System.Drawing.Size(33, 17);
             this.WerewolfBox.TabIndex = 175;
@@ -2053,7 +2076,7 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(4, 550);
+            this.label63.Location = new System.Drawing.Point(4, 610);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(52, 13);
             this.label63.TabIndex = 174;
@@ -2061,7 +2084,7 @@
             // 
             // WerewolfCount
             // 
-            this.WerewolfCount.Location = new System.Drawing.Point(62, 548);
+            this.WerewolfCount.Location = new System.Drawing.Point(62, 608);
             this.WerewolfCount.Maximum = new decimal(new int[] {
             99,
             0,
@@ -2074,7 +2097,7 @@
             // JackBox
             // 
             this.JackBox.AutoSize = true;
-            this.JackBox.Location = new System.Drawing.Point(278, 547);
+            this.JackBox.Location = new System.Drawing.Point(278, 607);
             this.JackBox.Name = "JackBox";
             this.JackBox.Size = new System.Drawing.Size(33, 17);
             this.JackBox.TabIndex = 178;
@@ -2084,7 +2107,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(146, 550);
+            this.label64.Location = new System.Drawing.Point(146, 610);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(71, 13);
             this.label64.TabIndex = 177;
@@ -2092,7 +2115,7 @@
             // 
             // JackCount
             // 
-            this.JackCount.Location = new System.Drawing.Point(222, 546);
+            this.JackCount.Location = new System.Drawing.Point(222, 606);
             this.JackCount.Maximum = new decimal(new int[] {
             99,
             0,
@@ -2105,7 +2128,7 @@
             // DullahanBox
             // 
             this.DullahanBox.AutoSize = true;
-            this.DullahanBox.Location = new System.Drawing.Point(445, 547);
+            this.DullahanBox.Location = new System.Drawing.Point(445, 607);
             this.DullahanBox.Name = "DullahanBox";
             this.DullahanBox.Size = new System.Drawing.Size(33, 17);
             this.DullahanBox.TabIndex = 181;
@@ -2115,7 +2138,7 @@
             // label65
             // 
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(339, 548);
+            this.label65.Location = new System.Drawing.Point(339, 608);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(49, 13);
             this.label65.TabIndex = 180;
@@ -2123,7 +2146,7 @@
             // 
             // DullahanCount
             // 
-            this.DullahanCount.Location = new System.Drawing.Point(389, 546);
+            this.DullahanCount.Location = new System.Drawing.Point(389, 606);
             this.DullahanCount.Maximum = new decimal(new int[] {
             99,
             0,
@@ -2133,11 +2156,214 @@
             this.DullahanCount.Size = new System.Drawing.Size(50, 20);
             this.DullahanCount.TabIndex = 179;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(669, 69);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(16, 20);
+            this.button6.TabIndex = 182;
+            this.button6.Text = "?";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(669, 94);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(16, 20);
+            this.button7.TabIndex = 183;
+            this.button7.Text = "?";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(745, 125);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(16, 20);
+            this.button8.TabIndex = 184;
+            this.button8.Text = "?";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // OdelithBox
+            // 
+            this.OdelithBox.AutoSize = true;
+            this.OdelithBox.Location = new System.Drawing.Point(445, 497);
+            this.OdelithBox.Name = "OdelithBox";
+            this.OdelithBox.Size = new System.Drawing.Size(33, 17);
+            this.OdelithBox.TabIndex = 187;
+            this.OdelithBox.Text = "E";
+            this.OdelithBox.UseVisualStyleBackColor = true;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(337, 497);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(40, 13);
+            this.label66.TabIndex = 186;
+            this.label66.Text = "Odelith";
+            // 
+            // OdelithCount
+            // 
+            this.OdelithCount.Location = new System.Drawing.Point(389, 496);
+            this.OdelithCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.OdelithCount.Name = "OdelithCount";
+            this.OdelithCount.Size = new System.Drawing.Size(50, 20);
+            this.OdelithCount.TabIndex = 185;
+            // 
+            // KirkBox
+            // 
+            this.KirkBox.AutoSize = true;
+            this.KirkBox.Location = new System.Drawing.Point(445, 523);
+            this.KirkBox.Name = "KirkBox";
+            this.KirkBox.Size = new System.Drawing.Size(33, 17);
+            this.KirkBox.TabIndex = 196;
+            this.KirkBox.Text = "E";
+            this.KirkBox.UseVisualStyleBackColor = true;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(337, 523);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(49, 13);
+            this.label67.TabIndex = 195;
+            this.label67.Text = "Lord Kirk";
+            // 
+            // KirkCount
+            // 
+            this.KirkCount.Location = new System.Drawing.Point(389, 522);
+            this.KirkCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.KirkCount.Name = "KirkCount";
+            this.KirkCount.Size = new System.Drawing.Size(50, 20);
+            this.KirkCount.TabIndex = 194;
+            // 
+            // ThertBox
+            // 
+            this.ThertBox.AutoSize = true;
+            this.ThertBox.Location = new System.Drawing.Point(278, 521);
+            this.ThertBox.Name = "ThertBox";
+            this.ThertBox.Size = new System.Drawing.Size(33, 17);
+            this.ThertBox.TabIndex = 193;
+            this.ThertBox.Text = "E";
+            this.ThertBox.UseVisualStyleBackColor = true;
+            // 
+            // Thert
+            // 
+            this.Thert.AutoSize = true;
+            this.Thert.Location = new System.Drawing.Point(170, 521);
+            this.Thert.Name = "Thert";
+            this.Thert.Size = new System.Drawing.Size(32, 13);
+            this.Thert.TabIndex = 192;
+            this.Thert.Text = "Thert";
+            // 
+            // ThertCount
+            // 
+            this.ThertCount.Location = new System.Drawing.Point(222, 520);
+            this.ThertCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.ThertCount.Name = "ThertCount";
+            this.ThertCount.Size = new System.Drawing.Size(50, 20);
+            this.ThertCount.TabIndex = 191;
+            // 
+            // ShyguBox
+            // 
+            this.ShyguBox.AutoSize = true;
+            this.ShyguBox.Location = new System.Drawing.Point(118, 521);
+            this.ShyguBox.Name = "ShyguBox";
+            this.ShyguBox.Size = new System.Drawing.Size(33, 17);
+            this.ShyguBox.TabIndex = 190;
+            this.ShyguBox.Text = "E";
+            this.ShyguBox.UseVisualStyleBackColor = true;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(12, 522);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(37, 13);
+            this.label69.TabIndex = 189;
+            this.label69.Text = "Shygu";
+            // 
+            // ShyguCount
+            // 
+            this.ShyguCount.Location = new System.Drawing.Point(62, 520);
+            this.ShyguCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.ShyguCount.Name = "ShyguCount";
+            this.ShyguCount.Size = new System.Drawing.Size(50, 20);
+            this.ShyguCount.TabIndex = 188;
+            // 
+            // NeptuniusBox
+            // 
+            this.NeptuniusBox.AutoSize = true;
+            this.NeptuniusBox.Location = new System.Drawing.Point(278, 547);
+            this.NeptuniusBox.Name = "NeptuniusBox";
+            this.NeptuniusBox.Size = new System.Drawing.Size(33, 17);
+            this.NeptuniusBox.TabIndex = 199;
+            this.NeptuniusBox.Text = "E";
+            this.NeptuniusBox.UseVisualStyleBackColor = true;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(161, 548);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(55, 13);
+            this.label68.TabIndex = 198;
+            this.label68.Text = "Neptunius";
+            // 
+            // NeptuniusCount
+            // 
+            this.NeptuniusCount.Location = new System.Drawing.Point(222, 546);
+            this.NeptuniusCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.NeptuniusCount.Name = "NeptuniusCount";
+            this.NeptuniusCount.Size = new System.Drawing.Size(50, 20);
+            this.NeptuniusCount.TabIndex = 197;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 586);
+            this.ClientSize = new System.Drawing.Size(790, 637);
+            this.Controls.Add(this.NeptuniusBox);
+            this.Controls.Add(this.label68);
+            this.Controls.Add(this.NeptuniusCount);
+            this.Controls.Add(this.KirkBox);
+            this.Controls.Add(this.label67);
+            this.Controls.Add(this.KirkCount);
+            this.Controls.Add(this.ThertBox);
+            this.Controls.Add(this.Thert);
+            this.Controls.Add(this.ThertCount);
+            this.Controls.Add(this.ShyguBox);
+            this.Controls.Add(this.label69);
+            this.Controls.Add(this.ShyguCount);
+            this.Controls.Add(this.OdelithBox);
+            this.Controls.Add(this.label66);
+            this.Controls.Add(this.OdelithCount);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.DullahanBox);
             this.Controls.Add(this.label65);
             this.Controls.Add(this.DullahanCount);
@@ -2378,6 +2604,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.WerewolfCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JackCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DullahanCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OdelithCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KirkCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThertCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShyguCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NeptuniusCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2567,6 +2798,24 @@
         private System.Windows.Forms.CheckBox DullahanBox;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.NumericUpDown DullahanCount;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.CheckBox OdelithBox;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.NumericUpDown OdelithCount;
+        private System.Windows.Forms.CheckBox KirkBox;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.NumericUpDown KirkCount;
+        private System.Windows.Forms.CheckBox ThertBox;
+        private System.Windows.Forms.Label Thert;
+        private System.Windows.Forms.NumericUpDown ThertCount;
+        private System.Windows.Forms.CheckBox ShyguBox;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.NumericUpDown ShyguCount;
+        private System.Windows.Forms.CheckBox NeptuniusBox;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.NumericUpDown NeptuniusCount;
     }
 }
 

@@ -21,7 +21,7 @@ namespace CQMacroCreator
         string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x", 
                                 "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
-                              "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan"};
+                              "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius"};
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +42,8 @@ namespace CQMacroCreator
                                                ValorCount, RokkaCount, PyroCount, BewatCount,
                                                NicteCount, DruidCount, IgnitorCount, UndineCount,
                                                ChromaCount, PetryCount, ZaytusCount,
-                                               WerewolfCount, JackCount, DullahanCount
+                                               WerewolfCount, JackCount, DullahanCount,
+                                               OdelithCount, ShyguCount, ThertCount, KirkCount, NeptuniusCount
 
             };
 
@@ -63,15 +64,9 @@ namespace CQMacroCreator
                                                ValorBox, RokkaBox, PyroBox, BewatBox,
                                                NicteBox, DruidBox, IgnitorBox, UndineBox,
                                                ChromaBox, PetryBox, ZaytusBox,
-                                               WerewolfBox, JackBox, DullahanBox
-            };
-
-            
-
-
-            tp.SetToolTip(lowerCount, "Lower follower limit. It disables low tier monsters making calculations a little faster. Default is 0(no limit)");
-            tp.SetToolTip(upperCount, "Upper follower limit. Disables high tier monsters(those you can't afford) making calculations a little faster. Default is -1(no limit)");
-            tp.SetToolTip(lineupBox, "Write enemy lineup here. Uses same format as Dice's calc - units are separated by comma, heroes are Name:Level\nQuests are written like questX-Y where X is quest number and Y is 1 for 6 monsters solutions, 2 for 5 monsters, 3 for 4 monsters");
+                                               WerewolfBox, JackBox, DullahanBox,
+                                               OdelithBox, ShyguBox, ThertBox, KirkBox, NeptuniusBox
+            };                  
         }
 
         List<Hero> heroList = new List<Hero>(new Hero[] {
@@ -92,7 +87,8 @@ namespace CQMacroCreator
             new Hero(20,10,1,0,0), new Hero(30,8,1,0,0), new Hero(24,12,1,0,0), new Hero(50,6,1,0,0),
             new Hero(22,32,2,0,0), new Hero(46,16,2,0,0), new Hero(32,24,2,0,0), new Hero(58,14,2,0,0),
             new Hero(52,20,2,0,0), new Hero(26,44,2,0,0), new Hero(58,22,2,0,0),
-            new Hero(35,25,1,0,0), new Hero(55,35,2,0,0), new Hero(75,45,6,0,0)
+            new Hero(35,25,1,0,0), new Hero(55,35,2,0,0), new Hero(75,45,6,0,0),
+            new Hero(36,36,2,0,0), new Hero(34,54,6,0,0), new Hero(72,28,6,0,0), new Hero(32,64,6,0,0), new Hero(30,70,6,0,0) 
 
         });
 
@@ -115,7 +111,6 @@ namespace CQMacroCreator
             try
             {
                 int[] levels = s.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
-
                 for (int i = 0; i < levels.Length; i++)
                 {
                     heroCounts[i].Value = levels[i];
@@ -158,34 +153,45 @@ namespace CQMacroCreator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            int heroChecked = 0;
+            DialogResult dr = DialogResult.Yes;
+            foreach (CheckBox cb in heroBoxes)
             {
-                createMacroFile();
-                Process.Start("CosmosQuest.exe", "gen.cqinput");
+                if (cb.Checked)
+                {
+                    heroChecked++;
+                }
             }
-            catch (Win32Exception ex)
+            if (heroChecked == 0)
             {
-                MessageBox.Show("Something went wrong. Make sure Macro Creator is in the same folder as calc.\nError Message: " + ex.Message,
-                    "Error " + ex.ErrorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dr = MessageBox.Show("You haven't enabled any heroes. Are you sure you want to run the calculator without using any heroes?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            }
+            else if (heroChecked > 20)
+            {
+                dr = MessageBox.Show("You are using more than 20 heroes, that might considerably slow down the calculations. Are you sure you want to run the calc with so many heroes enabled?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            }
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
+                    createMacroFile();
+                    Process.Start("CosmosQuest.exe", "gen.cqinput");
+                }
+                catch (Win32Exception ex)
+                {
+                    MessageBox.Show("Something went wrong. Make sure Macro Creator is in the same folder as calc.\nError Message: " + ex.Message,
+                        "Error " + ex.ErrorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
+        
         private void createMacroFile()
         {
             Console.Write("\n" + Directory.GetCurrentDirectory());
             System.IO.StreamWriter sw = new System.IO.StreamWriter("gen.cqinput");
-            sw.WriteLine("n");
             List<string> l = new List<string>();
             for (int i = 0; i < heroCounts.Count; i++)
-            {
-                //if (heroBoxes[i].Checked)
-                //{
-                //    l.Add((int)heroCounts[i].Value);
-                //}
-                //else
-                //{
-                //    l.Add(0);
-                //}
+            {                
                 if (heroBoxes[i].Checked && heroCounts[i].Value > 0)
                 {
                     l.Add(names[i] + ":" + heroCounts[i].Value);
@@ -246,6 +252,24 @@ namespace CQMacroCreator
         private void button5_Click(object sender, EventArgs e)
         {
             chooseHeroes();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //tp.Show("Lower follower limit. It disables low tier monsters making calculations a little faster. Default is 0(no limit)", button6);
+            MessageBox.Show("Lower follower limit. It disables low tier monsters making calculations a little faster.\nDefault is 0(no limit)", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //tp.Show("Upper follower limit. Disables high tier monsters(those you can't afford) making calculations a little faster. Default is -1(no limit)", button7, 30000);
+            MessageBox.Show("Upper follower limit. Disables high tier monsters(those you can't afford) making calculations a little faster.\nDefault is -1(no limit)", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Write enemy lineup here.\nUses same format as Dice's calc - units are separated by comma, heroes are Name:Level\nQuests are written like questX-Y where X is quest number and Y is 1 for 6 monsters solution, 2 for 5 monsters, 3 for 4 monsters\n\nExample lineups:\na10,f10,w10,e10,e10,nebra:40\nquest33-2", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
     }
