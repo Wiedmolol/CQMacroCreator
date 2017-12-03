@@ -22,7 +22,7 @@ namespace CQMacroCreator
                                 "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
-                                "sigrun", "koldis", "alvitr"};
+                                "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr"};
         public Form1()
         {
             InitializeComponent();
@@ -45,7 +45,8 @@ namespace CQMacroCreator
                                                ChromaCount, PetryCount, ZaytusCount,
                                                WerewolfCount, JackCount, DullahanCount,
                                                OdelithCount, ShyguCount, ThertCount, KirkCount, NeptuniusCount,
-                                               SigrunCount, KoldisCount, AlvitrCount
+                                               SigrunCount, KoldisCount, AlvitrCount,
+                                               HamaCount, HallinskidiCount, RigrCount
 
             };
 
@@ -68,7 +69,8 @@ namespace CQMacroCreator
                                                ChromaBox, PetryBox, ZaytusBox,
                                                WerewolfBox, JackBox, DullahanBox,
                                                OdelithBox, ShyguBox, ThertBox, KirkBox, NeptuniusBox,
-                                               SigrunBox, KoldisBox, AlvitrBox
+                                               SigrunBox, KoldisBox, AlvitrBox,
+                                               HamaBox, HallinskidiBox, RigrBox
             };                  
         }
 
@@ -92,7 +94,8 @@ namespace CQMacroCreator
             new Hero(52,20,2,0,0), new Hero(26,44,2,0,0), new Hero(58,22,2,0,0),
             new Hero(35,25,1,0,0), new Hero(55,35,2,0,0), new Hero(75,45,6,0,0),
             new Hero(36,36,2,0,0), new Hero(34,54,6,0,0), new Hero(72,28,6,0,0), new Hero(32,64,6,0,0), new Hero(30,70,6,0,0),
-            new Hero(65,12,6,0,0), new Hero(70,14,6,0,0), new Hero(75,16,6,0,0)                 // Sigrun, Koldis, Alvitr
+            new Hero(65,12,6,0,0), new Hero(70,14,6,0,0), new Hero(75,16,6,0,0),               // Sigrun, Koldis, Alvitr
+            new Hero(30,18,1,0,0), new Hero(34,34,2,0,0), new Hero(60,42,6,0,0)
 
         });
 
@@ -200,7 +203,6 @@ namespace CQMacroCreator
                 {
                     l.Add(names[i] + ":" + heroCounts[i].Value);
                 }
-
             }
             for (int i = 0; i < l.Count; i++)
             {
