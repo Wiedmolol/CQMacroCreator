@@ -2,7 +2,7 @@
 
 CQMacroCreator is a "GUI' for Dicecycle's Cosmos Quest PvE Instance Solver https://github.com/Diceycle/C-Hero-Calc
 
-Just place CQMacroCreator.exe in the same folder as CosmosQuest.exe and run it. I suggest saving your hero file with different name than default "heroLevels2.7.2" as it is automatically updated every time you run a calc.
+Just place CQMacroCreator.exe in the same folder as CosmosQuest.exe and run it.
 
 # What's new
 v.2.8.2 - Playfab integration, settings file, aliases
