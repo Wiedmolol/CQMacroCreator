@@ -1,3 +1,5 @@
+**GUI NOW REQUIRES Newtonssoft.Json.dll and Newtonsoft.Json.xml FILES TO RUN**
+
 # CQMacroCreator
 
 CQMacroCreator is a "GUI' for Dicecycle's Cosmos Quest PvE Instance Solver https://github.com/Diceycle/C-Hero-Calc
@@ -7,7 +9,7 @@ Just place CQMacroCreator.exe in the same folder as CosmosQuest.exe and run it.
 # What's new
 v.2.8.2 - Playfab integration, settings file, aliases
 
-**PLayfab** - GUI can now automatically download your heroes' levels and enemy DQ lineup from server so there is no need to write it down. To access those features you need Newtonssoft.Json.dll and Newtonsoft.Json.xml files in the same folder. GUI should work fine without them if you don't plan to use playfab features. It also requires finding your Authentication Ticket and Kongregate ID and writing it down in settings file. You can see instruction how to get them below.
+**PLayfab** - GUI can now automatically download your heroes' levels and enemy DQ lineup from server so there is no need to write it down. It requires finding your Authentication Ticket and Kongregate ID and writing it down in settings file. You can see instruction how to get them below.
 
 **Settings file** - you can now create settings file so the GUI will automatically load heroes from file or server at start-up. First line tells the program what to do: 0 - no action(GUI will load as it used to), 1 - load heroes from "defaultHeroes" file if it exists, 2 - loads heroes from server, 3 - load heroes and your current DQ enemy lineup from server. 2nd line is you Authentication Ticket, 3rd line is KongregateID. 
 
