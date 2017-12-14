@@ -63,4 +63,13 @@ On the right side you should see "Request Payload" section if you are using Chro
 ## WARNING
 **NEVER share your Authentication Ticket with anyone. If someone has access to it he will be able to do a lot of nasty stuff with your game like enter tournaments with bad lineups, spend your UM or clear your PvP grid.**
 
+### List of all files required for calc to work
+* CosmosQuest.exe - Dice's calc
+* CQMacroCreator.exe
+* Newtonsoft.Json.dll
+* Newtonsoft.Json.xml
+* MacroSettings.txt(optional - required for playfab features)
+* defaultHeroes(optional - the standard hero file loaded automatically if default action on open is set to 1 in MacroSettings.txt file)
+
+
 ![screenshot](https://image.prntscr.com/image/4rFNp8zFRgqxIt8pCQvEzQ.png)
