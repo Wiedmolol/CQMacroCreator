@@ -247,6 +247,10 @@
             this.HamaBox = new System.Windows.Forms.CheckBox();
             this.label75 = new System.Windows.Forms.Label();
             this.HamaCount = new System.Windows.Forms.NumericUpDown();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.autoSend = new System.Windows.Forms.CheckBox();
+            this.guiLog = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -1854,20 +1858,21 @@
             // 
             // lowerCount
             // 
-            this.lowerCount.Location = new System.Drawing.Point(594, 69);
+            this.lowerCount.Location = new System.Drawing.Point(581, 69);
             this.lowerCount.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
             this.lowerCount.Name = "lowerCount";
-            this.lowerCount.Size = new System.Drawing.Size(69, 20);
+            this.lowerCount.Size = new System.Drawing.Size(114, 20);
             this.lowerCount.TabIndex = 149;
+            this.lowerCount.ThousandsSeparator = true;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(512, 71);
+            this.label52.Location = new System.Drawing.Point(504, 71);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(69, 13);
             this.label52.TabIndex = 150;
@@ -1876,7 +1881,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(512, 97);
+            this.label53.Location = new System.Drawing.Point(504, 97);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(76, 13);
             this.label53.TabIndex = 152;
@@ -1884,7 +1889,7 @@
             // 
             // upperCount
             // 
-            this.upperCount.Location = new System.Drawing.Point(594, 95);
+            this.upperCount.Location = new System.Drawing.Point(581, 95);
             this.upperCount.Maximum = new decimal(new int[] {
             99999999,
             0,
@@ -1896,8 +1901,9 @@
             0,
             -2147483648});
             this.upperCount.Name = "upperCount";
-            this.upperCount.Size = new System.Drawing.Size(69, 20);
+            this.upperCount.Size = new System.Drawing.Size(114, 20);
             this.upperCount.TabIndex = 151;
+            this.upperCount.ThousandsSeparator = true;
             this.upperCount.Value = new decimal(new int[] {
             1,
             0,
@@ -1906,15 +1912,15 @@
             // 
             // lineupBox
             // 
-            this.lineupBox.Location = new System.Drawing.Point(594, 125);
+            this.lineupBox.Location = new System.Drawing.Point(581, 125);
             this.lineupBox.Name = "lineupBox";
-            this.lineupBox.Size = new System.Drawing.Size(145, 20);
+            this.lineupBox.Size = new System.Drawing.Size(180, 20);
             this.lineupBox.TabIndex = 154;
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(512, 125);
+            this.label54.Location = new System.Drawing.Point(504, 125);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(39, 13);
             this.label54.TabIndex = 155;
@@ -1930,7 +1936,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(566, 178);
+            this.button3.Location = new System.Drawing.Point(572, 178);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 63);
             this.button3.TabIndex = 157;
@@ -1956,7 +1962,7 @@
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(108, 13);
             this.label57.TabIndex = 159;
-            this.label57.Text = "for Dice\'s Calc v2.8.1";
+            this.label57.Text = "for Dice\'s Calc v2.8.2";
             // 
             // GurthBox
             // 
@@ -2063,9 +2069,9 @@
             // 
             // label61
             // 
-            this.label61.Location = new System.Drawing.Point(512, 256);
+            this.label61.Location = new System.Drawing.Point(505, 280);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(218, 200);
+            this.label61.Size = new System.Drawing.Size(218, 118);
             this.label61.TabIndex = 170;
             this.label61.Text = resources.GetString("label61.Text");
             // 
@@ -2182,7 +2188,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(669, 69);
+            this.button6.Location = new System.Drawing.Point(701, 70);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(16, 20);
             this.button6.TabIndex = 182;
@@ -2192,7 +2198,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(669, 94);
+            this.button7.Location = new System.Drawing.Point(701, 95);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(16, 20);
             this.button7.TabIndex = 183;
@@ -2202,7 +2208,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(745, 125);
+            this.button8.Location = new System.Drawing.Point(767, 125);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(16, 20);
             this.button8.TabIndex = 184;
@@ -2551,11 +2557,53 @@
             this.HamaCount.Size = new System.Drawing.Size(50, 20);
             this.HamaCount.TabIndex = 209;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(469, 12);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(74, 40);
+            this.button9.TabIndex = 218;
+            this.button9.Text = "Get Heroes from server";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(549, 13);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(74, 40);
+            this.button10.TabIndex = 219;
+            this.button10.Text = "Get DQ from server";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // autoSend
+            // 
+            this.autoSend.AutoSize = true;
+            this.autoSend.Location = new System.Drawing.Point(549, 247);
+            this.autoSend.Name = "autoSend";
+            this.autoSend.Size = new System.Drawing.Size(204, 30);
+            this.autoSend.TabIndex = 221;
+            this.autoSend.Text = "Don\'t show console and automatically\r\nsend solution to server\r\n";
+            this.autoSend.UseVisualStyleBackColor = true;
+            // 
+            // guiLog
+            // 
+            this.guiLog.Location = new System.Drawing.Point(508, 438);
+            this.guiLog.Name = "guiLog";
+            this.guiLog.Size = new System.Drawing.Size(259, 202);
+            this.guiLog.TabIndex = 222;
+            this.guiLog.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 691);
+            this.Controls.Add(this.guiLog);
+            this.Controls.Add(this.autoSend);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.RigrBox);
             this.Controls.Add(this.label73);
             this.Controls.Add(this.RigrCount);
@@ -3068,6 +3116,10 @@
         private System.Windows.Forms.CheckBox HamaBox;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.NumericUpDown HamaCount;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.CheckBox autoSend;
+        public System.Windows.Forms.RichTextBox guiLog;
     }
 }
 

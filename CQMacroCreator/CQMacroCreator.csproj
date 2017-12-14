@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +48,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -51,6 +58,28 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Hero.cs" />
+    <Compile Include="PFStuff.cs" />
+    <Compile Include="PlayFab\Json\ISerializer.cs" />
+    <Compile Include="PlayFab\Json\NewtonsoftWrapper.cs" />
+    <Compile Include="PlayFab\Json\SimpleJson.cs" />
+    <Compile Include="PlayFab\PlayFabClientAPI.cs" />
+    <Compile Include="PlayFab\PlayFabClientModels.cs" />
+    <Compile Include="PlayFab\PlayFabErrors.cs" />
+    <Compile Include="PlayFab\PlayFabFileUtil.cs" />
+    <Compile Include="PlayFab\PlayFabHttp\IPlayFabHttp.cs" />
+    <Compile Include="PlayFab\PlayFabHttp\PlayFabHttp.cs" />
+    <Compile Include="PlayFab\PlayFabHttp\PlayFabSysHttp.cs" />
+    <Compile Include="PlayFab\PlayFabHttp\PlayFabWinHttp.cs" />
+    <Compile Include="PlayFab\PlayFabSettings.cs" />
+    <Compile Include="PlayFab\PlayFabUtil.cs" />
+    <Compile Include="PlayFab\Uunit\PlayFabApiTest.cs" />
+    <Compile Include="PlayFab\Uunit\UUnitAssertException.cs" />
+    <Compile Include="PlayFab\Uunit\UUnitIncrementalTestRunner.cs" />
+    <Compile Include="PlayFab\Uunit\UUnitTestCase.cs" />
+    <Compile Include="PlayFab\Uunit\UUnitTestContext.cs" />
+    <Compile Include="PlayFab\Uunit\UUnitTestReport.cs" />
+    <Compile Include="PlayFab\Uunit\UUnitTestSuite.cs" />
+    <Compile Include="PlayFab\WsaReflectionExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +94,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
