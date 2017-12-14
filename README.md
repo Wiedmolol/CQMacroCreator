@@ -63,4 +63,4 @@ On the right side you should see "Request Payload" section if you are using Chro
 ## WARNING
 **NEVER share your Authentication Ticket with anyone. If someone has access to it he will be able to do a lot of nasty stuff with your game like enter tournaments with bad lineups, spend your UM or clear your PvP grid.**
 
-![screenshot](https://image.prntscr.com/image/wAfxQhDIQiK-I5SjB4tXdQ.png)
+![screenshot](https://image.prntscr.com/image/4rFNp8zFRgqxIt8pCQvEzQ.png)
