@@ -58,7 +58,7 @@ Open the game and open the console(Ctrl+Shift+J or F12), choose "Network" tab.
 ![screenshot](https://image.prntscr.com/image/jbnEU_vqS22_fNBQDpf-zQ.png)
 Without closing the Network tab refresh the game website. A lot of entries should appear. You need to find one called "LoginWithKongregate"(you can use search/filter option placed above all entries) and click on it.
 ![screenshot](https://image.prntscr.com/image/rq85HuDfR2qxRgmAHYx_hw.png)
-On the right side you should see "Request Payload" section. Authentication Ticket and your KongregateID will be written just there. Just copy them and paste into "MacroSettings" file(auth ticket should be in 2nd line, kong ID in line 3, don't use quotes). I included example MacroSettings file in the repository so you can see how it should look like.
+On the right side you should see "Request Payload" section if you are using Chrome or Maxthon, on Firefox you should see "Params" tab. Authentication Ticket and your KongregateID will be written just there. Just copy them and paste into "MacroSettings" file(auth ticket should be in 2nd line, kong ID in line 3, don't use quotes). I included example MacroSettings file in the repository so you can see how it should look like.
 ![screenshot](https://image.prntscr.com/image/q9yVmqa4Rg6dnwQmfIHDIg.png)
 ## WARNING
 **NEVER share your Authentication Ticket with anyone. If someone has access to it he will be able to do a lot of nasty stuff with your game like enter tournaments with bad lineups, spend your UM or clear your PvP grid.**
