@@ -203,7 +203,7 @@ namespace CQMacroCreator
                     }
                     else
                     {
-                        MessageBox.Show("No default file found. Make sure it's name is \"defaultHeroes\"");
+                        MessageBox.Show("No default file found. Make sure its name is \"defaultHeroes\"");
                     }
                     break;
                 case ("2"):
@@ -513,14 +513,12 @@ namespace CQMacroCreator
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {
-            //tp.Show("Lower follower limit. It disables low tier monsters making calculations a little faster. Default is 0(no limit)", button6);
+        {            
             MessageBox.Show("Lower follower limit. It disables low tier monsters making calculations a little faster.\nDefault is 0(no limit)", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button7_Click(object sender, EventArgs e)
-        {
-            //tp.Show("Upper follower limit. Disables high tier monsters(those you can't afford) making calculations a little faster. Default is -1(no limit)", button7, 30000);
+        {            
             MessageBox.Show("Upper follower limit. Disables high tier monsters(those you can't afford) making calculations a little faster.\nDefault is -1(no limit)", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -592,7 +590,7 @@ namespace CQMacroCreator
             mt.Join();
             if (PFStuff.getResult.Count > 0)
             {
-                guiLog.AppendText("Successfully got enemy lineup for DQ" + PFStuff.DQlvl + "\n");
+                
                 string[] enemylist = new string[5];
                 for (int i = 0; i < 5; i++)
                 {
@@ -604,6 +602,7 @@ namespace CQMacroCreator
                 }
                 enemylist = enemylist.Reverse().ToArray();
                 lineupBox.Text = string.Join(",", enemylist);
+                guiLog.AppendText("Successfully got enemy lineup for DQ" + PFStuff.DQlvl + " - " + string.Join(",", enemylist) + "\n");
             }
             else
             {

@@ -1936,7 +1936,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(572, 178);
+            this.button3.Location = new System.Drawing.Point(581, 151);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 63);
             this.button3.TabIndex = 157;
@@ -2069,7 +2069,7 @@
             // 
             // label61
             // 
-            this.label61.Location = new System.Drawing.Point(505, 280);
+            this.label61.Location = new System.Drawing.Point(531, 253);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(218, 118);
             this.label61.TabIndex = 170;
@@ -2580,7 +2580,7 @@
             // autoSend
             // 
             this.autoSend.AutoSize = true;
-            this.autoSend.Location = new System.Drawing.Point(549, 247);
+            this.autoSend.Location = new System.Drawing.Point(545, 220);
             this.autoSend.Name = "autoSend";
             this.autoSend.Size = new System.Drawing.Size(204, 30);
             this.autoSend.TabIndex = 221;
@@ -2589,9 +2589,9 @@
             // 
             // guiLog
             // 
-            this.guiLog.Location = new System.Drawing.Point(508, 438);
+            this.guiLog.Location = new System.Drawing.Point(508, 362);
             this.guiLog.Name = "guiLog";
-            this.guiLog.Size = new System.Drawing.Size(259, 202);
+            this.guiLog.Size = new System.Drawing.Size(259, 278);
             this.guiLog.TabIndex = 222;
             this.guiLog.Text = "";
             // 
