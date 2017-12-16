@@ -1948,7 +1948,7 @@
             // 
             this.label56.AutoSize = true;
             this.label56.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label56.Location = new System.Drawing.Point(731, 651);
+            this.label56.Location = new System.Drawing.Point(736, 8);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(47, 13);
             this.label56.TabIndex = 158;
@@ -1958,7 +1958,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label57.Location = new System.Drawing.Point(670, 669);
+            this.label57.Location = new System.Drawing.Point(675, 26);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(108, 13);
             this.label57.TabIndex = 159;
@@ -2059,7 +2059,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(222, 12);
+            this.button4.Location = new System.Drawing.Point(216, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 40);
             this.button4.TabIndex = 169;
@@ -2077,7 +2077,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(349, 13);
+            this.button5.Location = new System.Drawing.Point(343, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(114, 39);
             this.button5.TabIndex = 171;
@@ -2559,7 +2559,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(469, 12);
+            this.button9.Location = new System.Drawing.Point(463, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(74, 40);
             this.button9.TabIndex = 218;
@@ -2569,7 +2569,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(549, 13);
+            this.button10.Location = new System.Drawing.Point(543, 12);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(74, 40);
             this.button10.TabIndex = 219;
@@ -2591,7 +2591,8 @@
             // 
             this.guiLog.Location = new System.Drawing.Point(508, 362);
             this.guiLog.Name = "guiLog";
-            this.guiLog.Size = new System.Drawing.Size(259, 278);
+            this.guiLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.guiLog.Size = new System.Drawing.Size(270, 317);
             this.guiLog.TabIndex = 222;
             this.guiLog.Text = "";
             // 

@@ -471,7 +471,7 @@ namespace CQMacroCreator
             int index;
             int[] sorted = strength.OrderByDescending(i => i).ToArray();
             int j = 0;
-            while ((j < 8 || (j < 12 && sorted[j + 1] > sorted[j] * 0.7)))
+            while ((j < 8 || (j < 14 && sorted[j + 1] > sorted[j] * 0.6)))
             {
                 index = Array.IndexOf(strength, sorted[j]);
                 heroBoxes[index].Checked = true;
@@ -552,7 +552,7 @@ namespace CQMacroCreator
             if (PFStuff.getResult.Count > 0)
             {
                 guiLog.AppendText("Successfully got hero levels from server\n");
-                upperCount.Value = (int)(PFStuff.followers * 1.1);
+                //upperCount.Value = (int)(PFStuff.followers * 1.1);
                 for (int i = 0; i < heroCountsServerOrder.Count; i++)
                 {
                     heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
