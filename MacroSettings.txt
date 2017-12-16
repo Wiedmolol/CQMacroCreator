@@ -1,0 +1,3 @@
+0		// default action on open; 0 - no action, 1 - load heroes from defaultHeroes file, 2 - load heroes from server, 3 - load heroes and DQ from server
+1111111111111111111111111111111111111111111111111111111111111111		//Authentication Ticket, don't share that with anyone! 	
+0000000		//Kongregate ID
