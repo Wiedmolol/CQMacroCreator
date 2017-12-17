@@ -154,6 +154,13 @@ namespace CQMacroCreator
 
             init();
         }
+        private void hideButtons()
+        {
+            button10.Visible = false;
+            button9.Visible = false;
+            autoSend.Visible = false;
+            guiLog.Visible = false;
+        }
 
         private void init()
         {
@@ -161,12 +168,16 @@ namespace CQMacroCreator
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader("MacroSettings.txt");
                 defaultActionOnOpen = sr.ReadLine();
-                defaultActionOnOpen = defaultActionOnOpen.Substring(0, defaultActionOnOpen.IndexOfAny(" \t".ToArray()));
+                defaultActionOnOpen = defaultActionOnOpen.Substring(0, defaultActionOnOpen.IndexOfAny("/ \t".ToArray()));
                 token = sr.ReadLine();
-                if(token != null) 
+                if (token != null)
+                {
                     token = token.Substring(0, token.IndexOfAny(" \t".ToArray()));
+                    if (token == "1111111111111111111111111111111111111111111111111111111111111111")
+                        token = null;
+                }
                 KongregateId = sr.ReadLine();
-                if(KongregateId != null)
+                if (KongregateId != null)
                     KongregateId = KongregateId.Substring(0, KongregateId.IndexOfAny(" \t".ToArray()));
             }
             else
@@ -180,10 +191,7 @@ namespace CQMacroCreator
             }
             else
             {
-                button10.Visible = false;
-                button9.Visible = false;
-                autoSend.Visible = false;
-                guiLog.Visible = false;
+                hideButtons();
             }
             switch (defaultActionOnOpen)
             {
@@ -207,13 +215,19 @@ namespace CQMacroCreator
                     }
                     break;
                 case ("2"):
-                    button9_Click(this, EventArgs.Empty);
-                    button5_Click(this, EventArgs.Empty);
+                    if (token != null)
+                    {
+                        button9_Click(this, EventArgs.Empty);
+                        button5_Click(this, EventArgs.Empty);
+                    }
                     break;
                 case ("3"):
-                    button9_Click(this, EventArgs.Empty);
-                    button10_Click(this, EventArgs.Empty);
-                    button5_Click(this, EventArgs.Empty);
+                    if (token != null)
+                    {
+                        button9_Click(this, EventArgs.Empty);
+                        button10_Click(this, EventArgs.Empty);
+                        button5_Click(this, EventArgs.Empty);
+                    }
                     break;
             }
         }
@@ -370,7 +384,7 @@ namespace CQMacroCreator
                     }
                     else
                     {
-                        Process.Start("CosmosQuest.exe", "gen.cqinput");                        
+                        Process.Start("CosmosQuest.exe", "gen.cqinput");
                     }
                 }
                 catch (Win32Exception ex)
@@ -416,7 +430,7 @@ namespace CQMacroCreator
         }
 
         private void createMacroFile()
-        { 
+        {
             System.IO.StreamWriter sw = new System.IO.StreamWriter("gen.cqinput");
             List<string> l = new List<string>();
             for (int i = 0; i < heroCounts.Count; i++)
@@ -513,12 +527,12 @@ namespace CQMacroCreator
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {            
+        {
             MessageBox.Show("Lower follower limit. It disables low tier monsters making calculations a little faster.\nDefault is 0(no limit)", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button7_Click(object sender, EventArgs e)
-        {            
+        {
             MessageBox.Show("Upper follower limit. Disables high tier monsters(those you can't afford) making calculations a little faster.\nDefault is -1(no limit)", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -528,87 +542,98 @@ namespace CQMacroCreator
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void login()
         {
             Thread mt;
-            if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
-            {
-                mt = new Thread(pf.LoginKong);
-                mt.Start();
-                mt.Join();
-                if (PFStuff.logres)
-                {
-                    guiLog.AppendText("Successfully logged in\n");
-                }
-                else
-                {
-                    guiLog.AppendText("Failed to log in\n");
-                }
-            }
-
-            mt = new Thread(pf.GetGameData);
+            mt = new Thread(pf.LoginKong);
             mt.Start();
             mt.Join();
-            if (PFStuff.getResult.Count > 0)
+            if (PFStuff.logres)
             {
-                guiLog.AppendText("Successfully got hero levels from server\n");
-                //upperCount.Value = (int)(PFStuff.followers * 1.1);
-                for (int i = 0; i < heroCountsServerOrder.Count; i++)
-                {
-                    heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
-                }
-                chooseHeroes();
+                guiLog.AppendText("Successfully logged in\n");
             }
             else
             {
-                guiLog.AppendText("Failed to get heroes from server\n");
+                hideButtons();
+                throw new System.InvalidOperationException("Failed to log in");
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Thread mt;
+                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
+                {
+                    login();
+                }
+
+                mt = new Thread(pf.GetGameData);
+                mt.Start();
+                mt.Join();
+                if (PFStuff.getResult.Count > 0)
+                {
+                    guiLog.AppendText("Successfully got hero levels from server\n");
+                    //upperCount.Value = (int)(PFStuff.followers * 1.1);
+                    for (int i = 0; i < heroCountsServerOrder.Count; i++)
+                    {
+                        heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
+                    }
+                    chooseHeroes();
+                }
+                else
+                {
+                    guiLog.AppendText("Failed to get heroes from server\n");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to log in");
             }
 
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Thread mt;
-            if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
+            try
             {
-                mt = new Thread(pf.LoginKong);
+                Thread mt;
+                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
+                {
+                    login();
+                }
+
+                mt = new Thread(pf.GetGameData);
                 mt.Start();
                 mt.Join();
-                if (PFStuff.logres)
+                if (PFStuff.getResult.Count > 0)
                 {
-                    guiLog.AppendText("Successfully logged in\n");
-                    Console.Write("\n\nTEST\n\n");
+
+                    string[] enemylist = new string[5];
+                    for (int i = 0; i < 5; i++)
+                    {
+                        enemylist[i] = servernames[PFStuff.getResult[1][i] + heroesInGame];
+                        if (PFStuff.getResult[1][i] < -1)
+                        {
+                            enemylist[i] += ":" + PFStuff.getResult[2][-PFStuff.getResult[1][i] - 2].ToString();
+                        }
+                    }
+                    enemylist = enemylist.Reverse().ToArray();
+                    lineupBox.Text = string.Join(",", enemylist);
+                    guiLog.AppendText("Successfully got enemy lineup for DQ" + PFStuff.DQlvl + " - " + string.Join(",", enemylist) + "\n");
                 }
                 else
                 {
-                    guiLog.AppendText("Failed to log in\n");
+                    guiLog.AppendText("Failed to get enemy lineup from server\n");
                 }
             }
-
-            mt = new Thread(pf.GetGameData);
-            mt.Start();
-            mt.Join();
-            if (PFStuff.getResult.Count > 0)
+            catch
             {
-                
-                string[] enemylist = new string[5];
-                for (int i = 0; i < 5; i++)
-                {
-                    enemylist[i] = servernames[PFStuff.getResult[1][i] + heroesInGame];
-                    if (PFStuff.getResult[1][i] < -1)
-                    {
-                        enemylist[i] += ":" + PFStuff.getResult[2][-PFStuff.getResult[1][i] - 2].ToString();
-                    }
-                }
-                enemylist = enemylist.Reverse().ToArray();
-                lineupBox.Text = string.Join(",", enemylist);
-                guiLog.AppendText("Successfully got enemy lineup for DQ" + PFStuff.DQlvl + " - " + string.Join(",", enemylist) + "\n");
-            }
-            else
-            {
-                guiLog.AppendText("Failed to get enemy lineup from server\n");
+                MessageBox.Show("Failed t o log in");
             }
         }
+
 
     }
 }

@@ -2823,6 +2823,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.JamesCount);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Macro Creator";
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).EndInit();
