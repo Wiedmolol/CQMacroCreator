@@ -386,6 +386,7 @@ namespace CQMacroCreator
                     {
                         Process.Start("CosmosQuest.exe", "gen.cqinput");
                     }
+                    guiLog.ScrollToCaret();
                 }
                 catch (Win32Exception ex)
                 {
@@ -630,8 +631,17 @@ namespace CQMacroCreator
             }
             catch
             {
-                MessageBox.Show("Failed t o log in");
+                MessageBox.Show("Failed to log in");
             }
+        }
+
+        private void RigrBox_CheckedChanged(object sender, EventArgs e)
+        {
+            int temp = 0;
+            foreach (CheckBox c in heroBoxes)
+                if (c.Checked)
+                    temp++;
+            CSHC.Text = temp.ToString();
         }
 
 

@@ -251,6 +251,8 @@
             this.button10 = new System.Windows.Forms.Button();
             this.autoSend = new System.Windows.Forms.CheckBox();
             this.guiLog = new System.Windows.Forms.RichTextBox();
+            this.label76 = new System.Windows.Forms.Label();
+            this.CSHC = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -360,6 +362,7 @@
             this.HunterBox.TabIndex = 5;
             this.HunterBox.Text = "E";
             this.HunterBox.UseVisualStyleBackColor = true;
+            this.HunterBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label2
             // 
@@ -391,6 +394,7 @@
             this.JetBox.TabIndex = 11;
             this.JetBox.Text = "E";
             this.JetBox.UseVisualStyleBackColor = true;
+            this.JetBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label3
             // 
@@ -422,6 +426,7 @@
             this.CarlBox.TabIndex = 8;
             this.CarlBox.Text = "E";
             this.CarlBox.UseVisualStyleBackColor = true;
+            this.CarlBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label4
             // 
@@ -453,6 +458,7 @@
             this.KairyBox.TabIndex = 17;
             this.KairyBox.Text = "E";
             this.KairyBox.UseVisualStyleBackColor = true;
+            this.KairyBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label5
             // 
@@ -484,6 +490,7 @@
             this.AilenBox.TabIndex = 14;
             this.AilenBox.Text = "E";
             this.AilenBox.UseVisualStyleBackColor = true;
+            this.AilenBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label6
             // 
@@ -515,6 +522,7 @@
             this.RudeanBox.TabIndex = 23;
             this.RudeanBox.Text = "E";
             this.RudeanBox.UseVisualStyleBackColor = true;
+            this.RudeanBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label7
             // 
@@ -546,6 +554,7 @@
             this.AquortisBox.TabIndex = 20;
             this.AquortisBox.Text = "E";
             this.AquortisBox.UseVisualStyleBackColor = true;
+            this.AquortisBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label8
             // 
@@ -577,6 +586,7 @@
             this.OymosBox.TabIndex = 29;
             this.OymosBox.Text = "E";
             this.OymosBox.UseVisualStyleBackColor = true;
+            this.OymosBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label9
             // 
@@ -608,6 +618,7 @@
             this.OureaBox.TabIndex = 26;
             this.OureaBox.Text = "E";
             this.OureaBox.UseVisualStyleBackColor = true;
+            this.OureaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label10
             // 
@@ -639,6 +650,7 @@
             this.XarthBox.TabIndex = 56;
             this.XarthBox.Text = "E";
             this.XarthBox.UseVisualStyleBackColor = true;
+            this.XarthBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label11
             // 
@@ -670,6 +682,7 @@
             this.ErebusBox.TabIndex = 53;
             this.ErebusBox.Text = "E";
             this.ErebusBox.UseVisualStyleBackColor = true;
+            this.ErebusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label12
             // 
@@ -701,6 +714,7 @@
             this.AuralBox.TabIndex = 50;
             this.AuralBox.Text = "E";
             this.AuralBox.UseVisualStyleBackColor = true;
+            this.AuralBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label13
             // 
@@ -732,6 +746,7 @@
             this.AerisBox.TabIndex = 47;
             this.AerisBox.Text = "E";
             this.AerisBox.UseVisualStyleBackColor = true;
+            this.AerisBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label14
             // 
@@ -763,6 +778,7 @@
             this.TaurusBox.TabIndex = 44;
             this.TaurusBox.Text = "E";
             this.TaurusBox.UseVisualStyleBackColor = true;
+            this.TaurusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label15
             // 
@@ -794,6 +810,7 @@
             this.FaefyrBox.TabIndex = 41;
             this.FaefyrBox.Text = "E";
             this.FaefyrBox.UseVisualStyleBackColor = true;
+            this.FaefyrBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label16
             // 
@@ -825,6 +842,7 @@
             this.GeronBox.TabIndex = 38;
             this.GeronBox.Text = "E";
             this.GeronBox.UseVisualStyleBackColor = true;
+            this.GeronBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label17
             // 
@@ -856,6 +874,7 @@
             this.NimueBox.TabIndex = 35;
             this.NimueBox.Text = "E";
             this.NimueBox.UseVisualStyleBackColor = true;
+            this.NimueBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label18
             // 
@@ -887,6 +906,7 @@
             this.ShamanBox.TabIndex = 32;
             this.ShamanBox.Text = "E";
             this.ShamanBox.UseVisualStyleBackColor = true;
+            this.ShamanBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label19
             // 
@@ -918,6 +938,7 @@
             this.AtzarBox.TabIndex = 83;
             this.AtzarBox.Text = "E";
             this.AtzarBox.UseVisualStyleBackColor = true;
+            this.AtzarBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label20
             // 
@@ -949,6 +970,7 @@
             this.PontusBox.TabIndex = 80;
             this.PontusBox.Text = "E";
             this.PontusBox.UseVisualStyleBackColor = true;
+            this.PontusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label21
             // 
@@ -980,6 +1002,7 @@
             this.GerorBox.TabIndex = 77;
             this.GerorBox.Text = "E";
             this.GerorBox.UseVisualStyleBackColor = true;
+            this.GerorBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label22
             // 
@@ -1011,6 +1034,7 @@
             this.GeumBox.TabIndex = 74;
             this.GeumBox.Text = "E";
             this.GeumBox.UseVisualStyleBackColor = true;
+            this.GeumBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label23
             // 
@@ -1042,6 +1066,7 @@
             this.TronixBox.TabIndex = 71;
             this.TronixBox.Text = "E";
             this.TronixBox.UseVisualStyleBackColor = true;
+            this.TronixBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label24
             // 
@@ -1073,6 +1098,7 @@
             this.AuriBox.TabIndex = 68;
             this.AuriBox.Text = "E";
             this.AuriBox.UseVisualStyleBackColor = true;
+            this.AuriBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label25
             // 
@@ -1104,6 +1130,7 @@
             this.ReiBox.TabIndex = 65;
             this.ReiBox.Text = "E";
             this.ReiBox.UseVisualStyleBackColor = true;
+            this.ReiBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label26
             // 
@@ -1135,6 +1162,7 @@
             this.AthosBox.TabIndex = 62;
             this.AthosBox.Text = "E";
             this.AthosBox.UseVisualStyleBackColor = true;
+            this.AthosBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label27
             // 
@@ -1166,6 +1194,7 @@
             this.AlphaBox.TabIndex = 59;
             this.AlphaBox.Text = "E";
             this.AlphaBox.UseVisualStyleBackColor = true;
+            this.AlphaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label28
             // 
@@ -1197,6 +1226,7 @@
             this.NebraBox.TabIndex = 92;
             this.NebraBox.Text = "E";
             this.NebraBox.UseVisualStyleBackColor = true;
+            this.NebraBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label29
             // 
@@ -1228,6 +1258,7 @@
             this.TinyBox.TabIndex = 89;
             this.TinyBox.Text = "E";
             this.TinyBox.UseVisualStyleBackColor = true;
+            this.TinyBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label30
             // 
@@ -1259,6 +1290,7 @@
             this.LadyBox.TabIndex = 86;
             this.LadyBox.Text = "E";
             this.LadyBox.UseVisualStyleBackColor = true;
+            this.LadyBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label31
             // 
@@ -1298,6 +1330,7 @@
             this.GrothBox.TabIndex = 102;
             this.GrothBox.Text = "E";
             this.GrothBox.UseVisualStyleBackColor = true;
+            this.GrothBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label33
             // 
@@ -1329,6 +1362,7 @@
             this.BrynBox.TabIndex = 99;
             this.BrynBox.Text = "E";
             this.BrynBox.UseVisualStyleBackColor = true;
+            this.BrynBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label34
             // 
@@ -1360,6 +1394,7 @@
             this.VeildurBox.TabIndex = 96;
             this.VeildurBox.Text = "E";
             this.VeildurBox.UseVisualStyleBackColor = true;
+            this.VeildurBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label35
             // 
@@ -1391,6 +1426,7 @@
             this.GaiaBox.TabIndex = 111;
             this.GaiaBox.Text = "E";
             this.GaiaBox.UseVisualStyleBackColor = true;
+            this.GaiaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label36
             // 
@@ -1422,6 +1458,7 @@
             this.AoyukiBox.TabIndex = 108;
             this.AoyukiBox.Text = "E";
             this.AoyukiBox.UseVisualStyleBackColor = true;
+            this.AoyukiBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label37
             // 
@@ -1453,6 +1490,7 @@
             this.SpykeBox.TabIndex = 105;
             this.SpykeBox.Text = "E";
             this.SpykeBox.UseVisualStyleBackColor = true;
+            this.SpykeBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label38
             // 
@@ -1492,6 +1530,7 @@
             this.ChromaBox.TabIndex = 145;
             this.ChromaBox.Text = "E";
             this.ChromaBox.UseVisualStyleBackColor = true;
+            this.ChromaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label41
             // 
@@ -1523,6 +1562,7 @@
             this.DruidBox.TabIndex = 142;
             this.DruidBox.Text = "E";
             this.DruidBox.UseVisualStyleBackColor = true;
+            this.DruidBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label42
             // 
@@ -1554,6 +1594,7 @@
             this.PyroBox.TabIndex = 139;
             this.PyroBox.Text = "E";
             this.PyroBox.UseVisualStyleBackColor = true;
+            this.PyroBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label43
             // 
@@ -1585,6 +1626,7 @@
             this.ZaytusBox.TabIndex = 136;
             this.ZaytusBox.Text = "E";
             this.ZaytusBox.UseVisualStyleBackColor = true;
+            this.ZaytusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label44
             // 
@@ -1616,6 +1658,7 @@
             this.UndineBox.TabIndex = 133;
             this.UndineBox.Text = "E";
             this.UndineBox.UseVisualStyleBackColor = true;
+            this.UndineBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label45
             // 
@@ -1647,6 +1690,7 @@
             this.NicteBox.TabIndex = 130;
             this.NicteBox.Text = "E";
             this.NicteBox.UseVisualStyleBackColor = true;
+            this.NicteBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label46
             // 
@@ -1678,6 +1722,7 @@
             this.RokkaBox.TabIndex = 127;
             this.RokkaBox.Text = "E";
             this.RokkaBox.UseVisualStyleBackColor = true;
+            this.RokkaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label47
             // 
@@ -1709,6 +1754,7 @@
             this.PetryBox.TabIndex = 124;
             this.PetryBox.Text = "E";
             this.PetryBox.UseVisualStyleBackColor = true;
+            this.PetryBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label48
             // 
@@ -1740,6 +1786,7 @@
             this.IgnitorBox.TabIndex = 121;
             this.IgnitorBox.Text = "E";
             this.IgnitorBox.UseVisualStyleBackColor = true;
+            this.IgnitorBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label49
             // 
@@ -1771,6 +1818,7 @@
             this.BewatBox.TabIndex = 118;
             this.BewatBox.Text = "E";
             this.BewatBox.UseVisualStyleBackColor = true;
+            this.BewatBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label50
             // 
@@ -1802,6 +1850,7 @@
             this.ValorBox.TabIndex = 115;
             this.ValorBox.Text = "E";
             this.ValorBox.UseVisualStyleBackColor = true;
+            this.ValorBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label51
             // 
@@ -1973,6 +2022,7 @@
             this.GurthBox.TabIndex = 168;
             this.GurthBox.Text = "E";
             this.GurthBox.UseVisualStyleBackColor = true;
+            this.GurthBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label58
             // 
@@ -2004,6 +2054,7 @@
             this.KothBox.TabIndex = 165;
             this.KothBox.Text = "E";
             this.KothBox.UseVisualStyleBackColor = true;
+            this.KothBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label59
             // 
@@ -2035,6 +2086,7 @@
             this.ZethBox.TabIndex = 162;
             this.ZethBox.Text = "E";
             this.ZethBox.UseVisualStyleBackColor = true;
+            this.ZethBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label60
             // 
@@ -2225,6 +2277,7 @@
             this.OdelithBox.TabIndex = 187;
             this.OdelithBox.Text = "E";
             this.OdelithBox.UseVisualStyleBackColor = true;
+            this.OdelithBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label66
             // 
@@ -2256,6 +2309,7 @@
             this.KirkBox.TabIndex = 196;
             this.KirkBox.Text = "E";
             this.KirkBox.UseVisualStyleBackColor = true;
+            this.KirkBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label67
             // 
@@ -2287,6 +2341,7 @@
             this.ThertBox.TabIndex = 193;
             this.ThertBox.Text = "E";
             this.ThertBox.UseVisualStyleBackColor = true;
+            this.ThertBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // Thert
             // 
@@ -2318,6 +2373,7 @@
             this.ShyguBox.TabIndex = 190;
             this.ShyguBox.Text = "E";
             this.ShyguBox.UseVisualStyleBackColor = true;
+            this.ShyguBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label69
             // 
@@ -2349,6 +2405,7 @@
             this.NeptuniusBox.TabIndex = 199;
             this.NeptuniusBox.Text = "E";
             this.NeptuniusBox.UseVisualStyleBackColor = true;
+            this.NeptuniusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label68
             // 
@@ -2380,6 +2437,7 @@
             this.AlvitrBox.TabIndex = 208;
             this.AlvitrBox.Text = "E";
             this.AlvitrBox.UseVisualStyleBackColor = true;
+            this.AlvitrBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label70
             // 
@@ -2411,6 +2469,7 @@
             this.KoldisBox.TabIndex = 205;
             this.KoldisBox.Text = "E";
             this.KoldisBox.UseVisualStyleBackColor = true;
+            this.KoldisBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label71
             // 
@@ -2442,6 +2501,7 @@
             this.SigrunBox.TabIndex = 202;
             this.SigrunBox.Text = "E";
             this.SigrunBox.UseVisualStyleBackColor = true;
+            this.SigrunBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label72
             // 
@@ -2473,6 +2533,7 @@
             this.RigrBox.TabIndex = 217;
             this.RigrBox.Text = "E";
             this.RigrBox.UseVisualStyleBackColor = true;
+            this.RigrBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label73
             // 
@@ -2504,6 +2565,7 @@
             this.HallinskidiBox.TabIndex = 214;
             this.HallinskidiBox.Text = "E";
             this.HallinskidiBox.UseVisualStyleBackColor = true;
+            this.HallinskidiBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label74
             // 
@@ -2535,6 +2597,7 @@
             this.HamaBox.TabIndex = 211;
             this.HamaBox.Text = "E";
             this.HamaBox.UseVisualStyleBackColor = true;
+            this.HamaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label75
             // 
@@ -2596,11 +2659,31 @@
             this.guiLog.TabIndex = 222;
             this.guiLog.Text = "";
             // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(4, 54);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(162, 13);
+            this.label76.TabIndex = 223;
+            this.label76.Text = "Currently selected heroes count: ";
+            // 
+            // CSHC
+            // 
+            this.CSHC.AutoSize = true;
+            this.CSHC.Location = new System.Drawing.Point(161, 55);
+            this.CSHC.Name = "CSHC";
+            this.CSHC.Size = new System.Drawing.Size(13, 13);
+            this.CSHC.TabIndex = 224;
+            this.CSHC.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 691);
+            this.Controls.Add(this.CSHC);
+            this.Controls.Add(this.label76);
             this.Controls.Add(this.guiLog);
             this.Controls.Add(this.autoSend);
             this.Controls.Add(this.button10);
@@ -3122,6 +3205,8 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.CheckBox autoSend;
         public System.Windows.Forms.RichTextBox guiLog;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label CSHC;
     }
 }
 
