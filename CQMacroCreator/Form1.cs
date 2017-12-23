@@ -23,7 +23,6 @@ namespace CQMacroCreator
         const int heroesInGame = 66;
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
-        //List<List<CheckBox>> questBoxes;
         List<CheckBox> questBoxes;
         List<Button> questButtons;
         List<CheckBox> heroBoxes;
@@ -59,7 +58,16 @@ namespace CQMacroCreator
             {"ALF", "alvitr"},
             {"FREUD", "sigrun"},
             {"FOREIGNER", "koldis"},
-            {"VOWELCHICK", "aoyuki"}
+            {"VOWELCHICK", "aoyuki"},
+            {"SANTA", "santaclaus"},
+            {"MARY", "marychristmas"},
+            {"DEER", "reindeer"},
+            {"RUDOLPH", "reindeer"},
+            {"ELF", "christmaself"},
+            {"FBOSS", "lordofchaos"},
+            {"ATRONIX", "atr0n1x"},
+            {"ASHIT", "ageum"}
+
         };
         string token;
         string KongregateId;
@@ -69,9 +77,11 @@ namespace CQMacroCreator
                                 "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
-                                "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr"};
+                                "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
+                                "christmaself", "reindeer", "santaclaus", "marychristmas"};
 
-        string[] servernames = {"rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
+        string[] servernames = {    "marychristmas", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+                                   "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
                                "james", "nicte", "auri", "faefyr", "ailen", "rei", "geron", "jet", "athos", "nimue", "carl", "alpha", "shaman", "hunter", "bewat", "pyromancer", "rokka",
