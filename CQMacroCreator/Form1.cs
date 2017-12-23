@@ -23,6 +23,9 @@ namespace CQMacroCreator
         const int heroesInGame = 66;
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
+        //List<List<CheckBox>> questBoxes;
+        List<CheckBox> questBoxes;
+        List<Button> questButtons;
         List<CheckBox> heroBoxes;
 
         ToolTip tp = new ToolTip();
@@ -99,7 +102,10 @@ namespace CQMacroCreator
                                                WerewolfCount, JackCount, DullahanCount,
                                                OdelithCount, ShyguCount, ThertCount, KirkCount, NeptuniusCount,
                                                SigrunCount, KoldisCount, AlvitrCount,
-                                               HamaCount, HallinskidiCount, RigrCount
+                                               HamaCount, HallinskidiCount, RigrCount,
+                                               AAlphaCount, AAthosCount, AReiCount, AAuriCount, ATronixCount, AGeumCount, AGerorCount,
+                                               null,
+                                               elfCount, deerCount, santaCount, maryCount
 
             };
 
@@ -125,8 +131,10 @@ namespace CQMacroCreator
                                                WerewolfCount, JackCount, DullahanCount,
                                                OdelithCount, ShyguCount, ThertCount, KirkCount, NeptuniusCount,                                               
                                                SigrunCount, KoldisCount, AlvitrCount,
-                                               HamaCount, HallinskidiCount, RigrCount
-
+                                               HamaCount, HallinskidiCount, RigrCount,
+                                               AAlphaCount, AAthosCount, AReiCount, AAuriCount, ATronixCount, AGeumCount, AGerorCount,
+                                               null,
+                                               elfCount, deerCount, santaCount, maryCount
             };
 
             heroBoxes = new List<CheckBox>() { JamesBox, 
@@ -149,17 +157,155 @@ namespace CQMacroCreator
                                                WerewolfBox, JackBox, DullahanBox,
                                                OdelithBox, ShyguBox, ThertBox, KirkBox, NeptuniusBox,
                                                SigrunBox, KoldisBox, AlvitrBox,
-                                               HamaBox, HallinskidiBox, RigrBox
+                                               HamaBox, HallinskidiBox, RigrBox,
+                                               AAlphaBox, AAthosBox, AReiBox, AAuriBox, ATronixBox, AGeumBox, AGerorBox,
+                                               null,
+                                               elfBox, deerBox, santaBox, maryBox
+            };
+
+            questBoxes = new List<CheckBox>() {
+                checkBox1, checkBox2, checkBox3,
+                checkBox6, checkBox5, checkBox4,
+                checkBox9, checkBox8, checkBox7,
+                checkBox12, checkBox11, checkBox10,
+                checkBox15, checkBox14, checkBox13,
+
+				checkBox30, checkBox29, checkBox28,
+                checkBox27, checkBox26, checkBox25,
+                checkBox24, checkBox23, checkBox22,
+                checkBox21, checkBox20, checkBox19,
+                checkBox18, checkBox17, checkBox16,
+
+                checkBox45, checkBox44, checkBox43,
+                checkBox42, checkBox41, checkBox40,
+                checkBox39, checkBox38, checkBox37,
+                checkBox36, checkBox35, checkBox34,
+                checkBox33, checkBox32, checkBox31,
+
+                checkBox60, checkBox59, checkBox58,
+                checkBox57, checkBox56, checkBox55,
+                checkBox54, checkBox53, checkBox52,
+                checkBox51, checkBox50, checkBox49,
+                checkBox48, checkBox47, checkBox46,
+
+                checkBox75, checkBox74, checkBox73,
+                checkBox72, checkBox71, checkBox70,
+                checkBox69, checkBox68, checkBox67,
+                checkBox66, checkBox65, checkBox64, 
+                checkBox63, checkBox62, checkBox61, 
+
+                checkBox105, checkBox104, checkBox103,
+                checkBox102, checkBox101, checkBox100, 
+                checkBox99, checkBox98, checkBox97, 
+                checkBox96, checkBox95, checkBox94, 
+                checkBox93, checkBox92, checkBox91,
+
+                checkBox90, checkBox89, checkBox88,
+                checkBox87, checkBox86, checkBox85,
+                checkBox84, checkBox83, checkBox82, 
+                checkBox81, checkBox80, checkBox79, 
+                checkBox78, checkBox77, checkBox76,                
+
+                checkBox120, checkBox119, checkBox118,
+                checkBox117, checkBox116, checkBox115,
+                checkBox114, checkBox113, checkBox112, 
+                checkBox111, checkBox110, checkBox109,
+                checkBox108, checkBox107, checkBox106,
+
+                checkBox150, checkBox149, checkBox148, 
+                checkBox147, checkBox146, checkBox145, 
+                checkBox144, checkBox143, checkBox142, 
+                checkBox141, checkBox140, checkBox139, 
+                checkBox138, checkBox137, checkBox136,
+
+                checkBox135, checkBox134, checkBox133, 
+                checkBox132, checkBox131, checkBox130, 
+                checkBox129, checkBox128, checkBox127, 
+                checkBox126, checkBox125, checkBox124, 
+                checkBox123, checkBox122, checkBox121,                
+
+                checkBox165, checkBox164, checkBox163, 
+                checkBox162, checkBox161, checkBox160,
+                checkBox159, checkBox158, checkBox157, 
+                checkBox156, checkBox155, checkBox154, 
+                checkBox153, checkBox152, checkBox151,
+
+                checkBox195, checkBox194, checkBox193, 
+                checkBox192, checkBox191, checkBox190, 
+                checkBox189, checkBox188, checkBox187,  
+                checkBox186, checkBox185, checkBox184,  
+                checkBox183, checkBox182, checkBox181,
+
+                checkBox180, checkBox179, checkBox178,
+                checkBox177, checkBox176, checkBox175, 
+                checkBox174, checkBox173, checkBox172, 
+                checkBox171, checkBox170, checkBox169,
+                checkBox168, checkBox167, checkBox166,
+
+                checkBox225, checkBox224, checkBox223, 
+                checkBox222, checkBox221, checkBox220, 
+                checkBox219, checkBox218, checkBox217, 
+                checkBox216, checkBox215, checkBox214,  
+                checkBox213, checkBox212, checkBox211,                                
+
+                checkBox210, checkBox209, checkBox208, 
+                checkBox207, checkBox206, checkBox205, 
+                checkBox204, checkBox203, checkBox202, 
+                checkBox201, checkBox200, checkBox199, 
+                checkBox198, checkBox197, checkBox196,
+
+                checkBox240, checkBox239, checkBox238, 
+                checkBox237, checkBox236, checkBox235,  
+                checkBox234, checkBox233, checkBox232,
+                checkBox231, checkBox230, checkBox229, 
+                checkBox228, checkBox227, checkBox226,
+
+            };
+            questButtons = new List<Button>() {
+                button11, button12, button13, button14, button15,
+                button20, button19, button18, button17, button16,
+                button25, button24, button23, button22, button21,
+                button30, button29, button28, button27, button26,
+                button35, button34, button33, button32, button31,
+                button45, button44, button43, button42, button41,
+                button40, button39, button38, button37, button36,                
+                button50, button49, button48, button47, button46,
+                button60, button59, button58, button57, button56,
+                button55, button54, button53, button52, button51,                
+                button65, button64, button63, button62, button61,
+                button75, button74, button73, button72, button71,
+                button70, button69, button68, button67, button66,
+                button85, button84, button83, button82, button81,
+                button80, button79, button78, button77, button76,                
+                button90, button89, button88, button87, button86
             };
 
             init();
         }
         private void hideButtons()
         {
-            button10.Visible = false;
-            button9.Visible = false;
-            autoSend.Visible = false;
-            guiLog.Visible = false;
+            button10.Enabled = false;
+            button9.Enabled = false;
+            autoSend.Enabled = false;
+            guiLog.Enabled = false;
+            getQuestsButton.Enabled = false;
+            ((Control)tabControl1.TabPages[1]).Enabled = false;
+            ((Control)tabControl1.TabPages[2]).Enabled = false;
+        }
+
+        private string getSetting(string s)
+        {
+            if (s == null || s == String.Empty)
+                return null;
+            else
+            {
+                int index = s.IndexOfAny("/ \t".ToArray());
+                if (index > 0)
+                {
+                    s = s.Substring(0, index);
+                }
+                return s.Trim();
+            }
         }
 
         private void init()
@@ -167,18 +313,13 @@ namespace CQMacroCreator
             if (File.Exists("MacroSettings.txt"))
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader("MacroSettings.txt");
-                defaultActionOnOpen = sr.ReadLine();
-                defaultActionOnOpen = defaultActionOnOpen.Substring(0, defaultActionOnOpen.IndexOfAny("/ \t".ToArray()));
-                token = sr.ReadLine();
-                if (token != null)
+                defaultActionOnOpen = getSetting(sr.ReadLine());
+                token = getSetting(sr.ReadLine());
+                KongregateId = getSetting(sr.ReadLine());
+                if (token == "1111111111111111111111111111111111111111111111111111111111111111" || KongregateId == "000000")
                 {
-                    token = token.Substring(0, token.IndexOfAny(" \t".ToArray()));
-                    if (token == "1111111111111111111111111111111111111111111111111111111111111111")
-                        token = null;
+                    token = KongregateId = null;
                 }
-                KongregateId = sr.ReadLine();
-                if (KongregateId != null)
-                    KongregateId = KongregateId.Substring(0, KongregateId.IndexOfAny(" \t".ToArray()));
             }
             else
             {
@@ -229,6 +370,18 @@ namespace CQMacroCreator
                         button5_Click(this, EventArgs.Empty);
                     }
                     break;
+                case ("4"):
+                    if (token != null)
+                    {
+                        button9_Click(this, EventArgs.Empty);
+                        button10_Click(this, EventArgs.Empty);
+                        button5_Click(this, EventArgs.Empty);
+                        getQuestsButton_Click(this, EventArgs.Empty);
+                    }
+                    break;
+                default:
+                    break;
+
             }
         }
 
@@ -253,7 +406,11 @@ namespace CQMacroCreator
             new Hero(35,25,1,0,0), new Hero(55,35,2,0,0), new Hero(75,45,6,0,0),
             new Hero(36,36,2,0,0), new Hero(34,54,6,0,0), new Hero(72,28,6,0,0), new Hero(32,64,6,0,0), new Hero(30,70,6,0,0),
             new Hero(65,12,6,0,0), new Hero(70,14,6,0,0), new Hero(75,16,6,0,0),               // Sigrun, Koldis, Alvitr
-            new Hero(30,18,1,0,0), new Hero(34,34,2,0,0), new Hero(60,42,6,0,0)
+            new Hero(30,18,1,0,0), new Hero(34,34,2,0,0), new Hero(60,42,6,0,0),                //Hama, Halli, Rigr
+            new Hero(174,46,12,0,0), new Hero(162,60,12,0,0), new Hero(120,104,12,0,0), new Hero(148,78,12,0,0),new Hero(190,38,12,0,0),new Hero(222,8,12,0,0),new Hero(116,116,12,0,0),
+            null,
+            new Hero(38,24,1,0,0), new Hero(54,36,2,0,0), new Hero(72,48,6,0,0), new Hero(44,44,2,0,0),
+
 
         });
 
@@ -324,7 +481,7 @@ namespace CQMacroCreator
             DialogResult dr = DialogResult.Yes;
             foreach (CheckBox cb in heroBoxes)
             {
-                if (cb.Checked)
+                if (cb != null && cb.Checked)
                 {
                     heroChecked++;
                 }
@@ -341,52 +498,79 @@ namespace CQMacroCreator
             {
                 try
                 {
-                    createMacroFile();
                     if (autoSend.Checked)
                     {
-                        RunWithRedirect("CosmosQuest.exe");
-                        JObject solution = JObject.Parse(calcOut);
-                        Console.Write("\n" + solution["validSolution"]["solution"].ToString() + "Haha\n");
-                        if (solution["validSolution"]["solution"].ToString() != String.Empty)
+                        List<string> lineups = lineupBox.Text.Split(' ').ToList();
+                        foreach (string lp in lineups)
                         {
-                            var mon = solution["validSolution"]["solution"]["monsters"];
-                            if (mon.Count() > 0)
+                            createMacroFile(lp);
+                            RunWithRedirect("CosmosQuest.exe");
+                            JObject solution = JObject.Parse(calcOut);
+                            if (solution["validSolution"]["solution"].ToString() != String.Empty)
                             {
-                                List<int> solutionLineupIDs = new List<int>();
-                                foreach (JToken jt in mon)
+                                var mon = solution["validSolution"]["solution"]["monsters"];
+                                if (mon.Count() > 0)
                                 {
-                                    solutionLineupIDs.Add(Convert.ToInt32(jt["id"]));
+                                    List<int> solutionLineupIDs = new List<int>();
+                                    foreach (JToken jt in mon)
+                                    {
+                                        solutionLineupIDs.Add(Convert.ToInt32(jt["id"]));
+                                    }
+                                    while (solutionLineupIDs.Count < 6)
+                                    {
+                                        solutionLineupIDs.Add(-1);
+                                    }
+                                    PFStuff.lineup = solutionLineupIDs.ToArray();
+                                    Thread mt;
+                                    if (lp.Contains("quest"))
+                                    {
+                                        int a = lp.IndexOf("-");
+                                        string s = lp.Substring(5, a - 5);
+                                        Console.Write("\n" + s);
+                                        PFStuff.questID = Int32.Parse(s) - 1;
+                                        mt = new Thread(pf.sendQuestSolution);
+                                        mt.Start();
+                                        mt.Join();
+                                    }
+                                    else
+                                    {
+                                        mt = new Thread(pf.sendDQSolution);
+                                        mt.Start();
+                                        mt.Join();
+                                    }
+                                    if (PFStuff.DQResult)
+                                    {
+                                        if (lp.Contains("quest"))
+                                        {
+                                            guiLog.AppendText("Quest " + (PFStuff.questID + 1) + " solution accepted by server\n");
+                                        }
+                                        else
+                                        {
+                                            guiLog.AppendText("DQ solution accepted by server\n");
+                                            button10_Click(this, EventArgs.Empty);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        guiLog.AppendText("Solution rejected by server\n");
+                                    }
                                 }
-                                while (solutionLineupIDs.Count < 6)
-                                {
-                                    solutionLineupIDs.Add(-1);
-                                }
-                                PFStuff.lineup = solutionLineupIDs.ToArray();
-                                Thread mt;
-                                mt = new Thread(pf.sendDQSolution);
-                                mt.Start();
-                                mt.Join();
-                                if (PFStuff.DQResult)
-                                {
-                                    guiLog.AppendText("Solution accepted by server\n");
-                                }
-                                else
-                                {
-                                    guiLog.AppendText("Solution rejected by server\n");
-                                }
-                                button10_Click(this, EventArgs.Empty);
+
                             }
-                        }
-                        else
-                        {
-                            guiLog.AppendText("Solution not found\n");
+                            else
+                            {
+                                guiLog.AppendText("Solution not found\n");
+                            }
                         }
                     }
                     else
                     {
+                        createMacroFile(lineupBox.Text);
                         Process.Start("CosmosQuest.exe", "gen.cqinput");
                     }
                     guiLog.ScrollToCaret();
+
+
                 }
                 catch (Win32Exception ex)
                 {
@@ -430,16 +614,20 @@ namespace CQMacroCreator
             }
         }
 
-        private void createMacroFile()
+        private void createMacroFile(string lineup)
         {
             System.IO.StreamWriter sw = new System.IO.StreamWriter("gen.cqinput");
             List<string> l = new List<string>();
             for (int i = 0; i < heroCounts.Count; i++)
             {
-                if (heroBoxes[i].Checked && heroCounts[i].Value > 0)
+                if (heroBoxes[i] != null && heroCounts[i] != null)
                 {
-                    l.Add(names[i] + ":" + heroCounts[i].Value);
+                    if (heroBoxes[i].Checked && heroCounts[i].Value > 0)
+                    {
+                        l.Add(names[i] + ":" + heroCounts[i].Value);
+                    }
                 }
+
             }
             for (int i = 0; i < l.Count; i++)
             {
@@ -449,7 +637,7 @@ namespace CQMacroCreator
             sw.WriteLine(lowerCount.Value);
             sw.WriteLine(upperCount.Value);
 
-            sw.WriteLine(checkForAliases(lineupBox.Text));
+            sw.WriteLine(checkForAliases(lineup));
             sw.WriteLine("y");
             sw.Close();
         }
@@ -477,16 +665,18 @@ namespace CQMacroCreator
         private void chooseHeroes()
         {
             foreach (CheckBox cb in heroBoxes)
-                cb.Checked = false;
+                if (cb != null)
+                    cb.Checked = false;
             int[] strength = new int[heroCounts.Count];
             for (int i = 0; i < heroCounts.Count; i++)
             {
-                strength[i] = heroList[i].getStrength((int)heroCounts[i].Value);
+                if (heroList[i] != null && heroCounts[i] != null && heroCounts[i].Enabled)
+                    strength[i] = heroList[i].getStrength((int)heroCounts[i].Value);
             }
             int index;
             int[] sorted = strength.OrderByDescending(i => i).ToArray();
             int j = 0;
-            while ((j < 8 || (j < 14 && sorted[j + 1] > sorted[j] * 0.6)))
+            while ((j < 8 || (j < 14 && sorted[j + 1] > sorted[j] * 0.5)))
             {
                 index = Array.IndexOf(strength, sorted[j]);
                 heroBoxes[index].Checked = true;
@@ -579,9 +769,11 @@ namespace CQMacroCreator
                     //upperCount.Value = (int)(PFStuff.followers * 1.1);
                     for (int i = 0; i < heroCountsServerOrder.Count; i++)
                     {
-                        heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
+                        if (heroCountsServerOrder[i] != null)
+                            heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
                     }
                     chooseHeroes();
+                    followerLabel.Text = PFStuff.followers.ToString("### ### ###");
                 }
                 else
                 {
@@ -610,7 +802,6 @@ namespace CQMacroCreator
                 mt.Join();
                 if (PFStuff.getResult.Count > 0)
                 {
-
                     string[] enemylist = new string[5];
                     for (int i = 0; i < 5; i++)
                     {
@@ -639,11 +830,256 @@ namespace CQMacroCreator
         {
             int temp = 0;
             foreach (CheckBox c in heroBoxes)
-                if (c.Checked)
-                    temp++;
+                if (c != null)
+                    if (c.Checked)
+                        temp++;
             CSHC.Text = temp.ToString();
         }
 
+
+        private void questButtonClick(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            Predicate<Button> pre = delegate(Button a) { return a.Name == b.Name; };
+            int index = questButtons.FindIndex(pre);
+            lineupBox.Text += getQuestString(index);
+        }
+
+        private string getQuestString(int index)
+        {
+            if (questBoxes[3 * index + 2].Checked)
+            {
+                return null;
+            }
+            else
+            {
+                string s = " ";
+                if (lineupBox.Text == "" || lineupBox.Text == null)
+                {
+                    s = "";
+                }
+                s += "quest" + (index + 1);
+                s += questBoxes[3 * index + 1].Checked ? "-3" : questBoxes[3 * index].Checked ? "-2" : "-1";
+                return s;
+            }
+        }
+
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3_Click(this, EventArgs.Empty);
+            }
+        }
+
+        private void questCheckboxChanged(object sender, EventArgs e)
+        {
+            CheckBox b = (CheckBox)sender;
+            Predicate<CheckBox> pre = delegate(CheckBox a) { return a.Name == b.Name; };
+            setQuestBoxes(questBoxes.FindIndex(pre), b.Checked);
+        }
+
+        private void setQuestBoxes(int boxID, bool checkState)
+        {
+            if (boxID % 3 < 2)
+            {
+                if (questBoxes[boxID + 1].Checked)
+                {
+                    questBoxes[boxID].Checked = true;
+                }
+            }
+            for (int i = 3 * (boxID / 3); i < 3 * (boxID / 3) + 3; i++)
+            {
+                if (i != boxID)
+                {
+                    if (i < boxID)
+                    {
+                        questBoxes[i].Checked = true;
+                    }
+                    else
+                    {
+                        questBoxes[i].Checked = false;
+                    }
+                }
+            }
+        }
+
+
+        private void setQuestBoxesFromServer(int index, int questState)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if (questState > 0)
+                {
+                    questBoxes[3 * index + i].Checked = true;
+                }
+                questState = questState / 2;
+            }
+        }
+
+        private void deactivateButtons()
+        {
+            for (int i = 0; i < questButtons.Count(); i++)
+            {
+                if (questBoxes[3 * i + 2].Checked)
+                {
+                    questButtons[i].Enabled = false;
+                }
+                else
+                {
+                    questButtons[i].Enabled = true;
+                }
+            }
+        }
+        private void getQuestsButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Thread mt;
+                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
+                {
+                    login();
+                }
+
+                mt = new Thread(pf.GetGameData);
+                mt.Start();
+                mt.Join();
+                if (PFStuff.getResult.Count > 0)
+                {
+                    int questMax = Math.Min(PFStuff.questList.Count(), 80);
+                    for (int i = 0; i < questMax; i++)
+                    {
+                        setQuestBoxesFromServer(i, PFStuff.questList[i]);
+                    }
+                    deactivateButtons();
+                    guiLog.AppendText("Successfully got quests from server\n");
+                }
+                else
+                {
+                    guiLog.AppendText("Failed to get quests from server\n");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to log in");
+            }
+        }
+
+        private void setUpperFromServer(double d)
+        {
+            if (followerLabel.Text == "0")
+            {
+                upperCount.Value = -1;
+            }
+            else
+            {
+                upperCount.Value = (int)(d * Int32.Parse(followerLabel.Text.Replace(" ", "")));
+            }
+        }
+
+        private void setLowerFromServer(double d)
+        {
+            if (followerLabel.Text == "0")
+            {
+                lowerCount.Value = 0;
+            }
+            else
+            {
+                lowerCount.Value = (int)(d * Int32.Parse(followerLabel.Text.Replace(" ", "")));
+            }
+        }
+
+
+        private void button92_Click(object sender, EventArgs e)
+        {
+            if (followerLabel.Text == "0")
+            {
+                lowerCount.Value = 0;
+            }
+            else
+            {
+                lowerCount.Value = (int)(0.3 * Int32.Parse(followerLabel.Text.Replace(" ", "")));
+            }
+        }
+
+        private void button93_Click(object sender, EventArgs e)
+        {
+            int twoMonsterQuestLimit = 4;
+            int oneMonsterQuestLimit = 1;
+            List<string> result = new List<string>();
+            lineupBox.Text = "";
+            for (int i = 0; i < questButtons.Count; i++)
+            {
+                if (!questBoxes[3 * i + 2].Checked)
+                {
+                    if (questBoxes[3 * i + 1].Checked)
+                    {
+                        result.Add("quest" + (i + 1) + "-3");
+                    }
+                    else if (questBoxes[3 * i].Checked && twoMonsterQuestLimit > 0)
+                    {
+                        result.Add("quest" + (i + 1) + "-2");
+                        twoMonsterQuestLimit--;
+                    }
+                    else if (oneMonsterQuestLimit > 0)
+                    {
+                        result.Add("quest" + (i + 1) + "-1");
+                        oneMonsterQuestLimit--;
+                    }
+                }
+            }
+            lineupBox.Text = String.Join(" ", result);
+        }
+
+        private void upper100_Click(object sender, EventArgs e)
+        {
+            setUpperFromServer(1.0);
+        }
+
+        private void upper110_Click(object sender, EventArgs e)
+        {
+            setUpperFromServer(1.1);
+        }
+
+        private void lower30_Click(object sender, EventArgs e)
+        {
+            setLowerFromServer(0.3);
+        }
+
+        private void lower60_Click(object sender, EventArgs e)
+        {
+            setLowerFromServer(0.6);
+        }
+
+        private void button91_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Thread mt;
+                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
+                {
+                    login();
+                }
+
+                mt = new Thread(pf.GetGameData);
+                mt.Start();
+                mt.Join();
+                if (PFStuff.getResult.Count > 0)
+                {
+                    guiLog.AppendText("Followers refreshed\n");
+                    followerLabel.Text = PFStuff.followers.ToString("### ### ###");
+                }
+                else
+                {
+                    guiLog.AppendText("Failed to refresh followers\n");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to log in");
+            }
+        }
 
     }
 }

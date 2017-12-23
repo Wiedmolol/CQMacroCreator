@@ -22,9 +22,12 @@ namespace CQMacroCreator
         static bool _running = true;
         string token;
         string kongID;
+        public static int questID;
         public static List<int[]> getResult;
         public static int followers;
         public static int[] lineup;
+        public static List<int> questList;
+        public static int CSamount;
         public PFStuff(string t, string kid)
         {
             token = t;
@@ -32,7 +35,7 @@ namespace CQMacroCreator
         }
 
         public void LoginKong()
-        {           
+        {
             PlayFabSettings.TitleId = "E3FA";
             var request = new LoginWithKongregateRequest
             {
@@ -68,6 +71,7 @@ namespace CQMacroCreator
 
         public void GetGameData()
         {
+            questList = new List<int>();
             getResult = new List<int[]>();
             var request = new ExecuteCloudScriptRequest()
             {
@@ -88,18 +92,20 @@ namespace CQMacroCreator
                     {
                         return;
                     }
-                    else if (apiResult != null)
+                    else if (apiResult.FunctionResult != null)
                     {
                         JObject json = JObject.Parse(apiResult.FunctionResult.ToString());
                         string el = json["data"]["city"]["daily"]["setup"].ToString();
                         string elvl = json["data"]["city"]["daily"]["hero"].ToString();
                         string levels = json["data"]["city"]["hero"].ToString();
+                        string quests = json["data"]["city"]["quests"].ToString();
                         DQlvl = json["data"]["city"]["daily"]["lvl"].ToString();
+                        quests = quests.Substring(1, quests.Length - 2);
+                        questList = quests.Split(',').Select(Int32.Parse).ToList();
                         followers = Convert.ToInt32(json["data"]["followers"].ToString());
                         int[] heroLevels = getArray(levels);
                         int[] enemyLineup = getArray(el);
                         int[] enemyLevels = getArray(elvl);
-
                         getResult.Add(heroLevels);
                         getResult.Add(enemyLineup);
                         getResult.Add(enemyLevels);
@@ -119,6 +125,78 @@ namespace CQMacroCreator
                 RevisionSelection = CloudScriptRevisionOption.Live,
                 FunctionName = "pved",
                 FunctionParameter = new { setup = lineup, kid = kongID, max = true }
+            };
+            var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
+            bool _running = true;
+            while (_running)
+            {
+                if (statusTask.IsCompleted)
+                {
+                    var apiError = statusTask.Result.Error;
+                    var apiResult = statusTask.Result.Result;
+
+                    if (apiError != null)
+                    {
+                        DQResult = false;
+                        return;
+                    }
+                    else if (apiResult != null)
+                    {
+                        DQResult = true;
+                        return;
+                    }
+                    _running = false;
+                }
+                Thread.Sleep(1);
+            }
+            DQResult = false;
+            return;
+        }
+
+        //public void claimSticks()
+        //{
+        //    //object param2 = ""cs":5";
+        //    string param = @"""cs"":5";
+        //    var request = new ExecuteCloudScriptRequest()
+        //    {
+        //        RevisionSelection = CloudScriptRevisionOption.Live,
+        //        FunctionName = "xmas",
+        //        FunctionParameter =  param
+        //    };
+        //    var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
+        //    bool _running = true;
+        //    while (_running)
+        //    {
+        //        if (statusTask.IsCompleted)
+        //        {
+        //            var apiError = statusTask.Result.Error;
+        //            var apiResult = statusTask.Result.Result;
+
+        //            if (apiError != null)
+        //            {
+        //                DQResult = false;
+        //                return;
+        //            }
+        //            else if (apiResult != null)
+        //            {
+        //                DQResult = true;
+        //                return;
+        //            }
+        //            _running = false;
+        //        }
+        //        Thread.Sleep(1);
+        //    }
+        //    DQResult = false;
+        //    return;
+        //}
+
+        public void sendQuestSolution()
+        {
+            var request = new ExecuteCloudScriptRequest()
+            {
+                RevisionSelection = CloudScriptRevisionOption.Live,
+                FunctionName = "pve",
+                FunctionParameter = new { setup = lineup, id = questID }
             };
             var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
             bool _running = true;
