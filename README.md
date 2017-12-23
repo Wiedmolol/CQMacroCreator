@@ -7,7 +7,9 @@ CQMacroCreator is a "GUI' for Dicecycle's Cosmos Quest PvE Instance Solver https
 Just place CQMacroCreator.exe in the same folder as CosmosQuest.exe and run it.
 
 # What's new
-v.2.8.2 - Playfab integration, settings file, aliases
+v. 2.9.1 - added quest support. GUI can now send quest solutions to server.
+
+v. 2.8.2 - Playfab integration, settings file, aliases
 
 **PLayfab** - GUI can now automatically download your heroes' levels and enemy DQ lineup from server so there is no need to write it down. It requires finding your Authentication Ticket and Kongregate ID and writing it down in settings file. You can see instruction how to get them below.
 
