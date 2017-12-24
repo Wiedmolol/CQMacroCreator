@@ -27,7 +27,7 @@ namespace CQMacroCreator
         List<Button> questButtons;
         List<CheckBox> heroBoxes;
 
-        ToolTip tp = new ToolTip();
+        ToolTip tp = new ToolTip(); 
         PFStuff pf;
         Dictionary<string, string> aliases = new Dictionary<string, string>
         {
