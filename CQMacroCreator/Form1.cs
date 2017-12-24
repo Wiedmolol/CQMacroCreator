@@ -27,7 +27,7 @@ namespace CQMacroCreator
         List<Button> questButtons;
         List<CheckBox> heroBoxes;
 
-        ToolTip tp = new ToolTip(); 
+        ToolTip tp = new ToolTip();
         PFStuff pf;
         Dictionary<string, string> aliases = new Dictionary<string, string>
         {
@@ -657,18 +657,23 @@ namespace CQMacroCreator
             int counter = 0;
             foreach (CheckBox cb in heroBoxes)
             {
-                if (cb.Checked)
+                if (cb != null && cb.Checked)
                     counter++;
             }
             if (counter > heroBoxes.Count / 2)
             {
                 foreach (CheckBox cb in heroBoxes)
-                    cb.Checked = false;
+                    if (cb != null)
+                    {
+                        cb.Checked = false;
+                        CSHC.Text = "0";
+                    }
             }
             else
             {
                 foreach (CheckBox cb in heroBoxes)
-                    cb.Checked = true;
+                    if (cb != null)
+                        cb.Checked = true;
             }
         }
 
