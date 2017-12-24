@@ -1055,7 +1055,7 @@ namespace CQMacroCreator
                         result.Add("quest" + (i + 1) + "-2");
                         twoMonsterQuestLimit--;
                     }
-                    else if (oneMonsterQuestLimit > 0)
+                    else if (!questBoxes[3 * i].Checked && oneMonsterQuestLimit > 0)
                     {
                         result.Add("quest" + (i + 1) + "-1");
                         oneMonsterQuestLimit--;
