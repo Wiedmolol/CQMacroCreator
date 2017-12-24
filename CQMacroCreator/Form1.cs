@@ -20,7 +20,7 @@ namespace CQMacroCreator
     public partial class Form1 : Form
     {
         static string calcOut;
-        const int heroesInGame = 66;
+        const int heroesInGame = 78;
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
         List<CheckBox> questBoxes;
