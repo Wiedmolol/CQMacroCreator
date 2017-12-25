@@ -60,13 +60,15 @@ namespace CQMacroCreator
             {"FOREIGNER", "koldis"},
             {"VOWELCHICK", "aoyuki"},
             {"SANTA", "santaclaus"},
-            {"MARY", "marychristmas"},
+            {"MARY", "sexysanta"},
+            {"MARYCHRISTMAS", "sexysanta"},
             {"DEER", "reindeer"},
             {"RUDOLPH", "reindeer"},
             {"ELF", "christmaself"},
             {"FBOSS", "lordofchaos"},
             {"ATRONIX", "atr0n1x"},
-            {"ASHIT", "ageum"}
+            {"ASHIT", "ageum"},
+            {"SEXY", "sexysanta"}
 
         };
         string token;
@@ -78,9 +80,9 @@ namespace CQMacroCreator
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
-                                "christmaself", "reindeer", "santaclaus", "marychristmas"};
+                                "christmaself", "reindeer", "santaclaus", "sexysanta"};
 
-        string[] servernames = {    "marychristmas", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        string[] servernames = {    "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -294,7 +296,7 @@ namespace CQMacroCreator
         }
         private void hideButtons()
         {
-            button10.Enabled = false;
+            getDQButton.Enabled = false;
             button9.Enabled = false;
             autoSend.Enabled = false;
             guiLog.Enabled = false;
@@ -368,25 +370,22 @@ namespace CQMacroCreator
                 case ("2"):
                     if (token != null)
                     {
-                        button9_Click(this, EventArgs.Empty);
+                        getData(true, true, false, false);
                         button5_Click(this, EventArgs.Empty);
                     }
                     break;
                 case ("3"):
                     if (token != null)
                     {
-                        button9_Click(this, EventArgs.Empty);
-                        button10_Click(this, EventArgs.Empty);
+                        getData(true, true, true, false);
                         button5_Click(this, EventArgs.Empty);
                     }
                     break;
                 case ("4"):
                     if (token != null)
                     {
-                        button9_Click(this, EventArgs.Empty);
-                        button10_Click(this, EventArgs.Empty);
+                        getData(true, true, true, true);
                         button5_Click(this, EventArgs.Empty);
-                        getQuestsButton_Click(this, EventArgs.Empty);
                     }
                     break;
                 default:
@@ -503,7 +502,7 @@ namespace CQMacroCreator
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void runCalcButton_Click(object sender, EventArgs e)
         {
             int heroChecked = 0;
             DialogResult dr = DialogResult.Yes;
@@ -575,7 +574,7 @@ namespace CQMacroCreator
                                         else
                                         {
                                             guiLog.AppendText("DQ solution accepted by server\n");
-                                            button10_Click(this, EventArgs.Empty);
+                                            getDQButton_Click(this, EventArgs.Empty);
                                         }
                                     }
                                     else
@@ -807,6 +806,8 @@ namespace CQMacroCreator
                     }
                     chooseHeroes();
                     followerLabel.Text = PFStuff.followers.ToString("### ### ###");
+                    calculatePranaCosts();
+                    
                 }
                 else
                 {
@@ -820,7 +821,20 @@ namespace CQMacroCreator
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void calculatePranaCosts()
+        {
+            int PGrare = 0;
+            int PGcommon = 0;
+            int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63 };
+            foreach(int i in chestRaresID) {
+                PGrare += (99 - Math.Max(1, (int)heroCounts[i].Value)) * 3;
+                PGcommon += (99 - Math.Max(1, (int)heroCounts[i].Value));
+            }
+            PGforMaxCommon.Text = PGcommon.ToString("# ###");
+            PGforMaxRare.Text = PGrare.ToString("# ###");
+        }
+
+        private void getDQButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -902,7 +916,7 @@ namespace CQMacroCreator
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button3_Click(this, EventArgs.Empty);
+                runCalcButton_Click(this, EventArgs.Empty);
             }
         }
 
@@ -1114,5 +1128,80 @@ namespace CQMacroCreator
             }
         }
 
+        private void clearLogButton_click(object sender, EventArgs e)
+        {
+            guiLog.Text = "";
+        }
+
+        private void getData(bool heroes, bool followers, bool DQ, bool quests)
+        {
+            try
+            {
+                Thread mt;
+                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
+                {
+                    login();
+                }
+
+                mt = new Thread(pf.GetGameData);
+                mt.Start();
+                mt.Join();
+                if (PFStuff.getResult.Count > 0)
+                {
+                    if (followers)
+                    {
+                        guiLog.AppendText("Followers refreshed\n");
+                        followerLabel.Text = PFStuff.followers.ToString("### ### ###");
+                    }
+                    if (heroes)
+                    {
+                        guiLog.AppendText("Successfully got hero levels from server\n");
+                        for (int i = 0; i < heroCountsServerOrder.Count; i++)
+                        {
+                            if (heroCountsServerOrder[i] != null)
+                                heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
+                        }
+                        chooseHeroes();
+                        followerLabel.Text = PFStuff.followers.ToString("### ### ###");
+                        calculatePranaCosts();
+                    }
+                    if (DQ)
+                    {
+                        string[] enemylist = new string[5];
+                        for (int i = 0; i < 5; i++)
+                        {
+                            enemylist[i] = servernames[PFStuff.getResult[1][i] + heroesInGame];
+                            if (PFStuff.getResult[1][i] < -1)
+                            {
+                                enemylist[i] += ":" + PFStuff.getResult[2][-PFStuff.getResult[1][i] - 2].ToString();
+                            }
+                        }
+                        enemylist = enemylist.Reverse().ToArray();
+                        lineupBox.Text = string.Join(",", enemylist);
+                        guiLog.AppendText("Successfully got enemy lineup for DQ" + PFStuff.DQlvl + " - " + string.Join(",", enemylist) + "\n");
+                    }
+                    if (quests)
+                    {
+                        int questMax = Math.Min(PFStuff.questList.Count(), 80);
+                        for (int i = 0; i < questMax; i++)
+                        {
+                            setQuestBoxesFromServer(i, PFStuff.questList[i]);
+                        }
+                        deactivateButtons();
+                        guiLog.AppendText("Successfully got quests from server\n");
+                    }
+                }
+                else
+                {
+                    guiLog.AppendText("Failed to obtain game data\n");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed to log in");
+            }
+        }
+
+       
     }
 }

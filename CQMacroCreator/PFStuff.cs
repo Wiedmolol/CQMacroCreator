@@ -95,6 +95,7 @@ namespace CQMacroCreator
                     else if (apiResult.FunctionResult != null)
                     {
                         JObject json = JObject.Parse(apiResult.FunctionResult.ToString());
+                        //Console.Write(json);
                         string el = json["data"]["city"]["daily"]["setup"].ToString();
                         string elvl = json["data"]["city"]["daily"]["hero"].ToString();
                         string levels = json["data"]["city"]["hero"].ToString();
@@ -152,6 +153,8 @@ namespace CQMacroCreator
             DQResult = false;
             return;
         }
+
+       
 
         //public void claimSticks()
         //{
