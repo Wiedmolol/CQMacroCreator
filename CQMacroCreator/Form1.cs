@@ -447,7 +447,8 @@ namespace CQMacroCreator
                 int[] levels = s.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
                 for (int i = 0; i < levels.Length; i++)
                 {
-                    heroCounts[i].Value = levels[i];
+                    if (heroCounts[i] != null)
+                        heroCounts[i].Value = levels[i];
                 }
             }
             catch (Exception e)
@@ -461,7 +462,8 @@ namespace CQMacroCreator
             int[] bools = s.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
             for (int i = 0; i < bools.Length; i++)
             {
-                heroBoxes[i].Checked = bools[i] == 1;
+                if (heroBoxes[i] != null)
+                    heroBoxes[i].Checked = bools[i] == 1;
             }
         }
 
@@ -471,12 +473,28 @@ namespace CQMacroCreator
             if (save.ShowDialog() == DialogResult.OK)
             {
                 System.IO.StreamWriter sw = new System.IO.StreamWriter(save.OpenFile());
-                string s = string.Join(",", heroCounts.Select(x => x.Value).ToArray());
+                List<int> levels = new List<int>();
+                foreach (NumericUpDown n in heroCounts)
+                {
+                    if (n != null)
+                    {
+                        levels.Add((int)n.Value);
+                    }
+                    else
+                    {
+                        levels.Add(0);
+                    }
+                }
+                string s = string.Join(",", levels.ToArray());
+                //string s = string.Join(",", heroCounts.Select(x => x.Value).ToArray());
                 sw.WriteLine(s);
                 List<int> bools = new List<int>();
                 foreach (CheckBox cb in heroBoxes)
                 {
-                    bools.Add(cb.Checked ? 1 : 0);
+                    if (cb != null)
+                        bools.Add(cb.Checked ? 1 : 0);
+                    else
+                        bools.Add(0);
                 }
                 s = string.Join(",", bools.ToArray());
                 sw.Write(s);
