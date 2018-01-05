@@ -485,7 +485,6 @@ namespace CQMacroCreator
                     }
                 }
                 string s = string.Join(",", levels.ToArray());
-                //string s = string.Join(",", heroCounts.Select(x => x.Value).ToArray());
                 sw.WriteLine(s);
                 List<int> bools = new List<int>();
                 foreach (CheckBox cb in heroBoxes)
@@ -574,7 +573,7 @@ namespace CQMacroCreator
                                         else
                                         {
                                             guiLog.AppendText("DQ solution accepted by server\n");
-                                            getDQButton_Click(this, EventArgs.Empty);
+                                            setDQData();
                                         }
                                     }
                                     else
@@ -630,7 +629,6 @@ namespace CQMacroCreator
             proc.BeginOutputReadLine();
 
             proc.WaitForExit();
-
         }
 
         void proc_DataReceived(object sender, DataReceivedEventArgs e)
@@ -807,7 +805,7 @@ namespace CQMacroCreator
                     chooseHeroes();
                     followerLabel.Text = PFStuff.followers.ToString("### ### ###");
                     calculatePranaCosts();
-                    
+
                 }
                 else
                 {
@@ -826,12 +824,29 @@ namespace CQMacroCreator
             int PGrare = 0;
             int PGcommon = 0;
             int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63 };
-            foreach(int i in chestRaresID) {
+            foreach (int i in chestRaresID)
+            {
                 PGrare += (99 - Math.Max(1, (int)heroCounts[i].Value)) * 3;
-                PGcommon += (99 - Math.Max(1, (int)heroCounts[i].Value));
+                PGcommon += (99 - Math.Max(1, (int)heroCounts[i - 1].Value));
             }
             PGforMaxCommon.Text = PGcommon.ToString("# ###");
             PGforMaxRare.Text = PGrare.ToString("# ###");
+        }
+
+        private void setDQData()
+        {
+            string[] enemylist = new string[5];
+            for (int i = 0; i < 5; i++)
+            {
+                enemylist[i] = servernames[PFStuff.getResult[1][i] + heroesInGame];
+                if (PFStuff.getResult[1][i] < -1)
+                {
+                    enemylist[i] += ":" + PFStuff.getResult[2][-PFStuff.getResult[1][i] - 2].ToString();
+                }
+            }
+            enemylist = enemylist.Reverse().ToArray();
+            lineupBox.Text = string.Join(",", enemylist);
+            guiLog.AppendText("Successfully got enemy lineup for DQ" + PFStuff.DQlvl + " - " + string.Join(",", enemylist) + "\n");
         }
 
         private void getDQButton_Click(object sender, EventArgs e)
@@ -849,18 +864,7 @@ namespace CQMacroCreator
                 mt.Join();
                 if (PFStuff.getResult.Count > 0)
                 {
-                    string[] enemylist = new string[5];
-                    for (int i = 0; i < 5; i++)
-                    {
-                        enemylist[i] = servernames[PFStuff.getResult[1][i] + heroesInGame];
-                        if (PFStuff.getResult[1][i] < -1)
-                        {
-                            enemylist[i] += ":" + PFStuff.getResult[2][-PFStuff.getResult[1][i] - 2].ToString();
-                        }
-                    }
-                    enemylist = enemylist.Reverse().ToArray();
-                    lineupBox.Text = string.Join(",", enemylist);
-                    guiLog.AppendText("Successfully got enemy lineup for DQ" + PFStuff.DQlvl + " - " + string.Join(",", enemylist) + "\n");
+                    setDQData();
                 }
                 else
                 {
@@ -1202,6 +1206,6 @@ namespace CQMacroCreator
             }
         }
 
-       
+
     }
 }

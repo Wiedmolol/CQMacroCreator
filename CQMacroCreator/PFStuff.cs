@@ -95,7 +95,6 @@ namespace CQMacroCreator
                     else if (apiResult.FunctionResult != null)
                     {
                         JObject json = JObject.Parse(apiResult.FunctionResult.ToString());
-                        //Console.Write(json);
                         string el = json["data"]["city"]["daily"]["setup"].ToString();
                         string elvl = json["data"]["city"]["daily"]["hero"].ToString();
                         string levels = json["data"]["city"]["hero"].ToString();
@@ -141,8 +140,22 @@ namespace CQMacroCreator
                         DQResult = false;
                         return;
                     }
-                    else if (apiResult != null)
+                    else if (apiResult.FunctionResult != null)
                     {
+                        getResult = new List<int[]>();
+
+                        JObject json = JObject.Parse(apiResult.FunctionResult.ToString());
+                        string el = json["data"]["city"]["daily"]["setup"].ToString();
+                        string elvl = json["data"]["city"]["daily"]["hero"].ToString();
+                        string levels = json["data"]["city"]["hero"].ToString();
+                        DQlvl = json["data"]["city"]["daily"]["lvl"].ToString();
+                        int[] heroLevels = getArray(levels);
+                        int[] enemyLineup = getArray(el);
+                        int[] enemyLevels = getArray(elvl);
+                        getResult.Add(heroLevels);
+                        getResult.Add(enemyLineup);
+                        getResult.Add(enemyLevels);
+
                         DQResult = true;
                         return;
                     }
@@ -152,46 +165,8 @@ namespace CQMacroCreator
             }
             DQResult = false;
             return;
-        }
+        }     
 
-       
-
-        //public void claimSticks()
-        //{
-        //    //object param2 = ""cs":5";
-        //    string param = @"""cs"":5";
-        //    var request = new ExecuteCloudScriptRequest()
-        //    {
-        //        RevisionSelection = CloudScriptRevisionOption.Live,
-        //        FunctionName = "xmas",
-        //        FunctionParameter =  param
-        //    };
-        //    var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
-        //    bool _running = true;
-        //    while (_running)
-        //    {
-        //        if (statusTask.IsCompleted)
-        //        {
-        //            var apiError = statusTask.Result.Error;
-        //            var apiResult = statusTask.Result.Result;
-
-        //            if (apiError != null)
-        //            {
-        //                DQResult = false;
-        //                return;
-        //            }
-        //            else if (apiResult != null)
-        //            {
-        //                DQResult = true;
-        //                return;
-        //            }
-        //            _running = false;
-        //        }
-        //        Thread.Sleep(1);
-        //    }
-        //    DQResult = false;
-        //    return;
-        //}
 
         public void sendQuestSolution()
         {
