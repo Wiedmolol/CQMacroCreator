@@ -20,7 +20,7 @@ namespace CQMacroCreator
     public partial class Form1 : Form
     {
         static string calcOut;
-        const int heroesInGame = 78;
+        const int heroesInGame = 84;
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
         List<CheckBox> questBoxes;
@@ -80,9 +80,9 @@ namespace CQMacroCreator
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
-                                "christmaself", "reindeer", "santaclaus", "sexysanta"};
+                                "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar"};
 
-        string[] servernames = {    "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        string[] servernames = {   "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -117,7 +117,8 @@ namespace CQMacroCreator
                                                HamaCount, HallinskidiCount, RigrCount,
                                                AAlphaCount, AAthosCount, AReiCount, AAuriCount, ATronixCount, AGeumCount, AGerorCount,
                                                null,
-                                               elfCount, deerCount, santaCount, maryCount
+                                               elfCount, deerCount, santaCount, maryCount,
+                                               TothCount, GanahCount, DagdaCount, BubblesCount, APontusCount, AAtzarCount
 
             };
 
@@ -146,7 +147,8 @@ namespace CQMacroCreator
                                                HamaCount, HallinskidiCount, RigrCount,
                                                AAlphaCount, AAthosCount, AReiCount, AAuriCount, ATronixCount, AGeumCount, AGerorCount,
                                                null,
-                                               elfCount, deerCount, santaCount, maryCount
+                                               elfCount, deerCount, santaCount, maryCount,
+                                               TothCount, GanahCount, DagdaCount, BubblesCount, APontusCount, AAtzarCount
             };
 
             heroBoxes = new List<CheckBox>() { JamesBox, 
@@ -172,7 +174,8 @@ namespace CQMacroCreator
                                                HamaBox, HallinskidiBox, RigrBox,
                                                AAlphaBox, AAthosBox, AReiBox, AAuriBox, ATronixBox, AGeumBox, AGerorBox,
                                                null,
-                                               elfBox, deerBox, santaBox, maryBox
+                                               elfBox, deerBox, santaBox, maryBox,
+                                               TothBox, GanahBox, DagdaBox, BubblesBox, APontusBox, AAtzarBox
             };
 
             questBoxes = new List<CheckBox>() {
@@ -418,8 +421,10 @@ namespace CQMacroCreator
             new Hero(30,18,1,0,0), new Hero(34,34,2,0,0), new Hero(60,42,6,0,0),                //Hama, Halli, Rigr
             new Hero(174,46,12,0,0), new Hero(162,60,12,0,0), new Hero(120,104,12,0,0), new Hero(148,78,12,0,0),new Hero(190,38,12,0,0),new Hero(222,8,12,0,0),new Hero(116,116,12,0,0),
             null,
-            new Hero(38,24,1,0,0), new Hero(54,36,2,0,0), new Hero(72,48,6,0,0), new Hero(44,44,2,0,0),
-
+            new Hero(38,24,1,0,0), new Hero(54,36,2,0,0), new Hero(72,48,6,0,0), new Hero(44,44,2,0,0), //xmas
+            new Hero(24,24,1,0,0), new Hero(40,30,2,0,0), new Hero(58,46,6,1,1.15),             //toth, ganah, dagda
+            new Hero(174,46,12,0,0),                                                            //bubbles
+            new Hero(150,86,12,0,0),new Hero(201,37,12,0,0)
 
         });
 
