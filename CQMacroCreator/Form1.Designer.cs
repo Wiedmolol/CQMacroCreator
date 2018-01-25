@@ -2434,8 +2434,8 @@
             // 
             this.lowerCount.Location = new System.Drawing.Point(607, 73);
             this.lowerCount.Maximum = new decimal(new int[] {
-            99999999,
-            0,
+            1410065407,
+            2,
             0,
             0});
             this.lowerCount.Minimum = new decimal(new int[] {
@@ -2470,8 +2470,8 @@
             // 
             this.upperCount.Location = new System.Drawing.Point(607, 99);
             this.upperCount.Maximum = new decimal(new int[] {
-            99999999,
-            0,
+            1410065407,
+            2,
             0,
             0});
             this.upperCount.Minimum = new decimal(new int[] {
