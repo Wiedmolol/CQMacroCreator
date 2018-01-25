@@ -2542,7 +2542,7 @@
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(37, 13);
             this.label57.TabIndex = 159;
-            this.label57.Text = "v2.9.2";
+            this.label57.Text = "v2.9.3";
             // 
             // GurthBox
             // 
