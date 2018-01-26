@@ -543,7 +543,7 @@ namespace CQMacroCreator
                         {
                             createMacroFile(lp);
                             RunWithRedirect("CosmosQuest.exe");
-                            calcOut = calcOut.Substring(0, calcOut.Length - 24);
+                            //calcOut = calcOut.Substring(0, calcOut.Length - 24);
                             JObject solution = JObject.Parse(calcOut);
                             if (solution["validSolution"]["solution"].ToString() != String.Empty)
                             {
