@@ -26,7 +26,8 @@ namespace CQMacroCreator
         List<CheckBox> questBoxes;
         List<Button> questButtons;
         List<CheckBox> heroBoxes;
-
+        double lowerFollowerPerc = 0.0;
+        double upperFollowerPerc = 0.0;
         ToolTip tp = new ToolTip();
         PFStuff pf;
         Dictionary<string, string> aliases = new Dictionary<string, string>
@@ -337,6 +338,34 @@ namespace CQMacroCreator
                 defaultActionOnOpen = getSetting(sr.ReadLine());
                 token = getSetting(sr.ReadLine());
                 KongregateId = getSetting(sr.ReadLine());
+
+                string lower = getSetting(sr.ReadLine());
+                string upper = getSetting(sr.ReadLine());
+
+                if (lower != null)
+                {
+                    if (lower.Contains("%"))
+                    {
+                        lowerFollowerPerc = Int64.Parse(lower.Split('%')[0]) / 100.0;
+                    }
+                    else
+                    {
+                        lowerCount.Value = Int64.Parse(lower);
+                    }
+                }
+
+                if (upper != null)
+                {
+                    if (upper.Contains("%"))
+                    {
+                        upperFollowerPerc = Int64.Parse(upper.Split('%')[0]) / 100.0;
+                    }
+                    else
+                    {
+                        upperCount.Value = Int64.Parse(upper);
+                    }
+                }
+
                 if (token == "1111111111111111111111111111111111111111111111111111111111111111" || KongregateId == "000000")
                 {
                     token = KongregateId = null;
@@ -1170,6 +1199,14 @@ namespace CQMacroCreator
                     {
                         guiLog.AppendText("Followers refreshed\n");
                         followerLabel.Text = PFStuff.followers.ToString("### ### ###");
+                        if (upperFollowerPerc != 0.0)
+                        {
+                            upperCount.Value = (decimal)(upperFollowerPerc * PFStuff.followers);
+                        }
+                        if (lowerFollowerPerc != 0.0)
+                        {
+                            lowerCount.Value = (decimal)(lowerFollowerPerc * PFStuff.followers);
+                        }
                     }
                     if (heroes)
                     {
