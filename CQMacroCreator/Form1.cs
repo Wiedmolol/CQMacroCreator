@@ -463,8 +463,9 @@ namespace CQMacroCreator
             new Hero(38,24,1,0,0), new Hero(54,36,2,0,0), new Hero(72,48,6,0,0), new Hero(44,44,2,0,0), //xmas
             new Hero(24,24,1,0,0), new Hero(40,30,2,0,0), new Hero(58,46,6,1,1.15),             //toth, ganah, dagda
             new Hero(174,46,12,0,0),                                                            //bubbles
-            new Hero(150,86,12,0,0),new Hero(201,37,12,0,0),
+            new Hero(150,86,12,0,0),new Hero(162,81,12,0,0),
             new Hero(74,36,6,0,0), new Hero(78,40,6,0,0), new Hero(82,44,6,0,0),
+            new Hero(141,99,12,0,0), null
 
         });
 
