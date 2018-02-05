@@ -1,3 +1,5 @@
 0		// default action on open; 0 - no action, 1 - load heroes from defaultHeroes file, 2 - load heroes from server, 3 - load heroes and DQ from server
 1111111111111111111111111111111111111111111111111111111111111111		//Authentication Ticket, don't share that with anyone! 	
 0000000		//Kongregate ID
+0   //lower follower limit, you can use flat value like 2137 or percentage like 10%
+-1  //upper follower limit, same deal
