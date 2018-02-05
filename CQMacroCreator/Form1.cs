@@ -20,7 +20,7 @@ namespace CQMacroCreator
     public partial class Form1 : Form
     {
         static string calcOut;
-        const int heroesInGame = 87;
+        const int heroesInGame = 89;
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
         List<CheckBox> questBoxes;
@@ -69,7 +69,8 @@ namespace CQMacroCreator
             {"FBOSS", "lordofchaos"},
             {"ATRONIX", "atr0n1x"},
             {"ASHIT", "ageum"},
-            {"SEXY", "sexysanta"}
+            {"SEXY", "sexysanta"},
+            {"EBOSS", "moak"},
 
         };
         string token;
@@ -81,9 +82,9 @@ namespace CQMacroCreator
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
-                                "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth"};
+                                "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", "moak"};
 
-        string[] servernames = {   "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        string[] servernames = {  "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -123,7 +124,8 @@ namespace CQMacroCreator
                                                null,
                                                elfCount, deerCount, santaCount, maryCount,
                                                TothCount, GanahCount, DagdaCount, BubblesCount, APontusCount, AAtzarCount,
-                                               ArshenCount, RuaCount, DorthCount
+                                               ArshenCount, RuaCount, DorthCount,
+                                               aRigrCount, null
 
             };
 
@@ -154,7 +156,8 @@ namespace CQMacroCreator
                                                null,
                                                elfCount, deerCount, santaCount, maryCount,
                                                TothCount, GanahCount, DagdaCount, BubblesCount, APontusCount, AAtzarCount,
-                                               ArshenCount, RuaCount, DorthCount
+                                               ArshenCount, RuaCount, DorthCount,
+                                               aRigrCount, null
             };
 
             heroBoxes = new List<CheckBox>() { JamesBox, 
@@ -182,7 +185,8 @@ namespace CQMacroCreator
                                                null,
                                                elfBox, deerBox, santaBox, maryBox,
                                                TothBox, GanahBox, DagdaBox, BubblesBox, APontusBox, AAtzarBox,
-                                               ArshenBox, RuaBox, DorthBox
+                                               ArshenBox, RuaBox, DorthBox,
+                                               aRigrBox, null
             };
 
             questBoxes = new List<CheckBox>() {

@@ -26,8 +26,7 @@ namespace CQMacroCreator
         public static List<int[]> getResult;
         public static int followers;
         public static int[] lineup;
-        public static List<int> questList;
-        public static int CSamount;
+        public static List<int> questList;        
         public PFStuff(string t, string kid)
         {
             token = t;

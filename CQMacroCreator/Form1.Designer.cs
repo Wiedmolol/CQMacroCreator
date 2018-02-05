@@ -255,6 +255,15 @@
             this.CSHC = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Heroes = new System.Windows.Forms.TabPage();
+            this.DorthBox = new System.Windows.Forms.CheckBox();
+            this.label194 = new System.Windows.Forms.Label();
+            this.DorthCount = new System.Windows.Forms.NumericUpDown();
+            this.RuaBox = new System.Windows.Forms.CheckBox();
+            this.label195 = new System.Windows.Forms.Label();
+            this.RuaCount = new System.Windows.Forms.NumericUpDown();
+            this.ArshenBox = new System.Windows.Forms.CheckBox();
+            this.label196 = new System.Windows.Forms.Label();
+            this.ArshenCount = new System.Windows.Forms.NumericUpDown();
             this.AAtzarBox = new System.Windows.Forms.CheckBox();
             this.label192 = new System.Windows.Forms.Label();
             this.AAtzarCount = new System.Windows.Forms.NumericUpDown();
@@ -742,15 +751,9 @@
             this.button93 = new System.Windows.Forms.Button();
             this.getQuestsButton = new System.Windows.Forms.Button();
             this.clearLogButton = new System.Windows.Forms.Button();
-            this.DorthBox = new System.Windows.Forms.CheckBox();
-            this.label194 = new System.Windows.Forms.Label();
-            this.DorthCount = new System.Windows.Forms.NumericUpDown();
-            this.RuaBox = new System.Windows.Forms.CheckBox();
-            this.label195 = new System.Windows.Forms.Label();
-            this.RuaCount = new System.Windows.Forms.NumericUpDown();
-            this.ArshenBox = new System.Windows.Forms.CheckBox();
-            this.label196 = new System.Windows.Forms.Label();
-            this.ArshenCount = new System.Windows.Forms.NumericUpDown();
+            this.aRigrBox = new System.Windows.Forms.CheckBox();
+            this.label197 = new System.Windows.Forms.Label();
+            this.aRigrCount = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -820,6 +823,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.HamaCount)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Heroes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DorthCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RuaCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArshenCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AAtzarCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.APontusCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DagdaCount)).BeginInit();
@@ -842,9 +848,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DorthCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RuaCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArshenCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRigrCount)).BeginInit();
             this.SuspendLayout();
             // 
             // JamesCount
@@ -2542,7 +2546,7 @@
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(37, 13);
             this.label57.TabIndex = 159;
-            this.label57.Text = "v2.9.3";
+            this.label57.Text = "v2.9.4";
             // 
             // GurthBox
             // 
@@ -3223,6 +3227,9 @@
             // Heroes
             // 
             this.Heroes.AutoScroll = true;
+            this.Heroes.Controls.Add(this.aRigrBox);
+            this.Heroes.Controls.Add(this.label197);
+            this.Heroes.Controls.Add(this.aRigrCount);
             this.Heroes.Controls.Add(this.DorthBox);
             this.Heroes.Controls.Add(this.label194);
             this.Heroes.Controls.Add(this.DorthCount);
@@ -3490,6 +3497,99 @@
             this.Heroes.TabIndex = 0;
             this.Heroes.Text = "Heroes";
             this.Heroes.UseVisualStyleBackColor = true;
+            // 
+            // DorthBox
+            // 
+            this.DorthBox.AutoSize = true;
+            this.DorthBox.Location = new System.Drawing.Point(441, 372);
+            this.DorthBox.Name = "DorthBox";
+            this.DorthBox.Size = new System.Drawing.Size(33, 17);
+            this.DorthBox.TabIndex = 282;
+            this.DorthBox.Text = "E";
+            this.DorthBox.UseVisualStyleBackColor = true;
+            // 
+            // label194
+            // 
+            this.label194.AutoSize = true;
+            this.label194.Location = new System.Drawing.Point(333, 372);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(33, 13);
+            this.label194.TabIndex = 281;
+            this.label194.Text = "Dorth";
+            // 
+            // DorthCount
+            // 
+            this.DorthCount.Location = new System.Drawing.Point(385, 371);
+            this.DorthCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.DorthCount.Name = "DorthCount";
+            this.DorthCount.Size = new System.Drawing.Size(50, 20);
+            this.DorthCount.TabIndex = 280;
+            // 
+            // RuaBox
+            // 
+            this.RuaBox.AutoSize = true;
+            this.RuaBox.Location = new System.Drawing.Point(281, 372);
+            this.RuaBox.Name = "RuaBox";
+            this.RuaBox.Size = new System.Drawing.Size(33, 17);
+            this.RuaBox.TabIndex = 279;
+            this.RuaBox.Text = "E";
+            this.RuaBox.UseVisualStyleBackColor = true;
+            // 
+            // label195
+            // 
+            this.label195.AutoSize = true;
+            this.label195.Location = new System.Drawing.Point(164, 373);
+            this.label195.Name = "label195";
+            this.label195.Size = new System.Drawing.Size(27, 13);
+            this.label195.TabIndex = 278;
+            this.label195.Text = "Rua";
+            // 
+            // RuaCount
+            // 
+            this.RuaCount.Location = new System.Drawing.Point(225, 371);
+            this.RuaCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.RuaCount.Name = "RuaCount";
+            this.RuaCount.Size = new System.Drawing.Size(50, 20);
+            this.RuaCount.TabIndex = 277;
+            // 
+            // ArshenBox
+            // 
+            this.ArshenBox.AutoSize = true;
+            this.ArshenBox.Location = new System.Drawing.Point(121, 372);
+            this.ArshenBox.Name = "ArshenBox";
+            this.ArshenBox.Size = new System.Drawing.Size(33, 17);
+            this.ArshenBox.TabIndex = 276;
+            this.ArshenBox.Text = "E";
+            this.ArshenBox.UseVisualStyleBackColor = true;
+            // 
+            // label196
+            // 
+            this.label196.AutoSize = true;
+            this.label196.Location = new System.Drawing.Point(13, 373);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(40, 13);
+            this.label196.TabIndex = 275;
+            this.label196.Text = "Arshen";
+            // 
+            // ArshenCount
+            // 
+            this.ArshenCount.Location = new System.Drawing.Point(65, 371);
+            this.ArshenCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.ArshenCount.Name = "ArshenCount";
+            this.ArshenCount.Size = new System.Drawing.Size(50, 20);
+            this.ArshenCount.TabIndex = 274;
             // 
             // AAtzarBox
             // 
@@ -9014,98 +9114,36 @@
             this.clearLogButton.UseVisualStyleBackColor = true;
             this.clearLogButton.Click += new System.EventHandler(this.clearLogButton_click);
             // 
-            // DorthBox
+            // aRigrBox
             // 
-            this.DorthBox.AutoSize = true;
-            this.DorthBox.Location = new System.Drawing.Point(441, 372);
-            this.DorthBox.Name = "DorthBox";
-            this.DorthBox.Size = new System.Drawing.Size(33, 17);
-            this.DorthBox.TabIndex = 282;
-            this.DorthBox.Text = "E";
-            this.DorthBox.UseVisualStyleBackColor = true;
+            this.aRigrBox.AutoSize = true;
+            this.aRigrBox.Location = new System.Drawing.Point(121, 787);
+            this.aRigrBox.Name = "aRigrBox";
+            this.aRigrBox.Size = new System.Drawing.Size(33, 17);
+            this.aRigrBox.TabIndex = 285;
+            this.aRigrBox.Text = "E";
+            this.aRigrBox.UseVisualStyleBackColor = true;
             // 
-            // label194
+            // label197
             // 
-            this.label194.AutoSize = true;
-            this.label194.Location = new System.Drawing.Point(333, 372);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(33, 13);
-            this.label194.TabIndex = 281;
-            this.label194.Text = "Dorth";
+            this.label197.AutoSize = true;
+            this.label197.Location = new System.Drawing.Point(7, 788);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(50, 13);
+            this.label197.TabIndex = 284;
+            this.label197.Text = "Asc. Rigr";
             // 
-            // DorthCount
+            // aRigrCount
             // 
-            this.DorthCount.Location = new System.Drawing.Point(385, 371);
-            this.DorthCount.Maximum = new decimal(new int[] {
+            this.aRigrCount.Location = new System.Drawing.Point(65, 786);
+            this.aRigrCount.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.DorthCount.Name = "DorthCount";
-            this.DorthCount.Size = new System.Drawing.Size(50, 20);
-            this.DorthCount.TabIndex = 280;
-            // 
-            // RuaBox
-            // 
-            this.RuaBox.AutoSize = true;
-            this.RuaBox.Location = new System.Drawing.Point(281, 372);
-            this.RuaBox.Name = "RuaBox";
-            this.RuaBox.Size = new System.Drawing.Size(33, 17);
-            this.RuaBox.TabIndex = 279;
-            this.RuaBox.Text = "E";
-            this.RuaBox.UseVisualStyleBackColor = true;
-            // 
-            // label195
-            // 
-            this.label195.AutoSize = true;
-            this.label195.Location = new System.Drawing.Point(164, 373);
-            this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(27, 13);
-            this.label195.TabIndex = 278;
-            this.label195.Text = "Rua";
-            // 
-            // RuaCount
-            // 
-            this.RuaCount.Location = new System.Drawing.Point(225, 371);
-            this.RuaCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.RuaCount.Name = "RuaCount";
-            this.RuaCount.Size = new System.Drawing.Size(50, 20);
-            this.RuaCount.TabIndex = 277;
-            // 
-            // ArshenBox
-            // 
-            this.ArshenBox.AutoSize = true;
-            this.ArshenBox.Location = new System.Drawing.Point(121, 372);
-            this.ArshenBox.Name = "ArshenBox";
-            this.ArshenBox.Size = new System.Drawing.Size(33, 17);
-            this.ArshenBox.TabIndex = 276;
-            this.ArshenBox.Text = "E";
-            this.ArshenBox.UseVisualStyleBackColor = true;
-            // 
-            // label196
-            // 
-            this.label196.AutoSize = true;
-            this.label196.Location = new System.Drawing.Point(13, 373);
-            this.label196.Name = "label196";
-            this.label196.Size = new System.Drawing.Size(40, 13);
-            this.label196.TabIndex = 275;
-            this.label196.Text = "Arshen";
-            // 
-            // ArshenCount
-            // 
-            this.ArshenCount.Location = new System.Drawing.Point(65, 371);
-            this.ArshenCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.ArshenCount.Name = "ArshenCount";
-            this.ArshenCount.Size = new System.Drawing.Size(50, 20);
-            this.ArshenCount.TabIndex = 274;
+            this.aRigrCount.Name = "aRigrCount";
+            this.aRigrCount.Size = new System.Drawing.Size(50, 20);
+            this.aRigrCount.TabIndex = 283;
             // 
             // Form1
             // 
@@ -9214,6 +9252,9 @@
             this.tabControl1.ResumeLayout(false);
             this.Heroes.ResumeLayout(false);
             this.Heroes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DorthCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RuaCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArshenCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AAtzarCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.APontusCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DagdaCount)).EndInit();
@@ -9240,9 +9281,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DorthCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RuaCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArshenCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aRigrCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -9972,6 +10011,9 @@
         private System.Windows.Forms.CheckBox ArshenBox;
         private System.Windows.Forms.Label label196;
         private System.Windows.Forms.NumericUpDown ArshenCount;
+        private System.Windows.Forms.CheckBox aRigrBox;
+        private System.Windows.Forms.Label label197;
+        private System.Windows.Forms.NumericUpDown aRigrCount;
     }
 }
 
