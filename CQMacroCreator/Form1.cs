@@ -325,7 +325,8 @@ namespace CQMacroCreator
                 return null;
             else
             {
-                int index = s.IndexOfAny("/ \t".ToArray());
+                s = s.TrimStart(" ".ToArray());
+                int index = s.IndexOfAny("/ \t\n".ToArray());
                 if (index > 0)
                 {
                     s = s.Substring(0, index);
@@ -1258,7 +1259,8 @@ namespace CQMacroCreator
             }
             catch
             {
-                MessageBox.Show("Failed to log in");
+                //MessageBox.Show("Failed to log in");
+                guiLog.AppendText("Failed to log in - your Auth Ticket: " + token + ", your KongID: " + KongregateId);
             }
         }
 

@@ -53,6 +53,7 @@ namespace CQMacroCreator
                     if (apiError != null)
                     {
                         logres = false;
+                        MessageBox.Show("Failed to log in. Error: " + apiError.ErrorMessage);
                         return;
                     }
                     else if (apiResult != null)
