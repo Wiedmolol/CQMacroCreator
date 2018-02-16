@@ -20,7 +20,7 @@ namespace CQMacroCreator
     public partial class Form1 : Form
     {
         static string calcOut;
-        const int heroesInGame = 89;
+        
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
         List<CheckBox> questBoxes;
@@ -77,14 +77,14 @@ namespace CQMacroCreator
         string KongregateId;
         string defaultActionOnOpen = "0";
 
-        string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x", 
+        static string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x", 
                                 "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
-                                "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", "moak"};
+                                "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", "moak", "hosokawa", "takeda", "hirate", "hattori"};
 
-        string[] servernames = {  "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+       static string[] servernames = {  "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -96,8 +96,13 @@ namespace CQMacroCreator
                                "A22","E22","F22","W22","A23","E23","F23","W23","A24","E24","F24","W24","A25","E25","F25","W25","A26","E26","F26","W26","A27","E27","F27","W27",
                                "A28","E28","F28","W28","A29","E29","F29","W29","A30","E30","F30","W30",};
 
+
+        int heroesInGame = Array.IndexOf(servernames, "ladyoftwilight") + 2;
+        
+
         public Form1()
         {
+            
             InitializeComponent();
             heroCounts = new List<NumericUpDown>() {JamesCount, 
                                                HunterCount, ShamanCount, AlphaCount, 
@@ -125,7 +130,8 @@ namespace CQMacroCreator
                                                elfCount, deerCount, santaCount, maryCount,
                                                TothCount, GanahCount, DagdaCount, BubblesCount, APontusCount, AAtzarCount,
                                                ArshenCount, RuaCount, DorthCount,
-                                               aRigrCount, null
+                                               aRigrCount, null,
+                                               HosokawaCount, TakedaCount, HirateCount, HattoriCount
 
             };
 
@@ -157,7 +163,8 @@ namespace CQMacroCreator
                                                elfCount, deerCount, santaCount, maryCount,
                                                TothCount, GanahCount, DagdaCount, BubblesCount, APontusCount, AAtzarCount,
                                                ArshenCount, RuaCount, DorthCount,
-                                               aRigrCount, null
+                                               aRigrCount, null,
+                                               HosokawaCount, TakedaCount, HirateCount, HattoriCount
             };
 
             heroBoxes = new List<CheckBox>() { JamesBox, 
@@ -186,7 +193,8 @@ namespace CQMacroCreator
                                                elfBox, deerBox, santaBox, maryBox,
                                                TothBox, GanahBox, DagdaBox, BubblesBox, APontusBox, AAtzarBox,
                                                ArshenBox, RuaBox, DorthBox,
-                                               aRigrBox, null
+                                               aRigrBox, null,
+                                               HosokawaBox, TakedaBox, HirateBox, HattoriBox
             };
 
             questBoxes = new List<CheckBox>() {
@@ -286,6 +294,32 @@ namespace CQMacroCreator
                 checkBox231, checkBox230, checkBox229, 
                 checkBox228, checkBox227, checkBox226,
 
+                checkBox255, checkBox254, checkBox253,
+                checkBox252, checkBox251, checkBox250,
+                checkBox249, checkBox248, checkBox247,
+                checkBox246, checkBox245, checkBox244,
+                checkBox243, checkBox242, checkBox241,
+
+                checkBox300, checkBox299, checkBox298, 
+                checkBox297, checkBox296, checkBox295,
+                checkBox294, checkBox293, checkBox292, 
+                checkBox291, checkBox290, checkBox289, 
+                checkBox288, checkBox287, checkBox286, 
+
+                checkBox285, checkBox284, checkBox283, 
+                checkBox282, checkBox281, checkBox280, 
+                checkBox279, checkBox278, checkBox277, 
+                checkBox276, checkBox275, checkBox274,
+                checkBox273, checkBox272, checkBox271, 
+
+                checkBox270, checkBox269, checkBox268, 
+                checkBox267, checkBox266, checkBox265, 
+                checkBox264, checkBox263, checkBox262, 
+                checkBox261, checkBox260, checkBox259, 
+                checkBox258, checkBox257, checkBox256, 
+
+
+
             };
             questButtons = new List<Button>() {
                 button11, button12, button13, button14, button15,
@@ -303,7 +337,11 @@ namespace CQMacroCreator
                 button70, button69, button68, button67, button66,
                 button85, button84, button83, button82, button81,
                 button80, button79, button78, button77, button76,                
-                button90, button89, button88, button87, button86
+                button90, button89, button88, button87, button86,
+                button95, button94, button93, button92, button91,
+                button110, button109, button108, button107, button106,
+                button105, button104, button103, button102, button101,
+                button100, button99, button98, button97, button96
             }; 
 
             init();
@@ -466,7 +504,8 @@ namespace CQMacroCreator
             new Hero(174,46,12,0,0),                                                            //bubbles
             new Hero(150,86,12,0,0),new Hero(162,81,12,0,0),
             new Hero(74,36,6,0,0), new Hero(78,40,6,0,0), new Hero(82,44,6,0,0),
-            new Hero(141,99,12,0,0), null
+            new Hero(141,99,12,0,0), null,
+            new Hero(42,50,6,0,0), new Hero(32,66,6,0,0), new Hero(38,56,6,0,0), new Hero(44,48,6,0,0)
 
         });
 
@@ -831,41 +870,7 @@ namespace CQMacroCreator
 
         private void button9_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Thread mt;
-                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
-                {
-                    login();
-                }
-
-                mt = new Thread(pf.GetGameData);
-                mt.Start();
-                mt.Join();
-                if (PFStuff.getResult.Count > 0)
-                {
-                    guiLog.AppendText("Successfully got hero levels from server\n");
-                    //upperCount.Value = (int)(PFStuff.followers * 1.1);
-                    for (int i = 0; i < heroCountsServerOrder.Count; i++)
-                    {
-                        if (heroCountsServerOrder[i] != null)
-                            heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
-                    }
-                    chooseHeroes();
-                    followerLabel.Text = PFStuff.followers.ToString("### ### ###");
-                    calculatePranaCosts();
-
-                }
-                else
-                {
-                    guiLog.AppendText("Failed to get heroes from server\n");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Failed to log in");
-            }
-
+            getData(true, false, false, false);
         }
 
         private void calculatePranaCosts()
@@ -900,30 +905,7 @@ namespace CQMacroCreator
 
         private void getDQButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Thread mt;
-                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
-                {
-                    login();
-                }
-
-                mt = new Thread(pf.GetGameData);
-                mt.Start();
-                mt.Join();
-                if (PFStuff.getResult.Count > 0)
-                {
-                    setDQData();
-                }
-                else
-                {
-                    guiLog.AppendText("Failed to get enemy lineup from server\n");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Failed to log in");
-            }
+            getData(false, false, true, false);
         }
 
         private void RigrBox_CheckedChanged(object sender, EventArgs e)
@@ -1034,36 +1016,7 @@ namespace CQMacroCreator
         }
         private void getQuestsButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Thread mt;
-                if (!PlayFab.PlayFabClientAPI.IsClientLoggedIn())
-                {
-                    login();
-                }
-
-                mt = new Thread(pf.GetGameData);
-                mt.Start();
-                mt.Join();
-                if (PFStuff.getResult.Count > 0)
-                {
-                    int questMax = Math.Min(PFStuff.questList.Count(), 80);
-                    for (int i = 0; i < questMax; i++)
-                    {
-                        setQuestBoxesFromServer(i, PFStuff.questList[i]);
-                    }
-                    deactivateButtons();
-                    guiLog.AppendText("Successfully got quests from server\n");
-                }
-                else
-                {
-                    guiLog.AppendText("Failed to get quests from server\n");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Failed to log in");
-            }
+            getData(false, false, false, true);           
         }
 
         private void setUpperFromServer(double d)
@@ -1243,7 +1196,7 @@ namespace CQMacroCreator
                     }
                     if (quests)
                     {
-                        int questMax = Math.Min(PFStuff.questList.Count(), 80);
+                        int questMax = Math.Min(PFStuff.questList.Count(), 100);
                         for (int i = 0; i < questMax; i++)
                         {
                             setQuestBoxesFromServer(i, PFStuff.questList[i]);
