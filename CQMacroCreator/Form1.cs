@@ -338,7 +338,7 @@ namespace CQMacroCreator
                 button85, button84, button83, button82, button81,
                 button80, button79, button78, button77, button76,                
                 button90, button89, button88, button87, button86,
-                button95, button94, button93, button92, button91,
+                button95, button94, button92, button10, button3,
                 button110, button109, button108, button107, button106,
                 button105, button104, button103, button102, button101,
                 button100, button99, button98, button97, button96
