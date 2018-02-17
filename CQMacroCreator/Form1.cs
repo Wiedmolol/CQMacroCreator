@@ -1210,10 +1210,17 @@ namespace CQMacroCreator
                     guiLog.AppendText("Failed to obtain game data\n");
                 }
             }
-            catch
+            catch(InvalidOperationException)
             {
-                //MessageBox.Show("Failed to log in");
                 guiLog.AppendText("Failed to log in - your Auth Ticket: " + token + ", your KongID: " + KongregateId);
+            }
+            catch(IndexOutOfRangeException)
+            {
+                guiLog.AppendText("Unknown unit");
+            }
+            catch(Exception dataException)
+            {
+                guiLog.AppendText("Error: " + dataException.Message);
             }
         }
 
