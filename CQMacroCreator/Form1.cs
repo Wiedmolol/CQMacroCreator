@@ -13,14 +13,14 @@ using System.Collections;
 using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-
+using System.Windows.Threading;
 
 namespace CQMacroCreator
 {
     public partial class Form1 : Form
     {
         static string calcOut;
-        
+        static bool running;
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
         List<CheckBox> questBoxes;
@@ -84,7 +84,7 @@ namespace CQMacroCreator
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", "moak", "hosokawa", "takeda", "hirate", "hattori"};
 
-       static string[] servernames = {  "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = {  "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -98,11 +98,11 @@ namespace CQMacroCreator
 
 
         int heroesInGame = Array.IndexOf(servernames, "ladyoftwilight") + 2;
-        
+
 
         public Form1()
         {
-            
+
             InitializeComponent();
             heroCounts = new List<NumericUpDown>() {JamesCount, 
                                                HunterCount, ShamanCount, AlphaCount, 
@@ -342,7 +342,7 @@ namespace CQMacroCreator
                 button110, button109, button108, button107, button106,
                 button105, button104, button103, button102, button101,
                 button100, button99, button98, button97, button96
-            }; 
+            };
 
             init();
         }
@@ -355,6 +355,7 @@ namespace CQMacroCreator
             getQuestsButton.Enabled = false;
             ((Control)tabControl1.TabPages[1]).Enabled = false;
             ((Control)tabControl1.TabPages[2]).Enabled = false;
+
         }
 
         private string getSetting(string s)
@@ -673,6 +674,7 @@ namespace CQMacroCreator
                             else
                             {
                                 guiLog.AppendText("Solution not found\n");
+                                PFStuff.lineup = null;
                             }
                         }
                     }
@@ -716,7 +718,7 @@ namespace CQMacroCreator
             proc.BeginOutputReadLine();
 
             proc.WaitForExit();
-            
+
         }
 
         void proc_DataReceived(object sender, DataReceivedEventArgs e)
@@ -1016,7 +1018,7 @@ namespace CQMacroCreator
         }
         private void getQuestsButton_Click(object sender, EventArgs e)
         {
-            getData(false, false, false, true);           
+            getData(false, false, false, true);
         }
 
         private void setUpperFromServer(double d)
@@ -1210,20 +1212,51 @@ namespace CQMacroCreator
                     guiLog.AppendText("Failed to obtain game data\n");
                 }
             }
-            catch(InvalidOperationException)
+            catch (InvalidOperationException)
             {
                 guiLog.AppendText("Failed to log in - your Auth Ticket: " + token + ", your KongID: " + KongregateId);
             }
-            catch(IndexOutOfRangeException)
+            catch (IndexOutOfRangeException)
             {
                 guiLog.AppendText("Unknown unit");
             }
-            catch(Exception dataException)
+            catch (Exception dataException)
             {
                 guiLog.AppendText("Error: " + dataException.Message);
             }
         }
 
+        private void sendTillNoSolveButton_Click(object sender, EventArgs e)
+        {
+            int attempts = 0;
+            string previousDQlvl = "";
+            autoSend.Checked = true;
+            running = false;
+            while ((previousDQlvl != PFStuff.DQlvl || !PFStuff.DQResult) && (PFStuff.lineup != null || attempts == 0))
+            {
+                if (PFStuff.DQResult || attempts == 0)
+                {
+                    attempts = 1;
+                    previousDQlvl = PFStuff.DQlvl;
+                    runCalcButton_Click(this, EventArgs.Empty);
+                }
+                else
+                {
+                    if (attempts < 3)
+                    {
+                        attempts++;
+                        guiLog.AppendText("Attempt no. " + attempts + " in 5 seconds\n");
+                        System.Threading.Thread.Sleep(5000);
+                        runCalcButton_Click(this, EventArgs.Empty);
+                    }
+                    else
+                    {
+                        guiLog.AppendText("Solution invalid, solving was stopped\n");
+                        break;
+                    }
+                }
+            }
+        }
 
     }
 }

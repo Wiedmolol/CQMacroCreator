@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="label61.Text" xml:space="preserve">
-    <value>Few tips:
+    <value>Info:
         Hero will be used in calculations only if you check the box next to its lvl. 
 
         Don't use all heroes, if you have Carl lvl 99 then don't use Aquortis lvl 10. It will only slow down the calc. In most cases you should limit yourself to 6-10 heroes.

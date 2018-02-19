@@ -143,7 +143,6 @@ namespace CQMacroCreator
                     else if (apiResult.FunctionResult != null)
                     {
                         getResult = new List<int[]>();
-
                         JObject json = JObject.Parse(apiResult.FunctionResult.ToString());
                         string el = json["data"]["city"]["daily"]["setup"].ToString();
                         string elvl = json["data"]["city"]["daily"]["hero"].ToString();

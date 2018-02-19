@@ -870,6 +870,7 @@
             this.button93 = new System.Windows.Forms.Button();
             this.getQuestsButton = new System.Windows.Forms.Button();
             this.clearLogButton = new System.Windows.Forms.Button();
+            this.sendTillNoSolveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -981,7 +982,7 @@
             0});
             this.JamesCount.Name = "JamesCount";
             this.JamesCount.Size = new System.Drawing.Size(50, 20);
-            this.JamesCount.TabIndex = 0;
+            this.JamesCount.TabIndex = 71;
             // 
             // label1
             // 
@@ -999,6 +1000,7 @@
             this.JamesBox.Name = "JamesBox";
             this.JamesBox.Size = new System.Drawing.Size(33, 17);
             this.JamesBox.TabIndex = 2;
+            this.JamesBox.TabStop = false;
             this.JamesBox.Text = "E";
             this.JamesBox.UseVisualStyleBackColor = true;
             // 
@@ -1009,6 +1011,7 @@
             this.HunterBox.Name = "HunterBox";
             this.HunterBox.Size = new System.Drawing.Size(33, 17);
             this.HunterBox.TabIndex = 5;
+            this.HunterBox.TabStop = false;
             this.HunterBox.Text = "E";
             this.HunterBox.UseVisualStyleBackColor = true;
             this.HunterBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1032,7 +1035,7 @@
             0});
             this.HunterCount.Name = "HunterCount";
             this.HunterCount.Size = new System.Drawing.Size(50, 20);
-            this.HunterCount.TabIndex = 3;
+            this.HunterCount.TabIndex = 0;
             // 
             // JetBox
             // 
@@ -1041,6 +1044,7 @@
             this.JetBox.Name = "JetBox";
             this.JetBox.Size = new System.Drawing.Size(33, 17);
             this.JetBox.TabIndex = 11;
+            this.JetBox.TabStop = false;
             this.JetBox.Text = "E";
             this.JetBox.UseVisualStyleBackColor = true;
             this.JetBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1064,7 +1068,7 @@
             0});
             this.JetCount.Name = "JetCount";
             this.JetCount.Size = new System.Drawing.Size(50, 20);
-            this.JetCount.TabIndex = 9;
+            this.JetCount.TabIndex = 6;
             // 
             // CarlBox
             // 
@@ -1073,6 +1077,7 @@
             this.CarlBox.Name = "CarlBox";
             this.CarlBox.Size = new System.Drawing.Size(33, 17);
             this.CarlBox.TabIndex = 8;
+            this.CarlBox.TabStop = false;
             this.CarlBox.Text = "E";
             this.CarlBox.UseVisualStyleBackColor = true;
             this.CarlBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1096,7 +1101,7 @@
             0});
             this.CarlCount.Name = "CarlCount";
             this.CarlCount.Size = new System.Drawing.Size(50, 20);
-            this.CarlCount.TabIndex = 6;
+            this.CarlCount.TabIndex = 3;
             // 
             // KairyBox
             // 
@@ -1105,6 +1110,7 @@
             this.KairyBox.Name = "KairyBox";
             this.KairyBox.Size = new System.Drawing.Size(33, 17);
             this.KairyBox.TabIndex = 17;
+            this.KairyBox.TabStop = false;
             this.KairyBox.Text = "E";
             this.KairyBox.UseVisualStyleBackColor = true;
             this.KairyBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1128,7 +1134,7 @@
             0});
             this.KairyCount.Name = "KairyCount";
             this.KairyCount.Size = new System.Drawing.Size(50, 20);
-            this.KairyCount.TabIndex = 15;
+            this.KairyCount.TabIndex = 12;
             // 
             // AilenBox
             // 
@@ -1137,6 +1143,7 @@
             this.AilenBox.Name = "AilenBox";
             this.AilenBox.Size = new System.Drawing.Size(33, 17);
             this.AilenBox.TabIndex = 14;
+            this.AilenBox.TabStop = false;
             this.AilenBox.Text = "E";
             this.AilenBox.UseVisualStyleBackColor = true;
             this.AilenBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1160,7 +1167,7 @@
             0});
             this.AilenCount.Name = "AilenCount";
             this.AilenCount.Size = new System.Drawing.Size(50, 20);
-            this.AilenCount.TabIndex = 12;
+            this.AilenCount.TabIndex = 9;
             // 
             // RudeanBox
             // 
@@ -1169,6 +1176,7 @@
             this.RudeanBox.Name = "RudeanBox";
             this.RudeanBox.Size = new System.Drawing.Size(33, 17);
             this.RudeanBox.TabIndex = 23;
+            this.RudeanBox.TabStop = false;
             this.RudeanBox.Text = "E";
             this.RudeanBox.UseVisualStyleBackColor = true;
             this.RudeanBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1192,7 +1200,7 @@
             0});
             this.RudeanCount.Name = "RudeanCount";
             this.RudeanCount.Size = new System.Drawing.Size(50, 20);
-            this.RudeanCount.TabIndex = 21;
+            this.RudeanCount.TabIndex = 18;
             // 
             // AquortisBox
             // 
@@ -1201,6 +1209,7 @@
             this.AquortisBox.Name = "AquortisBox";
             this.AquortisBox.Size = new System.Drawing.Size(33, 17);
             this.AquortisBox.TabIndex = 20;
+            this.AquortisBox.TabStop = false;
             this.AquortisBox.Text = "E";
             this.AquortisBox.UseVisualStyleBackColor = true;
             this.AquortisBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1224,7 +1233,7 @@
             0});
             this.AquortisCount.Name = "AquortisCount";
             this.AquortisCount.Size = new System.Drawing.Size(50, 20);
-            this.AquortisCount.TabIndex = 18;
+            this.AquortisCount.TabIndex = 15;
             // 
             // OymosBox
             // 
@@ -1233,6 +1242,7 @@
             this.OymosBox.Name = "OymosBox";
             this.OymosBox.Size = new System.Drawing.Size(33, 17);
             this.OymosBox.TabIndex = 29;
+            this.OymosBox.TabStop = false;
             this.OymosBox.Text = "E";
             this.OymosBox.UseVisualStyleBackColor = true;
             this.OymosBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1256,7 +1266,7 @@
             0});
             this.OymosCount.Name = "OymosCount";
             this.OymosCount.Size = new System.Drawing.Size(50, 20);
-            this.OymosCount.TabIndex = 27;
+            this.OymosCount.TabIndex = 24;
             // 
             // OureaBox
             // 
@@ -1265,6 +1275,7 @@
             this.OureaBox.Name = "OureaBox";
             this.OureaBox.Size = new System.Drawing.Size(33, 17);
             this.OureaBox.TabIndex = 26;
+            this.OureaBox.TabStop = false;
             this.OureaBox.Text = "E";
             this.OureaBox.UseVisualStyleBackColor = true;
             this.OureaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1288,7 +1299,7 @@
             0});
             this.OureaCount.Name = "OureaCount";
             this.OureaCount.Size = new System.Drawing.Size(50, 20);
-            this.OureaCount.TabIndex = 24;
+            this.OureaCount.TabIndex = 21;
             // 
             // XarthBox
             // 
@@ -1297,6 +1308,7 @@
             this.XarthBox.Name = "XarthBox";
             this.XarthBox.Size = new System.Drawing.Size(33, 17);
             this.XarthBox.TabIndex = 56;
+            this.XarthBox.TabStop = false;
             this.XarthBox.Text = "E";
             this.XarthBox.UseVisualStyleBackColor = true;
             this.XarthBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1320,7 +1332,7 @@
             0});
             this.XarthCount.Name = "XarthCount";
             this.XarthCount.Size = new System.Drawing.Size(50, 20);
-            this.XarthCount.TabIndex = 54;
+            this.XarthCount.TabIndex = 25;
             // 
             // ErebusBox
             // 
@@ -1329,6 +1341,7 @@
             this.ErebusBox.Name = "ErebusBox";
             this.ErebusBox.Size = new System.Drawing.Size(33, 17);
             this.ErebusBox.TabIndex = 53;
+            this.ErebusBox.TabStop = false;
             this.ErebusBox.Text = "E";
             this.ErebusBox.UseVisualStyleBackColor = true;
             this.ErebusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1352,7 +1365,7 @@
             0});
             this.ErebusCount.Name = "ErebusCount";
             this.ErebusCount.Size = new System.Drawing.Size(50, 20);
-            this.ErebusCount.TabIndex = 51;
+            this.ErebusCount.TabIndex = 22;
             // 
             // AuralBox
             // 
@@ -1361,6 +1374,7 @@
             this.AuralBox.Name = "AuralBox";
             this.AuralBox.Size = new System.Drawing.Size(33, 17);
             this.AuralBox.TabIndex = 50;
+            this.AuralBox.TabStop = false;
             this.AuralBox.Text = "E";
             this.AuralBox.UseVisualStyleBackColor = true;
             this.AuralBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1384,7 +1398,7 @@
             0});
             this.AuralCount.Name = "AuralCount";
             this.AuralCount.Size = new System.Drawing.Size(50, 20);
-            this.AuralCount.TabIndex = 48;
+            this.AuralCount.TabIndex = 19;
             // 
             // AerisBox
             // 
@@ -1393,6 +1407,7 @@
             this.AerisBox.Name = "AerisBox";
             this.AerisBox.Size = new System.Drawing.Size(33, 17);
             this.AerisBox.TabIndex = 47;
+            this.AerisBox.TabStop = false;
             this.AerisBox.Text = "E";
             this.AerisBox.UseVisualStyleBackColor = true;
             this.AerisBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1416,7 +1431,7 @@
             0});
             this.AerisCount.Name = "AerisCount";
             this.AerisCount.Size = new System.Drawing.Size(50, 20);
-            this.AerisCount.TabIndex = 45;
+            this.AerisCount.TabIndex = 16;
             // 
             // TaurusBox
             // 
@@ -1425,6 +1440,7 @@
             this.TaurusBox.Name = "TaurusBox";
             this.TaurusBox.Size = new System.Drawing.Size(33, 17);
             this.TaurusBox.TabIndex = 44;
+            this.TaurusBox.TabStop = false;
             this.TaurusBox.Text = "E";
             this.TaurusBox.UseVisualStyleBackColor = true;
             this.TaurusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1448,7 +1464,7 @@
             0});
             this.TaurusCount.Name = "TaurusCount";
             this.TaurusCount.Size = new System.Drawing.Size(50, 20);
-            this.TaurusCount.TabIndex = 42;
+            this.TaurusCount.TabIndex = 13;
             // 
             // FaefyrBox
             // 
@@ -1457,6 +1473,7 @@
             this.FaefyrBox.Name = "FaefyrBox";
             this.FaefyrBox.Size = new System.Drawing.Size(33, 17);
             this.FaefyrBox.TabIndex = 41;
+            this.FaefyrBox.TabStop = false;
             this.FaefyrBox.Text = "E";
             this.FaefyrBox.UseVisualStyleBackColor = true;
             this.FaefyrBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1480,7 +1497,7 @@
             0});
             this.FaefyrCount.Name = "FaefyrCount";
             this.FaefyrCount.Size = new System.Drawing.Size(50, 20);
-            this.FaefyrCount.TabIndex = 39;
+            this.FaefyrCount.TabIndex = 10;
             // 
             // GeronBox
             // 
@@ -1489,6 +1506,7 @@
             this.GeronBox.Name = "GeronBox";
             this.GeronBox.Size = new System.Drawing.Size(33, 17);
             this.GeronBox.TabIndex = 38;
+            this.GeronBox.TabStop = false;
             this.GeronBox.Text = "E";
             this.GeronBox.UseVisualStyleBackColor = true;
             this.GeronBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1512,7 +1530,7 @@
             0});
             this.GeronCount.Name = "GeronCount";
             this.GeronCount.Size = new System.Drawing.Size(50, 20);
-            this.GeronCount.TabIndex = 36;
+            this.GeronCount.TabIndex = 7;
             // 
             // NimueBox
             // 
@@ -1521,6 +1539,7 @@
             this.NimueBox.Name = "NimueBox";
             this.NimueBox.Size = new System.Drawing.Size(33, 17);
             this.NimueBox.TabIndex = 35;
+            this.NimueBox.TabStop = false;
             this.NimueBox.Text = "E";
             this.NimueBox.UseVisualStyleBackColor = true;
             this.NimueBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1544,7 +1563,7 @@
             0});
             this.NimueCount.Name = "NimueCount";
             this.NimueCount.Size = new System.Drawing.Size(50, 20);
-            this.NimueCount.TabIndex = 33;
+            this.NimueCount.TabIndex = 4;
             // 
             // ShamanBox
             // 
@@ -1553,6 +1572,7 @@
             this.ShamanBox.Name = "ShamanBox";
             this.ShamanBox.Size = new System.Drawing.Size(33, 17);
             this.ShamanBox.TabIndex = 32;
+            this.ShamanBox.TabStop = false;
             this.ShamanBox.Text = "E";
             this.ShamanBox.UseVisualStyleBackColor = true;
             this.ShamanBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1576,7 +1596,7 @@
             0});
             this.ShamanCount.Name = "ShamanCount";
             this.ShamanCount.Size = new System.Drawing.Size(50, 20);
-            this.ShamanCount.TabIndex = 30;
+            this.ShamanCount.TabIndex = 1;
             // 
             // AtzarBox
             // 
@@ -1585,6 +1605,7 @@
             this.AtzarBox.Name = "AtzarBox";
             this.AtzarBox.Size = new System.Drawing.Size(33, 17);
             this.AtzarBox.TabIndex = 83;
+            this.AtzarBox.TabStop = false;
             this.AtzarBox.Text = "E";
             this.AtzarBox.UseVisualStyleBackColor = true;
             this.AtzarBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1608,7 +1629,7 @@
             0});
             this.AtzarCount.Name = "AtzarCount";
             this.AtzarCount.Size = new System.Drawing.Size(50, 20);
-            this.AtzarCount.TabIndex = 81;
+            this.AtzarCount.TabIndex = 26;
             // 
             // PontusBox
             // 
@@ -1617,6 +1638,7 @@
             this.PontusBox.Name = "PontusBox";
             this.PontusBox.Size = new System.Drawing.Size(33, 17);
             this.PontusBox.TabIndex = 80;
+            this.PontusBox.TabStop = false;
             this.PontusBox.Text = "E";
             this.PontusBox.UseVisualStyleBackColor = true;
             this.PontusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1640,7 +1662,7 @@
             0});
             this.PontusCount.Name = "PontusCount";
             this.PontusCount.Size = new System.Drawing.Size(50, 20);
-            this.PontusCount.TabIndex = 78;
+            this.PontusCount.TabIndex = 23;
             // 
             // GerorBox
             // 
@@ -1649,6 +1671,7 @@
             this.GerorBox.Name = "GerorBox";
             this.GerorBox.Size = new System.Drawing.Size(33, 17);
             this.GerorBox.TabIndex = 77;
+            this.GerorBox.TabStop = false;
             this.GerorBox.Text = "E";
             this.GerorBox.UseVisualStyleBackColor = true;
             this.GerorBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1672,7 +1695,7 @@
             0});
             this.GerorCount.Name = "GerorCount";
             this.GerorCount.Size = new System.Drawing.Size(50, 20);
-            this.GerorCount.TabIndex = 75;
+            this.GerorCount.TabIndex = 20;
             // 
             // GeumBox
             // 
@@ -1681,6 +1704,7 @@
             this.GeumBox.Name = "GeumBox";
             this.GeumBox.Size = new System.Drawing.Size(33, 17);
             this.GeumBox.TabIndex = 74;
+            this.GeumBox.TabStop = false;
             this.GeumBox.Text = "E";
             this.GeumBox.UseVisualStyleBackColor = true;
             this.GeumBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1704,7 +1728,7 @@
             0});
             this.GeumCount.Name = "GeumCount";
             this.GeumCount.Size = new System.Drawing.Size(50, 20);
-            this.GeumCount.TabIndex = 72;
+            this.GeumCount.TabIndex = 17;
             // 
             // TronixBox
             // 
@@ -1713,6 +1737,7 @@
             this.TronixBox.Name = "TronixBox";
             this.TronixBox.Size = new System.Drawing.Size(33, 17);
             this.TronixBox.TabIndex = 71;
+            this.TronixBox.TabStop = false;
             this.TronixBox.Text = "E";
             this.TronixBox.UseVisualStyleBackColor = true;
             this.TronixBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1736,7 +1761,7 @@
             0});
             this.TronixCount.Name = "TronixCount";
             this.TronixCount.Size = new System.Drawing.Size(50, 20);
-            this.TronixCount.TabIndex = 69;
+            this.TronixCount.TabIndex = 14;
             // 
             // AuriBox
             // 
@@ -1745,6 +1770,7 @@
             this.AuriBox.Name = "AuriBox";
             this.AuriBox.Size = new System.Drawing.Size(33, 17);
             this.AuriBox.TabIndex = 68;
+            this.AuriBox.TabStop = false;
             this.AuriBox.Text = "E";
             this.AuriBox.UseVisualStyleBackColor = true;
             this.AuriBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1768,7 +1794,7 @@
             0});
             this.AuriCount.Name = "AuriCount";
             this.AuriCount.Size = new System.Drawing.Size(50, 20);
-            this.AuriCount.TabIndex = 66;
+            this.AuriCount.TabIndex = 11;
             // 
             // ReiBox
             // 
@@ -1777,6 +1803,7 @@
             this.ReiBox.Name = "ReiBox";
             this.ReiBox.Size = new System.Drawing.Size(33, 17);
             this.ReiBox.TabIndex = 65;
+            this.ReiBox.TabStop = false;
             this.ReiBox.Text = "E";
             this.ReiBox.UseVisualStyleBackColor = true;
             this.ReiBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1800,7 +1827,7 @@
             0});
             this.ReiCount.Name = "ReiCount";
             this.ReiCount.Size = new System.Drawing.Size(50, 20);
-            this.ReiCount.TabIndex = 63;
+            this.ReiCount.TabIndex = 8;
             // 
             // AthosBox
             // 
@@ -1809,6 +1836,7 @@
             this.AthosBox.Name = "AthosBox";
             this.AthosBox.Size = new System.Drawing.Size(33, 17);
             this.AthosBox.TabIndex = 62;
+            this.AthosBox.TabStop = false;
             this.AthosBox.Text = "E";
             this.AthosBox.UseVisualStyleBackColor = true;
             this.AthosBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1832,7 +1860,7 @@
             0});
             this.AthosCount.Name = "AthosCount";
             this.AthosCount.Size = new System.Drawing.Size(50, 20);
-            this.AthosCount.TabIndex = 60;
+            this.AthosCount.TabIndex = 5;
             // 
             // AlphaBox
             // 
@@ -1841,6 +1869,7 @@
             this.AlphaBox.Name = "AlphaBox";
             this.AlphaBox.Size = new System.Drawing.Size(33, 17);
             this.AlphaBox.TabIndex = 59;
+            this.AlphaBox.TabStop = false;
             this.AlphaBox.Text = "E";
             this.AlphaBox.UseVisualStyleBackColor = true;
             this.AlphaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1864,7 +1893,7 @@
             0});
             this.AlphaCount.Name = "AlphaCount";
             this.AlphaCount.Size = new System.Drawing.Size(50, 20);
-            this.AlphaCount.TabIndex = 57;
+            this.AlphaCount.TabIndex = 2;
             // 
             // NebraBox
             // 
@@ -1873,6 +1902,7 @@
             this.NebraBox.Name = "NebraBox";
             this.NebraBox.Size = new System.Drawing.Size(33, 17);
             this.NebraBox.TabIndex = 92;
+            this.NebraBox.TabStop = false;
             this.NebraBox.Text = "E";
             this.NebraBox.UseVisualStyleBackColor = true;
             this.NebraBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1896,7 +1926,7 @@
             0});
             this.NebraCount.Name = "NebraCount";
             this.NebraCount.Size = new System.Drawing.Size(50, 20);
-            this.NebraCount.TabIndex = 90;
+            this.NebraCount.TabIndex = 70;
             // 
             // TinyBox
             // 
@@ -1905,6 +1935,7 @@
             this.TinyBox.Name = "TinyBox";
             this.TinyBox.Size = new System.Drawing.Size(33, 17);
             this.TinyBox.TabIndex = 89;
+            this.TinyBox.TabStop = false;
             this.TinyBox.Text = "E";
             this.TinyBox.UseVisualStyleBackColor = true;
             this.TinyBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1928,7 +1959,7 @@
             0});
             this.TinyCount.Name = "TinyCount";
             this.TinyCount.Size = new System.Drawing.Size(50, 20);
-            this.TinyCount.TabIndex = 87;
+            this.TinyCount.TabIndex = 69;
             // 
             // LadyBox
             // 
@@ -1937,6 +1968,7 @@
             this.LadyBox.Name = "LadyBox";
             this.LadyBox.Size = new System.Drawing.Size(33, 17);
             this.LadyBox.TabIndex = 86;
+            this.LadyBox.TabStop = false;
             this.LadyBox.Text = "E";
             this.LadyBox.UseVisualStyleBackColor = true;
             this.LadyBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -1960,7 +1992,7 @@
             0});
             this.LadyCount.Name = "LadyCount";
             this.LadyCount.Size = new System.Drawing.Size(50, 20);
-            this.LadyCount.TabIndex = 84;
+            this.LadyCount.TabIndex = 68;
             // 
             // label32
             // 
@@ -1977,6 +2009,7 @@
             this.GrothBox.Name = "GrothBox";
             this.GrothBox.Size = new System.Drawing.Size(33, 17);
             this.GrothBox.TabIndex = 102;
+            this.GrothBox.TabStop = false;
             this.GrothBox.Text = "E";
             this.GrothBox.UseVisualStyleBackColor = true;
             this.GrothBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2000,7 +2033,7 @@
             0});
             this.GrothCount.Name = "GrothCount";
             this.GrothCount.Size = new System.Drawing.Size(50, 20);
-            this.GrothCount.TabIndex = 100;
+            this.GrothCount.TabIndex = 35;
             // 
             // BrynBox
             // 
@@ -2009,6 +2042,7 @@
             this.BrynBox.Name = "BrynBox";
             this.BrynBox.Size = new System.Drawing.Size(33, 17);
             this.BrynBox.TabIndex = 99;
+            this.BrynBox.TabStop = false;
             this.BrynBox.Text = "E";
             this.BrynBox.UseVisualStyleBackColor = true;
             this.BrynBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2032,7 +2066,7 @@
             0});
             this.BrynCount.Name = "BrynCount";
             this.BrynCount.Size = new System.Drawing.Size(50, 20);
-            this.BrynCount.TabIndex = 97;
+            this.BrynCount.TabIndex = 34;
             // 
             // VeildurBox
             // 
@@ -2041,6 +2075,7 @@
             this.VeildurBox.Name = "VeildurBox";
             this.VeildurBox.Size = new System.Drawing.Size(33, 17);
             this.VeildurBox.TabIndex = 96;
+            this.VeildurBox.TabStop = false;
             this.VeildurBox.Text = "E";
             this.VeildurBox.UseVisualStyleBackColor = true;
             this.VeildurBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2064,7 +2099,7 @@
             0});
             this.VeildurCount.Name = "VeildurCount";
             this.VeildurCount.Size = new System.Drawing.Size(50, 20);
-            this.VeildurCount.TabIndex = 94;
+            this.VeildurCount.TabIndex = 33;
             // 
             // GaiaBox
             // 
@@ -2073,6 +2108,7 @@
             this.GaiaBox.Name = "GaiaBox";
             this.GaiaBox.Size = new System.Drawing.Size(33, 17);
             this.GaiaBox.TabIndex = 111;
+            this.GaiaBox.TabStop = false;
             this.GaiaBox.Text = "E";
             this.GaiaBox.UseVisualStyleBackColor = true;
             this.GaiaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2096,7 +2132,7 @@
             0});
             this.GaiaCount.Name = "GaiaCount";
             this.GaiaCount.Size = new System.Drawing.Size(50, 20);
-            this.GaiaCount.TabIndex = 109;
+            this.GaiaCount.TabIndex = 47;
             // 
             // AoyukiBox
             // 
@@ -2105,6 +2141,7 @@
             this.AoyukiBox.Name = "AoyukiBox";
             this.AoyukiBox.Size = new System.Drawing.Size(33, 17);
             this.AoyukiBox.TabIndex = 108;
+            this.AoyukiBox.TabStop = false;
             this.AoyukiBox.Text = "E";
             this.AoyukiBox.UseVisualStyleBackColor = true;
             this.AoyukiBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2128,7 +2165,7 @@
             0});
             this.AoyukiCount.Name = "AoyukiCount";
             this.AoyukiCount.Size = new System.Drawing.Size(50, 20);
-            this.AoyukiCount.TabIndex = 106;
+            this.AoyukiCount.TabIndex = 46;
             // 
             // SpykeBox
             // 
@@ -2137,6 +2174,7 @@
             this.SpykeBox.Name = "SpykeBox";
             this.SpykeBox.Size = new System.Drawing.Size(33, 17);
             this.SpykeBox.TabIndex = 105;
+            this.SpykeBox.TabStop = false;
             this.SpykeBox.Text = "E";
             this.SpykeBox.UseVisualStyleBackColor = true;
             this.SpykeBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2160,7 +2198,7 @@
             0});
             this.SpykeCount.Name = "SpykeCount";
             this.SpykeCount.Size = new System.Drawing.Size(50, 20);
-            this.SpykeCount.TabIndex = 103;
+            this.SpykeCount.TabIndex = 45;
             // 
             // label39
             // 
@@ -2177,6 +2215,7 @@
             this.ChromaBox.Name = "ChromaBox";
             this.ChromaBox.Size = new System.Drawing.Size(33, 17);
             this.ChromaBox.TabIndex = 145;
+            this.ChromaBox.TabStop = false;
             this.ChromaBox.Text = "E";
             this.ChromaBox.UseVisualStyleBackColor = true;
             this.ChromaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2200,7 +2239,7 @@
             0});
             this.ChromaCount.Name = "ChromaCount";
             this.ChromaCount.Size = new System.Drawing.Size(50, 20);
-            this.ChromaCount.TabIndex = 143;
+            this.ChromaCount.TabIndex = 56;
             // 
             // DruidBox
             // 
@@ -2209,6 +2248,7 @@
             this.DruidBox.Name = "DruidBox";
             this.DruidBox.Size = new System.Drawing.Size(33, 17);
             this.DruidBox.TabIndex = 142;
+            this.DruidBox.TabStop = false;
             this.DruidBox.Text = "E";
             this.DruidBox.UseVisualStyleBackColor = true;
             this.DruidBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2232,7 +2272,7 @@
             0});
             this.DruidCount.Name = "DruidCount";
             this.DruidCount.Size = new System.Drawing.Size(50, 20);
-            this.DruidCount.TabIndex = 140;
+            this.DruidCount.TabIndex = 53;
             // 
             // PyroBox
             // 
@@ -2241,6 +2281,7 @@
             this.PyroBox.Name = "PyroBox";
             this.PyroBox.Size = new System.Drawing.Size(33, 17);
             this.PyroBox.TabIndex = 139;
+            this.PyroBox.TabStop = false;
             this.PyroBox.Text = "E";
             this.PyroBox.UseVisualStyleBackColor = true;
             this.PyroBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2264,7 +2305,7 @@
             0});
             this.PyroCount.Name = "PyroCount";
             this.PyroCount.Size = new System.Drawing.Size(50, 20);
-            this.PyroCount.TabIndex = 137;
+            this.PyroCount.TabIndex = 50;
             // 
             // ZaytusBox
             // 
@@ -2273,6 +2314,7 @@
             this.ZaytusBox.Name = "ZaytusBox";
             this.ZaytusBox.Size = new System.Drawing.Size(33, 17);
             this.ZaytusBox.TabIndex = 136;
+            this.ZaytusBox.TabStop = false;
             this.ZaytusBox.Text = "E";
             this.ZaytusBox.UseVisualStyleBackColor = true;
             this.ZaytusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2296,7 +2338,7 @@
             0});
             this.ZaytusCount.Name = "ZaytusCount";
             this.ZaytusCount.Size = new System.Drawing.Size(50, 20);
-            this.ZaytusCount.TabIndex = 134;
+            this.ZaytusCount.TabIndex = 58;
             // 
             // UndineBox
             // 
@@ -2305,6 +2347,7 @@
             this.UndineBox.Name = "UndineBox";
             this.UndineBox.Size = new System.Drawing.Size(33, 17);
             this.UndineBox.TabIndex = 133;
+            this.UndineBox.TabStop = false;
             this.UndineBox.Text = "E";
             this.UndineBox.UseVisualStyleBackColor = true;
             this.UndineBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2328,7 +2371,7 @@
             0});
             this.UndineCount.Name = "UndineCount";
             this.UndineCount.Size = new System.Drawing.Size(50, 20);
-            this.UndineCount.TabIndex = 131;
+            this.UndineCount.TabIndex = 55;
             // 
             // NicteBox
             // 
@@ -2337,6 +2380,7 @@
             this.NicteBox.Name = "NicteBox";
             this.NicteBox.Size = new System.Drawing.Size(33, 17);
             this.NicteBox.TabIndex = 130;
+            this.NicteBox.TabStop = false;
             this.NicteBox.Text = "E";
             this.NicteBox.UseVisualStyleBackColor = true;
             this.NicteBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2360,7 +2404,7 @@
             0});
             this.NicteCount.Name = "NicteCount";
             this.NicteCount.Size = new System.Drawing.Size(50, 20);
-            this.NicteCount.TabIndex = 128;
+            this.NicteCount.TabIndex = 52;
             // 
             // RokkaBox
             // 
@@ -2369,6 +2413,7 @@
             this.RokkaBox.Name = "RokkaBox";
             this.RokkaBox.Size = new System.Drawing.Size(33, 17);
             this.RokkaBox.TabIndex = 127;
+            this.RokkaBox.TabStop = false;
             this.RokkaBox.Text = "E";
             this.RokkaBox.UseVisualStyleBackColor = true;
             this.RokkaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2392,7 +2437,7 @@
             0});
             this.RokkaCount.Name = "RokkaCount";
             this.RokkaCount.Size = new System.Drawing.Size(50, 20);
-            this.RokkaCount.TabIndex = 125;
+            this.RokkaCount.TabIndex = 49;
             // 
             // PetryBox
             // 
@@ -2401,6 +2446,7 @@
             this.PetryBox.Name = "PetryBox";
             this.PetryBox.Size = new System.Drawing.Size(33, 17);
             this.PetryBox.TabIndex = 124;
+            this.PetryBox.TabStop = false;
             this.PetryBox.Text = "E";
             this.PetryBox.UseVisualStyleBackColor = true;
             this.PetryBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2424,7 +2470,7 @@
             0});
             this.PetryCount.Name = "PetryCount";
             this.PetryCount.Size = new System.Drawing.Size(50, 20);
-            this.PetryCount.TabIndex = 122;
+            this.PetryCount.TabIndex = 57;
             // 
             // IgnitorBox
             // 
@@ -2433,6 +2479,7 @@
             this.IgnitorBox.Name = "IgnitorBox";
             this.IgnitorBox.Size = new System.Drawing.Size(33, 17);
             this.IgnitorBox.TabIndex = 121;
+            this.IgnitorBox.TabStop = false;
             this.IgnitorBox.Text = "E";
             this.IgnitorBox.UseVisualStyleBackColor = true;
             this.IgnitorBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2456,7 +2503,7 @@
             0});
             this.IgnitorCount.Name = "IgnitorCount";
             this.IgnitorCount.Size = new System.Drawing.Size(50, 20);
-            this.IgnitorCount.TabIndex = 119;
+            this.IgnitorCount.TabIndex = 54;
             // 
             // BewatBox
             // 
@@ -2465,6 +2512,7 @@
             this.BewatBox.Name = "BewatBox";
             this.BewatBox.Size = new System.Drawing.Size(33, 17);
             this.BewatBox.TabIndex = 118;
+            this.BewatBox.TabStop = false;
             this.BewatBox.Text = "E";
             this.BewatBox.UseVisualStyleBackColor = true;
             this.BewatBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2488,7 +2536,7 @@
             0});
             this.BewatCount.Name = "BewatCount";
             this.BewatCount.Size = new System.Drawing.Size(50, 20);
-            this.BewatCount.TabIndex = 116;
+            this.BewatCount.TabIndex = 51;
             // 
             // ValorBox
             // 
@@ -2497,6 +2545,7 @@
             this.ValorBox.Name = "ValorBox";
             this.ValorBox.Size = new System.Drawing.Size(33, 17);
             this.ValorBox.TabIndex = 115;
+            this.ValorBox.TabStop = false;
             this.ValorBox.Text = "E";
             this.ValorBox.UseVisualStyleBackColor = true;
             this.ValorBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2520,7 +2569,7 @@
             0});
             this.ValorCount.Name = "ValorCount";
             this.ValorCount.Size = new System.Drawing.Size(50, 20);
-            this.ValorCount.TabIndex = 113;
+            this.ValorCount.TabIndex = 48;
             // 
             // label40
             // 
@@ -2640,7 +2689,7 @@
             // 
             // runCalcButton
             // 
-            this.runCalcButton.Location = new System.Drawing.Point(607, 152);
+            this.runCalcButton.Location = new System.Drawing.Point(534, 151);
             this.runCalcButton.Name = "runCalcButton";
             this.runCalcButton.Size = new System.Drawing.Size(132, 63);
             this.runCalcButton.TabIndex = 157;
@@ -2675,6 +2724,7 @@
             this.GurthBox.Name = "GurthBox";
             this.GurthBox.Size = new System.Drawing.Size(33, 17);
             this.GurthBox.TabIndex = 168;
+            this.GurthBox.TabStop = false;
             this.GurthBox.Text = "E";
             this.GurthBox.UseVisualStyleBackColor = true;
             this.GurthBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2698,7 +2748,7 @@
             0});
             this.GurthCount.Name = "GurthCount";
             this.GurthCount.Size = new System.Drawing.Size(50, 20);
-            this.GurthCount.TabIndex = 166;
+            this.GurthCount.TabIndex = 38;
             // 
             // KothBox
             // 
@@ -2707,6 +2757,7 @@
             this.KothBox.Name = "KothBox";
             this.KothBox.Size = new System.Drawing.Size(33, 17);
             this.KothBox.TabIndex = 165;
+            this.KothBox.TabStop = false;
             this.KothBox.Text = "E";
             this.KothBox.UseVisualStyleBackColor = true;
             this.KothBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2730,7 +2781,7 @@
             0});
             this.KothCount.Name = "KothCount";
             this.KothCount.Size = new System.Drawing.Size(50, 20);
-            this.KothCount.TabIndex = 163;
+            this.KothCount.TabIndex = 37;
             // 
             // ZethBox
             // 
@@ -2739,6 +2790,7 @@
             this.ZethBox.Name = "ZethBox";
             this.ZethBox.Size = new System.Drawing.Size(33, 17);
             this.ZethBox.TabIndex = 162;
+            this.ZethBox.TabStop = false;
             this.ZethBox.Text = "E";
             this.ZethBox.UseVisualStyleBackColor = true;
             this.ZethBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2762,7 +2814,7 @@
             0});
             this.ZethCount.Name = "ZethCount";
             this.ZethCount.Size = new System.Drawing.Size(50, 20);
-            this.ZethCount.TabIndex = 160;
+            this.ZethCount.TabIndex = 36;
             // 
             // button4
             // 
@@ -2776,9 +2828,9 @@
             // 
             // label61
             // 
-            this.label61.Location = new System.Drawing.Point(557, 253);
+            this.label61.Location = new System.Drawing.Point(536, 255);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(218, 118);
+            this.label61.Size = new System.Drawing.Size(218, 106);
             this.label61.TabIndex = 170;
             this.label61.Text = resources.GetString("label61.Text");
             // 
@@ -2807,6 +2859,7 @@
             this.WerewolfBox.Name = "WerewolfBox";
             this.WerewolfBox.Size = new System.Drawing.Size(33, 17);
             this.WerewolfBox.TabIndex = 175;
+            this.WerewolfBox.TabStop = false;
             this.WerewolfBox.Text = "E";
             this.WerewolfBox.UseVisualStyleBackColor = true;
             // 
@@ -2829,7 +2882,7 @@
             0});
             this.WerewolfCount.Name = "WerewolfCount";
             this.WerewolfCount.Size = new System.Drawing.Size(50, 20);
-            this.WerewolfCount.TabIndex = 173;
+            this.WerewolfCount.TabIndex = 73;
             // 
             // JackBox
             // 
@@ -2838,6 +2891,7 @@
             this.JackBox.Name = "JackBox";
             this.JackBox.Size = new System.Drawing.Size(33, 17);
             this.JackBox.TabIndex = 178;
+            this.JackBox.TabStop = false;
             this.JackBox.Text = "E";
             this.JackBox.UseVisualStyleBackColor = true;
             // 
@@ -2860,7 +2914,7 @@
             0});
             this.JackCount.Name = "JackCount";
             this.JackCount.Size = new System.Drawing.Size(50, 20);
-            this.JackCount.TabIndex = 176;
+            this.JackCount.TabIndex = 74;
             // 
             // DullahanBox
             // 
@@ -2869,6 +2923,7 @@
             this.DullahanBox.Name = "DullahanBox";
             this.DullahanBox.Size = new System.Drawing.Size(33, 17);
             this.DullahanBox.TabIndex = 181;
+            this.DullahanBox.TabStop = false;
             this.DullahanBox.Text = "E";
             this.DullahanBox.UseVisualStyleBackColor = true;
             // 
@@ -2891,7 +2946,7 @@
             0});
             this.DullahanCount.Name = "DullahanCount";
             this.DullahanCount.Size = new System.Drawing.Size(50, 20);
-            this.DullahanCount.TabIndex = 179;
+            this.DullahanCount.TabIndex = 75;
             // 
             // button6
             // 
@@ -2930,6 +2985,7 @@
             this.OdelithBox.Name = "OdelithBox";
             this.OdelithBox.Size = new System.Drawing.Size(33, 17);
             this.OdelithBox.TabIndex = 187;
+            this.OdelithBox.TabStop = false;
             this.OdelithBox.Text = "E";
             this.OdelithBox.UseVisualStyleBackColor = true;
             this.OdelithBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2953,7 +3009,7 @@
             0});
             this.OdelithCount.Name = "OdelithCount";
             this.OdelithCount.Size = new System.Drawing.Size(50, 20);
-            this.OdelithCount.TabIndex = 185;
+            this.OdelithCount.TabIndex = 59;
             // 
             // KirkBox
             // 
@@ -2962,6 +3018,7 @@
             this.KirkBox.Name = "KirkBox";
             this.KirkBox.Size = new System.Drawing.Size(33, 17);
             this.KirkBox.TabIndex = 196;
+            this.KirkBox.TabStop = false;
             this.KirkBox.Text = "E";
             this.KirkBox.UseVisualStyleBackColor = true;
             this.KirkBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -2985,7 +3042,7 @@
             0});
             this.KirkCount.Name = "KirkCount";
             this.KirkCount.Size = new System.Drawing.Size(50, 20);
-            this.KirkCount.TabIndex = 194;
+            this.KirkCount.TabIndex = 62;
             // 
             // ThertBox
             // 
@@ -2994,6 +3051,7 @@
             this.ThertBox.Name = "ThertBox";
             this.ThertBox.Size = new System.Drawing.Size(33, 17);
             this.ThertBox.TabIndex = 193;
+            this.ThertBox.TabStop = false;
             this.ThertBox.Text = "E";
             this.ThertBox.UseVisualStyleBackColor = true;
             this.ThertBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3017,7 +3075,7 @@
             0});
             this.ThertCount.Name = "ThertCount";
             this.ThertCount.Size = new System.Drawing.Size(50, 20);
-            this.ThertCount.TabIndex = 191;
+            this.ThertCount.TabIndex = 61;
             // 
             // ShyguBox
             // 
@@ -3026,6 +3084,7 @@
             this.ShyguBox.Name = "ShyguBox";
             this.ShyguBox.Size = new System.Drawing.Size(33, 17);
             this.ShyguBox.TabIndex = 190;
+            this.ShyguBox.TabStop = false;
             this.ShyguBox.Text = "E";
             this.ShyguBox.UseVisualStyleBackColor = true;
             this.ShyguBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3049,7 +3108,7 @@
             0});
             this.ShyguCount.Name = "ShyguCount";
             this.ShyguCount.Size = new System.Drawing.Size(50, 20);
-            this.ShyguCount.TabIndex = 188;
+            this.ShyguCount.TabIndex = 60;
             // 
             // NeptuniusBox
             // 
@@ -3058,6 +3117,7 @@
             this.NeptuniusBox.Name = "NeptuniusBox";
             this.NeptuniusBox.Size = new System.Drawing.Size(33, 17);
             this.NeptuniusBox.TabIndex = 199;
+            this.NeptuniusBox.TabStop = false;
             this.NeptuniusBox.Text = "E";
             this.NeptuniusBox.UseVisualStyleBackColor = true;
             this.NeptuniusBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3081,7 +3141,7 @@
             0});
             this.NeptuniusCount.Name = "NeptuniusCount";
             this.NeptuniusCount.Size = new System.Drawing.Size(50, 20);
-            this.NeptuniusCount.TabIndex = 197;
+            this.NeptuniusCount.TabIndex = 63;
             // 
             // AlvitrBox
             // 
@@ -3090,6 +3150,7 @@
             this.AlvitrBox.Name = "AlvitrBox";
             this.AlvitrBox.Size = new System.Drawing.Size(33, 17);
             this.AlvitrBox.TabIndex = 208;
+            this.AlvitrBox.TabStop = false;
             this.AlvitrBox.Text = "E";
             this.AlvitrBox.UseVisualStyleBackColor = true;
             this.AlvitrBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3113,7 +3174,7 @@
             0});
             this.AlvitrCount.Name = "AlvitrCount";
             this.AlvitrCount.Size = new System.Drawing.Size(50, 20);
-            this.AlvitrCount.TabIndex = 206;
+            this.AlvitrCount.TabIndex = 41;
             // 
             // KoldisBox
             // 
@@ -3122,6 +3183,7 @@
             this.KoldisBox.Name = "KoldisBox";
             this.KoldisBox.Size = new System.Drawing.Size(33, 17);
             this.KoldisBox.TabIndex = 205;
+            this.KoldisBox.TabStop = false;
             this.KoldisBox.Text = "E";
             this.KoldisBox.UseVisualStyleBackColor = true;
             this.KoldisBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3145,7 +3207,7 @@
             0});
             this.KoldisCount.Name = "KoldisCount";
             this.KoldisCount.Size = new System.Drawing.Size(50, 20);
-            this.KoldisCount.TabIndex = 203;
+            this.KoldisCount.TabIndex = 40;
             // 
             // SigrunBox
             // 
@@ -3154,6 +3216,7 @@
             this.SigrunBox.Name = "SigrunBox";
             this.SigrunBox.Size = new System.Drawing.Size(33, 17);
             this.SigrunBox.TabIndex = 202;
+            this.SigrunBox.TabStop = false;
             this.SigrunBox.Text = "E";
             this.SigrunBox.UseVisualStyleBackColor = true;
             this.SigrunBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3177,7 +3240,7 @@
             0});
             this.SigrunCount.Name = "SigrunCount";
             this.SigrunCount.Size = new System.Drawing.Size(50, 20);
-            this.SigrunCount.TabIndex = 200;
+            this.SigrunCount.TabIndex = 39;
             // 
             // RigrBox
             // 
@@ -3186,6 +3249,7 @@
             this.RigrBox.Name = "RigrBox";
             this.RigrBox.Size = new System.Drawing.Size(33, 17);
             this.RigrBox.TabIndex = 217;
+            this.RigrBox.TabStop = false;
             this.RigrBox.Text = "E";
             this.RigrBox.UseVisualStyleBackColor = true;
             this.RigrBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3209,7 +3273,7 @@
             0});
             this.RigrCount.Name = "RigrCount";
             this.RigrCount.Size = new System.Drawing.Size(50, 20);
-            this.RigrCount.TabIndex = 215;
+            this.RigrCount.TabIndex = 29;
             // 
             // HallinskidiBox
             // 
@@ -3218,6 +3282,7 @@
             this.HallinskidiBox.Name = "HallinskidiBox";
             this.HallinskidiBox.Size = new System.Drawing.Size(33, 17);
             this.HallinskidiBox.TabIndex = 214;
+            this.HallinskidiBox.TabStop = false;
             this.HallinskidiBox.Text = "E";
             this.HallinskidiBox.UseVisualStyleBackColor = true;
             this.HallinskidiBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3241,7 +3306,7 @@
             0});
             this.HallinskidiCount.Name = "HallinskidiCount";
             this.HallinskidiCount.Size = new System.Drawing.Size(50, 20);
-            this.HallinskidiCount.TabIndex = 212;
+            this.HallinskidiCount.TabIndex = 28;
             // 
             // HamaBox
             // 
@@ -3250,6 +3315,7 @@
             this.HamaBox.Name = "HamaBox";
             this.HamaBox.Size = new System.Drawing.Size(33, 17);
             this.HamaBox.TabIndex = 211;
+            this.HamaBox.TabStop = false;
             this.HamaBox.Text = "E";
             this.HamaBox.UseVisualStyleBackColor = true;
             this.HamaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
@@ -3273,7 +3339,7 @@
             0});
             this.HamaCount.Name = "HamaCount";
             this.HamaCount.Size = new System.Drawing.Size(50, 20);
-            this.HamaCount.TabIndex = 209;
+            this.HamaCount.TabIndex = 27;
             // 
             // button9
             // 
@@ -3298,12 +3364,11 @@
             // autoSend
             // 
             this.autoSend.AutoSize = true;
-            this.autoSend.Location = new System.Drawing.Point(567, 215);
+            this.autoSend.Location = new System.Drawing.Point(534, 216);
             this.autoSend.Name = "autoSend";
-            this.autoSend.Size = new System.Drawing.Size(236, 43);
+            this.autoSend.Size = new System.Drawing.Size(171, 30);
             this.autoSend.TabIndex = 221;
-            this.autoSend.Text = "Don\'t show console and automatically\r\nsend solution to server(quests and DQs only" +
-    ")\r\n\r\n";
+            this.autoSend.Text = "Automatically send solution\r\nto server(DQs and quests only)";
             this.autoSend.UseVisualStyleBackColor = true;
             // 
             // guiLog
@@ -3637,6 +3702,7 @@
             this.HattoriBox.Name = "HattoriBox";
             this.HattoriBox.Size = new System.Drawing.Size(33, 17);
             this.HattoriBox.TabIndex = 297;
+            this.HattoriBox.TabStop = false;
             this.HattoriBox.Text = "E";
             this.HattoriBox.UseVisualStyleBackColor = true;
             // 
@@ -3659,7 +3725,7 @@
             0});
             this.HattoriCount.Name = "HattoriCount";
             this.HattoriCount.Size = new System.Drawing.Size(50, 20);
-            this.HattoriCount.TabIndex = 295;
+            this.HattoriCount.TabIndex = 67;
             // 
             // HirateBox
             // 
@@ -3668,6 +3734,7 @@
             this.HirateBox.Name = "HirateBox";
             this.HirateBox.Size = new System.Drawing.Size(33, 17);
             this.HirateBox.TabIndex = 294;
+            this.HirateBox.TabStop = false;
             this.HirateBox.Text = "E";
             this.HirateBox.UseVisualStyleBackColor = true;
             // 
@@ -3690,7 +3757,7 @@
             0});
             this.HirateCount.Name = "HirateCount";
             this.HirateCount.Size = new System.Drawing.Size(50, 20);
-            this.HirateCount.TabIndex = 292;
+            this.HirateCount.TabIndex = 66;
             // 
             // TakedaBox
             // 
@@ -3699,6 +3766,7 @@
             this.TakedaBox.Name = "TakedaBox";
             this.TakedaBox.Size = new System.Drawing.Size(33, 17);
             this.TakedaBox.TabIndex = 291;
+            this.TakedaBox.TabStop = false;
             this.TakedaBox.Text = "E";
             this.TakedaBox.UseVisualStyleBackColor = true;
             // 
@@ -3721,7 +3789,7 @@
             0});
             this.TakedaCount.Name = "TakedaCount";
             this.TakedaCount.Size = new System.Drawing.Size(50, 20);
-            this.TakedaCount.TabIndex = 289;
+            this.TakedaCount.TabIndex = 65;
             // 
             // HosokawaBox
             // 
@@ -3730,6 +3798,7 @@
             this.HosokawaBox.Name = "HosokawaBox";
             this.HosokawaBox.Size = new System.Drawing.Size(33, 17);
             this.HosokawaBox.TabIndex = 288;
+            this.HosokawaBox.TabStop = false;
             this.HosokawaBox.Text = "E";
             this.HosokawaBox.UseVisualStyleBackColor = true;
             // 
@@ -3752,7 +3821,7 @@
             0});
             this.HosokawaCount.Name = "HosokawaCount";
             this.HosokawaCount.Size = new System.Drawing.Size(50, 20);
-            this.HosokawaCount.TabIndex = 286;
+            this.HosokawaCount.TabIndex = 64;
             // 
             // aRigrBox
             // 
@@ -3761,6 +3830,7 @@
             this.aRigrBox.Name = "aRigrBox";
             this.aRigrBox.Size = new System.Drawing.Size(33, 17);
             this.aRigrBox.TabIndex = 285;
+            this.aRigrBox.TabStop = false;
             this.aRigrBox.Text = "E";
             this.aRigrBox.UseVisualStyleBackColor = true;
             // 
@@ -3783,7 +3853,7 @@
             0});
             this.aRigrCount.Name = "aRigrCount";
             this.aRigrCount.Size = new System.Drawing.Size(50, 20);
-            this.aRigrCount.TabIndex = 283;
+            this.aRigrCount.TabIndex = 89;
             // 
             // DorthBox
             // 
@@ -3792,6 +3862,7 @@
             this.DorthBox.Name = "DorthBox";
             this.DorthBox.Size = new System.Drawing.Size(33, 17);
             this.DorthBox.TabIndex = 282;
+            this.DorthBox.TabStop = false;
             this.DorthBox.Text = "E";
             this.DorthBox.UseVisualStyleBackColor = true;
             // 
@@ -3814,7 +3885,7 @@
             0});
             this.DorthCount.Name = "DorthCount";
             this.DorthCount.Size = new System.Drawing.Size(50, 20);
-            this.DorthCount.TabIndex = 280;
+            this.DorthCount.TabIndex = 44;
             // 
             // RuaBox
             // 
@@ -3823,6 +3894,7 @@
             this.RuaBox.Name = "RuaBox";
             this.RuaBox.Size = new System.Drawing.Size(33, 17);
             this.RuaBox.TabIndex = 279;
+            this.RuaBox.TabStop = false;
             this.RuaBox.Text = "E";
             this.RuaBox.UseVisualStyleBackColor = true;
             // 
@@ -3845,7 +3917,7 @@
             0});
             this.RuaCount.Name = "RuaCount";
             this.RuaCount.Size = new System.Drawing.Size(50, 20);
-            this.RuaCount.TabIndex = 277;
+            this.RuaCount.TabIndex = 43;
             // 
             // ArshenBox
             // 
@@ -3854,6 +3926,7 @@
             this.ArshenBox.Name = "ArshenBox";
             this.ArshenBox.Size = new System.Drawing.Size(33, 17);
             this.ArshenBox.TabIndex = 276;
+            this.ArshenBox.TabStop = false;
             this.ArshenBox.Text = "E";
             this.ArshenBox.UseVisualStyleBackColor = true;
             // 
@@ -3876,7 +3949,7 @@
             0});
             this.ArshenCount.Name = "ArshenCount";
             this.ArshenCount.Size = new System.Drawing.Size(50, 20);
-            this.ArshenCount.TabIndex = 274;
+            this.ArshenCount.TabIndex = 42;
             // 
             // AAtzarBox
             // 
@@ -3885,6 +3958,7 @@
             this.AAtzarBox.Name = "AAtzarBox";
             this.AAtzarBox.Size = new System.Drawing.Size(33, 17);
             this.AAtzarBox.TabIndex = 273;
+            this.AAtzarBox.TabStop = false;
             this.AAtzarBox.Text = "E";
             this.AAtzarBox.UseVisualStyleBackColor = true;
             // 
@@ -3907,7 +3981,7 @@
             0});
             this.AAtzarCount.Name = "AAtzarCount";
             this.AAtzarCount.Size = new System.Drawing.Size(50, 20);
-            this.AAtzarCount.TabIndex = 271;
+            this.AAtzarCount.TabIndex = 88;
             // 
             // APontusBox
             // 
@@ -3916,6 +3990,7 @@
             this.APontusBox.Name = "APontusBox";
             this.APontusBox.Size = new System.Drawing.Size(33, 17);
             this.APontusBox.TabIndex = 270;
+            this.APontusBox.TabStop = false;
             this.APontusBox.Text = "E";
             this.APontusBox.UseVisualStyleBackColor = true;
             // 
@@ -3938,7 +4013,7 @@
             0});
             this.APontusCount.Name = "APontusCount";
             this.APontusCount.Size = new System.Drawing.Size(50, 20);
-            this.APontusCount.TabIndex = 268;
+            this.APontusCount.TabIndex = 87;
             // 
             // DagdaBox
             // 
@@ -3947,6 +4022,7 @@
             this.DagdaBox.Name = "DagdaBox";
             this.DagdaBox.Size = new System.Drawing.Size(33, 17);
             this.DagdaBox.TabIndex = 267;
+            this.DagdaBox.TabStop = false;
             this.DagdaBox.Text = "E";
             this.DagdaBox.UseVisualStyleBackColor = true;
             // 
@@ -3969,7 +4045,7 @@
             0});
             this.DagdaCount.Name = "DagdaCount";
             this.DagdaCount.Size = new System.Drawing.Size(50, 20);
-            this.DagdaCount.TabIndex = 265;
+            this.DagdaCount.TabIndex = 32;
             // 
             // GanahBox
             // 
@@ -3978,6 +4054,7 @@
             this.GanahBox.Name = "GanahBox";
             this.GanahBox.Size = new System.Drawing.Size(33, 17);
             this.GanahBox.TabIndex = 264;
+            this.GanahBox.TabStop = false;
             this.GanahBox.Text = "E";
             this.GanahBox.UseVisualStyleBackColor = true;
             // 
@@ -4000,7 +4077,7 @@
             0});
             this.GanahCount.Name = "GanahCount";
             this.GanahCount.Size = new System.Drawing.Size(50, 20);
-            this.GanahCount.TabIndex = 262;
+            this.GanahCount.TabIndex = 31;
             // 
             // TothBox
             // 
@@ -4009,6 +4086,7 @@
             this.TothBox.Name = "TothBox";
             this.TothBox.Size = new System.Drawing.Size(33, 17);
             this.TothBox.TabIndex = 261;
+            this.TothBox.TabStop = false;
             this.TothBox.Text = "E";
             this.TothBox.UseVisualStyleBackColor = true;
             // 
@@ -4031,7 +4109,7 @@
             0});
             this.TothCount.Name = "TothCount";
             this.TothCount.Size = new System.Drawing.Size(50, 20);
-            this.TothCount.TabIndex = 259;
+            this.TothCount.TabIndex = 30;
             // 
             // BubblesCount
             // 
@@ -4043,7 +4121,7 @@
             0});
             this.BubblesCount.Name = "BubblesCount";
             this.BubblesCount.Size = new System.Drawing.Size(50, 20);
-            this.BubblesCount.TabIndex = 256;
+            this.BubblesCount.TabIndex = 72;
             // 
             // label182
             // 
@@ -4061,6 +4139,7 @@
             this.BubblesBox.Name = "BubblesBox";
             this.BubblesBox.Size = new System.Drawing.Size(33, 17);
             this.BubblesBox.TabIndex = 258;
+            this.BubblesBox.TabStop = false;
             this.BubblesBox.Text = "E";
             this.BubblesBox.UseVisualStyleBackColor = true;
             // 
@@ -4074,7 +4153,7 @@
             0});
             this.maryCount.Name = "maryCount";
             this.maryCount.Size = new System.Drawing.Size(50, 20);
-            this.maryCount.TabIndex = 227;
+            this.maryCount.TabIndex = 79;
             // 
             // AGeumBox
             // 
@@ -4083,6 +4162,7 @@
             this.AGeumBox.Name = "AGeumBox";
             this.AGeumBox.Size = new System.Drawing.Size(33, 17);
             this.AGeumBox.TabIndex = 255;
+            this.AGeumBox.TabStop = false;
             this.AGeumBox.Text = "E";
             this.AGeumBox.UseVisualStyleBackColor = true;
             // 
@@ -4105,7 +4185,7 @@
             0});
             this.AGeumCount.Name = "AGeumCount";
             this.AGeumCount.Size = new System.Drawing.Size(50, 20);
-            this.AGeumCount.TabIndex = 253;
+            this.AGeumCount.TabIndex = 85;
             // 
             // AReiBox
             // 
@@ -4114,6 +4194,7 @@
             this.AReiBox.Name = "AReiBox";
             this.AReiBox.Size = new System.Drawing.Size(33, 17);
             this.AReiBox.TabIndex = 252;
+            this.AReiBox.TabStop = false;
             this.AReiBox.Text = "E";
             this.AReiBox.UseVisualStyleBackColor = true;
             // 
@@ -4136,7 +4217,7 @@
             0});
             this.AReiCount.Name = "AReiCount";
             this.AReiCount.Size = new System.Drawing.Size(50, 20);
-            this.AReiCount.TabIndex = 250;
+            this.AReiCount.TabIndex = 82;
             // 
             // ATronixBox
             // 
@@ -4145,6 +4226,7 @@
             this.ATronixBox.Name = "ATronixBox";
             this.ATronixBox.Size = new System.Drawing.Size(33, 17);
             this.ATronixBox.TabIndex = 246;
+            this.ATronixBox.TabStop = false;
             this.ATronixBox.Text = "E";
             this.ATronixBox.UseVisualStyleBackColor = true;
             // 
@@ -4167,7 +4249,7 @@
             0});
             this.ATronixCount.Name = "ATronixCount";
             this.ATronixCount.Size = new System.Drawing.Size(50, 20);
-            this.ATronixCount.TabIndex = 244;
+            this.ATronixCount.TabIndex = 84;
             // 
             // AAthosBox
             // 
@@ -4176,6 +4258,7 @@
             this.AAthosBox.Name = "AAthosBox";
             this.AAthosBox.Size = new System.Drawing.Size(33, 17);
             this.AAthosBox.TabIndex = 243;
+            this.AAthosBox.TabStop = false;
             this.AAthosBox.Text = "E";
             this.AAthosBox.UseVisualStyleBackColor = true;
             // 
@@ -4198,7 +4281,7 @@
             0});
             this.AAthosCount.Name = "AAthosCount";
             this.AAthosCount.Size = new System.Drawing.Size(50, 20);
-            this.AAthosCount.TabIndex = 241;
+            this.AAthosCount.TabIndex = 81;
             // 
             // AGerorBox
             // 
@@ -4207,6 +4290,7 @@
             this.AGerorBox.Name = "AGerorBox";
             this.AGerorBox.Size = new System.Drawing.Size(33, 17);
             this.AGerorBox.TabIndex = 240;
+            this.AGerorBox.TabStop = false;
             this.AGerorBox.Text = "E";
             this.AGerorBox.UseVisualStyleBackColor = true;
             // 
@@ -4229,7 +4313,7 @@
             0});
             this.AGerorCount.Name = "AGerorCount";
             this.AGerorCount.Size = new System.Drawing.Size(50, 20);
-            this.AGerorCount.TabIndex = 238;
+            this.AGerorCount.TabIndex = 86;
             // 
             // AAuriBox
             // 
@@ -4238,6 +4322,7 @@
             this.AAuriBox.Name = "AAuriBox";
             this.AAuriBox.Size = new System.Drawing.Size(33, 17);
             this.AAuriBox.TabIndex = 237;
+            this.AAuriBox.TabStop = false;
             this.AAuriBox.Text = "E";
             this.AAuriBox.UseVisualStyleBackColor = true;
             // 
@@ -4260,7 +4345,7 @@
             0});
             this.AAuriCount.Name = "AAuriCount";
             this.AAuriCount.Size = new System.Drawing.Size(50, 20);
-            this.AAuriCount.TabIndex = 235;
+            this.AAuriCount.TabIndex = 83;
             // 
             // AAlphaBox
             // 
@@ -4269,6 +4354,7 @@
             this.AAlphaBox.Name = "AAlphaBox";
             this.AAlphaBox.Size = new System.Drawing.Size(33, 17);
             this.AAlphaBox.TabIndex = 234;
+            this.AAlphaBox.TabStop = false;
             this.AAlphaBox.Text = "E";
             this.AAlphaBox.UseVisualStyleBackColor = true;
             // 
@@ -4291,7 +4377,7 @@
             0});
             this.AAlphaCount.Name = "AAlphaCount";
             this.AAlphaCount.Size = new System.Drawing.Size(50, 20);
-            this.AAlphaCount.TabIndex = 232;
+            this.AAlphaCount.TabIndex = 80;
             // 
             // label188
             // 
@@ -4308,6 +4394,7 @@
             this.maryBox.Name = "maryBox";
             this.maryBox.Size = new System.Drawing.Size(33, 17);
             this.maryBox.TabIndex = 229;
+            this.maryBox.TabStop = false;
             this.maryBox.Text = "E";
             this.maryBox.UseVisualStyleBackColor = true;
             // 
@@ -4327,6 +4414,7 @@
             this.santaBox.Name = "santaBox";
             this.santaBox.Size = new System.Drawing.Size(33, 17);
             this.santaBox.TabIndex = 226;
+            this.santaBox.TabStop = false;
             this.santaBox.Text = "E";
             this.santaBox.UseVisualStyleBackColor = true;
             // 
@@ -4349,7 +4437,7 @@
             0});
             this.santaCount.Name = "santaCount";
             this.santaCount.Size = new System.Drawing.Size(50, 20);
-            this.santaCount.TabIndex = 224;
+            this.santaCount.TabIndex = 78;
             // 
             // deerBox
             // 
@@ -4358,6 +4446,7 @@
             this.deerBox.Name = "deerBox";
             this.deerBox.Size = new System.Drawing.Size(33, 17);
             this.deerBox.TabIndex = 223;
+            this.deerBox.TabStop = false;
             this.deerBox.Text = "E";
             this.deerBox.UseVisualStyleBackColor = true;
             // 
@@ -4380,7 +4469,7 @@
             0});
             this.deerCount.Name = "deerCount";
             this.deerCount.Size = new System.Drawing.Size(50, 20);
-            this.deerCount.TabIndex = 221;
+            this.deerCount.TabIndex = 77;
             // 
             // elfBox
             // 
@@ -4389,6 +4478,7 @@
             this.elfBox.Name = "elfBox";
             this.elfBox.Size = new System.Drawing.Size(33, 17);
             this.elfBox.TabIndex = 220;
+            this.elfBox.TabStop = false;
             this.elfBox.Text = "E";
             this.elfBox.UseVisualStyleBackColor = true;
             // 
@@ -4411,7 +4501,7 @@
             0});
             this.elfCount.Name = "elfCount";
             this.elfCount.Size = new System.Drawing.Size(50, 20);
-            this.elfCount.TabIndex = 218;
+            this.elfCount.TabIndex = 76;
             // 
             // Quests
             // 
@@ -10598,11 +10688,22 @@
             this.clearLogButton.UseVisualStyleBackColor = true;
             this.clearLogButton.Click += new System.EventHandler(this.clearLogButton_click);
             // 
+            // sendTillNoSolveButton
+            // 
+            this.sendTillNoSolveButton.Location = new System.Drawing.Point(670, 152);
+            this.sendTillNoSolveButton.Name = "sendTillNoSolveButton";
+            this.sendTillNoSolveButton.Size = new System.Drawing.Size(132, 63);
+            this.sendTillNoSolveButton.TabIndex = 228;
+            this.sendTillNoSolveButton.Text = "Run and send DQs until no solution found";
+            this.sendTillNoSolveButton.UseVisualStyleBackColor = true;
+            this.sendTillNoSolveButton.Click += new System.EventHandler(this.sendTillNoSolveButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 693);
+            this.Controls.Add(this.sendTillNoSolveButton);
             this.Controls.Add(this.clearLogButton);
             this.Controls.Add(this.runCalcButton);
             this.Controls.Add(this.guiLog);
@@ -11587,6 +11688,7 @@
         private System.Windows.Forms.Label label223;
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.Label label225;
+        private System.Windows.Forms.Button sendTillNoSolveButton;
     }
 }
 
