@@ -19,8 +19,8 @@ namespace CQMacroCreator
 {
     public partial class Form1 : Form
     {
+        static DateTime previousDQTime;
         static string calcOut;
-        static bool running;
         List<NumericUpDown> heroCounts;
         List<NumericUpDown> heroCountsServerOrder;
         List<CheckBox> questBoxes;
@@ -376,6 +376,7 @@ namespace CQMacroCreator
 
         private void init()
         {
+            previousDQTime = DateTime.UtcNow;
             if (File.Exists("MacroSettings.txt"))
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader("MacroSettings.txt");
@@ -635,6 +636,7 @@ namespace CQMacroCreator
                                         solutionLineupIDs.Add(-1);
                                     }
                                     PFStuff.lineup = solutionLineupIDs.ToArray();
+                                    System.Threading.Thread.Sleep(Math.Max(0, (previousDQTime.AddSeconds(5.1) - DateTime.UtcNow).Milliseconds));
                                     Thread mt;
                                     if (lp.Contains("quest"))
                                     {
@@ -647,10 +649,11 @@ namespace CQMacroCreator
                                         mt.Join();
                                     }
                                     else
-                                    {
+                                    {                                        
                                         mt = new Thread(pf.sendDQSolution);
                                         mt.Start();
                                         mt.Join();
+                                        previousDQTime = DateTime.UtcNow;
                                     }
                                     if (PFStuff.DQResult)
                                     {
@@ -695,7 +698,7 @@ namespace CQMacroCreator
             }
         }
 
-        
+
         void RunWithRedirect(string cmdPath)
         {
             calcOut = "";
@@ -1231,7 +1234,6 @@ namespace CQMacroCreator
             int attempts = 0;
             string previousDQlvl = "";
             autoSend.Checked = true;
-            running = false;
             while ((previousDQlvl != PFStuff.DQlvl || !PFStuff.DQResult) && (PFStuff.lineup != null || attempts == 0))
             {
                 if (PFStuff.DQResult || attempts == 0)
