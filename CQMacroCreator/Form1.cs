@@ -695,7 +695,7 @@ namespace CQMacroCreator
             }
         }
 
-
+        
         void RunWithRedirect(string cmdPath)
         {
             calcOut = "";
@@ -1257,6 +1257,8 @@ namespace CQMacroCreator
                 }
             }
         }
+
+
 
     }
 }

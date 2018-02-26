@@ -140,7 +140,7 @@ namespace CQMacroCreator
                         DQResult = false;
                         return;
                     }
-                    else if (apiResult.FunctionResult != null)
+                    else if (apiResult.FunctionResult.ToString().Contains("true"))
                     {
                         getResult = new List<int[]>();
                         JObject json = JObject.Parse(apiResult.FunctionResult.ToString());
@@ -164,8 +164,73 @@ namespace CQMacroCreator
             }
             DQResult = false;
             return;
-        }     
+        }
 
+        public void sendHCOpen()
+        {
+            var request = new ExecuteCloudScriptRequest()
+            {
+                RevisionSelection = CloudScriptRevisionOption.Live,
+                FunctionName = "open",
+                FunctionParameter = new { kid = kongID, mode = "hero" }
+            };
+            var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
+            bool _running = true;
+            while (_running)
+            {
+                if (statusTask.IsCompleted)
+                {
+                    var apiError = statusTask.Result.Error;
+                    var apiResult = statusTask.Result.Result;
+
+                    if (apiError != null)
+                    {                       
+                        return;
+                    }
+                    else if (apiResult != null)
+                    {                        
+                        return;
+                    }
+                    _running = false;
+                }
+                Thread.Sleep(1);
+            }
+            
+            return;
+        }
+
+        public void sendClaimAll()
+        {
+            var request = new ExecuteCloudScriptRequest()
+            {
+                RevisionSelection = CloudScriptRevisionOption.Live,
+                FunctionName = "claimall",
+                FunctionParameter = new { kid = kongID}
+            };
+            var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
+            bool _running = true;
+            while (_running)
+            {
+                if (statusTask.IsCompleted)
+                {
+                    var apiError = statusTask.Result.Error;
+                    var apiResult = statusTask.Result.Result;
+
+                    if (apiError != null)
+                    {
+                        return;
+                    }
+                    else if (apiResult != null)
+                    {
+                        return;
+                    }
+                    _running = false;
+                }
+                Thread.Sleep(1);
+            }
+
+            return;
+        }        
 
         public void sendQuestSolution()
         {
