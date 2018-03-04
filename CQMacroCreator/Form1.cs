@@ -384,7 +384,7 @@ namespace CQMacroCreator
                 }
                 return s.Trim();
             }
-        }
+        } 
 
         private void init()
         {
