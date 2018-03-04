@@ -345,6 +345,18 @@ namespace CQMacroCreator
             };
 
             init();
+            String[] cmdArguments = Environment.GetCommandLineArgs();
+            if (cmdArguments.Length > 1)
+            {
+                if (token != null && KongregateId != null && cmdArguments[1] == "quick")
+                {
+                    this.Hide();
+                    sendTillNoSolveButton_Click(this, EventArgs.Empty);
+                    //Console.Write("\nExit\n");
+                    this.Close();
+                    Application.Exit();
+                }
+            }
         }
         private void hideButtons()
         {
@@ -386,6 +398,7 @@ namespace CQMacroCreator
 
                 string lower = getSetting(sr.ReadLine());
                 string upper = getSetting(sr.ReadLine());
+                sr.Close();
 
                 if (lower != null)
                 {
@@ -475,6 +488,7 @@ namespace CQMacroCreator
                     break;
 
             }
+
         }
 
         List<Hero> heroList = new List<Hero>(new Hero[] {
@@ -649,7 +663,7 @@ namespace CQMacroCreator
                                         mt.Join();
                                     }
                                     else
-                                    {                                        
+                                    {
                                         mt = new Thread(pf.sendDQSolution);
                                         mt.Start();
                                         mt.Join();
@@ -696,6 +710,7 @@ namespace CQMacroCreator
                         "Error " + ex.ErrorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
         }
 
 
@@ -1259,8 +1274,6 @@ namespace CQMacroCreator
                 }
             }
         }
-
-
-
+        
     }
 }

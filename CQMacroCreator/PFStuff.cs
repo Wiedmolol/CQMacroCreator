@@ -16,6 +16,9 @@ namespace CQMacroCreator
 
     class PFStuff
     {
+        public static int bidValue;
+        public static int bidHeroID;
+        public static string bidNameText;
         static public bool logres;
         static public bool DQResult;
         static public string DQlvl;
@@ -166,71 +169,7 @@ namespace CQMacroCreator
             return;
         }
 
-        public void sendHCOpen()
-        {
-            var request = new ExecuteCloudScriptRequest()
-            {
-                RevisionSelection = CloudScriptRevisionOption.Live,
-                FunctionName = "open",
-                FunctionParameter = new { kid = kongID, mode = "hero" }
-            };
-            var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
-            bool _running = true;
-            while (_running)
-            {
-                if (statusTask.IsCompleted)
-                {
-                    var apiError = statusTask.Result.Error;
-                    var apiResult = statusTask.Result.Result;
-
-                    if (apiError != null)
-                    {                       
-                        return;
-                    }
-                    else if (apiResult != null)
-                    {                        
-                        return;
-                    }
-                    _running = false;
-                }
-                Thread.Sleep(1);
-            }
-            
-            return;
-        }
-
-        public void sendClaimAll()
-        {
-            var request = new ExecuteCloudScriptRequest()
-            {
-                RevisionSelection = CloudScriptRevisionOption.Live,
-                FunctionName = "claimall",
-                FunctionParameter = new { kid = kongID}
-            };
-            var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
-            bool _running = true;
-            while (_running)
-            {
-                if (statusTask.IsCompleted)
-                {
-                    var apiError = statusTask.Result.Error;
-                    var apiResult = statusTask.Result.Result;
-
-                    if (apiError != null)
-                    {
-                        return;
-                    }
-                    else if (apiResult != null)
-                    {
-                        return;
-                    }
-                    _running = false;
-                }
-                Thread.Sleep(1);
-            }
-
-            return;
-        }        
+ 
 
         public void sendQuestSolution()
         {
@@ -239,6 +178,42 @@ namespace CQMacroCreator
                 RevisionSelection = CloudScriptRevisionOption.Live,
                 FunctionName = "pve",
                 FunctionParameter = new { setup = lineup, id = questID }
+            };
+            var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
+            bool _running = true;
+            while (_running)
+            {
+                if (statusTask.IsCompleted)
+                {
+                    var apiError = statusTask.Result.Error;
+                    var apiResult = statusTask.Result.Result;
+
+                    if (apiError != null)
+                    {
+                        DQResult = false;
+                        return;
+                    }
+                    else if (apiResult != null)
+                    {
+                        DQResult = true;
+                        return;
+                    }
+                    _running = false;
+                }
+                Thread.Sleep(1);
+            }
+            DQResult = false;
+            return;
+        }
+
+        public void sendWB()
+        {
+            var request = new ExecuteCloudScriptRequest()
+            {
+                RevisionSelection = CloudScriptRevisionOption.Specific,
+                SpecificRevision = 190,
+                FunctionName = "fightWB",
+                FunctionParameter = new { setup = lineup, kid = kongID }
             };
             var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
             bool _running = true;
