@@ -19,6 +19,7 @@ namespace CQMacroCreator
 {
     public partial class Form1 : Form
     {
+        static bool wrongHeroAmountAlreadyAsked = false;
         static DateTime previousDQTime;
         static string calcOut;
         List<NumericUpDown> heroCounts;
@@ -384,7 +385,7 @@ namespace CQMacroCreator
                 }
                 return s.Trim();
             }
-        } 
+        }
 
         private void init()
         {
@@ -614,16 +615,24 @@ namespace CQMacroCreator
                     heroChecked++;
                 }
             }
-            if (heroChecked == 0)
+            if (!wrongHeroAmountAlreadyAsked)
             {
-                dr = MessageBox.Show("You haven't enabled any heroes. Are you sure you want to run the calculator without using any heroes?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (heroChecked == 0)
+                {                   
+                    dr = MessageBox.Show("You haven't enabled any heroes. Are you sure you want to run the calculator without using any heroes?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                }
+                else if (heroChecked > 20)
+                {
+                    dr = MessageBox.Show("You are using more than 20 heroes, that might considerably slow down the calculations. Are you sure you want to run the calc with so many heroes enabled?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                }
             }
-            else if (heroChecked > 20)
+            else
             {
-                dr = MessageBox.Show("You are using more than 20 heroes, that might considerably slow down the calculations. Are you sure you want to run the calc with so many heroes enabled?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                dr = DialogResult.Yes;
             }
             if (dr == DialogResult.Yes)
             {
+                wrongHeroAmountAlreadyAsked = true;
                 try
                 {
                     if (autoSend.Checked)
@@ -1246,6 +1255,7 @@ namespace CQMacroCreator
 
         private void sendTillNoSolveButton_Click(object sender, EventArgs e)
         {
+            wrongHeroAmountAlreadyAsked = false;
             int attempts = 0;
             string previousDQlvl = "";
             autoSend.Checked = true;
@@ -1274,6 +1284,6 @@ namespace CQMacroCreator
                 }
             }
         }
-        
+
     }
 }
