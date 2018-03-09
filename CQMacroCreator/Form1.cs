@@ -823,7 +823,7 @@ namespace CQMacroCreator
             int index;
             int[] sorted = strength.OrderByDescending(i => i).ToArray();
             int j = 0;
-            while ((j < 8 || (j < 14 && sorted[j + 1] > sorted[j] * 0.5)))
+            while (sorted[j] > lowerCount.Value && (j < 8 || (j < 14 && sorted[j + 1] > sorted[j] * 0.5)))
             {
                 index = Array.IndexOf(strength, sorted[j]);
                 heroBoxes[index].Checked = true;
