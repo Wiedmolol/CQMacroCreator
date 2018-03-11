@@ -366,8 +366,14 @@ namespace CQMacroCreator
             autoSend.Enabled = false;
             guiLog.Enabled = false;
             getQuestsButton.Enabled = false;
-            ((Control)tabControl1.TabPages[1]).Enabled = false;
-            ((Control)tabControl1.TabPages[2]).Enabled = false;
+            //((Control)tabControl1.TabPages[1]).Enabled = false;
+            //((Control)tabControl1.TabPages[2]).Enabled = false;
+            upper100.Enabled = false;
+            upper110.Enabled = false;
+            lower30.Enabled = false;
+            lower60.Enabled = false;
+            refreshFollowersButton.Enabled = false;
+
 
         }
 
@@ -389,6 +395,10 @@ namespace CQMacroCreator
 
         private void init()
         {
+            if (!File.Exists("Newtonsoft.Json.dll"))
+            {
+                MessageBox.Show("Newtonsoft file not found. Please download it from this project's github");
+            }
             previousDQTime = DateTime.UtcNow;
             if (File.Exists("MacroSettings.txt"))
             {
@@ -434,6 +444,12 @@ namespace CQMacroCreator
             {
                 token = null;
                 KongregateId = null;
+                DialogResult dr = MessageBox.Show("MacroSettings file not found. Do you want help with creating one?", "Settings Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (dr == DialogResult.Yes)
+                {
+                    button111_Click(this, EventArgs.Empty);
+                }
+
             }
             if (token != null && KongregateId != null)
             {
@@ -618,7 +634,7 @@ namespace CQMacroCreator
             if (!wrongHeroAmountAlreadyAsked)
             {
                 if (heroChecked == 0)
-                {                   
+                {
                     dr = MessageBox.Show("You haven't enabled any heroes. Are you sure you want to run the calculator without using any heroes?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 }
                 else if (heroChecked > 20)
@@ -892,6 +908,11 @@ namespace CQMacroCreator
             }
             else
             {
+                DialogResult dr = MessageBox.Show("Failed to log in. Do you want help with creating MacroSettings file?", "Settings Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (dr == DialogResult.Yes)
+                {
+                    button111_Click(this, EventArgs.Empty);
+                }
                 hideButtons();
                 throw new System.InvalidOperationException("Failed to log in");
             }
@@ -1283,6 +1304,12 @@ namespace CQMacroCreator
                     }
                 }
             }
+        }
+
+        private void button111_Click(object sender, EventArgs e)
+        {
+            MacroSettingsHelper msh = new MacroSettingsHelper();
+            msh.Show();
         }
 
     }

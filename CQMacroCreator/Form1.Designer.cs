@@ -858,7 +858,7 @@
             this.PGforMaxCommon = new System.Windows.Forms.Label();
             this.PGforMaxRare = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button91 = new System.Windows.Forms.Button();
+            this.refreshFollowersButton = new System.Windows.Forms.Button();
             this.lower60 = new System.Windows.Forms.Button();
             this.label172 = new System.Windows.Forms.Label();
             this.upper100 = new System.Windows.Forms.Button();
@@ -867,10 +867,11 @@
             this.followerLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label173 = new System.Windows.Forms.Label();
-            this.button93 = new System.Windows.Forms.Button();
+            this.multQuestStringButton = new System.Windows.Forms.Button();
             this.getQuestsButton = new System.Windows.Forms.Button();
             this.clearLogButton = new System.Windows.Forms.Button();
             this.sendTillNoSolveButton = new System.Windows.Forms.Button();
+            this.SettingCreatorButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -2596,7 +2597,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(92, 12);
+            this.button2.Location = new System.Drawing.Point(88, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 23);
             this.button2.TabIndex = 148;
@@ -2819,7 +2820,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(173, 11);
+            this.button4.Location = new System.Drawing.Point(166, 11);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 40);
             this.button4.TabIndex = 169;
@@ -2837,7 +2838,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(295, 12);
+            this.button5.Location = new System.Drawing.Point(288, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(114, 39);
             this.button5.TabIndex = 171;
@@ -3347,7 +3348,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(411, 12);
+            this.button9.Location = new System.Drawing.Point(404, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(74, 40);
             this.button9.TabIndex = 218;
@@ -3357,7 +3358,7 @@
             // 
             // getDQButton
             // 
-            this.getDQButton.Location = new System.Drawing.Point(488, 13);
+            this.getDQButton.Location = new System.Drawing.Point(481, 13);
             this.getDQButton.Name = "getDQButton";
             this.getDQButton.Size = new System.Drawing.Size(74, 40);
             this.getDQButton.TabIndex = 219;
@@ -5055,7 +5056,6 @@
             this.Quests.TabIndex = 1;
             this.Quests.Text = "Quests";
             this.Quests.UseVisualStyleBackColor = true;
-            this.Quests.Click += new System.EventHandler(this.questCheckboxChanged);
             // 
             // label208
             // 
@@ -10511,6 +10511,7 @@
             // 
             // Other
             // 
+            this.Other.Controls.Add(this.SettingCreatorButton);
             this.Other.Controls.Add(this.groupBox3);
             this.Other.Controls.Add(this.groupBox2);
             this.Other.Controls.Add(this.groupBox1);
@@ -10579,7 +10580,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button91);
+            this.groupBox2.Controls.Add(this.refreshFollowersButton);
             this.groupBox2.Controls.Add(this.lower60);
             this.groupBox2.Controls.Add(this.label172);
             this.groupBox2.Controls.Add(this.upper100);
@@ -10593,15 +10594,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Follower limits";
             // 
-            // button91
+            // refreshFollowersButton
             // 
-            this.button91.Location = new System.Drawing.Point(9, 54);
-            this.button91.Name = "button91";
-            this.button91.Size = new System.Drawing.Size(61, 25);
-            this.button91.TabIndex = 7;
-            this.button91.Text = "Refresh";
-            this.button91.UseVisualStyleBackColor = true;
-            this.button91.Click += new System.EventHandler(this.button91_Click);
+            this.refreshFollowersButton.Location = new System.Drawing.Point(9, 54);
+            this.refreshFollowersButton.Name = "refreshFollowersButton";
+            this.refreshFollowersButton.Size = new System.Drawing.Size(61, 25);
+            this.refreshFollowersButton.TabIndex = 7;
+            this.refreshFollowersButton.Text = "Refresh";
+            this.refreshFollowersButton.UseVisualStyleBackColor = true;
+            this.refreshFollowersButton.Click += new System.EventHandler(this.button91_Click);
             // 
             // lower60
             // 
@@ -10664,7 +10665,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label173);
-            this.groupBox1.Controls.Add(this.button93);
+            this.groupBox1.Controls.Add(this.multQuestStringButton);
             this.groupBox1.Location = new System.Drawing.Point(11, 157);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(445, 120);
@@ -10681,19 +10682,19 @@
             this.label173.TabIndex = 8;
             this.label173.Text = resources.GetString("label173.Text");
             // 
-            // button93
+            // multQuestStringButton
             // 
-            this.button93.Location = new System.Drawing.Point(297, 34);
-            this.button93.Name = "button93";
-            this.button93.Size = new System.Drawing.Size(128, 49);
-            this.button93.TabIndex = 4;
-            this.button93.Text = "Make multiple quest string";
-            this.button93.UseVisualStyleBackColor = true;
-            this.button93.Click += new System.EventHandler(this.button93_Click);
+            this.multQuestStringButton.Location = new System.Drawing.Point(297, 34);
+            this.multQuestStringButton.Name = "multQuestStringButton";
+            this.multQuestStringButton.Size = new System.Drawing.Size(128, 49);
+            this.multQuestStringButton.TabIndex = 4;
+            this.multQuestStringButton.Text = "Make multiple quest string";
+            this.multQuestStringButton.UseVisualStyleBackColor = true;
+            this.multQuestStringButton.Click += new System.EventHandler(this.button93_Click);
             // 
             // getQuestsButton
             // 
-            this.getQuestsButton.Location = new System.Drawing.Point(565, 13);
+            this.getQuestsButton.Location = new System.Drawing.Point(558, 13);
             this.getQuestsButton.Name = "getQuestsButton";
             this.getQuestsButton.Size = new System.Drawing.Size(74, 40);
             this.getQuestsButton.TabIndex = 226;
@@ -10720,6 +10721,16 @@
             this.sendTillNoSolveButton.Text = "Run and send DQs until no solution found";
             this.sendTillNoSolveButton.UseVisualStyleBackColor = true;
             this.sendTillNoSolveButton.Click += new System.EventHandler(this.sendTillNoSolveButton_Click);
+            // 
+            // SettingCreatorButton
+            // 
+            this.SettingCreatorButton.Location = new System.Drawing.Point(328, 370);
+            this.SettingCreatorButton.Name = "SettingCreatorButton";
+            this.SettingCreatorButton.Size = new System.Drawing.Size(128, 49);
+            this.SettingCreatorButton.TabIndex = 9;
+            this.SettingCreatorButton.Text = "Help me create MacroSettings file";
+            this.SettingCreatorButton.UseVisualStyleBackColor = true;
+            this.SettingCreatorButton.Click += new System.EventHandler(this.button111_Click);
             // 
             // Form1
             // 
@@ -11518,10 +11529,10 @@
         private System.Windows.Forms.Label label172;
         private System.Windows.Forms.Button upper110;
         private System.Windows.Forms.Button lower30;
-        private System.Windows.Forms.Button button93;
+        private System.Windows.Forms.Button multQuestStringButton;
         private System.Windows.Forms.Button upper100;
         private System.Windows.Forms.Button lower60;
-        private System.Windows.Forms.Button button91;
+        private System.Windows.Forms.Button refreshFollowersButton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label173;
@@ -11712,6 +11723,7 @@
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.Label label225;
         private System.Windows.Forms.Button sendTillNoSolveButton;
+        private System.Windows.Forms.Button SettingCreatorButton;
     }
 }
 
