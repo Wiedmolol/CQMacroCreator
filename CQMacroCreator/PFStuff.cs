@@ -72,6 +72,7 @@ namespace CQMacroCreator
             return;
         }
 
+
         public void GetGameData()
         {
             questList = new List<int>();
