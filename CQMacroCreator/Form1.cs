@@ -72,6 +72,7 @@ namespace CQMacroCreator
             {"ASHIT", "ageum"},
             {"SEXY", "sexysanta"},
             {"EBOSS", "moak"},
+            {"MOTHEROFALLKODAMAS", "moak"},
 
         };
         string token;
