@@ -934,7 +934,7 @@ namespace CQMacroCreator
         {
             int PGrare = 0;
             int PGcommon = 0;
-            int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63 };
+            int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63, 78, 94};
             foreach (int i in chestRaresID)
             {
                 PGrare += (99 - Math.Max(1, (int)heroCounts[i].Value)) * 3;
