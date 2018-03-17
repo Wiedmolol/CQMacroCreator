@@ -255,6 +255,18 @@
             this.CSHC = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Heroes = new System.Windows.Forms.TabPage();
+            this.aDagdaBox = new System.Windows.Forms.CheckBox();
+            this.label229 = new System.Windows.Forms.Label();
+            this.aDagdaCount = new System.Windows.Forms.NumericUpDown();
+            this.BavahBox = new System.Windows.Forms.CheckBox();
+            this.label226 = new System.Windows.Forms.Label();
+            this.BavahCount = new System.Windows.Forms.NumericUpDown();
+            this.BoorBox = new System.Windows.Forms.CheckBox();
+            this.label227 = new System.Windows.Forms.Label();
+            this.BoorCount = new System.Windows.Forms.NumericUpDown();
+            this.BylarBox = new System.Windows.Forms.CheckBox();
+            this.label228 = new System.Windows.Forms.Label();
+            this.BylarCount = new System.Windows.Forms.NumericUpDown();
             this.HattoriBox = new System.Windows.Forms.CheckBox();
             this.label200 = new System.Windows.Forms.Label();
             this.HattoriCount = new System.Windows.Forms.NumericUpDown();
@@ -872,18 +884,9 @@
             this.getQuestsButton = new System.Windows.Forms.Button();
             this.clearLogButton = new System.Windows.Forms.Button();
             this.sendTillNoSolveButton = new System.Windows.Forms.Button();
-            this.BavahBox = new System.Windows.Forms.CheckBox();
-            this.label226 = new System.Windows.Forms.Label();
-            this.BavahCount = new System.Windows.Forms.NumericUpDown();
-            this.BoorBox = new System.Windows.Forms.CheckBox();
-            this.label227 = new System.Windows.Forms.Label();
-            this.BoorCount = new System.Windows.Forms.NumericUpDown();
-            this.BylarBox = new System.Windows.Forms.CheckBox();
-            this.label228 = new System.Windows.Forms.Label();
-            this.BylarCount = new System.Windows.Forms.NumericUpDown();
-            this.aDagdaBox = new System.Windows.Forms.CheckBox();
-            this.label229 = new System.Windows.Forms.Label();
-            this.aDagdaCount = new System.Windows.Forms.NumericUpDown();
+            this.LeprCount = new System.Windows.Forms.NumericUpDown();
+            this.label230 = new System.Windows.Forms.Label();
+            this.LeprBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -953,6 +956,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.HamaCount)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Heroes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aDagdaCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BavahCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoorCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BylarCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HattoriCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HirateCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakedaCount)).BeginInit();
@@ -983,10 +990,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BavahCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoorCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BylarCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aDagdaCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeprCount)).BeginInit();
             this.SuspendLayout();
             // 
             // JamesCount
@@ -2733,7 +2737,7 @@
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(37, 13);
             this.label57.TabIndex = 159;
-            this.label57.Text = "v2.9.7";
+            this.label57.Text = "v2.9.8";
             // 
             // GurthBox
             // 
@@ -3433,6 +3437,9 @@
             // Heroes
             // 
             this.Heroes.AutoScroll = true;
+            this.Heroes.Controls.Add(this.LeprCount);
+            this.Heroes.Controls.Add(this.label230);
+            this.Heroes.Controls.Add(this.LeprBox);
             this.Heroes.Controls.Add(this.aDagdaBox);
             this.Heroes.Controls.Add(this.label229);
             this.Heroes.Controls.Add(this.aDagdaCount);
@@ -3727,6 +3734,134 @@
             this.Heroes.TabIndex = 0;
             this.Heroes.Text = "Heroes";
             this.Heroes.UseVisualStyleBackColor = true;
+            // 
+            // aDagdaBox
+            // 
+            this.aDagdaBox.AutoSize = true;
+            this.aDagdaBox.Location = new System.Drawing.Point(281, 841);
+            this.aDagdaBox.Name = "aDagdaBox";
+            this.aDagdaBox.Size = new System.Drawing.Size(33, 17);
+            this.aDagdaBox.TabIndex = 309;
+            this.aDagdaBox.TabStop = false;
+            this.aDagdaBox.Text = "E";
+            this.aDagdaBox.UseVisualStyleBackColor = true;
+            // 
+            // label229
+            // 
+            this.label229.AutoSize = true;
+            this.label229.Location = new System.Drawing.Point(159, 842);
+            this.label229.Name = "label229";
+            this.label229.Size = new System.Drawing.Size(63, 13);
+            this.label229.TabIndex = 308;
+            this.label229.Text = "Asc. Dagda";
+            // 
+            // aDagdaCount
+            // 
+            this.aDagdaCount.Location = new System.Drawing.Point(225, 840);
+            this.aDagdaCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.aDagdaCount.Name = "aDagdaCount";
+            this.aDagdaCount.Size = new System.Drawing.Size(50, 20);
+            this.aDagdaCount.TabIndex = 307;
+            // 
+            // BavahBox
+            // 
+            this.BavahBox.AutoSize = true;
+            this.BavahBox.Location = new System.Drawing.Point(441, 295);
+            this.BavahBox.Name = "BavahBox";
+            this.BavahBox.Size = new System.Drawing.Size(33, 17);
+            this.BavahBox.TabIndex = 306;
+            this.BavahBox.TabStop = false;
+            this.BavahBox.Text = "E";
+            this.BavahBox.UseVisualStyleBackColor = true;
+            // 
+            // label226
+            // 
+            this.label226.AutoSize = true;
+            this.label226.Location = new System.Drawing.Point(333, 295);
+            this.label226.Name = "label226";
+            this.label226.Size = new System.Drawing.Size(38, 13);
+            this.label226.TabIndex = 305;
+            this.label226.Text = "Bavah";
+            // 
+            // BavahCount
+            // 
+            this.BavahCount.Location = new System.Drawing.Point(385, 294);
+            this.BavahCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.BavahCount.Name = "BavahCount";
+            this.BavahCount.Size = new System.Drawing.Size(50, 20);
+            this.BavahCount.TabIndex = 300;
+            // 
+            // BoorBox
+            // 
+            this.BoorBox.AutoSize = true;
+            this.BoorBox.Location = new System.Drawing.Point(281, 295);
+            this.BoorBox.Name = "BoorBox";
+            this.BoorBox.Size = new System.Drawing.Size(33, 17);
+            this.BoorBox.TabIndex = 304;
+            this.BoorBox.TabStop = false;
+            this.BoorBox.Text = "E";
+            this.BoorBox.UseVisualStyleBackColor = true;
+            // 
+            // label227
+            // 
+            this.label227.AutoSize = true;
+            this.label227.Location = new System.Drawing.Point(164, 296);
+            this.label227.Name = "label227";
+            this.label227.Size = new System.Drawing.Size(29, 13);
+            this.label227.TabIndex = 303;
+            this.label227.Text = "Boor";
+            // 
+            // BoorCount
+            // 
+            this.BoorCount.Location = new System.Drawing.Point(225, 294);
+            this.BoorCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.BoorCount.Name = "BoorCount";
+            this.BoorCount.Size = new System.Drawing.Size(50, 20);
+            this.BoorCount.TabIndex = 299;
+            // 
+            // BylarBox
+            // 
+            this.BylarBox.AutoSize = true;
+            this.BylarBox.Location = new System.Drawing.Point(121, 295);
+            this.BylarBox.Name = "BylarBox";
+            this.BylarBox.Size = new System.Drawing.Size(33, 17);
+            this.BylarBox.TabIndex = 302;
+            this.BylarBox.TabStop = false;
+            this.BylarBox.Text = "E";
+            this.BylarBox.UseVisualStyleBackColor = true;
+            // 
+            // label228
+            // 
+            this.label228.AutoSize = true;
+            this.label228.Location = new System.Drawing.Point(13, 296);
+            this.label228.Name = "label228";
+            this.label228.Size = new System.Drawing.Size(30, 13);
+            this.label228.TabIndex = 301;
+            this.label228.Text = "Bylar";
+            // 
+            // BylarCount
+            // 
+            this.BylarCount.Location = new System.Drawing.Point(65, 294);
+            this.BylarCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.BylarCount.Name = "BylarCount";
+            this.BylarCount.Size = new System.Drawing.Size(50, 20);
+            this.BylarCount.TabIndex = 298;
             // 
             // HattoriBox
             // 
@@ -10760,133 +10895,37 @@
             this.sendTillNoSolveButton.UseVisualStyleBackColor = true;
             this.sendTillNoSolveButton.Click += new System.EventHandler(this.sendTillNoSolveButton_Click);
             // 
-            // BavahBox
+            // LeprCount
             // 
-            this.BavahBox.AutoSize = true;
-            this.BavahBox.Location = new System.Drawing.Point(441, 295);
-            this.BavahBox.Name = "BavahBox";
-            this.BavahBox.Size = new System.Drawing.Size(33, 17);
-            this.BavahBox.TabIndex = 306;
-            this.BavahBox.TabStop = false;
-            this.BavahBox.Text = "E";
-            this.BavahBox.UseVisualStyleBackColor = true;
-            // 
-            // label226
-            // 
-            this.label226.AutoSize = true;
-            this.label226.Location = new System.Drawing.Point(333, 295);
-            this.label226.Name = "label226";
-            this.label226.Size = new System.Drawing.Size(38, 13);
-            this.label226.TabIndex = 305;
-            this.label226.Text = "Bavah";
-            // 
-            // BavahCount
-            // 
-            this.BavahCount.Location = new System.Drawing.Point(385, 294);
-            this.BavahCount.Maximum = new decimal(new int[] {
+            this.LeprCount.Location = new System.Drawing.Point(225, 736);
+            this.LeprCount.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.BavahCount.Name = "BavahCount";
-            this.BavahCount.Size = new System.Drawing.Size(50, 20);
-            this.BavahCount.TabIndex = 300;
+            this.LeprCount.Name = "LeprCount";
+            this.LeprCount.Size = new System.Drawing.Size(50, 20);
+            this.LeprCount.TabIndex = 310;
             // 
-            // BoorBox
+            // label230
             // 
-            this.BoorBox.AutoSize = true;
-            this.BoorBox.Location = new System.Drawing.Point(281, 295);
-            this.BoorBox.Name = "BoorBox";
-            this.BoorBox.Size = new System.Drawing.Size(33, 17);
-            this.BoorBox.TabIndex = 304;
-            this.BoorBox.TabStop = false;
-            this.BoorBox.Text = "E";
-            this.BoorBox.UseVisualStyleBackColor = true;
+            this.label230.AutoSize = true;
+            this.label230.Location = new System.Drawing.Point(160, 738);
+            this.label230.Name = "label230";
+            this.label230.Size = new System.Drawing.Size(64, 13);
+            this.label230.TabIndex = 311;
+            this.label230.Text = "Leprechaun";
             // 
-            // label227
+            // LeprBox
             // 
-            this.label227.AutoSize = true;
-            this.label227.Location = new System.Drawing.Point(164, 296);
-            this.label227.Name = "label227";
-            this.label227.Size = new System.Drawing.Size(29, 13);
-            this.label227.TabIndex = 303;
-            this.label227.Text = "Boor";
-            // 
-            // BoorCount
-            // 
-            this.BoorCount.Location = new System.Drawing.Point(225, 294);
-            this.BoorCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.BoorCount.Name = "BoorCount";
-            this.BoorCount.Size = new System.Drawing.Size(50, 20);
-            this.BoorCount.TabIndex = 299;
-            // 
-            // BylarBox
-            // 
-            this.BylarBox.AutoSize = true;
-            this.BylarBox.Location = new System.Drawing.Point(121, 295);
-            this.BylarBox.Name = "BylarBox";
-            this.BylarBox.Size = new System.Drawing.Size(33, 17);
-            this.BylarBox.TabIndex = 302;
-            this.BylarBox.TabStop = false;
-            this.BylarBox.Text = "E";
-            this.BylarBox.UseVisualStyleBackColor = true;
-            // 
-            // label228
-            // 
-            this.label228.AutoSize = true;
-            this.label228.Location = new System.Drawing.Point(13, 296);
-            this.label228.Name = "label228";
-            this.label228.Size = new System.Drawing.Size(30, 13);
-            this.label228.TabIndex = 301;
-            this.label228.Text = "Bylar";
-            // 
-            // BylarCount
-            // 
-            this.BylarCount.Location = new System.Drawing.Point(65, 294);
-            this.BylarCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.BylarCount.Name = "BylarCount";
-            this.BylarCount.Size = new System.Drawing.Size(50, 20);
-            this.BylarCount.TabIndex = 298;
-            // 
-            // aDagdaBox
-            // 
-            this.aDagdaBox.AutoSize = true;
-            this.aDagdaBox.Location = new System.Drawing.Point(281, 841);
-            this.aDagdaBox.Name = "aDagdaBox";
-            this.aDagdaBox.Size = new System.Drawing.Size(33, 17);
-            this.aDagdaBox.TabIndex = 309;
-            this.aDagdaBox.TabStop = false;
-            this.aDagdaBox.Text = "E";
-            this.aDagdaBox.UseVisualStyleBackColor = true;
-            // 
-            // label229
-            // 
-            this.label229.AutoSize = true;
-            this.label229.Location = new System.Drawing.Point(159, 842);
-            this.label229.Name = "label229";
-            this.label229.Size = new System.Drawing.Size(63, 13);
-            this.label229.TabIndex = 308;
-            this.label229.Text = "Asc. Dagda";
-            // 
-            // aDagdaCount
-            // 
-            this.aDagdaCount.Location = new System.Drawing.Point(225, 840);
-            this.aDagdaCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.aDagdaCount.Name = "aDagdaCount";
-            this.aDagdaCount.Size = new System.Drawing.Size(50, 20);
-            this.aDagdaCount.TabIndex = 307;
+            this.LeprBox.AutoSize = true;
+            this.LeprBox.Location = new System.Drawing.Point(281, 737);
+            this.LeprBox.Name = "LeprBox";
+            this.LeprBox.Size = new System.Drawing.Size(33, 17);
+            this.LeprBox.TabIndex = 312;
+            this.LeprBox.TabStop = false;
+            this.LeprBox.Text = "E";
+            this.LeprBox.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -10996,6 +11035,10 @@
             this.tabControl1.ResumeLayout(false);
             this.Heroes.ResumeLayout(false);
             this.Heroes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.aDagdaCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BavahCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoorCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BylarCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HattoriCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HirateCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TakedaCount)).EndInit();
@@ -11030,10 +11073,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BavahCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoorCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BylarCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aDagdaCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeprCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -11896,6 +11936,9 @@
         private System.Windows.Forms.CheckBox aDagdaBox;
         private System.Windows.Forms.Label label229;
         private System.Windows.Forms.NumericUpDown aDagdaCount;
+        private System.Windows.Forms.NumericUpDown LeprCount;
+        private System.Windows.Forms.Label label230;
+        private System.Windows.Forms.CheckBox LeprBox;
     }
 }
 

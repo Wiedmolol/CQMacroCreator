@@ -73,6 +73,7 @@ namespace CQMacroCreator
             {"SEXY", "sexysanta"},
             {"EBOSS", "moak"},
             {"MOTHEROFALLKODAMAS", "moak"},
+            {"LEPR", "leprechaun"}
 
         };
         string token;
@@ -85,10 +86,10 @@ namespace CQMacroCreator
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", 
-                                "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah"
+                                "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun"
                                 };
 
-        static string[] servernames = { "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = { "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -136,7 +137,7 @@ namespace CQMacroCreator
                                                ArshenCount, RuaCount, DorthCount,
                                                aRigrCount, null,
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
-                                               aDagdaCount, BylarCount, BoorCount, BavahCount
+                                               aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount
 
             };
 
@@ -170,7 +171,7 @@ namespace CQMacroCreator
                                                ArshenCount, RuaCount, DorthCount,
                                                aRigrCount, null,
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
-                                               aDagdaCount, BylarCount, BoorCount, BavahCount
+                                               aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount
             };
 
             heroBoxes = new List<CheckBox>() { JamesBox, 
@@ -201,7 +202,7 @@ namespace CQMacroCreator
                                                ArshenBox, RuaBox, DorthBox,
                                                aRigrBox, null,
                                                HosokawaBox, TakedaBox, HirateBox, HattoriBox,
-                                               aDagdaBox, BylarBox, BoorBox, BavahBox
+                                               aDagdaBox, BylarBox, BoorBox, BavahBox, LeprBox
             };
 
             questBoxes = new List<CheckBox>() {
@@ -545,9 +546,9 @@ namespace CQMacroCreator
             new Hero(74,36,6,0,0), new Hero(78,40,6,0,0), new Hero(82,44,6,0,0),
             new Hero(141,99,12,0,0), null,
             new Hero(42,50,6,0,0), new Hero(32,66,6,0,0), new Hero(38,56,6,0,0), new Hero(44,48,6,0,0),
-            new Hero(135,107,12,0,0), 
-            new Hero(30,20,1,0,0), new Hero(36,36,2,0,0), new Hero(52,52,6,0,0),
-
+            new Hero(135,107,12,0,0), //adagda
+            new Hero(30,20,1,0,0), new Hero(36,36,2,0,0), new Hero(52,52,6,0,0), //bavah, boor
+            new Hero(25,75,6,0,0)
         });
 
         private void button1_Click(object sender, EventArgs e)
