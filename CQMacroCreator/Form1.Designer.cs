@@ -3745,6 +3745,7 @@
             this.aDagdaBox.TabStop = false;
             this.aDagdaBox.Text = "E";
             this.aDagdaBox.UseVisualStyleBackColor = true;
+            this.aDagdaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label229
             // 
@@ -3777,6 +3778,7 @@
             this.BavahBox.TabStop = false;
             this.BavahBox.Text = "E";
             this.BavahBox.UseVisualStyleBackColor = true;
+            this.BavahBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label226
             // 
@@ -3809,6 +3811,7 @@
             this.BoorBox.TabStop = false;
             this.BoorBox.Text = "E";
             this.BoorBox.UseVisualStyleBackColor = true;
+            this.BoorBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label227
             // 
@@ -3841,6 +3844,7 @@
             this.BylarBox.TabStop = false;
             this.BylarBox.Text = "E";
             this.BylarBox.UseVisualStyleBackColor = true;
+            this.BylarBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label228
             // 
@@ -4038,6 +4042,7 @@
             this.DorthBox.TabStop = false;
             this.DorthBox.Text = "E";
             this.DorthBox.UseVisualStyleBackColor = true;
+            this.DorthBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label194
             // 
@@ -4070,6 +4075,7 @@
             this.RuaBox.TabStop = false;
             this.RuaBox.Text = "E";
             this.RuaBox.UseVisualStyleBackColor = true;
+            this.RuaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label195
             // 
@@ -4102,6 +4108,7 @@
             this.ArshenBox.TabStop = false;
             this.ArshenBox.Text = "E";
             this.ArshenBox.UseVisualStyleBackColor = true;
+            this.ArshenBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label196
             // 
@@ -4200,6 +4207,7 @@
             this.DagdaBox.TabStop = false;
             this.DagdaBox.Text = "E";
             this.DagdaBox.UseVisualStyleBackColor = true;
+            this.DagdaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label189
             // 
@@ -4232,6 +4240,7 @@
             this.GanahBox.TabStop = false;
             this.GanahBox.Text = "E";
             this.GanahBox.UseVisualStyleBackColor = true;
+            this.GanahBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label190
             // 
@@ -4264,6 +4273,7 @@
             this.TothBox.TabStop = false;
             this.TothBox.Text = "E";
             this.TothBox.UseVisualStyleBackColor = true;
+            this.TothBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // label191
             // 
@@ -10926,6 +10936,7 @@
             this.LeprBox.TabStop = false;
             this.LeprBox.Text = "E";
             this.LeprBox.UseVisualStyleBackColor = true;
+            this.LeprBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
             // Form1
             // 
