@@ -887,6 +887,7 @@
             this.LeprCount = new System.Windows.Forms.NumericUpDown();
             this.label230 = new System.Windows.Forms.Label();
             this.LeprBox = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -2627,7 +2628,7 @@
             // 
             // lowerCount
             // 
-            this.lowerCount.Location = new System.Drawing.Point(607, 73);
+            this.lowerCount.Location = new System.Drawing.Point(607, 77);
             this.lowerCount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -2646,7 +2647,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(530, 75);
+            this.label52.Location = new System.Drawing.Point(530, 79);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(69, 13);
             this.label52.TabIndex = 150;
@@ -2655,7 +2656,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(530, 101);
+            this.label53.Location = new System.Drawing.Point(530, 104);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(76, 13);
             this.label53.TabIndex = 152;
@@ -2663,7 +2664,7 @@
             // 
             // upperCount
             // 
-            this.upperCount.Location = new System.Drawing.Point(607, 99);
+            this.upperCount.Location = new System.Drawing.Point(607, 102);
             this.upperCount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -2723,7 +2724,7 @@
             // 
             this.label56.AutoSize = true;
             this.label56.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label56.Location = new System.Drawing.Point(688, 9);
+            this.label56.Location = new System.Drawing.Point(688, 17);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(121, 13);
             this.label56.TabIndex = 158;
@@ -2733,7 +2734,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label57.Location = new System.Drawing.Point(767, 25);
+            this.label57.Location = new System.Drawing.Point(767, 33);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(37, 13);
             this.label57.TabIndex = 159;
@@ -2840,7 +2841,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(166, 11);
+            this.button4.Location = new System.Drawing.Point(166, 17);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 40);
             this.button4.TabIndex = 169;
@@ -2858,7 +2859,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(288, 12);
+            this.button5.Location = new System.Drawing.Point(288, 18);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(114, 39);
             this.button5.TabIndex = 171;
@@ -2975,7 +2976,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(727, 74);
+            this.button6.Location = new System.Drawing.Point(727, 78);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(16, 20);
             this.button6.TabIndex = 182;
@@ -2985,7 +2986,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(727, 99);
+            this.button7.Location = new System.Drawing.Point(727, 102);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(16, 20);
             this.button7.TabIndex = 183;
@@ -3368,7 +3369,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(404, 12);
+            this.button9.Location = new System.Drawing.Point(404, 18);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(74, 40);
             this.button9.TabIndex = 218;
@@ -3378,7 +3379,7 @@
             // 
             // getDQButton
             // 
-            this.getDQButton.Location = new System.Drawing.Point(481, 13);
+            this.getDQButton.Location = new System.Drawing.Point(481, 19);
             this.getDQButton.Name = "getDQButton";
             this.getDQButton.Size = new System.Drawing.Size(74, 40);
             this.getDQButton.TabIndex = 219;
@@ -3408,7 +3409,7 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(531, 57);
+            this.label76.Location = new System.Drawing.Point(531, 61);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(162, 13);
             this.label76.TabIndex = 223;
@@ -3417,7 +3418,7 @@
             // CSHC
             // 
             this.CSHC.AutoSize = true;
-            this.CSHC.Location = new System.Drawing.Point(694, 58);
+            this.CSHC.Location = new System.Drawing.Point(694, 62);
             this.CSHC.Name = "CSHC";
             this.CSHC.Size = new System.Drawing.Size(13, 13);
             this.CSHC.TabIndex = 224;
@@ -10877,7 +10878,7 @@
             // 
             // getQuestsButton
             // 
-            this.getQuestsButton.Location = new System.Drawing.Point(558, 13);
+            this.getQuestsButton.Location = new System.Drawing.Point(558, 19);
             this.getQuestsButton.Name = "getQuestsButton";
             this.getQuestsButton.Size = new System.Drawing.Size(74, 40);
             this.getQuestsButton.TabIndex = 226;
@@ -10938,11 +10939,23 @@
             this.LeprBox.UseVisualStyleBackColor = true;
             this.LeprBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(468, 2);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(336, 13);
+            this.linkLabel1.TabIndex = 229;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Also check my CQAutomater - auto miracle claim, auto PVP and more!";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 693);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.sendTillNoSolveButton);
             this.Controls.Add(this.clearLogButton);
             this.Controls.Add(this.runCalcButton);
@@ -11950,6 +11963,7 @@
         private System.Windows.Forms.NumericUpDown LeprCount;
         private System.Windows.Forms.Label label230;
         private System.Windows.Forms.CheckBox LeprBox;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

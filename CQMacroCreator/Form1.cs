@@ -109,6 +109,9 @@ namespace CQMacroCreator
         {
 
             InitializeComponent();
+            //LinkLabel.Link l = new LinkLabel.Link();
+            //l.LinkData = "https://github.com/Wiedmolol/CQAutomater";
+            //linkLabel1.Links.Add(l);
             heroCounts = new List<NumericUpDown>() {JamesCount, 
                                                HunterCount, ShamanCount, AlphaCount, 
                                                CarlCount, NimueCount, AthosCount, 
@@ -848,7 +851,7 @@ namespace CQMacroCreator
             int index;
             int[] sorted = strength.OrderByDescending(i => i).ToArray();
             int j = 0;
-            while (sorted[j] > lowerCount.Value && (j < 8 || (j < 14 && sorted[j + 1] > sorted[j] * 0.5)))
+            while (sorted[j] > (decimal)0.33 * lowerCount.Value && (j < 8 || (j < 14 && sorted[j + 1] > sorted[j] * 0.5)))
             {
                 index = Array.IndexOf(strength, sorted[j]);
                 heroBoxes[index].Checked = true;
@@ -1319,6 +1322,11 @@ namespace CQMacroCreator
         {
             MacroSettingsHelper msh = new MacroSettingsHelper();
             msh.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/Wiedmolol/CQAutomater");
         }
 
        
