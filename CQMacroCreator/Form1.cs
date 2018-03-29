@@ -86,10 +86,10 @@ namespace CQMacroCreator
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", 
-                                "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun"
+                                "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn"
                                 };
 
-        static string[] servernames = { "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = { "flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -109,9 +109,6 @@ namespace CQMacroCreator
         {
 
             InitializeComponent();
-            //LinkLabel.Link l = new LinkLabel.Link();
-            //l.LinkData = "https://github.com/Wiedmolol/CQAutomater";
-            //linkLabel1.Links.Add(l);
             heroCounts = new List<NumericUpDown>() {JamesCount, 
                                                HunterCount, ShamanCount, AlphaCount, 
                                                CarlCount, NimueCount, AthosCount, 
@@ -140,7 +137,8 @@ namespace CQMacroCreator
                                                ArshenCount, RuaCount, DorthCount,
                                                aRigrCount, null,
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
-                                               aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount
+                                               aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
+                                               SparksCount, LeafCount, FlynnCount
 
             };
 
@@ -174,7 +172,8 @@ namespace CQMacroCreator
                                                ArshenCount, RuaCount, DorthCount,
                                                aRigrCount, null,
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
-                                               aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount
+                                               aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
+                                               SparksCount, LeafCount, FlynnCount
             };
 
             heroBoxes = new List<CheckBox>() { JamesBox, 
@@ -205,7 +204,8 @@ namespace CQMacroCreator
                                                ArshenBox, RuaBox, DorthBox,
                                                aRigrBox, null,
                                                HosokawaBox, TakedaBox, HirateBox, HattoriBox,
-                                               aDagdaBox, BylarBox, BoorBox, BavahBox, LeprBox
+                                               aDagdaBox, BylarBox, BoorBox, BavahBox, LeprBox,
+                                               SparksBox, LeafBox, FlynnBox
             };
 
             questBoxes = new List<CheckBox>() {
@@ -551,7 +551,8 @@ namespace CQMacroCreator
             new Hero(42,50,6,0,0), new Hero(32,66,6,0,0), new Hero(38,56,6,0,0), new Hero(44,48,6,0,0),
             new Hero(135,107,12,0,0), //adagda
             new Hero(30,20,1,0,0), new Hero(36,36,2,0,0), new Hero(52,52,6,0,0), //bavah, boor
-            new Hero(25,75,6,0,0)
+            new Hero(25,75,6,0,0),
+            new Hero(30,30,2,0,0), new Hero(48,42,4,0,0), new Hero(70,48,12,0,0) //sparks, leaf, flynn
         });
 
         private void button1_Click(object sender, EventArgs e)
