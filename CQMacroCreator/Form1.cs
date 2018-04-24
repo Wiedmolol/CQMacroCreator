@@ -19,6 +19,9 @@ namespace CQMacroCreator
 {
     public partial class Form1 : Form
     {
+        static AppSettings appSettings = new AppSettings();
+        public const string SettingsFilename = "Settings.json";
+        static string output;
         static bool wrongHeroAmountAlreadyAsked = false;
         static DateTime previousDQTime;
         static string calcOut;
@@ -78,7 +81,7 @@ namespace CQMacroCreator
         };
         string token;
         string KongregateId;
-        string defaultActionOnOpen = "0";
+        int defaultActionOnOpen = 0;
 
         static string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x", 
                                 "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
@@ -100,6 +103,18 @@ namespace CQMacroCreator
                                "A16","E16","F16","W16","A17","E17","F17","W17","A18","E18","F18","W18","A19","E19","F19","W19","A20","E20","F20","W20","A21","E21","F21","W21",
                                "A22","E22","F22","W22","A23","E23","F23","W23","A24","E24","F24","W24","A25","E25","F25","W25","A26","E26","F26","W26","A27","E27","F27","W27",
                                "A28","E28","F28","W28","A29","E29","F29","W29","A30","E30","F30","W30",};
+
+        static int[] monstersCosts = {1000, 1300, 1000, 1400, 3900, 2700, 3900, 3900, 8000, 7500, 8000, 8000, 15000, 18000, 23000, 18000, 41000, 54000, 31000,
+                                        52000, 96000, 71000, 94000, 84000, 144000, 115000, 115000, 159000, 257000, 215000, 321000, 241000, 495000, 436000,
+                                        454000, 418000, 785000, 689000, 787000, 675000, 1403000, 1130000, 1229000, 1315000, 1733000, 1903000, 1718000, 1775000,
+                                        2772000, 3971000, 3169000, 2398000, 4785000, 6044000, 4741000, 4159000, 8897000, 7173000, 5676000, 7758000, 12855000,
+                                        12534000, 13001000, 13475000, 16765000, 16531000, 18090000, 17573000, 21951000, 22567000, 21951000, 20909000, 27288000,
+                                        27107000, 25170000, 25079000, 32242000, 32025000, 33155600, 34182000, 42826000, 42252000, 42798000, 41901000, 55373000,
+                                        55671000, 55582000, 55877000, 72580000, 73483000, 72480000, 72243000, 94312000, 96071000, 95772000, 95903000, 124549000,
+                                        123096000, 125443000, 127256000, 155097000, 157055000, 160026000, 157140000, 202295000, 206317000, 201426000, 199344000,
+                                        265846000, 268117000, 264250000, 261023000, 368230000, 363805000, 358119000, 370761000, 505055000, 497082000, 514040000,
+                                        515849000,
+                                    };
 
 
         int heroesInGame = Array.IndexOf(servernames, "ladyoftwilight") + 2;
@@ -363,7 +378,8 @@ namespace CQMacroCreator
                 {
                     this.Hide();
                     sendTillNoSolveButton_Click(this, EventArgs.Empty);
-                    //Console.Write("\nExit\n");
+                    //Console.Write("\nTest\n");
+                    Console.Write(output);
                     this.Close();
                     Application.Exit();
                 }
@@ -387,6 +403,7 @@ namespace CQMacroCreator
 
         }
 
+
         private string getSetting(string s)
         {
             if (s == null || s == String.Empty)
@@ -405,61 +422,48 @@ namespace CQMacroCreator
 
         private void init()
         {
+            string lower = null, upper = null;
             if (!File.Exists("Newtonsoft.Json.dll"))
             {
                 MessageBox.Show("Newtonsoft file not found. Please download it from this project's github");
             }
             previousDQTime = DateTime.UtcNow;
-            if (File.Exists("MacroSettings.txt"))
+            if (File.Exists(SettingsFilename))
+            {
+                appSettings = AppSettings.loadSettings();
+                token = appSettings.token;
+                KongregateId = appSettings.KongregateId;
+                defaultActionOnOpen = appSettings.actionOnStart ?? 0;
+                lower = appSettings.defaultLowerLimit;
+                upper = appSettings.defaultUpperLimit;
+
+            }
+            else if (File.Exists("MacroSettings.txt"))
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader("MacroSettings.txt");
-                defaultActionOnOpen = getSetting(sr.ReadLine());
-                token = getSetting(sr.ReadLine());
-                KongregateId = getSetting(sr.ReadLine());
+                appSettings.actionOnStart = defaultActionOnOpen = int.Parse(getSetting(sr.ReadLine()));
+                token = appSettings.token = getSetting(sr.ReadLine());
+                KongregateId = appSettings.KongregateId = getSetting(sr.ReadLine());
 
-                string lower = getSetting(sr.ReadLine());
-                string upper = getSetting(sr.ReadLine());
+                lower = appSettings.defaultLowerLimit = getSetting(sr.ReadLine());
+                upper = appSettings.defaultUpperLimit = getSetting(sr.ReadLine());
+                appSettings.saveSettings();
                 sr.Close();
-
-                if (lower != null)
-                {
-                    if (lower.Contains("%"))
-                    {
-                        lowerFollowerPerc = Int64.Parse(lower.Split('%')[0]) / 100.0;
-                    }
-                    else
-                    {
-                        lowerCount.Value = Int64.Parse(lower);
-                    }
-                }
-
-                if (upper != null)
-                {
-                    if (upper.Contains("%"))
-                    {
-                        upperFollowerPerc = Int64.Parse(upper.Split('%')[0]) / 100.0;
-                    }
-                    else
-                    {
-                        upperCount.Value = Int64.Parse(upper);
-                    }
-                }
-
-                if (token == "1111111111111111111111111111111111111111111111111111111111111111" || KongregateId == "000000")
-                {
-                    token = KongregateId = null;
-                }
             }
             else
             {
                 token = null;
                 KongregateId = null;
-                DialogResult dr = MessageBox.Show("MacroSettings file not found. Do you want help with creating one?", "Settings Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                DialogResult dr = MessageBox.Show("Settings file not found. Do you want help with creating one?", "Settings Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (dr == DialogResult.Yes)
                 {
                     button111_Click(this, EventArgs.Empty);
                 }
 
+            }
+            if (token == "1111111111111111111111111111111111111111111111111111111111111111" || KongregateId == "000000")
+            {
+                token = KongregateId = null;
             }
             if (token != null && KongregateId != null)
             {
@@ -469,11 +473,34 @@ namespace CQMacroCreator
             {
                 hideButtons();
             }
+            if (lower != null)
+            {
+                if (lower.Contains("%"))
+                {
+                    lowerFollowerPerc = Int64.Parse(lower.Split('%')[0]) / 100.0;
+                }
+                else
+                {
+                    lowerCount.Value = Int64.Parse(lower);
+                }
+            }
+
+            if (upper != null)
+            {
+                if (upper.Contains("%"))
+                {
+                    upperFollowerPerc = Int64.Parse(upper.Split('%')[0]) / 100.0;
+                }
+                else
+                {
+                    upperCount.Value = Int64.Parse(upper);
+                }
+            }
             switch (defaultActionOnOpen)
             {
-                case ("0"):
+                case (0):
                     break;
-                case ("1"):
+                case (1):
                     if (File.Exists("defaultHeroes"))
                     {
                         System.IO.StreamReader sr = new System.IO.StreamReader("defaultHeroes");
@@ -490,21 +517,21 @@ namespace CQMacroCreator
                         MessageBox.Show("No default file found. Make sure its name is \"defaultHeroes\"");
                     }
                     break;
-                case ("2"):
+                case (2):
                     if (token != null)
                     {
                         getData(true, true, false, false);
                         button5_Click(this, EventArgs.Empty);
                     }
                     break;
-                case ("3"):
+                case (3):
                     if (token != null)
                     {
                         getData(true, true, true, false);
                         button5_Click(this, EventArgs.Empty);
                     }
                     break;
-                case ("4"):
+                case (4):
                     if (token != null)
                     {
                         getData(true, true, true, true);
@@ -513,9 +540,7 @@ namespace CQMacroCreator
                     break;
                 default:
                     break;
-
             }
-
         }
 
         List<Hero> heroList = new List<Hero>(new Hero[] {
@@ -654,6 +679,10 @@ namespace CQMacroCreator
                 {
                     dr = MessageBox.Show("You are using more than 20 heroes, that might considerably slow down the calculations. Are you sure you want to run the calc with so many heroes enabled?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 }
+                if (lowerCount.Value != -1 && monstersCosts.Count(x => x > lowerCount.Value && x < upperCount.Value) > 50)
+                {
+                    dr = MessageBox.Show("Your limits will make the calc use more than 50 monsters, that might considerably slow down the calculations. Are you sure you want to run the calc with so many monsters enabled?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                }
             }
             else
             {
@@ -678,6 +707,7 @@ namespace CQMacroCreator
                                 var mon = solution["validSolution"]["solution"]["monsters"];
                                 if (mon.Count() > 0)
                                 {
+                                    output = calcOut;
                                     List<int> solutionLineupIDs = new List<int>();
                                     foreach (JToken jt in mon)
                                     {
@@ -940,14 +970,42 @@ namespace CQMacroCreator
         {
             int PGrare = 0;
             int PGcommon = 0;
-            int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63, 78, 94};
+            int maxedCommons = 0;
+            int maxedRares = 0;
+            int maxedLegs = 0;
+            int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63, 78, 94 };
             foreach (int i in chestRaresID)
             {
                 PGrare += (99 - Math.Max(1, (int)heroCounts[i].Value)) * 3;
                 PGcommon += (99 - Math.Max(1, (int)heroCounts[i - 1].Value));
+
+                maxedCommons += heroCounts[i - 1].Value == 99 ? 0 : 1;
+                maxedRares += heroCounts[i].Value == 99 ? 0 : 1;
+                maxedLegs += heroCounts[i + 1].Value == 99 ? 0 : 1;
             }
-            PGforMaxCommon.Text = PGcommon.ToString("# ###");
-            PGforMaxRare.Text = PGrare.ToString("# ###");
+            PGforMaxCommon.Text = PGcommon.ToString("# ##0");
+            PGforMaxRare.Text = PGrare.ToString("# ##0");
+
+            if (maxedCommons + maxedRares + maxedLegs == 0)
+                maxedCommons = maxedRares = maxedLegs = chestRaresID.Length;
+            double totalWeight = 0.6 * maxedCommons + 0.3 * maxedRares + 0.1 * maxedLegs;
+
+            double commonChance = 0.6 * maxedCommons / totalWeight;
+            double rareChance = 0.3 * maxedRares / totalWeight;
+            double legChance = 0.1 * maxedLegs / totalWeight;
+
+            normalCommonChanceLabel.Text = (commonChance / 5.0).ToString("0.##%");
+            normalRareChanceLabel.Text = (rareChance / 5.0).ToString("0.##%");
+            normalLegChanceLabel.Text = (legChance / 5.0).ToString("0.##%");
+
+            heroCommonChanceLabel.Text = (commonChance).ToString("0.##%");
+            heroRareChanceLabel.Text = (rareChance).ToString("0.##%");
+            heroLegChanceLabel.Text = (legChance).ToString("0.##%");
+
+            normalAvgPranaLabel.Text = (1 * commonChance / 5 + 3 * rareChance / 5 + 12 * legChance / 5).ToString("0.##");
+            heroAvgPranaLabel.Text = (1 * commonChance + 3 * rareChance + 12 * legChance).ToString("0.##");
+
+
         }
 
         private void setDQData()
@@ -1321,7 +1379,7 @@ namespace CQMacroCreator
 
         private void button111_Click(object sender, EventArgs e)
         {
-            MacroSettingsHelper msh = new MacroSettingsHelper();
+            MacroSettingsHelper msh = new MacroSettingsHelper(appSettings);
             msh.Show();
         }
 
@@ -1330,7 +1388,7 @@ namespace CQMacroCreator
             Process.Start("https://github.com/Wiedmolol/CQAutomater");
         }
 
-       
+
 
     }
 }

@@ -16,9 +16,7 @@ namespace CQMacroCreator
 
     class PFStuff
     {
-        public static int bidValue;
-        public static int bidHeroID;
-        public static string bidNameText;
+
         static public bool logres;
         static public bool DQResult;
         static public string DQlvl;

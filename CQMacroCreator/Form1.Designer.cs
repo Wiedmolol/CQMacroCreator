@@ -255,6 +255,15 @@
             this.CSHC = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Heroes = new System.Windows.Forms.TabPage();
+            this.FlynnBox = new System.Windows.Forms.CheckBox();
+            this.label231 = new System.Windows.Forms.Label();
+            this.FlynnCount = new System.Windows.Forms.NumericUpDown();
+            this.LeafBox = new System.Windows.Forms.CheckBox();
+            this.label232 = new System.Windows.Forms.Label();
+            this.LeafCount = new System.Windows.Forms.NumericUpDown();
+            this.SparksBox = new System.Windows.Forms.CheckBox();
+            this.label233 = new System.Windows.Forms.Label();
+            this.SparksCount = new System.Windows.Forms.NumericUpDown();
             this.LeprCount = new System.Windows.Forms.NumericUpDown();
             this.label230 = new System.Windows.Forms.Label();
             this.LeprBox = new System.Windows.Forms.CheckBox();
@@ -888,15 +897,21 @@
             this.clearLogButton = new System.Windows.Forms.Button();
             this.sendTillNoSolveButton = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.FlynnBox = new System.Windows.Forms.CheckBox();
-            this.label231 = new System.Windows.Forms.Label();
-            this.FlynnCount = new System.Windows.Forms.NumericUpDown();
-            this.LeafBox = new System.Windows.Forms.CheckBox();
-            this.label232 = new System.Windows.Forms.Label();
-            this.LeafCount = new System.Windows.Forms.NumericUpDown();
-            this.SparksBox = new System.Windows.Forms.CheckBox();
-            this.label233 = new System.Windows.Forms.Label();
-            this.SparksCount = new System.Windows.Forms.NumericUpDown();
+            this.label234 = new System.Windows.Forms.Label();
+            this.label235 = new System.Windows.Forms.Label();
+            this.label236 = new System.Windows.Forms.Label();
+            this.label237 = new System.Windows.Forms.Label();
+            this.label238 = new System.Windows.Forms.Label();
+            this.label239 = new System.Windows.Forms.Label();
+            this.label240 = new System.Windows.Forms.Label();
+            this.normalCommonChanceLabel = new System.Windows.Forms.Label();
+            this.heroCommonChanceLabel = new System.Windows.Forms.Label();
+            this.heroRareChanceLabel = new System.Windows.Forms.Label();
+            this.normalRareChanceLabel = new System.Windows.Forms.Label();
+            this.heroLegChanceLabel = new System.Windows.Forms.Label();
+            this.normalLegChanceLabel = new System.Windows.Forms.Label();
+            this.heroAvgPranaLabel = new System.Windows.Forms.Label();
+            this.normalAvgPranaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -966,6 +981,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.HamaCount)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Heroes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FlynnCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeafCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SparksCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeprCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDagdaCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BavahCount)).BeginInit();
@@ -1001,9 +1019,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FlynnCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeafCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SparksCount)).BeginInit();
             this.SuspendLayout();
             // 
             // JamesCount
@@ -2736,11 +2751,11 @@
             // 
             this.label56.AutoSize = true;
             this.label56.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label56.Location = new System.Drawing.Point(688, 17);
+            this.label56.Location = new System.Drawing.Point(638, 17);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(121, 13);
+            this.label56.Size = new System.Drawing.Size(176, 13);
             this.label56.TabIndex = 158;
-            this.label56.Text = "by Latas for Dice\'s Calc ";
+            this.label56.Text = "by Latas for Dice\'s/hogwash\'s Calc ";
             // 
             // label57
             // 
@@ -3756,6 +3771,102 @@
             this.Heroes.TabIndex = 0;
             this.Heroes.Text = "Heroes";
             this.Heroes.UseVisualStyleBackColor = true;
+            // 
+            // FlynnBox
+            // 
+            this.FlynnBox.AutoSize = true;
+            this.FlynnBox.Location = new System.Drawing.Point(440, 733);
+            this.FlynnBox.Name = "FlynnBox";
+            this.FlynnBox.Size = new System.Drawing.Size(33, 17);
+            this.FlynnBox.TabIndex = 321;
+            this.FlynnBox.TabStop = false;
+            this.FlynnBox.Text = "E";
+            this.FlynnBox.UseVisualStyleBackColor = true;
+            // 
+            // label231
+            // 
+            this.label231.AutoSize = true;
+            this.label231.Location = new System.Drawing.Point(321, 736);
+            this.label231.Name = "label231";
+            this.label231.Size = new System.Drawing.Size(32, 13);
+            this.label231.TabIndex = 320;
+            this.label231.Text = "Flynn";
+            // 
+            // FlynnCount
+            // 
+            this.FlynnCount.Location = new System.Drawing.Point(385, 732);
+            this.FlynnCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.FlynnCount.Name = "FlynnCount";
+            this.FlynnCount.Size = new System.Drawing.Size(50, 20);
+            this.FlynnCount.TabIndex = 315;
+            // 
+            // LeafBox
+            // 
+            this.LeafBox.AutoSize = true;
+            this.LeafBox.Location = new System.Drawing.Point(281, 736);
+            this.LeafBox.Name = "LeafBox";
+            this.LeafBox.Size = new System.Drawing.Size(33, 17);
+            this.LeafBox.TabIndex = 319;
+            this.LeafBox.TabStop = false;
+            this.LeafBox.Text = "E";
+            this.LeafBox.UseVisualStyleBackColor = true;
+            // 
+            // label232
+            // 
+            this.label232.AutoSize = true;
+            this.label232.Location = new System.Drawing.Point(164, 736);
+            this.label232.Name = "label232";
+            this.label232.Size = new System.Drawing.Size(28, 13);
+            this.label232.TabIndex = 318;
+            this.label232.Text = "Leaf";
+            // 
+            // LeafCount
+            // 
+            this.LeafCount.Location = new System.Drawing.Point(225, 734);
+            this.LeafCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.LeafCount.Name = "LeafCount";
+            this.LeafCount.Size = new System.Drawing.Size(50, 20);
+            this.LeafCount.TabIndex = 314;
+            // 
+            // SparksBox
+            // 
+            this.SparksBox.AutoSize = true;
+            this.SparksBox.Location = new System.Drawing.Point(121, 735);
+            this.SparksBox.Name = "SparksBox";
+            this.SparksBox.Size = new System.Drawing.Size(33, 17);
+            this.SparksBox.TabIndex = 317;
+            this.SparksBox.TabStop = false;
+            this.SparksBox.Text = "E";
+            this.SparksBox.UseVisualStyleBackColor = true;
+            // 
+            // label233
+            // 
+            this.label233.AutoSize = true;
+            this.label233.Location = new System.Drawing.Point(12, 736);
+            this.label233.Name = "label233";
+            this.label233.Size = new System.Drawing.Size(40, 13);
+            this.label233.TabIndex = 316;
+            this.label233.Text = "Sparks";
+            // 
+            // SparksCount
+            // 
+            this.SparksCount.Location = new System.Drawing.Point(65, 734);
+            this.SparksCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.SparksCount.Name = "SparksCount";
+            this.SparksCount.Size = new System.Drawing.Size(50, 20);
+            this.SparksCount.TabIndex = 313;
             // 
             // LeprCount
             // 
@@ -10753,7 +10864,7 @@
             // 
             // SettingCreatorButton
             // 
-            this.SettingCreatorButton.Location = new System.Drawing.Point(328, 370);
+            this.SettingCreatorButton.Location = new System.Drawing.Point(172, 437);
             this.SettingCreatorButton.Name = "SettingCreatorButton";
             this.SettingCreatorButton.Size = new System.Drawing.Size(128, 49);
             this.SettingCreatorButton.TabIndex = 9;
@@ -10763,13 +10874,28 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.heroAvgPranaLabel);
+            this.groupBox3.Controls.Add(this.normalAvgPranaLabel);
+            this.groupBox3.Controls.Add(this.heroLegChanceLabel);
+            this.groupBox3.Controls.Add(this.normalLegChanceLabel);
+            this.groupBox3.Controls.Add(this.heroRareChanceLabel);
+            this.groupBox3.Controls.Add(this.normalRareChanceLabel);
+            this.groupBox3.Controls.Add(this.heroCommonChanceLabel);
+            this.groupBox3.Controls.Add(this.normalCommonChanceLabel);
+            this.groupBox3.Controls.Add(this.label240);
+            this.groupBox3.Controls.Add(this.label239);
+            this.groupBox3.Controls.Add(this.label238);
+            this.groupBox3.Controls.Add(this.label237);
+            this.groupBox3.Controls.Add(this.label236);
+            this.groupBox3.Controls.Add(this.label235);
+            this.groupBox3.Controls.Add(this.label234);
             this.groupBox3.Controls.Add(this.label178);
             this.groupBox3.Controls.Add(this.label179);
             this.groupBox3.Controls.Add(this.PGforMaxCommon);
             this.groupBox3.Controls.Add(this.PGforMaxRare);
             this.groupBox3.Location = new System.Drawing.Point(11, 283);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(445, 67);
+            this.groupBox3.Size = new System.Drawing.Size(445, 148);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Misc. info";
@@ -10796,7 +10922,7 @@
             // 
             this.PGforMaxCommon.AutoEllipsis = true;
             this.PGforMaxCommon.AutoSize = true;
-            this.PGforMaxCommon.Location = new System.Drawing.Point(180, 20);
+            this.PGforMaxCommon.Location = new System.Drawing.Point(168, 20);
             this.PGforMaxCommon.Name = "PGforMaxCommon";
             this.PGforMaxCommon.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PGforMaxCommon.Size = new System.Drawing.Size(18, 13);
@@ -10808,7 +10934,7 @@
             // 
             this.PGforMaxRare.AutoEllipsis = true;
             this.PGforMaxRare.AutoSize = true;
-            this.PGforMaxRare.Location = new System.Drawing.Point(180, 43);
+            this.PGforMaxRare.Location = new System.Drawing.Point(168, 43);
             this.PGforMaxRare.Name = "PGforMaxRare";
             this.PGforMaxRare.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PGforMaxRare.Size = new System.Drawing.Size(18, 13);
@@ -10971,101 +11097,139 @@
             this.linkLabel1.Text = "Also check my CQAutomater - auto miracle claim, auto PVP and more!";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // FlynnBox
+            // label234
             // 
-            this.FlynnBox.AutoSize = true;
-            this.FlynnBox.Location = new System.Drawing.Point(440, 733);
-            this.FlynnBox.Name = "FlynnBox";
-            this.FlynnBox.Size = new System.Drawing.Size(33, 17);
-            this.FlynnBox.TabIndex = 321;
-            this.FlynnBox.TabStop = false;
-            this.FlynnBox.Text = "E";
-            this.FlynnBox.UseVisualStyleBackColor = true;
+            this.label234.AutoSize = true;
+            this.label234.Location = new System.Drawing.Point(230, 43);
+            this.label234.Name = "label234";
+            this.label234.Size = new System.Drawing.Size(48, 13);
+            this.label234.TabIndex = 15;
+            this.label234.Text = "Common";
             // 
-            // label231
+            // label235
             // 
-            this.label231.AutoSize = true;
-            this.label231.Location = new System.Drawing.Point(321, 736);
-            this.label231.Name = "label231";
-            this.label231.Size = new System.Drawing.Size(32, 13);
-            this.label231.TabIndex = 320;
-            this.label231.Text = "Flynn";
+            this.label235.AutoSize = true;
+            this.label235.Location = new System.Drawing.Point(230, 67);
+            this.label235.Name = "label235";
+            this.label235.Size = new System.Drawing.Size(30, 13);
+            this.label235.TabIndex = 16;
+            this.label235.Text = "Rare";
             // 
-            // FlynnCount
+            // label236
             // 
-            this.FlynnCount.Location = new System.Drawing.Point(385, 732);
-            this.FlynnCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.FlynnCount.Name = "FlynnCount";
-            this.FlynnCount.Size = new System.Drawing.Size(50, 20);
-            this.FlynnCount.TabIndex = 315;
+            this.label236.AutoSize = true;
+            this.label236.Location = new System.Drawing.Point(230, 92);
+            this.label236.Name = "label236";
+            this.label236.Size = new System.Drawing.Size(25, 13);
+            this.label236.TabIndex = 17;
+            this.label236.Text = "Leg";
             // 
-            // LeafBox
+            // label237
             // 
-            this.LeafBox.AutoSize = true;
-            this.LeafBox.Location = new System.Drawing.Point(281, 736);
-            this.LeafBox.Name = "LeafBox";
-            this.LeafBox.Size = new System.Drawing.Size(33, 17);
-            this.LeafBox.TabIndex = 319;
-            this.LeafBox.TabStop = false;
-            this.LeafBox.Text = "E";
-            this.LeafBox.UseVisualStyleBackColor = true;
+            this.label237.AutoSize = true;
+            this.label237.Location = new System.Drawing.Point(286, 20);
+            this.label237.Name = "label237";
+            this.label237.Size = new System.Drawing.Size(69, 13);
+            this.label237.TabIndex = 18;
+            this.label237.Text = "Normal chest";
             // 
-            // label232
+            // label238
             // 
-            this.label232.AutoSize = true;
-            this.label232.Location = new System.Drawing.Point(164, 736);
-            this.label232.Name = "label232";
-            this.label232.Size = new System.Drawing.Size(28, 13);
-            this.label232.TabIndex = 318;
-            this.label232.Text = "Leaf";
+            this.label238.AutoSize = true;
+            this.label238.Location = new System.Drawing.Point(374, 20);
+            this.label238.Name = "label238";
+            this.label238.Size = new System.Drawing.Size(59, 13);
+            this.label238.TabIndex = 19;
+            this.label238.Text = "Hero chest";
             // 
-            // LeafCount
+            // label239
             // 
-            this.LeafCount.Location = new System.Drawing.Point(225, 734);
-            this.LeafCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.LeafCount.Name = "LeafCount";
-            this.LeafCount.Size = new System.Drawing.Size(50, 20);
-            this.LeafCount.TabIndex = 314;
+            this.label239.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label239.Location = new System.Drawing.Point(220, 109);
+            this.label239.Name = "label239";
+            this.label239.Size = new System.Drawing.Size(222, 1);
+            this.label239.TabIndex = 94;
             // 
-            // SparksBox
+            // label240
             // 
-            this.SparksBox.AutoSize = true;
-            this.SparksBox.Location = new System.Drawing.Point(121, 735);
-            this.SparksBox.Name = "SparksBox";
-            this.SparksBox.Size = new System.Drawing.Size(33, 17);
-            this.SparksBox.TabIndex = 317;
-            this.SparksBox.TabStop = false;
-            this.SparksBox.Text = "E";
-            this.SparksBox.UseVisualStyleBackColor = true;
+            this.label240.AutoSize = true;
+            this.label240.Location = new System.Drawing.Point(230, 117);
+            this.label240.Name = "label240";
+            this.label240.Size = new System.Drawing.Size(59, 13);
+            this.label240.TabIndex = 95;
+            this.label240.Text = "Avg. prana";
             // 
-            // label233
+            // normalCommonChanceLabel
             // 
-            this.label233.AutoSize = true;
-            this.label233.Location = new System.Drawing.Point(12, 736);
-            this.label233.Name = "label233";
-            this.label233.Size = new System.Drawing.Size(40, 13);
-            this.label233.TabIndex = 316;
-            this.label233.Text = "Sparks";
+            this.normalCommonChanceLabel.AutoSize = true;
+            this.normalCommonChanceLabel.Location = new System.Drawing.Point(298, 43);
+            this.normalCommonChanceLabel.Name = "normalCommonChanceLabel";
+            this.normalCommonChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalCommonChanceLabel.TabIndex = 96;
+            this.normalCommonChanceLabel.Text = "-/-";
             // 
-            // SparksCount
+            // heroCommonChanceLabel
             // 
-            this.SparksCount.Location = new System.Drawing.Point(65, 734);
-            this.SparksCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.SparksCount.Name = "SparksCount";
-            this.SparksCount.Size = new System.Drawing.Size(50, 20);
-            this.SparksCount.TabIndex = 313;
+            this.heroCommonChanceLabel.AutoSize = true;
+            this.heroCommonChanceLabel.Location = new System.Drawing.Point(378, 43);
+            this.heroCommonChanceLabel.Name = "heroCommonChanceLabel";
+            this.heroCommonChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroCommonChanceLabel.TabIndex = 97;
+            this.heroCommonChanceLabel.Text = "-/-";
+            // 
+            // heroRareChanceLabel
+            // 
+            this.heroRareChanceLabel.AutoSize = true;
+            this.heroRareChanceLabel.Location = new System.Drawing.Point(378, 67);
+            this.heroRareChanceLabel.Name = "heroRareChanceLabel";
+            this.heroRareChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroRareChanceLabel.TabIndex = 99;
+            this.heroRareChanceLabel.Text = "-/-";
+            // 
+            // normalRareChanceLabel
+            // 
+            this.normalRareChanceLabel.AutoSize = true;
+            this.normalRareChanceLabel.Location = new System.Drawing.Point(298, 67);
+            this.normalRareChanceLabel.Name = "normalRareChanceLabel";
+            this.normalRareChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalRareChanceLabel.TabIndex = 98;
+            this.normalRareChanceLabel.Text = "-/-";
+            // 
+            // heroLegChanceLabel
+            // 
+            this.heroLegChanceLabel.AutoSize = true;
+            this.heroLegChanceLabel.Location = new System.Drawing.Point(378, 92);
+            this.heroLegChanceLabel.Name = "heroLegChanceLabel";
+            this.heroLegChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroLegChanceLabel.TabIndex = 101;
+            this.heroLegChanceLabel.Text = "-/-";
+            // 
+            // normalLegChanceLabel
+            // 
+            this.normalLegChanceLabel.AutoSize = true;
+            this.normalLegChanceLabel.Location = new System.Drawing.Point(298, 92);
+            this.normalLegChanceLabel.Name = "normalLegChanceLabel";
+            this.normalLegChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalLegChanceLabel.TabIndex = 100;
+            this.normalLegChanceLabel.Text = "-/-";
+            // 
+            // heroAvgPranaLabel
+            // 
+            this.heroAvgPranaLabel.AutoSize = true;
+            this.heroAvgPranaLabel.Location = new System.Drawing.Point(378, 117);
+            this.heroAvgPranaLabel.Name = "heroAvgPranaLabel";
+            this.heroAvgPranaLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroAvgPranaLabel.TabIndex = 103;
+            this.heroAvgPranaLabel.Text = "-/-";
+            // 
+            // normalAvgPranaLabel
+            // 
+            this.normalAvgPranaLabel.AutoSize = true;
+            this.normalAvgPranaLabel.Location = new System.Drawing.Point(298, 117);
+            this.normalAvgPranaLabel.Name = "normalAvgPranaLabel";
+            this.normalAvgPranaLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalAvgPranaLabel.TabIndex = 102;
+            this.normalAvgPranaLabel.Text = "-/-";
             // 
             // Form1
             // 
@@ -11176,6 +11340,9 @@
             this.tabControl1.ResumeLayout(false);
             this.Heroes.ResumeLayout(false);
             this.Heroes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FlynnCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeafCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SparksCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeprCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aDagdaCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BavahCount)).EndInit();
@@ -11215,9 +11382,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FlynnCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeafCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SparksCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -12093,6 +12257,21 @@
         private System.Windows.Forms.CheckBox SparksBox;
         private System.Windows.Forms.Label label233;
         private System.Windows.Forms.NumericUpDown SparksCount;
+        private System.Windows.Forms.Label label239;
+        private System.Windows.Forms.Label label238;
+        private System.Windows.Forms.Label label237;
+        private System.Windows.Forms.Label label236;
+        private System.Windows.Forms.Label label235;
+        private System.Windows.Forms.Label label234;
+        private System.Windows.Forms.Label heroAvgPranaLabel;
+        private System.Windows.Forms.Label normalAvgPranaLabel;
+        private System.Windows.Forms.Label heroLegChanceLabel;
+        private System.Windows.Forms.Label normalLegChanceLabel;
+        private System.Windows.Forms.Label heroRareChanceLabel;
+        private System.Windows.Forms.Label normalRareChanceLabel;
+        private System.Windows.Forms.Label heroCommonChanceLabel;
+        private System.Windows.Forms.Label normalCommonChanceLabel;
+        private System.Windows.Forms.Label label240;
     }
 }
 
