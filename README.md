@@ -7,6 +7,8 @@ CQMacroCreator is a "GUI' for Dicecycle's Cosmos Quest PvE Instance Solver https
 Just place CQMacroCreator.exe in the same folder as CosmosQuest.exe and run it.
 
 # What's new
+v.2.9.9b - new option for settings. Now you can select which heroes you want to have enabled at the start instead of relying on app's "Choose best heroes" algorithm. There is new option for "default action on start" to use heroes from settings. Buttons for loading/saving old hero files moved to "Other" tab.
+
 v2.9.9a - changed settings file to new format. New settings file will be automatically created from the old one or by using "Settings Creator Helper" available through button in "Other" tab.
 v2.9.1 - added quest support. GUI can now send quest solutions to server.
 
