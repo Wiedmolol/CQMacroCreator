@@ -83,7 +83,7 @@
             // 
             this.defaultActionCount.Location = new System.Drawing.Point(149, 43);
             this.defaultActionCount.Maximum = new decimal(new int[] {
-            4,
+            5,
             0,
             0,
             0});

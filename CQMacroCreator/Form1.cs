@@ -377,11 +377,10 @@ namespace CQMacroCreator
                 if (token != null && KongregateId != null && cmdArguments[1] == "quick")
                 {
                     this.Hide();
-                    sendTillNoSolveButton_Click(this, EventArgs.Empty);
-                    //Console.Write("\nTest\n");
+                    sendTillNoSolveButton_Click(this, EventArgs.Empty);                    
                     Console.Write(output);
-                    this.Close();
-                    Application.Exit();
+                    Environment.Exit(0);
+                    //Application.Exit();
                 }
             }
         }
@@ -392,8 +391,6 @@ namespace CQMacroCreator
             autoSend.Enabled = false;
             guiLog.Enabled = false;
             getQuestsButton.Enabled = false;
-            //((Control)tabControl1.TabPages[1]).Enabled = false;
-            //((Control)tabControl1.TabPages[2]).Enabled = false;
             upper100.Enabled = false;
             upper110.Enabled = false;
             lower30.Enabled = false;
@@ -536,6 +533,17 @@ namespace CQMacroCreator
                     {
                         getData(true, true, true, true);
                         button5_Click(this, EventArgs.Empty);
+                    }
+                    break;
+                case (5):
+                    if (token != null)
+                    {
+                        getData(true, true, true, true);
+                        for (int i = 0; i < appSettings.calcEnabledHeroes.Count; i++)
+                        {
+                            int index = Array.FindIndex(names, w => w == appSettings.calcEnabledHeroes[i]);
+                            heroBoxes[index].Checked = true;
+                        }
                     }
                     break;
                 default:
@@ -1296,7 +1304,7 @@ namespace CQMacroCreator
                             if (heroCountsServerOrder[i] != null)
                                 heroCountsServerOrder[i].Value = PFStuff.getResult[0][i];
                         }
-                        chooseHeroes();
+                        //chooseHeroes();
                         followerLabel.Text = PFStuff.followers.ToString("### ### ###");
                         calculatePranaCosts();
                     }
@@ -1386,6 +1394,31 @@ namespace CQMacroCreator
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://github.com/Wiedmolol/CQAutomater");
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                getQuestsButton.Visible = true;
+            }
+            else
+            {
+                getQuestsButton.Visible = false;
+            }
+        }
+
+        private void button91_Click_1(object sender, EventArgs e)
+        {
+            List<string> enabled = new List<string>();
+            for (int i = 0; i < heroCounts.Count; i++)
+            {
+                if (heroBoxes[i] != null && heroBoxes[i].Checked)
+                    enabled.Add(names[i]);
+            }
+            appSettings = AppSettings.loadSettings();
+            appSettings.calcEnabledHeroes = enabled;
+            appSettings.saveSettings();
         }
 
 

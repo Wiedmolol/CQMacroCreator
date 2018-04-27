@@ -199,7 +199,6 @@
             this.label60 = new System.Windows.Forms.Label();
             this.ZethCount = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
-            this.label61 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label62 = new System.Windows.Forms.Label();
             this.WerewolfBox = new System.Windows.Forms.CheckBox();
@@ -878,6 +877,21 @@
             this.Other = new System.Windows.Forms.TabPage();
             this.SettingCreatorButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.heroAvgPranaLabel = new System.Windows.Forms.Label();
+            this.normalAvgPranaLabel = new System.Windows.Forms.Label();
+            this.heroLegChanceLabel = new System.Windows.Forms.Label();
+            this.normalLegChanceLabel = new System.Windows.Forms.Label();
+            this.heroRareChanceLabel = new System.Windows.Forms.Label();
+            this.normalRareChanceLabel = new System.Windows.Forms.Label();
+            this.heroCommonChanceLabel = new System.Windows.Forms.Label();
+            this.normalCommonChanceLabel = new System.Windows.Forms.Label();
+            this.label240 = new System.Windows.Forms.Label();
+            this.label239 = new System.Windows.Forms.Label();
+            this.label238 = new System.Windows.Forms.Label();
+            this.label237 = new System.Windows.Forms.Label();
+            this.label236 = new System.Windows.Forms.Label();
+            this.label235 = new System.Windows.Forms.Label();
+            this.label234 = new System.Windows.Forms.Label();
             this.label178 = new System.Windows.Forms.Label();
             this.label179 = new System.Windows.Forms.Label();
             this.PGforMaxCommon = new System.Windows.Forms.Label();
@@ -897,21 +911,9 @@
             this.clearLogButton = new System.Windows.Forms.Button();
             this.sendTillNoSolveButton = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label234 = new System.Windows.Forms.Label();
-            this.label235 = new System.Windows.Forms.Label();
-            this.label236 = new System.Windows.Forms.Label();
-            this.label237 = new System.Windows.Forms.Label();
-            this.label238 = new System.Windows.Forms.Label();
-            this.label239 = new System.Windows.Forms.Label();
-            this.label240 = new System.Windows.Forms.Label();
-            this.normalCommonChanceLabel = new System.Windows.Forms.Label();
-            this.heroCommonChanceLabel = new System.Windows.Forms.Label();
-            this.heroRareChanceLabel = new System.Windows.Forms.Label();
-            this.normalRareChanceLabel = new System.Windows.Forms.Label();
-            this.heroLegChanceLabel = new System.Windows.Forms.Label();
-            this.normalLegChanceLabel = new System.Windows.Forms.Label();
-            this.heroAvgPranaLabel = new System.Windows.Forms.Label();
-            this.normalAvgPranaLabel = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.button91 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -1019,6 +1021,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // JamesCount
@@ -2631,7 +2634,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(130, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 23);
             this.button1.TabIndex = 147;
@@ -2645,7 +2648,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(88, 12);
+            this.button2.Location = new System.Drawing.Point(130, 48);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 23);
             this.button2.TabIndex = 148;
@@ -2655,7 +2658,7 @@
             // 
             // lowerCount
             // 
-            this.lowerCount.Location = new System.Drawing.Point(607, 77);
+            this.lowerCount.Location = new System.Drawing.Point(607, 83);
             this.lowerCount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -2674,7 +2677,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(530, 79);
+            this.label52.Location = new System.Drawing.Point(530, 85);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(69, 13);
             this.label52.TabIndex = 150;
@@ -2683,7 +2686,7 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(530, 104);
+            this.label53.Location = new System.Drawing.Point(530, 110);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(76, 13);
             this.label53.TabIndex = 152;
@@ -2691,7 +2694,7 @@
             // 
             // upperCount
             // 
-            this.upperCount.Location = new System.Drawing.Point(607, 102);
+            this.upperCount.Location = new System.Drawing.Point(607, 108);
             this.upperCount.Maximum = new decimal(new int[] {
             1410065407,
             2,
@@ -2714,7 +2717,7 @@
             // 
             // lineupBox
             // 
-            this.lineupBox.Location = new System.Drawing.Point(607, 126);
+            this.lineupBox.Location = new System.Drawing.Point(607, 132);
             this.lineupBox.Name = "lineupBox";
             this.lineupBox.Size = new System.Drawing.Size(180, 20);
             this.lineupBox.TabIndex = 154;
@@ -2723,7 +2726,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(530, 126);
+            this.label54.Location = new System.Drawing.Point(530, 132);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(39, 13);
             this.label54.TabIndex = 155;
@@ -2739,7 +2742,7 @@
             // 
             // runCalcButton
             // 
-            this.runCalcButton.Location = new System.Drawing.Point(534, 151);
+            this.runCalcButton.Location = new System.Drawing.Point(534, 157);
             this.runCalcButton.Name = "runCalcButton";
             this.runCalcButton.Size = new System.Drawing.Size(132, 63);
             this.runCalcButton.TabIndex = 157;
@@ -2868,29 +2871,21 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(166, 17);
+            this.button4.Location = new System.Drawing.Point(234, 7);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 40);
+            this.button4.Size = new System.Drawing.Size(112, 23);
             this.button4.TabIndex = 169;
-            this.button4.Text = "Check/Uncheck all(not recommended)";
+            this.button4.Text = "Check/Uncheck all";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label61
-            // 
-            this.label61.Location = new System.Drawing.Point(536, 255);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(218, 106);
-            this.label61.TabIndex = 170;
-            this.label61.Text = resources.GetString("label61.Text");
-            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(288, 18);
+            this.button5.Location = new System.Drawing.Point(234, 31);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 39);
+            this.button5.Size = new System.Drawing.Size(112, 23);
             this.button5.TabIndex = 171;
-            this.button5.Text = "Select best heroes\r\n(recommended)\r\n";
+            this.button5.Text = "Select best heroes\r\n";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -3003,7 +2998,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(727, 78);
+            this.button6.Location = new System.Drawing.Point(727, 84);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(16, 20);
             this.button6.TabIndex = 182;
@@ -3013,7 +3008,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(727, 102);
+            this.button7.Location = new System.Drawing.Point(727, 108);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(16, 20);
             this.button7.TabIndex = 183;
@@ -3023,7 +3018,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(793, 126);
+            this.button8.Location = new System.Drawing.Point(793, 132);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(16, 20);
             this.button8.TabIndex = 184;
@@ -3396,28 +3391,28 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(404, 18);
+            this.button9.Location = new System.Drawing.Point(12, 7);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(74, 40);
+            this.button9.Size = new System.Drawing.Size(74, 23);
             this.button9.TabIndex = 218;
-            this.button9.Text = "Get Heroes from server";
+            this.button9.Text = "Get Heroes";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // getDQButton
             // 
-            this.getDQButton.Location = new System.Drawing.Point(481, 19);
+            this.getDQButton.Location = new System.Drawing.Point(86, 7);
             this.getDQButton.Name = "getDQButton";
-            this.getDQButton.Size = new System.Drawing.Size(74, 40);
+            this.getDQButton.Size = new System.Drawing.Size(74, 23);
             this.getDQButton.TabIndex = 219;
-            this.getDQButton.Text = "Get DQ from server";
+            this.getDQButton.Text = "Get DQ";
             this.getDQButton.UseVisualStyleBackColor = true;
             this.getDQButton.Click += new System.EventHandler(this.getDQButton_Click);
             // 
             // autoSend
             // 
             this.autoSend.AutoSize = true;
-            this.autoSend.Location = new System.Drawing.Point(534, 216);
+            this.autoSend.Location = new System.Drawing.Point(534, 222);
             this.autoSend.Name = "autoSend";
             this.autoSend.Size = new System.Drawing.Size(171, 30);
             this.autoSend.TabIndex = 221;
@@ -3436,7 +3431,7 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(531, 61);
+            this.label76.Location = new System.Drawing.Point(531, 67);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(162, 13);
             this.label76.TabIndex = 223;
@@ -3445,7 +3440,7 @@
             // CSHC
             // 
             this.CSHC.AutoSize = true;
-            this.CSHC.Location = new System.Drawing.Point(694, 62);
+            this.CSHC.Location = new System.Drawing.Point(694, 68);
             this.CSHC.Name = "CSHC";
             this.CSHC.Size = new System.Drawing.Size(13, 13);
             this.CSHC.TabIndex = 224;
@@ -3461,6 +3456,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(514, 641);
             this.tabControl1.TabIndex = 225;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // Heroes
             // 
@@ -10850,6 +10846,7 @@
             // 
             // Other
             // 
+            this.Other.Controls.Add(this.groupBox4);
             this.Other.Controls.Add(this.SettingCreatorButton);
             this.Other.Controls.Add(this.groupBox3);
             this.Other.Controls.Add(this.groupBox2);
@@ -10864,7 +10861,7 @@
             // 
             // SettingCreatorButton
             // 
-            this.SettingCreatorButton.Location = new System.Drawing.Point(172, 437);
+            this.SettingCreatorButton.Location = new System.Drawing.Point(172, 560);
             this.SettingCreatorButton.Name = "SettingCreatorButton";
             this.SettingCreatorButton.Size = new System.Drawing.Size(128, 49);
             this.SettingCreatorButton.TabIndex = 9;
@@ -10899,6 +10896,140 @@
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Misc. info";
+            // 
+            // heroAvgPranaLabel
+            // 
+            this.heroAvgPranaLabel.AutoSize = true;
+            this.heroAvgPranaLabel.Location = new System.Drawing.Point(378, 117);
+            this.heroAvgPranaLabel.Name = "heroAvgPranaLabel";
+            this.heroAvgPranaLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroAvgPranaLabel.TabIndex = 103;
+            this.heroAvgPranaLabel.Text = "-/-";
+            // 
+            // normalAvgPranaLabel
+            // 
+            this.normalAvgPranaLabel.AutoSize = true;
+            this.normalAvgPranaLabel.Location = new System.Drawing.Point(298, 117);
+            this.normalAvgPranaLabel.Name = "normalAvgPranaLabel";
+            this.normalAvgPranaLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalAvgPranaLabel.TabIndex = 102;
+            this.normalAvgPranaLabel.Text = "-/-";
+            // 
+            // heroLegChanceLabel
+            // 
+            this.heroLegChanceLabel.AutoSize = true;
+            this.heroLegChanceLabel.Location = new System.Drawing.Point(378, 92);
+            this.heroLegChanceLabel.Name = "heroLegChanceLabel";
+            this.heroLegChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroLegChanceLabel.TabIndex = 101;
+            this.heroLegChanceLabel.Text = "-/-";
+            // 
+            // normalLegChanceLabel
+            // 
+            this.normalLegChanceLabel.AutoSize = true;
+            this.normalLegChanceLabel.Location = new System.Drawing.Point(298, 92);
+            this.normalLegChanceLabel.Name = "normalLegChanceLabel";
+            this.normalLegChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalLegChanceLabel.TabIndex = 100;
+            this.normalLegChanceLabel.Text = "-/-";
+            // 
+            // heroRareChanceLabel
+            // 
+            this.heroRareChanceLabel.AutoSize = true;
+            this.heroRareChanceLabel.Location = new System.Drawing.Point(378, 67);
+            this.heroRareChanceLabel.Name = "heroRareChanceLabel";
+            this.heroRareChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroRareChanceLabel.TabIndex = 99;
+            this.heroRareChanceLabel.Text = "-/-";
+            // 
+            // normalRareChanceLabel
+            // 
+            this.normalRareChanceLabel.AutoSize = true;
+            this.normalRareChanceLabel.Location = new System.Drawing.Point(298, 67);
+            this.normalRareChanceLabel.Name = "normalRareChanceLabel";
+            this.normalRareChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalRareChanceLabel.TabIndex = 98;
+            this.normalRareChanceLabel.Text = "-/-";
+            // 
+            // heroCommonChanceLabel
+            // 
+            this.heroCommonChanceLabel.AutoSize = true;
+            this.heroCommonChanceLabel.Location = new System.Drawing.Point(378, 43);
+            this.heroCommonChanceLabel.Name = "heroCommonChanceLabel";
+            this.heroCommonChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.heroCommonChanceLabel.TabIndex = 97;
+            this.heroCommonChanceLabel.Text = "-/-";
+            // 
+            // normalCommonChanceLabel
+            // 
+            this.normalCommonChanceLabel.AutoSize = true;
+            this.normalCommonChanceLabel.Location = new System.Drawing.Point(298, 43);
+            this.normalCommonChanceLabel.Name = "normalCommonChanceLabel";
+            this.normalCommonChanceLabel.Size = new System.Drawing.Size(18, 13);
+            this.normalCommonChanceLabel.TabIndex = 96;
+            this.normalCommonChanceLabel.Text = "-/-";
+            // 
+            // label240
+            // 
+            this.label240.AutoSize = true;
+            this.label240.Location = new System.Drawing.Point(230, 117);
+            this.label240.Name = "label240";
+            this.label240.Size = new System.Drawing.Size(59, 13);
+            this.label240.TabIndex = 95;
+            this.label240.Text = "Avg. prana";
+            // 
+            // label239
+            // 
+            this.label239.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label239.Location = new System.Drawing.Point(220, 109);
+            this.label239.Name = "label239";
+            this.label239.Size = new System.Drawing.Size(222, 1);
+            this.label239.TabIndex = 94;
+            // 
+            // label238
+            // 
+            this.label238.AutoSize = true;
+            this.label238.Location = new System.Drawing.Point(374, 20);
+            this.label238.Name = "label238";
+            this.label238.Size = new System.Drawing.Size(59, 13);
+            this.label238.TabIndex = 19;
+            this.label238.Text = "Hero chest";
+            // 
+            // label237
+            // 
+            this.label237.AutoSize = true;
+            this.label237.Location = new System.Drawing.Point(286, 20);
+            this.label237.Name = "label237";
+            this.label237.Size = new System.Drawing.Size(69, 13);
+            this.label237.TabIndex = 18;
+            this.label237.Text = "Normal chest";
+            // 
+            // label236
+            // 
+            this.label236.AutoSize = true;
+            this.label236.Location = new System.Drawing.Point(230, 92);
+            this.label236.Name = "label236";
+            this.label236.Size = new System.Drawing.Size(25, 13);
+            this.label236.TabIndex = 17;
+            this.label236.Text = "Leg";
+            // 
+            // label235
+            // 
+            this.label235.AutoSize = true;
+            this.label235.Location = new System.Drawing.Point(230, 67);
+            this.label235.Name = "label235";
+            this.label235.Size = new System.Drawing.Size(30, 13);
+            this.label235.TabIndex = 16;
+            this.label235.Text = "Rare";
+            // 
+            // label234
+            // 
+            this.label234.AutoSize = true;
+            this.label234.Location = new System.Drawing.Point(230, 43);
+            this.label234.Name = "label234";
+            this.label234.Size = new System.Drawing.Size(48, 13);
+            this.label234.TabIndex = 15;
+            this.label234.Text = "Common";
             // 
             // label178
             // 
@@ -11058,11 +11189,11 @@
             // 
             // getQuestsButton
             // 
-            this.getQuestsButton.Location = new System.Drawing.Point(558, 19);
+            this.getQuestsButton.Location = new System.Drawing.Point(160, 7);
             this.getQuestsButton.Name = "getQuestsButton";
-            this.getQuestsButton.Size = new System.Drawing.Size(74, 40);
+            this.getQuestsButton.Size = new System.Drawing.Size(74, 23);
             this.getQuestsButton.TabIndex = 226;
-            this.getQuestsButton.Text = "Get Quests from server";
+            this.getQuestsButton.Text = "Get Quests";
             this.getQuestsButton.UseVisualStyleBackColor = true;
             this.getQuestsButton.Click += new System.EventHandler(this.getQuestsButton_Click);
             // 
@@ -11078,7 +11209,7 @@
             // 
             // sendTillNoSolveButton
             // 
-            this.sendTillNoSolveButton.Location = new System.Drawing.Point(670, 152);
+            this.sendTillNoSolveButton.Location = new System.Drawing.Point(670, 158);
             this.sendTillNoSolveButton.Name = "sendTillNoSolveButton";
             this.sendTillNoSolveButton.Size = new System.Drawing.Size(132, 63);
             this.sendTillNoSolveButton.TabIndex = 228;
@@ -11089,159 +11220,56 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(468, 2);
+            this.linkLabel1.Location = new System.Drawing.Point(425, 2);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(336, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(384, 13);
             this.linkLabel1.TabIndex = 229;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Also check my CQAutomater - auto miracle claim, auto PVP and more!";
+            this.linkLabel1.Text = "Also check my CQAutomater - auto miracle claim, auto PVP, auto-WB and more!";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label234
+            // groupBox4
             // 
-            this.label234.AutoSize = true;
-            this.label234.Location = new System.Drawing.Point(230, 43);
-            this.label234.Name = "label234";
-            this.label234.Size = new System.Drawing.Size(48, 13);
-            this.label234.TabIndex = 15;
-            this.label234.Text = "Common";
+            this.groupBox4.Controls.Add(this.label61);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Location = new System.Drawing.Point(11, 437);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(210, 76);
+            this.groupBox4.TabIndex = 149;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Hero Files";
             // 
-            // label235
+            // label61
             // 
-            this.label235.AutoSize = true;
-            this.label235.Location = new System.Drawing.Point(230, 67);
-            this.label235.Name = "label235";
-            this.label235.Size = new System.Drawing.Size(30, 13);
-            this.label235.TabIndex = 16;
-            this.label235.Text = "Rare";
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(6, 19);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(120, 39);
+            this.label61.TabIndex = 149;
+            this.label61.Text = "Hero files is an old way\r\nto keep your hero levels\r\nand their enabled state";
             // 
-            // label236
+            // button91
             // 
-            this.label236.AutoSize = true;
-            this.label236.Location = new System.Drawing.Point(230, 92);
-            this.label236.Name = "label236";
-            this.label236.Size = new System.Drawing.Size(25, 13);
-            this.label236.TabIndex = 17;
-            this.label236.Text = "Leg";
-            // 
-            // label237
-            // 
-            this.label237.AutoSize = true;
-            this.label237.Location = new System.Drawing.Point(286, 20);
-            this.label237.Name = "label237";
-            this.label237.Size = new System.Drawing.Size(69, 13);
-            this.label237.TabIndex = 18;
-            this.label237.Text = "Normal chest";
-            // 
-            // label238
-            // 
-            this.label238.AutoSize = true;
-            this.label238.Location = new System.Drawing.Point(374, 20);
-            this.label238.Name = "label238";
-            this.label238.Size = new System.Drawing.Size(59, 13);
-            this.label238.TabIndex = 19;
-            this.label238.Text = "Hero chest";
-            // 
-            // label239
-            // 
-            this.label239.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label239.Location = new System.Drawing.Point(220, 109);
-            this.label239.Name = "label239";
-            this.label239.Size = new System.Drawing.Size(222, 1);
-            this.label239.TabIndex = 94;
-            // 
-            // label240
-            // 
-            this.label240.AutoSize = true;
-            this.label240.Location = new System.Drawing.Point(230, 117);
-            this.label240.Name = "label240";
-            this.label240.Size = new System.Drawing.Size(59, 13);
-            this.label240.TabIndex = 95;
-            this.label240.Text = "Avg. prana";
-            // 
-            // normalCommonChanceLabel
-            // 
-            this.normalCommonChanceLabel.AutoSize = true;
-            this.normalCommonChanceLabel.Location = new System.Drawing.Point(298, 43);
-            this.normalCommonChanceLabel.Name = "normalCommonChanceLabel";
-            this.normalCommonChanceLabel.Size = new System.Drawing.Size(18, 13);
-            this.normalCommonChanceLabel.TabIndex = 96;
-            this.normalCommonChanceLabel.Text = "-/-";
-            // 
-            // heroCommonChanceLabel
-            // 
-            this.heroCommonChanceLabel.AutoSize = true;
-            this.heroCommonChanceLabel.Location = new System.Drawing.Point(378, 43);
-            this.heroCommonChanceLabel.Name = "heroCommonChanceLabel";
-            this.heroCommonChanceLabel.Size = new System.Drawing.Size(18, 13);
-            this.heroCommonChanceLabel.TabIndex = 97;
-            this.heroCommonChanceLabel.Text = "-/-";
-            // 
-            // heroRareChanceLabel
-            // 
-            this.heroRareChanceLabel.AutoSize = true;
-            this.heroRareChanceLabel.Location = new System.Drawing.Point(378, 67);
-            this.heroRareChanceLabel.Name = "heroRareChanceLabel";
-            this.heroRareChanceLabel.Size = new System.Drawing.Size(18, 13);
-            this.heroRareChanceLabel.TabIndex = 99;
-            this.heroRareChanceLabel.Text = "-/-";
-            // 
-            // normalRareChanceLabel
-            // 
-            this.normalRareChanceLabel.AutoSize = true;
-            this.normalRareChanceLabel.Location = new System.Drawing.Point(298, 67);
-            this.normalRareChanceLabel.Name = "normalRareChanceLabel";
-            this.normalRareChanceLabel.Size = new System.Drawing.Size(18, 13);
-            this.normalRareChanceLabel.TabIndex = 98;
-            this.normalRareChanceLabel.Text = "-/-";
-            // 
-            // heroLegChanceLabel
-            // 
-            this.heroLegChanceLabel.AutoSize = true;
-            this.heroLegChanceLabel.Location = new System.Drawing.Point(378, 92);
-            this.heroLegChanceLabel.Name = "heroLegChanceLabel";
-            this.heroLegChanceLabel.Size = new System.Drawing.Size(18, 13);
-            this.heroLegChanceLabel.TabIndex = 101;
-            this.heroLegChanceLabel.Text = "-/-";
-            // 
-            // normalLegChanceLabel
-            // 
-            this.normalLegChanceLabel.AutoSize = true;
-            this.normalLegChanceLabel.Location = new System.Drawing.Point(298, 92);
-            this.normalLegChanceLabel.Name = "normalLegChanceLabel";
-            this.normalLegChanceLabel.Size = new System.Drawing.Size(18, 13);
-            this.normalLegChanceLabel.TabIndex = 100;
-            this.normalLegChanceLabel.Text = "-/-";
-            // 
-            // heroAvgPranaLabel
-            // 
-            this.heroAvgPranaLabel.AutoSize = true;
-            this.heroAvgPranaLabel.Location = new System.Drawing.Point(378, 117);
-            this.heroAvgPranaLabel.Name = "heroAvgPranaLabel";
-            this.heroAvgPranaLabel.Size = new System.Drawing.Size(18, 13);
-            this.heroAvgPranaLabel.TabIndex = 103;
-            this.heroAvgPranaLabel.Text = "-/-";
-            // 
-            // normalAvgPranaLabel
-            // 
-            this.normalAvgPranaLabel.AutoSize = true;
-            this.normalAvgPranaLabel.Location = new System.Drawing.Point(298, 117);
-            this.normalAvgPranaLabel.Name = "normalAvgPranaLabel";
-            this.normalAvgPranaLabel.Size = new System.Drawing.Size(18, 13);
-            this.normalAvgPranaLabel.TabIndex = 102;
-            this.normalAvgPranaLabel.Text = "-/-";
+            this.button91.Location = new System.Drawing.Point(352, 20);
+            this.button91.Name = "button91";
+            this.button91.Size = new System.Drawing.Size(148, 37);
+            this.button91.TabIndex = 230;
+            this.button91.Text = "Save current heroes to \r\nsettings";
+            this.button91.UseVisualStyleBackColor = true;
+            this.button91.Click += new System.EventHandler(this.button91_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 693);
+            this.Controls.Add(this.button91);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.sendTillNoSolveButton);
             this.Controls.Add(this.clearLogButton);
             this.Controls.Add(this.runCalcButton);
             this.Controls.Add(this.guiLog);
-            this.Controls.Add(this.label61);
             this.Controls.Add(this.getQuestsButton);
             this.Controls.Add(this.CSHC);
             this.Controls.Add(this.getDQButton);
@@ -11263,8 +11291,6 @@
             this.Controls.Add(this.upperCount);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.lowerCount);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -11382,6 +11408,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -11559,7 +11587,6 @@
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.NumericUpDown ZethCount;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.CheckBox WerewolfBox;
@@ -12272,6 +12299,9 @@
         private System.Windows.Forms.Label heroCommonChanceLabel;
         private System.Windows.Forms.Label normalCommonChanceLabel;
         private System.Windows.Forms.Label label240;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Button button91;
     }
 }
 

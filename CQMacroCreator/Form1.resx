@@ -120,17 +120,6 @@
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="label61.Text" xml:space="preserve">
-    <value>Info:
-        Hero will be used in calculations only if you check the box next to its lvl. 
-
-        Don't use all heroes, if you have Carl lvl 99 then don't use Aquortis lvl 10. It will only slow down the calc. In most cases you should limit yourself to 6-10 heroes.
-
-
-
-
-</value>
-  </data>
   <data name="label173.Text" xml:space="preserve">
     <value>Automatically sets lineup text box to quest list
 that might be possible to do.

@@ -18,7 +18,8 @@ namespace CQMacroCreator
             "Load heroes from defaultHeroes file",
             "Load heroes from server",
             "Load heroes and DQ from server",
-            "Load heroes, DQ and quest states from server"
+            "Load heroes, DQ and quest states from server",
+            
         };
 
         public MacroSettingsHelper(AppSettings a)

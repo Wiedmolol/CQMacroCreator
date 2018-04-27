@@ -7,6 +7,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 namespace CQMacroCreator
 {
+    public struct AuctionBids
+    {
+        bool biddingEnabled;
+        string name;
+        int maxLevel;
+        int maxBid;
+    }
     public class AppSettings
     {
         public string KongregateId { get; set; }
@@ -17,18 +24,22 @@ namespace CQMacroCreator
         public List<string> LoCLineup { get; set; }
         public List<string> MOAKLineup { get; set; }
         public List<string> defaultDQLineup { get; set; }
+        public List<string> calcEnabledHeroes { get; set; }
         public bool? DQSoundEnabled { get; set; }
         public bool? autoBestDQEnabled { get; set; }
         public bool? autoDQEnabled { get; set; }
         public bool? autoPvPEnabled { get; set; }
         public bool? autoChestEnabled { get; set; }
+        public int? chestsToOpen { get; set; }
         public bool? autoWBEnabled { get; set; }
         public int? pvpLowerLimit { get; set; }
         public int? pvpUpperLimit { get; set; }
         public List<int> WBsettings { get; set; }
+        public List<AuctionBids> bids { get; set; }
+
 
         public static AppSettings loadSettings()
-        {            
+        {
             System.IO.StreamReader sr = new System.IO.StreamReader(Form1.SettingsFilename);
             AppSettings a = JsonConvert.DeserializeObject<AppSettings>(sr.ReadToEnd());
             sr.Close();
