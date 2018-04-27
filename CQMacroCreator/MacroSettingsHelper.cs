@@ -19,7 +19,7 @@ namespace CQMacroCreator
             "Load heroes from server",
             "Load heroes and DQ from server",
             "Load heroes, DQ and quest states from server",
-            
+            "Heroes&&DQ from server, enable heroes from settings"
         };
 
         public MacroSettingsHelper(AppSettings a)
@@ -27,34 +27,40 @@ namespace CQMacroCreator
             InitializeComponent();
             textBox1.Text = a.token ?? "";
             textBox2.Text = a.KongregateId ?? "";
-            if (a.defaultLowerLimit.Contains("%"))
+            if (a.defaultLowerLimit != null)
             {
-                lowerPercRadio.Checked = true;
-                lowerPercCount.Value = decimal.Parse(a.defaultLowerLimit.Split('%')[0]);
+                if (a.defaultLowerLimit.Contains("%"))
+                {
+                    lowerPercRadio.Checked = true;
+                    lowerPercCount.Value = decimal.Parse(a.defaultLowerLimit.Split('%')[0]);
+                }
+                else if (a.defaultLowerLimit == "-1")
+                {
+                    lowerNoRadio.Checked = true;
+                }
+                else
+                {
+                    lowerFlatRadio.Checked = true;
+                    lowerFlatCount.Value = decimal.Parse(a.defaultLowerLimit);
+                }
             }
-            else if (a.defaultLowerLimit == "-1")
+            if (a.defaultUpperLimit != null)
             {
-                lowerNoRadio.Checked = true;
-            }
-            else
-            {
-                lowerFlatRadio.Checked = true;
-                lowerFlatCount.Value = decimal.Parse(a.defaultLowerLimit);
-            }
-            if (a.defaultUpperLimit.Contains("%"))
-            {
+                if (a.defaultUpperLimit.Contains("%"))
+                {
 
-                upperPercRadio.Checked = true;
-                upperPercCount.Value = decimal.Parse(a.defaultUpperLimit.Split('%')[0]);
-            }
-            else if (a.defaultUpperLimit == "-1")
-            {
-                upperNoRadio.Checked = true;
-            }
-            else
-            {
-                upperFlatRadio.Checked = true;
-                upperFlatCount.Value = decimal.Parse(a.defaultUpperLimit);
+                    upperPercRadio.Checked = true;
+                    upperPercCount.Value = decimal.Parse(a.defaultUpperLimit.Split('%')[0]);
+                }
+                else if (a.defaultUpperLimit == "-1")
+                {
+                    upperNoRadio.Checked = true;
+                }
+                else
+                {
+                    upperFlatRadio.Checked = true;
+                    upperFlatCount.Value = decimal.Parse(a.defaultUpperLimit);
+                }
             }
             defaultActionCount.Value = a.actionOnStart ?? 0;
             autoChestBox.Checked = a.autoChestEnabled ?? false;

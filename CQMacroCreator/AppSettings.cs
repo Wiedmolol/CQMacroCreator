@@ -32,6 +32,7 @@ namespace CQMacroCreator
         public bool? autoChestEnabled { get; set; }
         public int? chestsToOpen { get; set; }
         public bool? autoWBEnabled { get; set; }
+        public bool? safeModeWBEnabled { get; set; }
         public int? pvpLowerLimit { get; set; }
         public int? pvpUpperLimit { get; set; }
         public List<int> WBsettings { get; set; }
