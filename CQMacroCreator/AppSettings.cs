@@ -42,6 +42,7 @@ namespace CQMacroCreator
 
         public static AppSettings loadSettings()
         {
+        
             if (File.Exists(Form1.SettingsFilename))
             {
                 System.IO.StreamReader sr = new System.IO.StreamReader(Form1.SettingsFilename);
