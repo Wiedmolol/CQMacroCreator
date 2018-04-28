@@ -41,10 +41,17 @@ namespace CQMacroCreator
 
         public static AppSettings loadSettings()
         {
-            System.IO.StreamReader sr = new System.IO.StreamReader(Form1.SettingsFilename);
-            AppSettings a = JsonConvert.DeserializeObject<AppSettings>(sr.ReadToEnd());
-            sr.Close();
-            return a;
+            if (File.Exists(Form1.SettingsFilename))
+            {
+                System.IO.StreamReader sr = new System.IO.StreamReader(Form1.SettingsFilename);
+                AppSettings a = JsonConvert.DeserializeObject<AppSettings>(sr.ReadToEnd());
+                sr.Close();
+                return a;
+            }
+            else
+            {
+                return new AppSettings();
+            }
         }
 
         public void saveSettings()
