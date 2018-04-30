@@ -5,7 +5,7 @@
 CQMacroCreator is a "GUI' for Dicecycle's Cosmos Quest PvE Instance Solver https://github.com/Diceycle/C-Hero-Calc
 
 Just place CQMacroCreator.exe in the same folder as CosmosQuest.exe and run it.
-
+![screenshot](https://i.imgur.com/MuTsyGA.png)
 # What's new
 v.2.9.9b - new option for settings. Now you can select which heroes you want to have enabled at the start instead of relying on app's "Choose best heroes" algorithm. There is new option for "default action on start" to use heroes from settings. Buttons for loading/saving old hero files moved to "Other" tab.
 
@@ -79,4 +79,4 @@ On the right side you should see "Request Payload" section if you are using Chro
 * defaultHeroes(optional - the standard hero file loaded automatically if default action on open is set to 1 in MacroSettings.txt file)
 
 
-![screenshot](https://image.prntscr.com/image/4rFNp8zFRgqxIt8pCQvEzQ.png)
+
