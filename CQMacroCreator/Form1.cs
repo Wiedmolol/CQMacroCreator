@@ -89,10 +89,11 @@ namespace CQMacroCreator
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", 
-                                "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn"
+                                "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
+                                "hawking", "masterlee", "kumu-san", "liucheng", "hidoka"
                                 };
 
-        static string[] servernames = { "flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = {"hidoka", "liucheng", "kumu-san", "masterlee", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -153,7 +154,8 @@ namespace CQMacroCreator
                                                aRigrCount, null,
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
                                                aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
-                                               SparksCount, LeafCount, FlynnCount
+                                               SparksCount, LeafCount, FlynnCount,
+                                               aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount
 
             };
 
@@ -188,9 +190,10 @@ namespace CQMacroCreator
                                                aRigrCount, null,
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
                                                aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
-                                               SparksCount, LeafCount, FlynnCount
-            };
+                                               SparksCount, LeafCount, FlynnCount,
+                                               aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount
 
+            };
             heroBoxes = new List<CheckBox>() { JamesBox, 
                                                HunterBox, ShamanBox, AlphaBox, 
                                                CarlBox, NimueBox, AthosBox, 
@@ -220,7 +223,9 @@ namespace CQMacroCreator
                                                aRigrBox, null,
                                                HosokawaBox, TakedaBox, HirateBox, HattoriBox,
                                                aDagdaBox, BylarBox, BoorBox, BavahBox, LeprBox,
-                                               SparksBox, LeafBox, FlynnBox
+                                               SparksBox, LeafBox, FlynnBox,
+                                               aBavahBox, HawkingBox, LeeBox, KumuBox, ChengBox, HidokaBox
+
             };
 
             questBoxes = new List<CheckBox>() {
@@ -585,7 +590,9 @@ namespace CQMacroCreator
             new Hero(135,107,12,0,0), //adagda
             new Hero(30,20,1,0,0), new Hero(36,36,2,0,0), new Hero(52,52,6,0,0), //bavah, boor
             new Hero(25,75,6,0,0),
-            new Hero(30,30,2,0,0), new Hero(48,42,4,0,0), new Hero(70,48,12,0,0) //sparks, leaf, flynn
+            new Hero(30,30,2,0,0), new Hero(48,42,4,0,0), new Hero(70,48,12,0,0), //sparks, leaf, flynn
+            new Hero(122,122,12,0,0),new Hero(60,66,6,0,0), //bavah , hawking
+            new Hero(150,90,12,0,0), new Hero(70,38,6,0,0), new Hero(78,42,6,0,0), new Hero(86,44,6,0,0),
         });
 
         private void button1_Click(object sender, EventArgs e)
@@ -1398,14 +1405,7 @@ namespace CQMacroCreator
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 1)
-            {
-                getQuestsButton.Visible = true;
-            }
-            else
-            {
-                getQuestsButton.Visible = false;
-            }
+           
         }
 
         private void button91_Click_1(object sender, EventArgs e)
