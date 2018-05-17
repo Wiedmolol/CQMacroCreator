@@ -126,6 +126,9 @@ namespace CQMacroCreator
         {
 
             InitializeComponent();
+
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += currentDomain_UnhandledException;
             heroCounts = new List<NumericUpDown>() {JamesCount, 
                                                HunterCount, ShamanCount, AlphaCount, 
                                                CarlCount, NimueCount, AthosCount, 
@@ -395,6 +398,15 @@ namespace CQMacroCreator
                 }
             }
         }
+        void currentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Exception ue = (Exception)e.ExceptionObject;
+            using (StreamWriter sw = new StreamWriter("ExceptionLog.txt", true))
+            {
+                sw.WriteLine(DateTime.Now);
+                sw.WriteLine(ue);
+            }
+        }
         private void hideButtons()
         {
             getDQButton.Enabled = false;
@@ -599,6 +611,7 @@ namespace CQMacroCreator
             new Hero(30,30,2,0,0), new Hero(48,42,4,0,0), new Hero(70,48,12,0,0), //sparks, leaf, flynn
             new Hero(122,122,12,0,0),new Hero(60,66,6,0,0), //bavah , hawking
             new Hero(150,90,12,0,0), new Hero(70,38,6,0,0), new Hero(78,42,6,0,0), new Hero(86,44,6,0,0),
+            null
         });
 
         private void button1_Click(object sender, EventArgs e)
