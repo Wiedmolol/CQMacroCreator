@@ -24,6 +24,7 @@ namespace CQMacroCreator
         public string defaultUpperLimit { get; set; }
         public List<string> LoCLineup { get; set; }
         public List<string> MOAKLineup { get; set; }
+        public List<string> KrytonLineup { get; set; }
         public List<string> defaultDQLineup { get; set; }
         public List<string> calcEnabledHeroes { get; set; }
         public bool? DQSoundEnabled { get; set; }
@@ -38,7 +39,10 @@ namespace CQMacroCreator
         public int? pvpUpperLimit { get; set; }
         public List<int> WBsettings { get; set; }
         public List<AuctionBids> bids { get; set; }
-
+        public bool? autoLevelEnabled { get; set; }
+        public int[] bankedCurrencies { get; set; }
+        public string[] herosToLevel { get; set; }
+        public int[] levelLimits { get; set; }
 
         public static AppSettings loadSettings()
         {        
