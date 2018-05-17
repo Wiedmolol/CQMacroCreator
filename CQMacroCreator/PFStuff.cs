@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Net;
+using System.IO;
+using System.Net.Http;
 
 namespace CQMacroCreator
 {
@@ -19,6 +22,7 @@ namespace CQMacroCreator
 
         static public bool logres;
         static public bool DQResult;
+        //static public bool DungResult;
         static public string DQlvl;
         static bool _running = true;
         string token;
@@ -27,7 +31,11 @@ namespace CQMacroCreator
         public static List<int[]> getResult;
         public static int followers;
         public static int[] lineup;
-        public static List<int> questList;        
+        public static List<int> questList;
+        public static int dungeonLvl;
+        public static List<int[]> dungeonLineup;
+
+
         public PFStuff(string t, string kid)
         {
             token = t;
@@ -168,6 +176,41 @@ namespace CQMacroCreator
             return;
         }
 
+
+        public void sendDungSolution()
+        {
+            var request = new ExecuteCloudScriptRequest()
+            {
+                RevisionSelection = CloudScriptRevisionOption.Live,
+                FunctionName = "dungeon",
+                FunctionParameter = new { setup = lineup, max = true }
+            };
+            var statusTask = PlayFabClientAPI.ExecuteCloudScriptAsync(request);
+            bool _running = true;
+            while (_running)
+            {
+                if (statusTask.IsCompleted)
+                {
+                    var apiError = statusTask.Result.Error;
+                    var apiResult = statusTask.Result.Result;
+
+                    if (apiError != null)
+                    {
+                        DQResult = false;
+                        return;
+                    }
+                    else if (apiResult.FunctionResult != null && apiResult.FunctionResult.ToString().Contains("true"))
+                    {
+                        DQResult = true;
+                        return;
+                    }
+                    _running = false;
+                }
+                Thread.Sleep(1);
+            }
+            DQResult = false;
+            return;
+        }
  
 
         public void sendQuestSolution()
@@ -241,12 +284,42 @@ namespace CQMacroCreator
             return;
         }
 
-        private int[] getArray(string s)
+        private static int[] getArray(string s)
         {
             s = Regex.Replace(s, @"\s+", "");
             s = s.Substring(1, s.Length - 2);
             int[] result = s.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
             return result;
         }
+
+        internal static void getDungeonData(string id)
+        {
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"https://cosmosquest.net/public.php?kid=" + id);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+                string content = new StreamReader(response.GetResponseStream()).ReadToEnd();
+
+                JObject json = JObject.Parse(content);
+                var dungData = json["dungeon"];
+                dungeonLineup = new List<int[]>();
+                dungeonLvl = int.Parse(dungData["lvl"].ToString());
+
+                string el = dungData["setup"].ToString();
+                string elvl = dungData["hero"].ToString();
+
+                int[] enemyLineup = getArray(el);
+                int[] enemyLevels = getArray(elvl);
+                dungeonLineup.Add(enemyLineup);
+                dungeonLineup.Add(enemyLevels);
+
+            }
+            catch (WebException webex)
+            {
+                Console.Write(webex.Message);
+            }
+        }
+
     }
 }

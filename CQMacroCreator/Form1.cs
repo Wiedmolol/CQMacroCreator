@@ -76,7 +76,8 @@ namespace CQMacroCreator
             {"SEXY", "sexysanta"},
             {"EBOSS", "moak"},
             {"MOTHEROFALLKODAMAS", "moak"},
-            {"LEPR", "leprechaun"}
+            {"LEPR", "leprechaun"},
+            {"ABOSS", "kryton"}
 
         };
         string token;
@@ -90,10 +91,10 @@ namespace CQMacroCreator
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", 
                                 "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
-                                "hawking", "masterlee", "kumu-san", "liucheng", "hidoka"
+                                "hawking", "masterlee", "kumu-san", "liucheng", "hidoka", "kryton"
                                 };
 
-        static string[] servernames = {"hidoka", "liucheng", "kumu-san", "masterlee", "hawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = {"kryton", "hidoka", "liucheng", "kumu-san", "masterlee", "hawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -155,7 +156,8 @@ namespace CQMacroCreator
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
                                                aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
                                                SparksCount, LeafCount, FlynnCount,
-                                               aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount
+                                               aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount,
+                                               null
 
             };
 
@@ -191,7 +193,8 @@ namespace CQMacroCreator
                                                HosokawaCount, TakedaCount, HirateCount, HattoriCount,
                                                aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
                                                SparksCount, LeafCount, FlynnCount,
-                                               aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount
+                                               aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount,
+                                               null
 
             };
             heroBoxes = new List<CheckBox>() { JamesBox, 
@@ -224,7 +227,8 @@ namespace CQMacroCreator
                                                HosokawaBox, TakedaBox, HirateBox, HattoriBox,
                                                aDagdaBox, BylarBox, BoorBox, BavahBox, LeprBox,
                                                SparksBox, LeafBox, FlynnBox,
-                                               aBavahBox, HawkingBox, LeeBox, KumuBox, ChengBox, HidokaBox
+                                               aBavahBox, HawkingBox, LeeBox, KumuBox, ChengBox, HidokaBox,
+                                               null
 
             };
 
@@ -382,6 +386,8 @@ namespace CQMacroCreator
                 if (token != null && KongregateId != null && cmdArguments[1] == "quick")
                 {
                     this.Hide();
+                    if (cmdArguments.Length > 2)
+                        getDungeonButton_Click(this, EventArgs.Empty);
                     sendTillNoSolveButton_Click(this, EventArgs.Empty);                    
                     Console.Write(output);
                     Environment.Exit(0);
@@ -713,7 +719,14 @@ namespace CQMacroCreator
                         List<string> lineups = lineupBox.Text.Split(' ').ToList();
                         foreach (string lp in lineups)
                         {
-                            createMacroFile(lp);
+                            if (lp.Contains("DUNG"))
+                            {
+                                createMacroFile(lp.Substring(5));
+                            }
+                            else
+                            {
+                                createMacroFile(lp);
+                            }
                             RunWithRedirect("CosmosQuest.exe");
                             //calcOut = calcOut.Substring(0, calcOut.Length - 24);
                             JObject solution = JObject.Parse(calcOut);
@@ -745,6 +758,12 @@ namespace CQMacroCreator
                                         mt.Start();
                                         mt.Join();
                                     }
+                                    else if (lp.Contains("DUNG"))
+                                    {
+                                        mt = new Thread(pf.sendDungSolution);
+                                        mt.Start();
+                                        mt.Join();
+                                    }
                                     else
                                     {
                                         mt = new Thread(pf.sendDQSolution);
@@ -757,6 +776,11 @@ namespace CQMacroCreator
                                         if (lp.Contains("quest"))
                                         {
                                             guiLog.AppendText("Quest " + (PFStuff.questID + 1) + " solution accepted by server\n");
+                                        }
+                                        else if (lp.Contains("DUNG"))
+                                        {
+                                            guiLog.AppendText("Dungeon " + PFStuff.dungeonLvl + " solution accepted by server\n");
+                                            getDungeonButton_Click(this, EventArgs.Empty);
                                         }
                                         else
                                         {
@@ -780,7 +804,7 @@ namespace CQMacroCreator
                     }
                     else
                     {
-                        createMacroFile(lineupBox.Text);
+                        createMacroFile(lineupBox.Text.Replace("DUNG,", ""));
                         Process.Start("CosmosQuest.exe", "gen.cqinput");
                     }
                     guiLog.ScrollToCaret();
@@ -1366,30 +1390,61 @@ namespace CQMacroCreator
             int attempts = 0;
             string previousDQlvl = "";
             autoSend.Checked = true;
-            while ((previousDQlvl != PFStuff.DQlvl || !PFStuff.DQResult) && (PFStuff.lineup != null || attempts == 0))
+            if (lineupBox.Text.Contains("DUNG"))
             {
-                if (PFStuff.DQResult || attempts == 0)
+                while ((previousDQlvl != PFStuff.dungeonLvl.ToString() || !PFStuff.DQResult) && (PFStuff.lineup != null || attempts == 0))
                 {
-                    attempts = 1;
-                    previousDQlvl = PFStuff.DQlvl;
-                    runCalcButton_Click(this, EventArgs.Empty);
-                }
-                else
-                {
-                    if (attempts < 3)
+                    if (PFStuff.DQResult || attempts == 0)
                     {
-                        attempts++;
-                        guiLog.AppendText("Attempt no. " + attempts + " in 5 seconds\n");
-                        System.Threading.Thread.Sleep(5000);
+                        attempts = 1;
+                        previousDQlvl = PFStuff.dungeonLvl.ToString();
                         runCalcButton_Click(this, EventArgs.Empty);
                     }
                     else
                     {
-                        guiLog.AppendText("Solution invalid, solving was stopped\n");
-                        break;
+                        if (attempts < 3)
+                        {
+                            attempts++;
+                            guiLog.AppendText("Attempt no. " + attempts + " in 5 seconds\n");
+                            System.Threading.Thread.Sleep(5000);
+                            runCalcButton_Click(this, EventArgs.Empty);
+                        }
+                        else
+                        {
+                            guiLog.AppendText("Solution invalid, solving was stopped\n");
+                            break;
+                        }
                     }
                 }
             }
+            else
+            {
+                while ((previousDQlvl != PFStuff.DQlvl || !PFStuff.DQResult) && (PFStuff.lineup != null || attempts == 0))
+                {
+                    if (PFStuff.DQResult || attempts == 0)
+                    {
+                        attempts = 1;
+                        previousDQlvl = PFStuff.DQlvl;
+                        runCalcButton_Click(this, EventArgs.Empty);
+                    }
+                    else
+                    {
+                        if (attempts < 3)
+                        {
+                            attempts++;
+                            guiLog.AppendText("Attempt no. " + attempts + " in 5 seconds\n");
+                            System.Threading.Thread.Sleep(5000);
+                            runCalcButton_Click(this, EventArgs.Empty);
+                        }
+                        else
+                        {
+                            guiLog.AppendText("Solution invalid, solving was stopped\n");
+                            break;
+                        }
+                    }
+                }
+            }
+           
         }
 
         private void button111_Click(object sender, EventArgs e)
@@ -1419,6 +1474,24 @@ namespace CQMacroCreator
             appSettings = AppSettings.loadSettings();
             appSettings.calcEnabledHeroes = enabled;
             appSettings.saveSettings();
+        }
+
+        private void getDungeonButton_Click(object sender, EventArgs e)
+        {
+            PFStuff.getDungeonData(KongregateId);
+            string[] enemylist = new string[6];
+            for (int i = 0; i < 5; i++)
+            {
+                enemylist[i] = servernames[PFStuff.dungeonLineup[0][i] + heroesInGame];
+                if (PFStuff.dungeonLineup[0][i] < -1)
+                {
+                    enemylist[i] += ":" + PFStuff.dungeonLineup[1][-PFStuff.dungeonLineup[0][i] - 2].ToString();
+                }
+            }
+            enemylist[5] = "DUNG";
+            enemylist = enemylist.Reverse().ToArray();
+            lineupBox.Text = string.Join(",", enemylist);
+            guiLog.AppendText("Successfully got enemy lineup for Dungeon" + PFStuff.dungeonLvl + " - " + string.Join(",", enemylist) + "\n");
         }
 
 

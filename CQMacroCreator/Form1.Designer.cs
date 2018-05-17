@@ -254,6 +254,24 @@
             this.CSHC = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Heroes = new System.Windows.Forms.TabPage();
+            this.LeeBox = new System.Windows.Forms.CheckBox();
+            this.label246 = new System.Windows.Forms.Label();
+            this.LeeCount = new System.Windows.Forms.NumericUpDown();
+            this.aBavahBox = new System.Windows.Forms.CheckBox();
+            this.label245 = new System.Windows.Forms.Label();
+            this.aBavahCount = new System.Windows.Forms.NumericUpDown();
+            this.HawkingCount = new System.Windows.Forms.NumericUpDown();
+            this.label244 = new System.Windows.Forms.Label();
+            this.HawkingBox = new System.Windows.Forms.CheckBox();
+            this.HidokaBox = new System.Windows.Forms.CheckBox();
+            this.label241 = new System.Windows.Forms.Label();
+            this.HidokaCount = new System.Windows.Forms.NumericUpDown();
+            this.ChengBox = new System.Windows.Forms.CheckBox();
+            this.label242 = new System.Windows.Forms.Label();
+            this.ChengCount = new System.Windows.Forms.NumericUpDown();
+            this.KumuBox = new System.Windows.Forms.CheckBox();
+            this.label243 = new System.Windows.Forms.Label();
+            this.KumuCount = new System.Windows.Forms.NumericUpDown();
             this.FlynnBox = new System.Windows.Forms.CheckBox();
             this.label231 = new System.Windows.Forms.Label();
             this.FlynnCount = new System.Windows.Forms.NumericUpDown();
@@ -914,24 +932,7 @@
             this.sendTillNoSolveButton = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button91 = new System.Windows.Forms.Button();
-            this.HidokaBox = new System.Windows.Forms.CheckBox();
-            this.label241 = new System.Windows.Forms.Label();
-            this.HidokaCount = new System.Windows.Forms.NumericUpDown();
-            this.ChengBox = new System.Windows.Forms.CheckBox();
-            this.label242 = new System.Windows.Forms.Label();
-            this.ChengCount = new System.Windows.Forms.NumericUpDown();
-            this.KumuBox = new System.Windows.Forms.CheckBox();
-            this.label243 = new System.Windows.Forms.Label();
-            this.KumuCount = new System.Windows.Forms.NumericUpDown();
-            this.HawkingCount = new System.Windows.Forms.NumericUpDown();
-            this.label244 = new System.Windows.Forms.Label();
-            this.HawkingBox = new System.Windows.Forms.CheckBox();
-            this.aBavahBox = new System.Windows.Forms.CheckBox();
-            this.label245 = new System.Windows.Forms.Label();
-            this.aBavahCount = new System.Windows.Forms.NumericUpDown();
-            this.LeeBox = new System.Windows.Forms.CheckBox();
-            this.label246 = new System.Windows.Forms.Label();
-            this.LeeCount = new System.Windows.Forms.NumericUpDown();
+            this.getDungeonButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -1001,6 +1002,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.HamaCount)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Heroes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeeCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBavahCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HawkingCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HidokaCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChengCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KumuCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlynnCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeafCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SparksCount)).BeginInit();
@@ -1040,12 +1047,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HidokaCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChengCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KumuCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HawkingCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aBavahCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeeCount)).BeginInit();
             this.SuspendLayout();
             // 
             // JamesCount
@@ -3809,6 +3810,204 @@
             this.Heroes.TabIndex = 0;
             this.Heroes.Text = "Heroes";
             this.Heroes.UseVisualStyleBackColor = true;
+            // 
+            // LeeBox
+            // 
+            this.LeeBox.AutoSize = true;
+            this.LeeBox.Location = new System.Drawing.Point(121, 918);
+            this.LeeBox.Name = "LeeBox";
+            this.LeeBox.Size = new System.Drawing.Size(33, 17);
+            this.LeeBox.TabIndex = 339;
+            this.LeeBox.TabStop = false;
+            this.LeeBox.Text = "E";
+            this.LeeBox.UseVisualStyleBackColor = true;
+            this.LeeBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // label246
+            // 
+            this.label246.AutoSize = true;
+            this.label246.Location = new System.Drawing.Point(5, 919);
+            this.label246.Name = "label246";
+            this.label246.Size = new System.Drawing.Size(60, 13);
+            this.label246.TabIndex = 338;
+            this.label246.Text = "Master Lee";
+            // 
+            // LeeCount
+            // 
+            this.LeeCount.Location = new System.Drawing.Point(65, 917);
+            this.LeeCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.LeeCount.Name = "LeeCount";
+            this.LeeCount.Size = new System.Drawing.Size(50, 20);
+            this.LeeCount.TabIndex = 337;
+            // 
+            // aBavahBox
+            // 
+            this.aBavahBox.AutoSize = true;
+            this.aBavahBox.Location = new System.Drawing.Point(448, 889);
+            this.aBavahBox.Name = "aBavahBox";
+            this.aBavahBox.Size = new System.Drawing.Size(33, 17);
+            this.aBavahBox.TabIndex = 336;
+            this.aBavahBox.TabStop = false;
+            this.aBavahBox.Text = "E";
+            this.aBavahBox.UseVisualStyleBackColor = true;
+            this.aBavahBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // label245
+            // 
+            this.label245.AutoSize = true;
+            this.label245.Location = new System.Drawing.Point(326, 890);
+            this.label245.Name = "label245";
+            this.label245.Size = new System.Drawing.Size(62, 13);
+            this.label245.TabIndex = 335;
+            this.label245.Text = "Asc. Bavah";
+            // 
+            // aBavahCount
+            // 
+            this.aBavahCount.Location = new System.Drawing.Point(392, 888);
+            this.aBavahCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.aBavahCount.Name = "aBavahCount";
+            this.aBavahCount.Size = new System.Drawing.Size(50, 20);
+            this.aBavahCount.TabIndex = 334;
+            // 
+            // HawkingCount
+            // 
+            this.HawkingCount.Location = new System.Drawing.Point(385, 685);
+            this.HawkingCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.HawkingCount.Name = "HawkingCount";
+            this.HawkingCount.Size = new System.Drawing.Size(50, 20);
+            this.HawkingCount.TabIndex = 331;
+            // 
+            // label244
+            // 
+            this.label244.AutoSize = true;
+            this.label244.Location = new System.Drawing.Point(320, 687);
+            this.label244.Name = "label244";
+            this.label244.Size = new System.Drawing.Size(66, 13);
+            this.label244.TabIndex = 332;
+            this.label244.Text = "Dr. Hawking";
+            // 
+            // HawkingBox
+            // 
+            this.HawkingBox.AutoSize = true;
+            this.HawkingBox.Location = new System.Drawing.Point(441, 686);
+            this.HawkingBox.Name = "HawkingBox";
+            this.HawkingBox.Size = new System.Drawing.Size(33, 17);
+            this.HawkingBox.TabIndex = 333;
+            this.HawkingBox.TabStop = false;
+            this.HawkingBox.Text = "E";
+            this.HawkingBox.UseVisualStyleBackColor = true;
+            this.HawkingBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // HidokaBox
+            // 
+            this.HidokaBox.AutoSize = true;
+            this.HidokaBox.Location = new System.Drawing.Point(441, 420);
+            this.HidokaBox.Name = "HidokaBox";
+            this.HidokaBox.Size = new System.Drawing.Size(33, 17);
+            this.HidokaBox.TabIndex = 330;
+            this.HidokaBox.TabStop = false;
+            this.HidokaBox.Text = "E";
+            this.HidokaBox.UseVisualStyleBackColor = true;
+            this.HidokaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // label241
+            // 
+            this.label241.AutoSize = true;
+            this.label241.Location = new System.Drawing.Point(333, 420);
+            this.label241.Name = "label241";
+            this.label241.Size = new System.Drawing.Size(41, 13);
+            this.label241.TabIndex = 329;
+            this.label241.Text = "Hidoka";
+            // 
+            // HidokaCount
+            // 
+            this.HidokaCount.Location = new System.Drawing.Point(385, 419);
+            this.HidokaCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.HidokaCount.Name = "HidokaCount";
+            this.HidokaCount.Size = new System.Drawing.Size(50, 20);
+            this.HidokaCount.TabIndex = 324;
+            // 
+            // ChengBox
+            // 
+            this.ChengBox.AutoSize = true;
+            this.ChengBox.Location = new System.Drawing.Point(281, 420);
+            this.ChengBox.Name = "ChengBox";
+            this.ChengBox.Size = new System.Drawing.Size(33, 17);
+            this.ChengBox.TabIndex = 328;
+            this.ChengBox.TabStop = false;
+            this.ChengBox.Text = "E";
+            this.ChengBox.UseVisualStyleBackColor = true;
+            this.ChengBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // label242
+            // 
+            this.label242.AutoSize = true;
+            this.label242.Location = new System.Drawing.Point(164, 421);
+            this.label242.Name = "label242";
+            this.label242.Size = new System.Drawing.Size(55, 13);
+            this.label242.TabIndex = 327;
+            this.label242.Text = "Liu Cheng";
+            // 
+            // ChengCount
+            // 
+            this.ChengCount.Location = new System.Drawing.Point(225, 419);
+            this.ChengCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.ChengCount.Name = "ChengCount";
+            this.ChengCount.Size = new System.Drawing.Size(50, 20);
+            this.ChengCount.TabIndex = 323;
+            // 
+            // KumuBox
+            // 
+            this.KumuBox.AutoSize = true;
+            this.KumuBox.Location = new System.Drawing.Point(121, 420);
+            this.KumuBox.Name = "KumuBox";
+            this.KumuBox.Size = new System.Drawing.Size(33, 17);
+            this.KumuBox.TabIndex = 326;
+            this.KumuBox.TabStop = false;
+            this.KumuBox.Text = "E";
+            this.KumuBox.UseVisualStyleBackColor = true;
+            this.KumuBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // label243
+            // 
+            this.label243.AutoSize = true;
+            this.label243.Location = new System.Drawing.Point(7, 421);
+            this.label243.Name = "label243";
+            this.label243.Size = new System.Drawing.Size(56, 13);
+            this.label243.TabIndex = 325;
+            this.label243.Text = "Kumu-San";
+            // 
+            // KumuCount
+            // 
+            this.KumuCount.Location = new System.Drawing.Point(65, 419);
+            this.KumuCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.KumuCount.Name = "KumuCount";
+            this.KumuCount.Size = new System.Drawing.Size(50, 20);
+            this.KumuCount.TabIndex = 322;
             // 
             // FlynnBox
             // 
@@ -11301,209 +11500,22 @@
             this.button91.UseVisualStyleBackColor = true;
             this.button91.Click += new System.EventHandler(this.button91_Click_1);
             // 
-            // HidokaBox
+            // getDungeonButton
             // 
-            this.HidokaBox.AutoSize = true;
-            this.HidokaBox.Location = new System.Drawing.Point(441, 420);
-            this.HidokaBox.Name = "HidokaBox";
-            this.HidokaBox.Size = new System.Drawing.Size(33, 17);
-            this.HidokaBox.TabIndex = 330;
-            this.HidokaBox.TabStop = false;
-            this.HidokaBox.Text = "E";
-            this.HidokaBox.UseVisualStyleBackColor = true;
-            this.HidokaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
-            // 
-            // label241
-            // 
-            this.label241.AutoSize = true;
-            this.label241.Location = new System.Drawing.Point(333, 420);
-            this.label241.Name = "label241";
-            this.label241.Size = new System.Drawing.Size(41, 13);
-            this.label241.TabIndex = 329;
-            this.label241.Text = "Hidoka";
-            // 
-            // HidokaCount
-            // 
-            this.HidokaCount.Location = new System.Drawing.Point(385, 419);
-            this.HidokaCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.HidokaCount.Name = "HidokaCount";
-            this.HidokaCount.Size = new System.Drawing.Size(50, 20);
-            this.HidokaCount.TabIndex = 324;
-            // 
-            // ChengBox
-            // 
-            this.ChengBox.AutoSize = true;
-            this.ChengBox.Location = new System.Drawing.Point(281, 420);
-            this.ChengBox.Name = "ChengBox";
-            this.ChengBox.Size = new System.Drawing.Size(33, 17);
-            this.ChengBox.TabIndex = 328;
-            this.ChengBox.TabStop = false;
-            this.ChengBox.Text = "E";
-            this.ChengBox.UseVisualStyleBackColor = true;
-            this.ChengBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
-            // 
-            // label242
-            // 
-            this.label242.AutoSize = true;
-            this.label242.Location = new System.Drawing.Point(164, 421);
-            this.label242.Name = "label242";
-            this.label242.Size = new System.Drawing.Size(55, 13);
-            this.label242.TabIndex = 327;
-            this.label242.Text = "Liu Cheng";
-            // 
-            // ChengCount
-            // 
-            this.ChengCount.Location = new System.Drawing.Point(225, 419);
-            this.ChengCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.ChengCount.Name = "ChengCount";
-            this.ChengCount.Size = new System.Drawing.Size(50, 20);
-            this.ChengCount.TabIndex = 323;
-            // 
-            // KumuBox
-            // 
-            this.KumuBox.AutoSize = true;
-            this.KumuBox.Location = new System.Drawing.Point(121, 420);
-            this.KumuBox.Name = "KumuBox";
-            this.KumuBox.Size = new System.Drawing.Size(33, 17);
-            this.KumuBox.TabIndex = 326;
-            this.KumuBox.TabStop = false;
-            this.KumuBox.Text = "E";
-            this.KumuBox.UseVisualStyleBackColor = true;
-            this.KumuBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
-            // 
-            // label243
-            // 
-            this.label243.AutoSize = true;
-            this.label243.Location = new System.Drawing.Point(7, 421);
-            this.label243.Name = "label243";
-            this.label243.Size = new System.Drawing.Size(56, 13);
-            this.label243.TabIndex = 325;
-            this.label243.Text = "Kumu-San";
-            // 
-            // KumuCount
-            // 
-            this.KumuCount.Location = new System.Drawing.Point(65, 419);
-            this.KumuCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.KumuCount.Name = "KumuCount";
-            this.KumuCount.Size = new System.Drawing.Size(50, 20);
-            this.KumuCount.TabIndex = 322;
-            // 
-            // HawkingCount
-            // 
-            this.HawkingCount.Location = new System.Drawing.Point(385, 685);
-            this.HawkingCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.HawkingCount.Name = "HawkingCount";
-            this.HawkingCount.Size = new System.Drawing.Size(50, 20);
-            this.HawkingCount.TabIndex = 331;
-            // 
-            // label244
-            // 
-            this.label244.AutoSize = true;
-            this.label244.Location = new System.Drawing.Point(320, 687);
-            this.label244.Name = "label244";
-            this.label244.Size = new System.Drawing.Size(66, 13);
-            this.label244.TabIndex = 332;
-            this.label244.Text = "Dr. Hawking";
-            // 
-            // HawkingBox
-            // 
-            this.HawkingBox.AutoSize = true;
-            this.HawkingBox.Location = new System.Drawing.Point(441, 686);
-            this.HawkingBox.Name = "HawkingBox";
-            this.HawkingBox.Size = new System.Drawing.Size(33, 17);
-            this.HawkingBox.TabIndex = 333;
-            this.HawkingBox.TabStop = false;
-            this.HawkingBox.Text = "E";
-            this.HawkingBox.UseVisualStyleBackColor = true;
-            this.HawkingBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
-            // 
-            // aBavahBox
-            // 
-            this.aBavahBox.AutoSize = true;
-            this.aBavahBox.Location = new System.Drawing.Point(448, 889);
-            this.aBavahBox.Name = "aBavahBox";
-            this.aBavahBox.Size = new System.Drawing.Size(33, 17);
-            this.aBavahBox.TabIndex = 336;
-            this.aBavahBox.TabStop = false;
-            this.aBavahBox.Text = "E";
-            this.aBavahBox.UseVisualStyleBackColor = true;
-            this.aBavahBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
-            // 
-            // label245
-            // 
-            this.label245.AutoSize = true;
-            this.label245.Location = new System.Drawing.Point(326, 890);
-            this.label245.Name = "label245";
-            this.label245.Size = new System.Drawing.Size(62, 13);
-            this.label245.TabIndex = 335;
-            this.label245.Text = "Asc. Bavah";
-            // 
-            // aBavahCount
-            // 
-            this.aBavahCount.Location = new System.Drawing.Point(392, 888);
-            this.aBavahCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.aBavahCount.Name = "aBavahCount";
-            this.aBavahCount.Size = new System.Drawing.Size(50, 20);
-            this.aBavahCount.TabIndex = 334;
-            // 
-            // LeeBox
-            // 
-            this.LeeBox.AutoSize = true;
-            this.LeeBox.Location = new System.Drawing.Point(121, 918);
-            this.LeeBox.Name = "LeeBox";
-            this.LeeBox.Size = new System.Drawing.Size(33, 17);
-            this.LeeBox.TabIndex = 339;
-            this.LeeBox.TabStop = false;
-            this.LeeBox.Text = "E";
-            this.LeeBox.UseVisualStyleBackColor = true;
-            this.LeeBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
-            // 
-            // label246
-            // 
-            this.label246.AutoSize = true;
-            this.label246.Location = new System.Drawing.Point(5, 919);
-            this.label246.Name = "label246";
-            this.label246.Size = new System.Drawing.Size(60, 13);
-            this.label246.TabIndex = 338;
-            this.label246.Text = "Master Lee";
-            // 
-            // LeeCount
-            // 
-            this.LeeCount.Location = new System.Drawing.Point(65, 917);
-            this.LeeCount.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.LeeCount.Name = "LeeCount";
-            this.LeeCount.Size = new System.Drawing.Size(50, 20);
-            this.LeeCount.TabIndex = 337;
+            this.getDungeonButton.Location = new System.Drawing.Point(160, 31);
+            this.getDungeonButton.Name = "getDungeonButton";
+            this.getDungeonButton.Size = new System.Drawing.Size(74, 23);
+            this.getDungeonButton.TabIndex = 231;
+            this.getDungeonButton.Text = "Get Dung";
+            this.getDungeonButton.UseVisualStyleBackColor = true;
+            this.getDungeonButton.Click += new System.EventHandler(this.getDungeonButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 693);
+            this.Controls.Add(this.getDungeonButton);
             this.Controls.Add(this.button91);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.sendTillNoSolveButton);
@@ -11606,6 +11618,12 @@
             this.tabControl1.ResumeLayout(false);
             this.Heroes.ResumeLayout(false);
             this.Heroes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeeCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aBavahCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HawkingCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HidokaCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChengCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KumuCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlynnCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeafCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SparksCount)).EndInit();
@@ -11650,12 +11668,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HidokaCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChengCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.KumuCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HawkingCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aBavahCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeeCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -12566,6 +12578,7 @@
         private System.Windows.Forms.CheckBox LeeBox;
         private System.Windows.Forms.Label label246;
         private System.Windows.Forms.NumericUpDown LeeCount;
+        private System.Windows.Forms.Button getDungeonButton;
     }
 }
 
