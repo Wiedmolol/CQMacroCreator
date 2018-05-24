@@ -91,10 +91,10 @@ namespace CQMacroCreator
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", 
                                 "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
-                                "hawking", "masterlee", "kumu-san", "liucheng", "hidoka", "kryton"
+                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton"
                                 };
 
-        static string[] servernames = {"kryton", "hidoka", "liucheng", "kumu-san", "masterlee", "hawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = {"kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -914,9 +914,16 @@ namespace CQMacroCreator
             }
             else
             {
-                foreach (CheckBox cb in heroBoxes)
-                    if (cb != null)
-                        cb.Checked = true;
+                for(int i =0; i<heroBoxes.Count; i++)
+                {
+                    if(heroBoxes[i] != null && heroCounts[i].Value != 0)
+                    {
+                        heroBoxes[i].Checked = true;
+                    }
+                }
+                //foreach (CheckBox cb in heroBoxes)
+                //    if (cb != null)
+                //        cb.Checked = true;
             }
         }
 

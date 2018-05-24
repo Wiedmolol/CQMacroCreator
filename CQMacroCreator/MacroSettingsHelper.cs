@@ -154,54 +154,6 @@ namespace CQMacroCreator
             }
 
             a.saveSettings();
-            //System.IO.StreamWriter sw = new System.IO.StreamWriter("MacroSettings.txt");
-            //sw.WriteLine(defaultActionCount.Value.ToString());
-            //if (textBox1.Text.Length == 0)
-            //{
-            //    sw.WriteLine("1111111111111111111111111111111111111111111111111111111111111111");
-            //}
-            //else
-            //{
-            //    sw.WriteLine(textBox1.Text);
-            //}
-
-            //if (textBox2.Text.Length == 0)
-            //{
-            //    sw.WriteLine("0000000");
-            //}
-            //else
-            //{
-            //    sw.WriteLine(textBox2.Text);
-            //}
-
-
-            //if (lowerFlatRadio.Checked)
-            //{
-            //    sw.WriteLine(lowerFlatCount.Value.ToString());
-            //}
-            //else if (lowerPercRadio.Checked)
-            //{
-            //    sw.WriteLine(lowerPercCount.Value.ToString() + "%");
-            //}
-            //else
-            //{
-            //    sw.WriteLine("-1");
-            //}
-
-            //if (upperFlatRadio.Checked)
-            //{
-            //    sw.WriteLine(upperFlatCount.Value.ToString());
-            //}
-            //else if (upperPercRadio.Checked)
-            //{
-            //    sw.WriteLine(upperPercCount.Value.ToString() + "%");
-            //}
-            //else
-            //{
-            //    sw.WriteLine("-1");
-            //}
-            //sw.WriteLine((autoDQBox.Checked ? 1 : 0) + "," + (autoChestBox.Checked ? 1 : 0) + "," + (autoPVPBox.Checked ? 1 : 0) + "," + (autoWBBox.Checked ? 1 : 0));
-            //sw.Close();
             MessageBox.Show("Settings saved to file. Restart the application to use the new settings.");
         }
 

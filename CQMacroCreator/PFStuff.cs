@@ -235,7 +235,7 @@ namespace CQMacroCreator
                         DQResult = false;
                         return;
                     }
-                    else if (apiResult != null)
+                    else if (apiResult != null && apiResult.FunctionResult.ToString().Contains("true"))
                     {
                         DQResult = true;
                         return;
@@ -271,7 +271,7 @@ namespace CQMacroCreator
                         DQResult = false;
                         return;
                     }
-                    else if (apiResult != null)
+                    else if (apiResult != null && apiResult.FunctionResult.ToString().Contains("true"))
                     {
                         DQResult = true;
                         return;
