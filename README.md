@@ -3,7 +3,9 @@
 # CQMacroCreator
 
 CQMacroCreator is a "GUI' for Dicecycle's Cosmos Quest PvE Instance Solver 
+
 Hogwash's fork: https://github.com/hw1-5/C-Hero-Calc
+
 Original repo: https://github.com/Diceycle/C-Hero-Calc
 
 Just place CQMacroCreator.exe in the same folder as CosmosQuest.exe and run it.
