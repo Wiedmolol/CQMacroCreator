@@ -77,31 +77,34 @@ namespace CQMacroCreator
             {"EBOSS", "moak"},
             {"MOTHEROFALLKODAMAS", "moak"},
             {"LEPR", "leprechaun"},
-            {"ABOSS", "kryton"}
+            {"ABOSS", "kryton"},
+            {"DICE", "dicemaster" },
+            {"POKER", "pokerface" },
+            {"LUX", "luxurious" }
 
         };
         string token;
         string KongregateId;
         int defaultActionOnOpen = 0;
 
-        static string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x", 
+        static string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x",
                                 "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
                               "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
                               "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
-                                "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos", 
-                                "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr", 
+                                "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos",
+                                "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr",
                                 "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
-                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton"
+                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton", "dicemaster", "luxurious", "pokerface", "taint", "putrid", "defile", "neil"
                                 };
 
-        static string[] servernames = {"kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = { "neil", "defile", "putrid", "taint", "pokerface", "luxurious", "dicemaster", "kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
                                "james", "nicte", "auri", "faefyr", "ailen", "rei", "geron", "jet", "athos", "nimue", "carl", "alpha", "shaman", "hunter", "bewat", "pyromancer", "rokka",
                                "valor", "nebra", "tiny", "ladyoftwilight", "", "A1", "E1", "F1", "W1", "A2", "E2", "F2", "W2", "A3", "E3", "F3", "W3", "A4", "E4", "F4", "W4",
                                "A5", "E5", "F5", "W5", "A6", "E6", "F6", "W6", "A7", "E7", "F7", "W7", "A8", "E8", "F8", "W8", "A9", "E9", "F9", "W9", "A10", "E10", "F10", "W10",
-                               "A11", "E11", "F11", "W11", "A12", "E12", "F12", "W12", "A13", "E13", "F13", "W13", "A14", "E14", "F14", "W14", "A15", "E15", "F15", "W15", 
+                               "A11", "E11", "F11", "W11", "A12", "E12", "F12", "W12", "A13", "E13", "F13", "W13", "A14", "E14", "F14", "W14", "A15", "E15", "F15", "W15",
                                "A16","E16","F16","W16","A17","E17","F17","W17","A18","E18","F18","W18","A19","E19","F19","W19","A20","E20","F20","W20","A21","E21","F21","W21",
                                "A22","E22","F22","W22","A23","E23","F23","W23","A24","E24","F24","W24","A25","E25","F25","W25","A26","E26","F26","W26","A27","E27","F27","W27",
                                "A28","E28","F28","W28","A29","E29","F29","W29","A30","E30","F30","W30",};
@@ -129,9 +132,9 @@ namespace CQMacroCreator
 
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += currentDomain_UnhandledException;
-            heroCounts = new List<NumericUpDown>() {JamesCount, 
-                                               HunterCount, ShamanCount, AlphaCount, 
-                                               CarlCount, NimueCount, AthosCount, 
+            heroCounts = new List<NumericUpDown>() {JamesCount,
+                                               HunterCount, ShamanCount, AlphaCount,
+                                               CarlCount, NimueCount, AthosCount,
                                                JetCount, GeronCount, ReiCount,
                                                AilenCount, FaefyrCount, AuriCount,
                                                KairyCount, TaurusCount, TronixCount,
@@ -142,7 +145,7 @@ namespace CQMacroCreator
                                                LadyCount, TinyCount, NebraCount,
                                                VeildurCount, BrynCount, GrothCount,
                                                ZethCount, KothCount, GurthCount,
-                                               SpykeCount, AoyukiCount, GaiaCount,                                               
+                                               SpykeCount, AoyukiCount, GaiaCount,
                                                ValorCount, RokkaCount, PyroCount, BewatCount,
                                                NicteCount, DruidCount, IgnitorCount, UndineCount,
                                                ChromaCount, PetryCount, ZaytusCount,
@@ -160,19 +163,22 @@ namespace CQMacroCreator
                                                aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
                                                SparksCount, LeafCount, FlynnCount,
                                                aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount,
-                                               null
+                                               null,
+                                               DicemasterCount, LuxCount, PokerCount,
+                                               TaintCount, PutridCount, DefileCount,
+                                               NeilCount,
 
             };
 
             heroCountsServerOrder = new List<NumericUpDown>() {
-                                               LadyCount, TinyCount, NebraCount, 
+                                               LadyCount, TinyCount, NebraCount,
                                                ValorCount, RokkaCount, PyroCount, BewatCount,
-                                               HunterCount, ShamanCount, AlphaCount, 
-                                               CarlCount, NimueCount, AthosCount, 
+                                               HunterCount, ShamanCount, AlphaCount,
+                                               CarlCount, NimueCount, AthosCount,
                                                JetCount, GeronCount, ReiCount,
                                                AilenCount, FaefyrCount, AuriCount,
                                                NicteCount,
-                                               JamesCount, 
+                                               JamesCount,
                                                KairyCount, TaurusCount, TronixCount,
                                                AquortisCount, AerisCount, GeumCount,
                                                DruidCount, IgnitorCount, UndineCount,
@@ -181,10 +187,10 @@ namespace CQMacroCreator
                                                OureaCount, ErebusCount, PontusCount,
                                                ChromaCount, PetryCount, ZaytusCount,
                                                SpykeCount, AoyukiCount, GaiaCount,
-                                               OymosCount, XarthCount, AtzarCount,  
+                                               OymosCount, XarthCount, AtzarCount,
                                                ZethCount, KothCount, GurthCount,
                                                WerewolfCount, JackCount, DullahanCount,
-                                               OdelithCount, ShyguCount, ThertCount, KirkCount, NeptuniusCount,                                               
+                                               OdelithCount, ShyguCount, ThertCount, KirkCount, NeptuniusCount,
                                                SigrunCount, KoldisCount, AlvitrCount,
                                                HamaCount, HallinskidiCount, RigrCount,
                                                AAlphaCount, AAthosCount, AReiCount, AAuriCount, ATronixCount, AGeumCount, AGerorCount,
@@ -197,12 +203,15 @@ namespace CQMacroCreator
                                                aDagdaCount, BylarCount, BoorCount, BavahCount, LeprCount,
                                                SparksCount, LeafCount, FlynnCount,
                                                aBavahCount, HawkingCount, LeeCount, KumuCount, ChengCount, HidokaCount,
-                                               null
+                                               null,
+                                               DicemasterCount, LuxCount, PokerCount,
+                                               TaintCount, PutridCount, DefileCount,
+                                               NeilCount,
 
             };
-            heroBoxes = new List<CheckBox>() { JamesBox, 
-                                               HunterBox, ShamanBox, AlphaBox, 
-                                               CarlBox, NimueBox, AthosBox, 
+            heroBoxes = new List<CheckBox>() { JamesBox,
+                                               HunterBox, ShamanBox, AlphaBox,
+                                               CarlBox, NimueBox, AthosBox,
                                                JetBox, GeronBox, ReiBox,
                                                AilenBox, FaefyrBox, AuriBox,
                                                KairyBox, TaurusBox, TronixBox,
@@ -213,7 +222,7 @@ namespace CQMacroCreator
                                                LadyBox, TinyBox, NebraBox,
                                                VeildurBox, BrynBox, GrothBox,
                                                ZethBox, KothBox, GurthBox,
-                                               SpykeBox, AoyukiBox, GaiaBox,                                              
+                                               SpykeBox, AoyukiBox, GaiaBox,
                                                ValorBox, RokkaBox, PyroBox, BewatBox,
                                                NicteBox, DruidBox, IgnitorBox, UndineBox,
                                                ChromaBox, PetryBox, ZaytusBox,
@@ -231,7 +240,10 @@ namespace CQMacroCreator
                                                aDagdaBox, BylarBox, BoorBox, BavahBox, LeprBox,
                                                SparksBox, LeafBox, FlynnBox,
                                                aBavahBox, HawkingBox, LeeBox, KumuBox, ChengBox, HidokaBox,
-                                               null
+                                               null,
+                                               DicemasterBox, LuxBox, PokerBox,
+                                               TaintBox, PutridBox, DefileBox,
+                                               NeilBox
 
             };
 
@@ -242,7 +254,7 @@ namespace CQMacroCreator
                 checkBox12, checkBox11, checkBox10,
                 checkBox15, checkBox14, checkBox13,
 
-				checkBox30, checkBox29, checkBox28,
+                checkBox30, checkBox29, checkBox28,
                 checkBox27, checkBox26, checkBox25,
                 checkBox24, checkBox23, checkBox22,
                 checkBox21, checkBox20, checkBox19,
@@ -263,73 +275,73 @@ namespace CQMacroCreator
                 checkBox75, checkBox74, checkBox73,
                 checkBox72, checkBox71, checkBox70,
                 checkBox69, checkBox68, checkBox67,
-                checkBox66, checkBox65, checkBox64, 
-                checkBox63, checkBox62, checkBox61, 
+                checkBox66, checkBox65, checkBox64,
+                checkBox63, checkBox62, checkBox61,
 
                 checkBox105, checkBox104, checkBox103,
-                checkBox102, checkBox101, checkBox100, 
-                checkBox99, checkBox98, checkBox97, 
-                checkBox96, checkBox95, checkBox94, 
+                checkBox102, checkBox101, checkBox100,
+                checkBox99, checkBox98, checkBox97,
+                checkBox96, checkBox95, checkBox94,
                 checkBox93, checkBox92, checkBox91,
 
                 checkBox90, checkBox89, checkBox88,
                 checkBox87, checkBox86, checkBox85,
-                checkBox84, checkBox83, checkBox82, 
-                checkBox81, checkBox80, checkBox79, 
-                checkBox78, checkBox77, checkBox76,                
+                checkBox84, checkBox83, checkBox82,
+                checkBox81, checkBox80, checkBox79,
+                checkBox78, checkBox77, checkBox76,
 
                 checkBox120, checkBox119, checkBox118,
                 checkBox117, checkBox116, checkBox115,
-                checkBox114, checkBox113, checkBox112, 
+                checkBox114, checkBox113, checkBox112,
                 checkBox111, checkBox110, checkBox109,
                 checkBox108, checkBox107, checkBox106,
 
-                checkBox150, checkBox149, checkBox148, 
-                checkBox147, checkBox146, checkBox145, 
-                checkBox144, checkBox143, checkBox142, 
-                checkBox141, checkBox140, checkBox139, 
+                checkBox150, checkBox149, checkBox148,
+                checkBox147, checkBox146, checkBox145,
+                checkBox144, checkBox143, checkBox142,
+                checkBox141, checkBox140, checkBox139,
                 checkBox138, checkBox137, checkBox136,
 
-                checkBox135, checkBox134, checkBox133, 
-                checkBox132, checkBox131, checkBox130, 
-                checkBox129, checkBox128, checkBox127, 
-                checkBox126, checkBox125, checkBox124, 
-                checkBox123, checkBox122, checkBox121,                
+                checkBox135, checkBox134, checkBox133,
+                checkBox132, checkBox131, checkBox130,
+                checkBox129, checkBox128, checkBox127,
+                checkBox126, checkBox125, checkBox124,
+                checkBox123, checkBox122, checkBox121,
 
-                checkBox165, checkBox164, checkBox163, 
+                checkBox165, checkBox164, checkBox163,
                 checkBox162, checkBox161, checkBox160,
-                checkBox159, checkBox158, checkBox157, 
-                checkBox156, checkBox155, checkBox154, 
+                checkBox159, checkBox158, checkBox157,
+                checkBox156, checkBox155, checkBox154,
                 checkBox153, checkBox152, checkBox151,
 
-                checkBox195, checkBox194, checkBox193, 
-                checkBox192, checkBox191, checkBox190, 
-                checkBox189, checkBox188, checkBox187,  
-                checkBox186, checkBox185, checkBox184,  
+                checkBox195, checkBox194, checkBox193,
+                checkBox192, checkBox191, checkBox190,
+                checkBox189, checkBox188, checkBox187,
+                checkBox186, checkBox185, checkBox184,
                 checkBox183, checkBox182, checkBox181,
 
                 checkBox180, checkBox179, checkBox178,
-                checkBox177, checkBox176, checkBox175, 
-                checkBox174, checkBox173, checkBox172, 
+                checkBox177, checkBox176, checkBox175,
+                checkBox174, checkBox173, checkBox172,
                 checkBox171, checkBox170, checkBox169,
                 checkBox168, checkBox167, checkBox166,
 
-                checkBox225, checkBox224, checkBox223, 
-                checkBox222, checkBox221, checkBox220, 
-                checkBox219, checkBox218, checkBox217, 
-                checkBox216, checkBox215, checkBox214,  
-                checkBox213, checkBox212, checkBox211,                                
+                checkBox225, checkBox224, checkBox223,
+                checkBox222, checkBox221, checkBox220,
+                checkBox219, checkBox218, checkBox217,
+                checkBox216, checkBox215, checkBox214,
+                checkBox213, checkBox212, checkBox211,
 
-                checkBox210, checkBox209, checkBox208, 
-                checkBox207, checkBox206, checkBox205, 
-                checkBox204, checkBox203, checkBox202, 
-                checkBox201, checkBox200, checkBox199, 
+                checkBox210, checkBox209, checkBox208,
+                checkBox207, checkBox206, checkBox205,
+                checkBox204, checkBox203, checkBox202,
+                checkBox201, checkBox200, checkBox199,
                 checkBox198, checkBox197, checkBox196,
 
-                checkBox240, checkBox239, checkBox238, 
-                checkBox237, checkBox236, checkBox235,  
+                checkBox240, checkBox239, checkBox238,
+                checkBox237, checkBox236, checkBox235,
                 checkBox234, checkBox233, checkBox232,
-                checkBox231, checkBox230, checkBox229, 
+                checkBox231, checkBox230, checkBox229,
                 checkBox228, checkBox227, checkBox226,
 
                 checkBox255, checkBox254, checkBox253,
@@ -338,23 +350,23 @@ namespace CQMacroCreator
                 checkBox246, checkBox245, checkBox244,
                 checkBox243, checkBox242, checkBox241,
 
-                checkBox300, checkBox299, checkBox298, 
+                checkBox300, checkBox299, checkBox298,
                 checkBox297, checkBox296, checkBox295,
-                checkBox294, checkBox293, checkBox292, 
-                checkBox291, checkBox290, checkBox289, 
-                checkBox288, checkBox287, checkBox286, 
+                checkBox294, checkBox293, checkBox292,
+                checkBox291, checkBox290, checkBox289,
+                checkBox288, checkBox287, checkBox286,
 
-                checkBox285, checkBox284, checkBox283, 
-                checkBox282, checkBox281, checkBox280, 
-                checkBox279, checkBox278, checkBox277, 
+                checkBox285, checkBox284, checkBox283,
+                checkBox282, checkBox281, checkBox280,
+                checkBox279, checkBox278, checkBox277,
                 checkBox276, checkBox275, checkBox274,
-                checkBox273, checkBox272, checkBox271, 
+                checkBox273, checkBox272, checkBox271,
 
-                checkBox270, checkBox269, checkBox268, 
-                checkBox267, checkBox266, checkBox265, 
-                checkBox264, checkBox263, checkBox262, 
-                checkBox261, checkBox260, checkBox259, 
-                checkBox258, checkBox257, checkBox256, 
+                checkBox270, checkBox269, checkBox268,
+                checkBox267, checkBox266, checkBox265,
+                checkBox264, checkBox263, checkBox262,
+                checkBox261, checkBox260, checkBox259,
+                checkBox258, checkBox257, checkBox256,
 
 
 
@@ -366,15 +378,15 @@ namespace CQMacroCreator
                 button30, button29, button28, button27, button26,
                 button35, button34, button33, button32, button31,
                 button45, button44, button43, button42, button41,
-                button40, button39, button38, button37, button36,                
+                button40, button39, button38, button37, button36,
                 button50, button49, button48, button47, button46,
                 button60, button59, button58, button57, button56,
-                button55, button54, button53, button52, button51,                
+                button55, button54, button53, button52, button51,
                 button65, button64, button63, button62, button61,
                 button75, button74, button73, button72, button71,
                 button70, button69, button68, button67, button66,
                 button85, button84, button83, button82, button81,
-                button80, button79, button78, button77, button76,                
+                button80, button79, button78, button77, button76,
                 button90, button89, button88, button87, button86,
                 button95, button94, button92, button10, button3,
                 button110, button109, button108, button107, button106,
@@ -389,9 +401,17 @@ namespace CQMacroCreator
                 if (token != null && KongregateId != null && cmdArguments[1] == "quick")
                 {
                     this.Hide();
-                    if (cmdArguments.Length > 2)
-                        getDungeonButton_Click(this, EventArgs.Empty);
-                    sendTillNoSolveButton_Click(this, EventArgs.Empty);                    
+
+                    sendTillNoSolveButton_Click(this, EventArgs.Empty);
+                    Console.Write(output);
+                    Environment.Exit(0);
+                    //Application.Exit();
+                }
+                if (token != null && KongregateId != null && cmdArguments[1] == "quickdung")
+                {
+                    this.Hide();
+                    getDungeonButton_Click(this, EventArgs.Empty);
+                    sendTillNoSolveButton_Click(this, EventArgs.Empty);
                     Console.Write(output);
                     Environment.Exit(0);
                     //Application.Exit();
@@ -611,7 +631,10 @@ namespace CQMacroCreator
             new Hero(30,30,2,0,0), new Hero(48,42,4,0,0), new Hero(70,48,12,0,0), //sparks, leaf, flynn
             new Hero(122,122,12,0,0),new Hero(60,66,6,0,0), //bavah , hawking
             new Hero(150,90,12,0,0), new Hero(70,38,6,0,0), new Hero(78,42,6,0,0), new Hero(86,44,6,0,0),
-            null
+            null,
+            new Hero(25,26,1,0,0), new Hero(28,60,2,0,0), new Hero(70,70,6,0,0),
+            new Hero(25,25,1,0,0), new Hero(48,50,2,0,0), new Hero(52,48,6,0,0),
+            new Hero(150,15,6,0,0)
         });
 
         private void button1_Click(object sender, EventArgs e)
@@ -914,9 +937,9 @@ namespace CQMacroCreator
             }
             else
             {
-                for(int i =0; i<heroBoxes.Count; i++)
+                for (int i = 0; i < heroBoxes.Count; i++)
                 {
-                    if(heroBoxes[i] != null && heroCounts[i].Value != 0)
+                    if (heroBoxes[i] != null && heroCounts[i].Value != 0)
                     {
                         heroBoxes[i].Checked = true;
                     }
@@ -1102,7 +1125,7 @@ namespace CQMacroCreator
         private void questButtonClick(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            Predicate<Button> pre = delegate(Button a) { return a.Name == b.Name; };
+            Predicate<Button> pre = delegate (Button a) { return a.Name == b.Name; };
             int index = questButtons.FindIndex(pre);
             lineupBox.Text += getQuestString(index);
         }
@@ -1138,7 +1161,7 @@ namespace CQMacroCreator
         private void questCheckboxChanged(object sender, EventArgs e)
         {
             CheckBox b = (CheckBox)sender;
-            Predicate<CheckBox> pre = delegate(CheckBox a) { return a.Name == b.Name; };
+            Predicate<CheckBox> pre = delegate (CheckBox a) { return a.Name == b.Name; };
             setQuestBoxes(questBoxes.FindIndex(pre), b.Checked);
         }
 
@@ -1464,7 +1487,7 @@ namespace CQMacroCreator
                     }
                 }
             }
-           
+
         }
 
         private void button111_Click(object sender, EventArgs e)
@@ -1480,7 +1503,7 @@ namespace CQMacroCreator
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button91_Click_1(object sender, EventArgs e)
@@ -1514,7 +1537,20 @@ namespace CQMacroCreator
             guiLog.AppendText("Successfully got enemy lineup for Dungeon" + PFStuff.dungeonLvl + " - " + string.Join(",", enemylist) + "\n");
         }
 
+        private void ascendTargetLevel_ValueChanged(object sender, EventArgs e)
+        {
+            decimal sum = 0;
+            for (decimal i = ascendCurrentLevel.Value; i < ascendTargetLevel.Value; i++)
+            {
+                sum += i;
+            }
+            sum += ascendCurrentLevel.Value == 0 ? 100 : 0;
+            ascendCostLabel.Text = sum.ToString();
+        }
 
-
+        private void chestHeroLevel_ValueChanged(object sender, EventArgs e)
+        {
+            calculatePranaCosts();
+        }
     }
 }
