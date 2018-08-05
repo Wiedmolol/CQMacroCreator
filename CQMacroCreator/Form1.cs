@@ -638,7 +638,8 @@ namespace CQMacroCreator
             null,
             new Hero(25,26,1,0,0), new Hero(28,60,2,0,0), new Hero(70,70,6,0,0),
             new Hero(25,25,1,0,0), new Hero(48,50,2,0,0), new Hero(52,48,6,0,0),
-            new Hero(150,15,6,0,0)
+            new Hero(150,15,6,0,0),
+            new Hero(78,26,6,0,0),new Hero(30,76,6,0,0),new Hero(36,72,6,0,0),new Hero(22,88,6,0,0) //mahatma 
         });
 
         private void button1_Click(object sender, EventArgs e)
