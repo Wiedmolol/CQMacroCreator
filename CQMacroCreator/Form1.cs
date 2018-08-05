@@ -94,10 +94,11 @@ namespace CQMacroCreator
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos",
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr",
                                 "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
-                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton", "dicemaster", "luxurious", "pokerface", "taint", "putrid", "defile", "neil"
+                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton", "dicemaster", "luxurious", "pokerface", "taint", "putrid", "defile", "neil",
+                                "mahatma", "jade", "edana", "dybbuk"
                                 };
 
-        static string[] servernames = { "neil", "defile", "putrid", "taint", "pokerface", "luxurious", "dicemaster", "kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+        static string[] servernames = { "dybbuk","edana","jade", "mahatma", "neil", "defile", "putrid", "taint", "pokerface", "luxurious", "dicemaster", "kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
                                    "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
@@ -167,6 +168,7 @@ namespace CQMacroCreator
                                                DicemasterCount, LuxCount, PokerCount,
                                                TaintCount, PutridCount, DefileCount,
                                                NeilCount,
+                                               MahatmaCount, JadeCount, EdanaCount, DybbukCount
 
             };
 
@@ -207,6 +209,7 @@ namespace CQMacroCreator
                                                DicemasterCount, LuxCount, PokerCount,
                                                TaintCount, PutridCount, DefileCount,
                                                NeilCount,
+                                               MahatmaCount, JadeCount, EdanaCount, DybbukCount
 
             };
             heroBoxes = new List<CheckBox>() { JamesBox,
@@ -243,7 +246,8 @@ namespace CQMacroCreator
                                                null,
                                                DicemasterBox, LuxBox, PokerBox,
                                                TaintBox, PutridBox, DefileBox,
-                                               NeilBox
+                                               NeilBox,
+                                               MahatmaBox, JadeBox, EdanaBox, DybbukBox
 
             };
 
