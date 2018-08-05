@@ -43,6 +43,7 @@ namespace CQMacroCreator
         public int[] bankedCurrencies { get; set; }
         public string[] herosToLevel { get; set; }
         public int[] levelLimits { get; set; }
+        public bool? instantMaxPriceBid { get; set; }
 
         public static AppSettings loadSettings()
         {        
