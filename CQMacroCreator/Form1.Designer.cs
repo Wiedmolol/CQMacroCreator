@@ -963,6 +963,18 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button91 = new System.Windows.Forms.Button();
             this.getDungeonButton = new System.Windows.Forms.Button();
+            this.MahatmaCount = new System.Windows.Forms.NumericUpDown();
+            this.label258 = new System.Windows.Forms.Label();
+            this.MahatmaBox = new System.Windows.Forms.CheckBox();
+            this.JadeCount = new System.Windows.Forms.NumericUpDown();
+            this.label259 = new System.Windows.Forms.Label();
+            this.JadeBox = new System.Windows.Forms.CheckBox();
+            this.EdanaCount = new System.Windows.Forms.NumericUpDown();
+            this.label260 = new System.Windows.Forms.Label();
+            this.EdanaBox = new System.Windows.Forms.CheckBox();
+            this.Count = new System.Windows.Forms.NumericUpDown();
+            this.label261 = new System.Windows.Forms.Label();
+            this.DybbukBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.JamesCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HunterCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JetCount)).BeginInit();
@@ -1087,6 +1099,10 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MahatmaCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JadeCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EdanaCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count)).BeginInit();
             this.SuspendLayout();
             // 
             // JamesCount
@@ -3619,14 +3635,26 @@
             this.Heroes.Controls.Add(this.BylarBox);
             this.Heroes.Controls.Add(this.label228);
             this.Heroes.Controls.Add(this.BylarCount);
+            this.Heroes.Controls.Add(this.EdanaBox);
             this.Heroes.Controls.Add(this.HattoriBox);
+            this.Heroes.Controls.Add(this.label260);
             this.Heroes.Controls.Add(this.label200);
+            this.Heroes.Controls.Add(this.EdanaCount);
             this.Heroes.Controls.Add(this.HattoriCount);
+            this.Heroes.Controls.Add(this.JadeBox);
             this.Heroes.Controls.Add(this.HirateBox);
+            this.Heroes.Controls.Add(this.label259);
             this.Heroes.Controls.Add(this.label201);
+            this.Heroes.Controls.Add(this.JadeCount);
             this.Heroes.Controls.Add(this.HirateCount);
+            this.Heroes.Controls.Add(this.DybbukBox);
+            this.Heroes.Controls.Add(this.MahatmaBox);
             this.Heroes.Controls.Add(this.TakedaBox);
+            this.Heroes.Controls.Add(this.label261);
+            this.Heroes.Controls.Add(this.label258);
             this.Heroes.Controls.Add(this.label198);
+            this.Heroes.Controls.Add(this.Count);
+            this.Heroes.Controls.Add(this.MahatmaCount);
             this.Heroes.Controls.Add(this.TakedaCount);
             this.Heroes.Controls.Add(this.HosokawaBox);
             this.Heroes.Controls.Add(this.label199);
@@ -11932,6 +11960,138 @@
             this.getDungeonButton.UseVisualStyleBackColor = true;
             this.getDungeonButton.Click += new System.EventHandler(this.getDungeonButton_Click);
             // 
+            // MahatmaCount
+            // 
+            this.MahatmaCount.Location = new System.Drawing.Point(384, 535);
+            this.MahatmaCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.MahatmaCount.Name = "MahatmaCount";
+            this.MahatmaCount.Size = new System.Drawing.Size(50, 22);
+            this.MahatmaCount.TabIndex = 65;
+            // 
+            // label258
+            // 
+            this.label258.AutoSize = true;
+            this.label258.Location = new System.Drawing.Point(339, 537);
+            this.label258.Name = "label258";
+            this.label258.Size = new System.Drawing.Size(48, 12);
+            this.label258.TabIndex = 290;
+            this.label258.Text = "Mahatma";
+            // 
+            // MahatmaBox
+            // 
+            this.MahatmaBox.AutoSize = true;
+            this.MahatmaBox.Location = new System.Drawing.Point(440, 537);
+            this.MahatmaBox.Name = "MahatmaBox";
+            this.MahatmaBox.Size = new System.Drawing.Size(31, 16);
+            this.MahatmaBox.TabIndex = 291;
+            this.MahatmaBox.TabStop = false;
+            this.MahatmaBox.Text = "E";
+            this.MahatmaBox.UseVisualStyleBackColor = true;
+            this.MahatmaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // JadeCount
+            // 
+            this.JadeCount.Location = new System.Drawing.Point(63, 555);
+            this.JadeCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.JadeCount.Name = "JadeCount";
+            this.JadeCount.Size = new System.Drawing.Size(50, 22);
+            this.JadeCount.TabIndex = 66;
+            // 
+            // label259
+            // 
+            this.label259.AutoSize = true;
+            this.label259.Location = new System.Drawing.Point(26, 556);
+            this.label259.Name = "label259";
+            this.label259.Size = new System.Drawing.Size(25, 12);
+            this.label259.TabIndex = 293;
+            this.label259.Text = "Jade";
+            // 
+            // JadeBox
+            // 
+            this.JadeBox.AutoSize = true;
+            this.JadeBox.Location = new System.Drawing.Point(119, 555);
+            this.JadeBox.Name = "JadeBox";
+            this.JadeBox.Size = new System.Drawing.Size(31, 16);
+            this.JadeBox.TabIndex = 294;
+            this.JadeBox.TabStop = false;
+            this.JadeBox.Text = "E";
+            this.JadeBox.UseVisualStyleBackColor = true;
+            this.JadeBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // EdanaCount
+            // 
+            this.EdanaCount.Location = new System.Drawing.Point(223, 555);
+            this.EdanaCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.EdanaCount.Name = "EdanaCount";
+            this.EdanaCount.Size = new System.Drawing.Size(50, 22);
+            this.EdanaCount.TabIndex = 67;
+            // 
+            // label260
+            // 
+            this.label260.AutoSize = true;
+            this.label260.Location = new System.Drawing.Point(184, 556);
+            this.label260.Name = "label260";
+            this.label260.Size = new System.Drawing.Size(34, 12);
+            this.label260.TabIndex = 296;
+            this.label260.Text = "Edana";
+            // 
+            // EdanaBox
+            // 
+            this.EdanaBox.AutoSize = true;
+            this.EdanaBox.Location = new System.Drawing.Point(279, 555);
+            this.EdanaBox.Name = "EdanaBox";
+            this.EdanaBox.Size = new System.Drawing.Size(31, 16);
+            this.EdanaBox.TabIndex = 297;
+            this.EdanaBox.TabStop = false;
+            this.EdanaBox.Text = "E";
+            this.EdanaBox.UseVisualStyleBackColor = true;
+            this.EdanaBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
+            // Count
+            // 
+            this.Count.Location = new System.Drawing.Point(384, 556);
+            this.Count.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.Count.Name = "Count";
+            this.Count.Size = new System.Drawing.Size(50, 22);
+            this.Count.TabIndex = 65;
+            // 
+            // label261
+            // 
+            this.label261.AutoSize = true;
+            this.label261.Location = new System.Drawing.Point(339, 558);
+            this.label261.Name = "label261";
+            this.label261.Size = new System.Drawing.Size(43, 12);
+            this.label261.TabIndex = 290;
+            this.label261.Text = "Dybbuk";
+            // 
+            // DybbukBox
+            // 
+            this.DybbukBox.AutoSize = true;
+            this.DybbukBox.Location = new System.Drawing.Point(440, 558);
+            this.DybbukBox.Name = "DybbukBox";
+            this.DybbukBox.Size = new System.Drawing.Size(31, 16);
+            this.DybbukBox.TabIndex = 291;
+            this.DybbukBox.TabStop = false;
+            this.DybbukBox.Text = "E";
+            this.DybbukBox.UseVisualStyleBackColor = true;
+            this.DybbukBox.CheckedChanged += new System.EventHandler(this.RigrBox_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -12101,6 +12261,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MahatmaCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JadeCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EdanaCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Count)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -13042,6 +13206,18 @@
         private System.Windows.Forms.CheckBox TaintBox;
         private System.Windows.Forms.Label label257;
         private System.Windows.Forms.NumericUpDown TaintCount;
+        private System.Windows.Forms.CheckBox EdanaBox;
+        private System.Windows.Forms.Label label260;
+        private System.Windows.Forms.NumericUpDown EdanaCount;
+        private System.Windows.Forms.CheckBox JadeBox;
+        private System.Windows.Forms.Label label259;
+        private System.Windows.Forms.NumericUpDown JadeCount;
+        private System.Windows.Forms.CheckBox DybbukBox;
+        private System.Windows.Forms.CheckBox MahatmaBox;
+        private System.Windows.Forms.Label label261;
+        private System.Windows.Forms.Label label258;
+        private System.Windows.Forms.NumericUpDown Count;
+        private System.Windows.Forms.NumericUpDown MahatmaCount;
     }
 }
 
