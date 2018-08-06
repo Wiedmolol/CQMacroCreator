@@ -94,11 +94,16 @@ namespace CQMacroCreator
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos",
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr",
                                 "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
-                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton", "dicemaster", "luxurious", "pokerface", "taint", "putrid", "defile", "neil"
+                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton", "dicemaster", "luxurious", "pokerface", "taint", "putrid", "defile", "neil",
+                                "mahatma", "jade", "edana", "dybbuk",
                                 };
 
-        static string[] servernames = { "neil", "defile", "putrid", "taint", "pokerface", "luxurious", "dicemaster", "kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking", "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth", "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror", "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
-                                   "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
+        static string[] servernames = { "dybbuk", "edana", "jade", "mahatma",
+                               "neil", "defile", "putrid", "taint", "pokerface", "luxurious", "dicemaster", "kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking",
+                               "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth",
+                               "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror",
+                               "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
+                               "rigr", "hallinskidi", "hama", "alvitr", "koldis", "sigrun", "neptunius", "lordkirk", "thert", "shygu", "ladyodelith", "dullahan", "jackoknight", "werewolf",
                                "gurth", "koth", "zeth", "atzar", "xarth", "oymos", "gaiabyte", "aoyuki", "spyke", "zaytus", "petry", "chroma", "pontus", "erebus", "ourea",
                                "groth", "brynhildr", "veildur", "geror", "aural", "rudean", "undine", "ignitor", "forestdruid", "geum", "aeris", "aquortis", "tronix", "taurus", "kairy",
                                "james", "nicte", "auri", "faefyr", "ailen", "rei", "geron", "jet", "athos", "nimue", "carl", "alpha", "shaman", "hunter", "bewat", "pyromancer", "rokka",
@@ -167,7 +172,7 @@ namespace CQMacroCreator
                                                DicemasterCount, LuxCount, PokerCount,
                                                TaintCount, PutridCount, DefileCount,
                                                NeilCount,
-
+                                               MahatmaCount, JadeCount, EdanaCount, DybbukCount,
             };
 
             heroCountsServerOrder = new List<NumericUpDown>() {
@@ -207,6 +212,7 @@ namespace CQMacroCreator
                                                DicemasterCount, LuxCount, PokerCount,
                                                TaintCount, PutridCount, DefileCount,
                                                NeilCount,
+                                               MahatmaCount, JadeCount, EdanaCount, DybbukCount
 
             };
             heroBoxes = new List<CheckBox>() { JamesBox,
@@ -243,7 +249,8 @@ namespace CQMacroCreator
                                                null,
                                                DicemasterBox, LuxBox, PokerBox,
                                                TaintBox, PutridBox, DefileBox,
-                                               NeilBox
+                                               NeilBox,
+                                               MahatmaBox, JadeBox, EdanaBox, DybbukBox
 
             };
 
@@ -634,7 +641,8 @@ namespace CQMacroCreator
             null,
             new Hero(25,26,1,0,0), new Hero(28,60,2,0,0), new Hero(70,70,6,0,0),
             new Hero(25,25,1,0,0), new Hero(48,50,2,0,0), new Hero(52,48,6,0,0),
-            new Hero(150,15,6,0,0)
+            new Hero(150,15,6,0,0),
+            new Hero(78,26,6,0,0), new Hero(76,30,6,0,0), new Hero(72,36,6,0,0), new Hero(88,22,6,0,0),
         });
 
         private void button1_Click(object sender, EventArgs e)
@@ -1055,7 +1063,7 @@ namespace CQMacroCreator
             int maxedCommons = 0;
             int maxedRares = 0;
             int maxedLegs = 0;
-            int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63, 78, 94 };
+            int[] chestRaresID = new int[] { 2, 5, 8, 11, 14, 17, 20, 23, 26, 63, 78, 94, 111 };
             foreach (int i in chestRaresID)
             {
                 PGrare += (99 - Math.Max(1, (int)heroCounts[i].Value)) * 3;
