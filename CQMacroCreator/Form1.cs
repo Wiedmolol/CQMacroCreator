@@ -71,6 +71,7 @@ namespace CQMacroCreator
             {"RUDOLPH", "reindeer"},
             {"ELF", "christmaself"},
             {"FBOSS", "lordofchaos"},
+            {"LOC", "lordofchaos"},
             {"ATRONIX", "atr0n1x"},
             {"ASHIT", "ageum"},
             {"SEXY", "sexysanta"},
@@ -80,7 +81,11 @@ namespace CQMacroCreator
             {"ABOSS", "kryton"},
             {"DICE", "dicemaster" },
             {"POKER", "pokerface" },
-            {"LUX", "luxurious" }
+            {"LUX", "luxuriusmaximus"},
+            {"LUXURIOUS", "luxuriusmaximus"},
+            {"AKIRK", "alordkirk"},
+            {"ANEP", "aneptunius"}
+
 
         };
         string token;
@@ -94,12 +99,12 @@ namespace CQMacroCreator
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos",
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr",
                                 "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
-                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton", "dicemaster", "luxurious", "pokerface", "taint", "putrid", "defile", "neil",
-                                "mahatma", "jade", "edana", "dybbuk",
+                                "drhawking", "masterlee", "kumusan", "liucheng", "hidoka", "kryton", "dicemaster", "luxuriusmaximus", "pokerface", "taint", "putrid", "defile", "neil",
+                                "mahatma", "jade", "edana", "dybbuk", "ashygu", "athert", "alordkirk", "aneptunius",
                                 };
 
-        static string[] servernames = { "dybbuk", "edana", "jade", "mahatma",
-                               "neil", "defile", "putrid", "taint", "pokerface", "luxurious", "dicemaster", "kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking",
+        static string[] servernames = { "aneptunius", "alordkirk", "athert", "ashygu", "dybbuk", "edana", "jade", "mahatma",
+                               "neil", "defile", "putrid", "taint", "pokerface", "luxuriusmaximus", "dicemaster", "kryton", "hidoka", "liucheng", "kumusan", "masterlee", "drhawking",
                                "abavah" ,"flynn", "leaf", "sparks", "leprechaun", "bavah", "boor", "bylar", "adagda", "hattori", "hirate", "takeda", "hosokawa", "moak", "arigr", "dorth",
                                "rua", "arshen", "aatzar", "apontus",  "bubbles",  "dagda",  "ganah", "toth",  "sexysanta", "santaclaus", "reindeer", "christmaself", "lordofchaos", "ageror",
                                "ageum", "atr0n1x", "aauri", "arei", "aathos", "aalpha",
@@ -173,6 +178,7 @@ namespace CQMacroCreator
                                                TaintCount, PutridCount, DefileCount,
                                                NeilCount,
                                                MahatmaCount, JadeCount, EdanaCount, DybbukCount,
+                                               AShyguCount, AThertCount, AKirkCount, ANepCount,
             };
 
             heroCountsServerOrder = new List<NumericUpDown>() {
@@ -212,7 +218,8 @@ namespace CQMacroCreator
                                                DicemasterCount, LuxCount, PokerCount,
                                                TaintCount, PutridCount, DefileCount,
                                                NeilCount,
-                                               MahatmaCount, JadeCount, EdanaCount, DybbukCount
+                                               MahatmaCount, JadeCount, EdanaCount, DybbukCount,
+                                               AShyguCount, AThertCount, AKirkCount, ANepCount
 
             };
             heroBoxes = new List<CheckBox>() { JamesBox,
@@ -250,7 +257,8 @@ namespace CQMacroCreator
                                                DicemasterBox, LuxBox, PokerBox,
                                                TaintBox, PutridBox, DefileBox,
                                                NeilBox,
-                                               MahatmaBox, JadeBox, EdanaBox, DybbukBox
+                                               MahatmaBox, JadeBox, EdanaBox, DybbukBox,
+                                               AShyguBox, AThertBox, AKirkBox, ANepBox
 
             };
 
@@ -375,7 +383,53 @@ namespace CQMacroCreator
                 checkBox261, checkBox260, checkBox259,
                 checkBox258, checkBox257, checkBox256,
 
+                checkBox420, checkBox419, checkBox418,
+                checkBox417, checkBox416, checkBox415,
+                checkBox414, checkBox413, checkBox412,
+                checkBox411, checkBox410, checkBox409,
+                checkBox408, checkBox407, checkBox406,
 
+                checkBox405, checkBox404, checkBox403,
+                checkBox402, checkBox401, checkBox400,
+                checkBox399, checkBox398, checkBox397,
+                checkBox396, checkBox395, checkBox394,
+                checkBox393, checkBox392, checkBox391,
+
+                checkBox390, checkBox389, checkBox388,
+                checkBox387, checkBox386, checkBox385,
+                checkBox384, checkBox383, checkBox382,
+                checkBox381, checkBox380, checkBox379,
+                checkBox378, checkBox377, checkBox376,
+
+                checkBox375, checkBox374, checkBox373,
+                checkBox372, checkBox371, checkBox370,
+                checkBox369, checkBox368, checkBox367,
+                checkBox366, checkBox365, checkBox364,
+                checkBox363, checkBox362, checkBox361,
+
+                checkBox360, checkBox359, checkBox358,
+                checkBox357, checkBox356, checkBox355,
+                checkBox354, checkBox353, checkBox352,
+                checkBox351, checkBox350, checkBox349,
+                checkBox348, checkBox347, checkBox346,
+
+                checkBox345, checkBox344, checkBox343,
+                checkBox342, checkBox341, checkBox340,
+                checkBox339, checkBox338, checkBox337,
+                checkBox336, checkBox335, checkBox334,
+                checkBox333, checkBox332, checkBox331,
+
+                checkBox330, checkBox329, checkBox328,
+                checkBox327, checkBox326, checkBox325,
+                checkBox324, checkBox323, checkBox322,
+                checkBox321, checkBox320, checkBox319,
+                checkBox318, checkBox317, checkBox316,
+
+                checkBox315, checkBox314, checkBox313,
+                checkBox312, checkBox311, checkBox310,
+                checkBox309, checkBox308, checkBox307,
+                checkBox306, checkBox305, checkBox304,
+                checkBox303, checkBox302, checkBox301,
 
             };
             questButtons = new List<Button>() {
@@ -398,7 +452,15 @@ namespace CQMacroCreator
                 button95, button94, button92, button10, button3,
                 button110, button109, button108, button107, button106,
                 button105, button104, button103, button102, button101,
-                button100, button99, button98, button97, button96
+                button100, button99, button98, button97, button96,
+                button149, button148, button147, button146, button145,
+                button144, button143, button142, button141, button140,
+                button139, button138, button137, button136, button135,
+                button134, button133, button132, button131, button130,
+                button129, button128, button127, button126, button125,
+                button124, button123, button122, button121, button120,
+                button119, button118, button117, button116, button115,
+                button114, button113, button112, button111, button93,
             };
 
             init();
@@ -643,6 +705,7 @@ namespace CQMacroCreator
             new Hero(25,25,1,0,0), new Hero(48,50,2,0,0), new Hero(52,48,6,0,0),
             new Hero(150,15,6,0,0),
             new Hero(78,26,6,0,0), new Hero(76,30,6,0,0), new Hero(72,36,6,0,0), new Hero(88,22,6,0,0),
+            new Hero(85,135,12,0,0), new Hero(180,70,12,0,0), new Hero(80,160,12,0,0), new Hero(75,175,12,0,0),
         });
 
         private void button1_Click(object sender, EventArgs e)
@@ -1407,7 +1470,7 @@ namespace CQMacroCreator
                     }
                     if (quests)
                     {
-                        int questMax = Math.Min(PFStuff.questList.Count(), 100);
+                        int questMax = Math.Min(PFStuff.questList.Count(), 140);
                         for (int i = 0; i < questMax; i++)
                         {
                             setQuestBoxesFromServer(i, PFStuff.questList[i]);
