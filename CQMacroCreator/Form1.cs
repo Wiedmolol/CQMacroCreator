@@ -19,6 +19,7 @@ namespace CQMacroCreator
 {
     public partial class Form1 : Form
     {
+        Process proc;
         static AppSettings appSettings = new AppSettings();
         public const string SettingsFilename = "Settings.json";
         static string output;
@@ -94,8 +95,8 @@ namespace CQMacroCreator
 
         static string[] names = {"james", "hunter", "shaman", "alpha", "carl", "nimue", "athos", "jet", "geron", "rei", "ailen", "faefyr", "auri", "k41ry", "t4urus", "tr0n1x",
                                 "aquortis", "aeris", "geum", "rudean", "aural", "geror", "ourea", "erebus", "pontus", "oymos", "xarth", "atzar", "ladyoftwilight", "tiny", "nebra",
-                              "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
-                              "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
+                                "veildur", "brynhildr", "groth", "zeth", "koth", "gurth", "spyke", "aoyuki", "gaiabyte", "valor", "rokka", "pyromancer", "bewat", "nicte", "forestdruid",
+                                "ignitor", "undine", "chroma", "petry", "zaytus", "werewolf", "jackoknight", "dullahan", "ladyodelith", "shygu", "thert", "lordkirk", "neptunius",
                                 "sigrun", "koldis", "alvitr", "hama", "hallinskidi", "rigr", "aalpha", "aathos", "arei", "aauri", "atr0n1x", "ageum", "ageror", "lordofchaos",
                                 "christmaself", "reindeer", "santaclaus", "sexysanta", "toth", "ganah", "dagda", "bubbles", "apontus", "aatzar", "arshen", "rua", "dorth", "arigr",
                                 "moak", "hosokawa", "takeda", "hirate", "hattori", "adagda", "bylar", "boor", "bavah", "leprechaun", "sparks", "leaf", "flynn", "abavah",
@@ -836,83 +837,109 @@ namespace CQMacroCreator
                             }
                             RunWithRedirect("CosmosQuest.exe");
                             //calcOut = calcOut.Substring(0, calcOut.Length - 24);
-                            JObject solution = JObject.Parse(calcOut);
-                            if (solution["validSolution"]["solution"].ToString() != String.Empty)
+                            try
                             {
-                                var mon = solution["validSolution"]["solution"]["monsters"];
-                                if (mon.Count() > 0)
+                                JObject solution = JObject.Parse(calcOut);
+                                if (solution["validSolution"]["solution"].ToString() != String.Empty)
                                 {
-                                    output = calcOut;
-                                    List<int> solutionLineupIDs = new List<int>();
-                                    foreach (JToken jt in mon)
+                                    var mon = solution["validSolution"]["solution"]["monsters"];
+                                    if (mon.Count() > 0)
                                     {
-                                        solutionLineupIDs.Add(Convert.ToInt32(jt["id"]));
-                                    }
-                                    while (solutionLineupIDs.Count < 6)
-                                    {
-                                        solutionLineupIDs.Add(-1);
-                                    }
-                                    PFStuff.lineup = solutionLineupIDs.ToArray();
-                                    System.Threading.Thread.Sleep(Math.Max(0, (previousDQTime.AddSeconds(5.1) - DateTime.UtcNow).Milliseconds));
-                                    Thread mt;
-                                    if (lp.Contains("quest"))
-                                    {
-                                        int a = lp.IndexOf("-");
-                                        string s = lp.Substring(5, a - 5);
-                                        Console.Write("\n" + s);
-                                        PFStuff.questID = Int32.Parse(s) - 1;
-                                        mt = new Thread(pf.sendQuestSolution);
-                                        mt.Start();
-                                        mt.Join();
-                                    }
-                                    else if (lp.Contains("DUNG"))
-                                    {
-                                        mt = new Thread(pf.sendDungSolution);
-                                        mt.Start();
-                                        mt.Join();
-                                    }
-                                    else
-                                    {
-                                        mt = new Thread(pf.sendDQSolution);
-                                        mt.Start();
-                                        mt.Join();
-                                        previousDQTime = DateTime.UtcNow;
-                                    }
-                                    if (PFStuff.DQResult)
-                                    {
+                                        output = calcOut;
+                                        List<int> solutionLineupIDs = new List<int>();
+                                        foreach (JToken jt in mon)
+                                        {
+                                            solutionLineupIDs.Add(Convert.ToInt32(jt["id"]));
+                                        }
+                                        while (solutionLineupIDs.Count < 6)
+                                        {
+                                            solutionLineupIDs.Add(-1);
+                                        }
+                                        PFStuff.lineup = solutionLineupIDs.ToArray();
+                                        int waitTime = Convert.ToInt32(Math.Ceiling(Math.Max(0, (previousDQTime.AddSeconds(5.1) - DateTime.UtcNow).TotalMilliseconds)));
+                                        if (waitTime > 0)
+                                        {
+                                            guiLog.AppendText("Waiting " + (waitTime / 1000.0).ToString("G3") + " s to send solution\n");
+                                            guiLog.Refresh();
+                                            System.Threading.Thread.Sleep(waitTime);
+                                        }
+                                        Thread mt;
                                         if (lp.Contains("quest"))
                                         {
-                                            guiLog.AppendText("Quest " + (PFStuff.questID + 1) + " solution accepted by server\n");
+                                            int a = lp.IndexOf("-");
+                                            string s = lp.Substring(5, a - 5);
+                                            Console.Write("\n" + s);
+                                            PFStuff.questID = Int32.Parse(s) - 1;
+                                            mt = new Thread(pf.sendQuestSolution);
+                                            mt.IsBackground = true;
+                                            mt.Start();
+                                            mt.Join();
+                                            previousDQTime = DateTime.UtcNow;
                                         }
                                         else if (lp.Contains("DUNG"))
                                         {
-                                            guiLog.AppendText("Dungeon " + PFStuff.dungeonLvl + " solution accepted by server\n");
-                                            getDungeonButton_Click(this, EventArgs.Empty);
+                                            mt = new Thread(pf.sendDungSolution);
+                                            mt.IsBackground = true;
+                                            mt.Start();
+                                            mt.Join();
+                                            previousDQTime = DateTime.UtcNow;
                                         }
                                         else
                                         {
-                                            guiLog.AppendText("DQ solution accepted by server\n");
-                                            setDQData();
+                                            mt = new Thread(pf.sendDQSolution);
+                                            mt.IsBackground = true;
+                                            mt.Start();
+                                            mt.Join();
+                                            previousDQTime = DateTime.UtcNow;
+                                        }
+                                        if (PFStuff.DQResult)
+                                        {
+                                            if (lp.Contains("quest"))
+                                            {
+                                                guiLog.AppendText("Quest " + (PFStuff.questID + 1) + " solution accepted by server\n");
+                                            }
+                                            else if (lp.Contains("DUNG"))
+                                            {
+                                                guiLog.AppendText("Dungeon " + PFStuff.dungeonLvl + " solution accepted by server\n");
+                                                getDungeonButton_Click(this, EventArgs.Empty);
+                                            }
+                                            else
+                                            {
+                                                guiLog.AppendText("DQ solution accepted by server\n");
+                                                setDQData();
+                                            }
+                                        }
+                                        else
+                                        {
+                                            guiLog.AppendText("Solution rejected by server\n");
                                         }
                                     }
-                                    else
-                                    {
-                                        guiLog.AppendText("Solution rejected by server\n");
-                                    }
-                                }
 
+                                }
+                                else
+                                {
+                                    guiLog.AppendText("Solution not found\n");
+                                    PFStuff.lineup = null;
+                                }
                             }
-                            else
+                            catch (JsonReaderException)
                             {
-                                guiLog.AppendText("Solution not found\n");
-                                PFStuff.lineup = null;
+                                guiLog.AppendText("Solution not found within allotted time\n");
                             }
                         }
                     }
                     else
                     {
                         createMacroFile(lineupBox.Text.Replace("DUNG,", ""));
-                        Process.Start("CosmosQuest.exe", "gen.cqinput");
+                        if (File.Exists("default.cqconfig"))
+                        {
+                            generateConfigFile();
+                            Process.Start("CosmosQuest.exe", "gen.cqconfig");
+                        }
+                        else
+                        {
+                            Process.Start("CosmosQuest.exe", "gen.cqinput");
+                        }
                     }
                     guiLog.ScrollToCaret();
 
@@ -931,7 +958,7 @@ namespace CQMacroCreator
         void RunWithRedirect(string cmdPath)
         {
             calcOut = "";
-            var proc = new Process();
+            proc = new Process();
             proc.StartInfo.FileName = cmdPath;
             proc.StartInfo.Arguments = "gen.cqinput -server";
 
@@ -949,8 +976,19 @@ namespace CQMacroCreator
             proc.BeginErrorReadLine();
             proc.BeginOutputReadLine();
 
-            proc.WaitForExit();
-
+            if (timeLimit.Value <= 0)
+            {
+                proc.WaitForExit();
+            }
+            else
+            {
+                proc.WaitForExit(Convert.ToInt32(Math.Round(timeLimit.Value * 1000)));
+            }
+            if (!proc.HasExited)
+            {
+                proc.Kill();
+                proc.Dispose();
+            }
         }
 
         void proc_DataReceived(object sender, DataReceivedEventArgs e)
@@ -986,6 +1024,23 @@ namespace CQMacroCreator
 
             sw.WriteLine(checkForAliases(lineup));
             sw.WriteLine("y");
+            sw.Close();
+        }
+
+        private void generateConfigFile()
+        {
+            string[] lines = System.IO.File.ReadAllLines("default.cqconfig");
+            char[] charSeparators = new char[] { ' ' };
+            string[] lastLine = lines[lines.Length - 1].Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            lastLine[1] = "gen.cqinput";
+            lines[lines.Length - 1] = lastLine[0] + ' ' + lastLine[1];
+
+            System.IO.StreamWriter sw = new System.IO.StreamWriter("gen.cqconfig");
+
+            foreach (string line in lines)
+            {
+                sw.WriteLine(line);
+            }
             sw.Close();
         }
 
@@ -1622,6 +1677,21 @@ namespace CQMacroCreator
         private void chestHeroLevel_ValueChanged(object sender, EventArgs e)
         {
             calculatePranaCosts();
+        }
+
+        private void clearLineupButton_click(object sender, EventArgs e)
+        {
+            lineupBox.Text = "";
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                proc.Kill();
+                proc.Dispose();
+            }
+            catch { }
         }
     }
 }
